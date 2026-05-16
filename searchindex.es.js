@@ -1,0 +1,1651 @@
+var relearn_searchindex = [
+  {
+    "breadcrumb": "",
+    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
+    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
+    "tags": [],
+    "title": "Aprende C — ejercicios resueltos",
+    "uri": "/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C vs C#",
+    "uri": "/tags/c-vs-c%23/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C vs C++",
+    "uri": "/tags/c-vs-c++/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C vs Rust",
+    "uri": "/tags/c-vs-rust/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "C vs Rust vs C++ vs C#: respuesta rápida Si buscas C vs Rust, C vs C++ o C vs C#, la decisión correcta depende del tipo de proyecto y del plazo en el que necesitas producir resultados.\nComparativa por criterio clave Lenguaje Rendimiento Seguridad de memoria Curva de aprendizaje Casos típicos C Muy alto Baja (manual) Media Embebidos, sistemas, librerías core Rust Muy alto Alta (por diseño) Alta Sistemas modernos y tooling seguro C++ Muy alto Media-baja (según disciplina) Alta Motores, trading, software de alto rendimiento C# Alto Alta (runtime gestionado) Media Backend empresarial, apps desktop y juegos con Unity Recomendación por objetivo real Quieres entender memoria a fondo: empieza por C. Quieres seguridad + rendimiento: Rust suele ser mejor apuesta. Estás en ecosistema legacy/performance extremo: C++. Priorizas productividad en backend/app: C#. Ruta práctica si eliges C como base Domina punteros, memoria dinámica y estructuras. Resuelve problemas de listas, pilas, colas y archivos. Después salta a Rust o C++ con base sólida. Siguiente recurso recomendado Punteros en C: ejercicios resueltos malloc y free en C: ejercicio resuelto Lista doblemente enlazada en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta estructurada para aprender C y usarlo como base técnica:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) Ejercicios Flutter para ampliar stack FAQ ¿Rust sustituirá completamente a C? No a corto plazo. Rust crece mucho, pero C sigue dominante en muchos sistemas y entornos embebidos.\n¿C++ es mejor que C para empezar? Depende del objetivo. Si quieres base de memoria limpia, C suele ser más directo.\n¿C# compite con C en lo mismo? No siempre. C# prioriza productividad en runtime gestionado; C prioriza control de bajo nivel.",
+    "description": "Comparativa clara entre C, Rust, C++ y C# según rendimiento, curva de aprendizaje, empleabilidad y tipo de proyecto real.",
+    "tags": [
+      "C vs Rust",
+      "C vs C++",
+      "C vs C#",
+      "Comparativa Lenguajes",
+      "Programación De Sistemas"
+    ],
+    "title": "C vs Rust vs C++ vs C#: comparativa práctica para elegir en 2026",
+    "uri": "/ejercicios/c-vs-rust-vs-cpp-vs-csharp-comparativa-practica/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Comparativa Lenguajes",
+    "uri": "/tags/comparativa-lenguajes/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicios C Básicos",
+    "uri": "/tags/ejercicios-c-b%C3%A1sicos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicios De C Desde Cero",
+    "uri": "/tags/ejercicios-de-c-desde-cero/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
+    "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
+    "tags": [],
+    "title": "Ejercicios resueltos en C (paso a paso)",
+    "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Entrada Proceso Salida en C",
+    "uri": "/tags/entrada-proceso-salida-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fundamentos De C",
+    "uri": "/tags/fundamentos-de-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programación De Sistemas",
+    "uri": "/tags/programaci%C3%B3n-de-sistemas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programación Secuencial en C",
+    "uri": "/tags/programaci%C3%B3n-secuencial-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Programación secuencial en C: ejercicios resueltos para empezar Si buscas programación secuencial en C, aquí tienes ejercicios básicos resueltos con el patrón más importante al inicio: entrada, proceso y salida.\nSon problemas simples, pero clave para construir una base sólida antes de bucles, condicionales complejos y estructuras de datos.\nEnunciado Resuelve estos 4 mini ejercicios secuenciales:\nconvertir grados Celsius a Fahrenheit, calcular el área y perímetro de un rectángulo, calcular la media de 3 notas, calcular el precio final con IVA del 21%. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 #include \u003cstdio.h\u003e double celsius_a_fahrenheit(double c) { return (c * 9.0 / 5.0) + 32.0; } void rectangulo(double base, double altura, double *area, double *perimetro) { *area = base * altura; *perimetro = 2.0 * (base + altura); } double media_tres(double a, double b, double c) { return (a + b + c) / 3.0; } double precio_con_iva(double precio_base) { const double IVA = 0.21; return precio_base * (1.0 + IVA); } int main(void) { double c = 25.0; printf(\"%.2f C = %.2f F\\n\", c, celsius_a_fahrenheit(c)); double area, perimetro; rectangulo(8.0, 3.0, \u0026area, \u0026perimetro); printf(\"Rectángulo -\u003e área: %.2f, perímetro: %.2f\\n\", area, perimetro); printf(\"Media de 7.5, 8.0 y 6.5 = %.2f\\n\", media_tres(7.5, 8.0, 6.5)); double base = 100.0; printf(\"Precio base %.2f -\u003e precio final con IVA: %.2f\\n\", base, precio_con_iva(base)); return 0; } Resultado esperado 1 2 3 4 25.00 C = 77.00 F Rectángulo -\u003e área: 24.00, perímetro: 22.00 Media de 7.5, 8.0 y 6.5 = 7.33 Precio base 100.00 -\u003e precio final con IVA: 121.00 Errores frecuentes Hacer divisiones enteras sin decimales donde necesitas double. Mezclar unidades o fórmulas (por ejemplo Celsius/Fahrenheit mal aplicada). Escribir todo en main sin separar cálculos en funciones. No comprobar resultados con casos sencillos de referencia. Aplicación práctica La programación secuencial en C se usa para:\nprimeros scripts de cálculo, prácticas académicas iniciales, consolidar sintaxis y operaciones numéricas. Dominar esta base acelera el aprendizaje de condicionales, bucles y modularidad.\nSiguiente ejercicio recomendado If else en C: ejercicios resueltos con condicionales anidadas For en C: ejercicios resueltos con acumuladores y contadores While y do while en C: ejercicios resueltos Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Qué significa programación secuencial en C? Es ejecutar instrucciones en orden, de arriba abajo, sin saltos complejos. Es la base de cualquier programa.\n¿Por qué empezar por ejercicios secuenciales? Porque te permite dominar sintaxis, variables y operaciones antes de añadir más complejidad.\n¿Después de esto qué conviene estudiar? Lo más rentable es pasar a condicionales y bucles, y luego practicar arrays y funciones con problemas reales.",
+    "description": "Ejercicios resueltos de programación secuencial en C con entrada, proceso y salida para quienes empiezan desde cero.",
+    "tags": [
+      "Programación Secuencial en C",
+      "Ejercicios De C Desde Cero",
+      "Entrada Proceso Salida en C",
+      "Fundamentos De C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "Programación secuencial en C: ejercicios resueltos desde cero",
+    "uri": "/ejercicios/programacion-secuencial-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Aprender C",
+    "uri": "/tags/aprender-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C Online Compiler",
+    "uri": "/tags/c-online-compiler/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Compilador C Online",
+    "uri": "/tags/compilador-c-online/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Compilador C online: qué opción elegir Si buscas compilador C online, no te conviene usar siempre la misma herramienta. La mejor elección depende de si estás practicando fundamentos, depurando o compartiendo código.\nComparativa rápida de compiladores C online Herramienta Punto fuerte Ideal para Límite principal OnlineGDB Compilar + depurar en navegador Ejercicios paso a paso Interfaz menos ligera Replit Entorno completo y colaboración Práctica diaria y proyectos pequeños Arranque algo más pesado Programiz Muy simple para empezar Primeros programas en C Menos opciones avanzadas JDoodle Ejecución rápida de snippets Pruebas cortas de funciones Restricciones de uso gratuitas Ideone Compartir código por enlace Revisiones rápidas Menos cómodo para proyectos largos Wandbox Varias versiones de compilador Comparar comportamiento Curva inicial algo mayor Compiler Explorer Ver salida del compilador Rendimiento y código generado No es el mejor para principiantes Recomendación rápida por perfil Si empiezas: Programiz u OnlineGDB. Si quieres practicar todos los días: Replit u OnlineGDB. Si quieres analizar optimización: Compiler Explorer. Si preparas entrevistas: combina JDoodle/Ideone para probar ideas rápido. Flujo recomendado para practicar C Resuelve el ejercicio en local o en OnlineGDB. Verifica casos límite (nulos, límites de array, tamaños). Copia el snippet a Ideone/JDoodle para compartirlo y recibir feedback. Cuando funcione, pásalo a un repositorio para histórico de progreso. Errores frecuentes Confiar en un único compilador para todos los casos. No probar entradas límite antes de dar por bueno el resultado. Practicar solo ejecución y no revisar warnings del compilador. Siguiente recurso recomendado Punteros en C: ejercicios resueltos malloc y realloc en C: ejercicio resuelto memset en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) Ejercicios Flutter para ampliar stack FAQ ¿Cuál es el mejor compilador C online para principiantes? OnlineGDB y Programiz suelen ser las opciones más simples para empezar sin fricción.\n¿Un compilador online sustituye al entorno local? Para práctica rápida, sí. Para proyectos más serios, conviene también trabajar en local.\n¿Cómo saco más partido SEO a este tema? Publica comparativas útiles, ejemplos reales y enlaza a ejercicios resueltos que ataquen intenciones concretas.",
+    "description": "Guía práctica para elegir compilador C online según tu objetivo: practicar ejercicios, probar snippets y preparar entrevistas técnicas.",
+    "tags": [
+      "Compilador C Online",
+      "C Online Compiler",
+      "Practicar C Online",
+      "Aprender C",
+      "Programación C"
+    ],
+    "title": "Compilador C online: 7 opciones para practicar C sin instalar nada",
+    "uri": "/ejercicios/c-online-compiler-para-practicar-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Composición en C",
+    "uri": "/tags/composici%C3%B3n-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicios C Intermedio",
+    "uri": "/tags/ejercicios-c-intermedio/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Herencia en C",
+    "uri": "/tags/herencia-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Herencia en C con composición: ejercicio resuelto Si buscas herencia en C, el enfoque práctico es simularla con composición y punteros a función, porque C no incluye herencia nativa.\nEste patrón te permite modelar jerarquías simples y comportamiento dinámico sin salir de C puro.\nEnunciado Modela una jerarquía básica:\ntipo base Animal con nombre y función hablar, tipo Perro y tipo Gato que “extienden” a Animal por composición, recorrido de un array de Animal* para ejecutar comportamiento polimórfico. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 #include \u003cstdio.h\u003e typedef struct Animal Animal; typedef void (*HablarFn)(const Animal *); struct Animal { const char *nombre; HablarFn hablar; }; typedef struct { Animal base; int energia; } Perro; typedef struct { Animal base; int vidas; } Gato; void perro_hablar(const Animal *a) { const Perro *p = (const Perro *)a; printf(\"Perro %s: guau (energía=%d)\\n\", p-\u003ebase.nombre, p-\u003eenergia); } void gato_hablar(const Animal *a) { const Gato *g = (const Gato *)a; printf(\"Gato %s: miau (vidas=%d)\\n\", g-\u003ebase.nombre, g-\u003evidas); } Perro perro_crear(const char *nombre, int energia) { Perro p; p.base.nombre = nombre; p.base.hablar = perro_hablar; p.energia = energia; return p; } Gato gato_crear(const char *nombre, int vidas) { Gato g; g.base.nombre = nombre; g.base.hablar = gato_hablar; g.vidas = vidas; return g; } int main(void) { Perro p = perro_crear(\"Toby\", 80); Gato g = gato_crear(\"Misu\", 9); Animal *grupo[] = {(Animal *)\u0026p, (Animal *)\u0026g}; int n = (int)(sizeof(grupo) / sizeof(grupo[0])); for (int i = 0; i \u003c n; i++) { grupo[i]-\u003ehablar(grupo[i]); } return 0; } Resultado esperado 1 2 Perro Toby: guau (energía=80) Gato Misu: miau (vidas=9) Errores frecuentes Copiar solo el tipo base en vez de trabajar con punteros al tipo compuesto. Olvidar inicializar el puntero a función y provocar fallo en tiempo de ejecución. Hacer cast de tipos no compatibles. Intentar replicar herencia compleja de POO clásica en C sin necesidad. Aplicación práctica Este patrón se usa para:\ndiseñar motores y librerías con callbacks, modelar plugins y controladores con interfaz común, reducir acoplamiento entre módulos. Es una habilidad útil para C de sistemas y código mantenible.\nSiguiente ejercicio recomendado Clases en C con struct: ejercicio resuelto de diseño modular Struct en C: ejercicio resuelto con arrays de estructuras Puntero a puntero en C: ejercicio resuelto con cambio de referencia Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿La herencia en C existe de forma nativa? No. En C se simula con composición, punteros y funciones para compartir interfaz y comportamiento.\n¿Cuándo merece la pena usar punteros a función? Cuando necesitas comportamiento intercambiable en tiempo de ejecución, por ejemplo estrategias, callbacks o controladores.\n¿Este patrón sustituye por completo a la POO? No. C no ofrece todas las abstracciones de POO, pero este enfoque cubre muchos casos prácticos de diseño modular.",
+    "description": "Ejercicio resuelto de herencia en C usando composición y punteros a función para simular comportamiento polimórfico.",
+    "tags": [
+      "Herencia en C",
+      "Composición en C",
+      "Punteros a Función en C",
+      "Polimorfismo en C",
+      "Ejercicios C Intermedio"
+    ],
+    "title": "Herencia en C: ejercicio resuelto con composición y punteros",
+    "uri": "/ejercicios/simular-herencia-en-c-con-composicion/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Polimorfismo en C",
+    "uri": "/tags/polimorfismo-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Practicar C Online",
+    "uri": "/tags/practicar-c-online/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programación C",
+    "uri": "/tags/programaci%C3%B3n-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros a Función en C",
+    "uri": "/tags/punteros-a-funci%C3%B3n-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C Basico",
+    "uri": "/tags/c-basico/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Clases en C Con Struct",
+    "uri": "/tags/clases-en-c-con-struct/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Clases en C con struct: ejercicio resuelto paso a paso Si buscas clases en C con struct, esta guía te muestra un enfoque práctico para modelar objetos sin POO nativa: struct + funciones + archivos separados.\nLa idea es aproximar encapsulación y responsabilidades claras en C puro.\nEnunciado Diseña un módulo Cuenta que:\ndefina una entidad con titular y saldo, exponga funciones para crear, depositar, retirar y mostrar estado, separe interfaz (cuenta.h) e implementación (cuenta.c), use un main.c para probar el flujo completo. Solución en C cuenta.h\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 #ifndef CUENTA_H #define CUENTA_H typedef struct { char titular[64]; double saldo; } Cuenta; Cuenta cuenta_crear(const char *titular, double saldo_inicial); int cuenta_depositar(Cuenta *c, double importe); int cuenta_retirar(Cuenta *c, double importe); void cuenta_imprimir(const Cuenta *c); #endif cuenta.c\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 #include \"cuenta.h\" #include \u003cstdio.h\u003e #include \u003cstring.h\u003e Cuenta cuenta_crear(const char *titular, double saldo_inicial) { Cuenta c; strncpy(c.titular, titular, sizeof(c.titular) - 1); c.titular[sizeof(c.titular) - 1] = '\\0'; c.saldo = (saldo_inicial \u003e= 0.0) ? saldo_inicial : 0.0; return c; } int cuenta_depositar(Cuenta *c, double importe) { if (!c || importe \u003c= 0.0) return 0; c-\u003esaldo += importe; return 1; } int cuenta_retirar(Cuenta *c, double importe) { if (!c || importe \u003c= 0.0 || importe \u003e c-\u003esaldo) return 0; c-\u003esaldo -= importe; return 1; } void cuenta_imprimir(const Cuenta *c) { if (!c) return; printf(\"Titular: %s | Saldo: %.2f\\n\", c-\u003etitular, c-\u003esaldo); } main.c\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \"cuenta.h\" #include \u003cstdio.h\u003e int main(void) { Cuenta c = cuenta_crear(\"Rodrigo\", 1000.0); cuenta_imprimir(\u0026c); cuenta_depositar(\u0026c, 250.0); cuenta_retirar(\u0026c, 400.0); cuenta_imprimir(\u0026c); if (!cuenta_retirar(\u0026c, 2000.0)) { printf(\"Retirada rechazada por saldo insuficiente.\\n\"); } return 0; } Compilación:\n1 gcc -Wall -Wextra -std=c11 main.c cuenta.c -o cuenta_demo Resultado esperado 1 2 3 Titular: Rodrigo | Saldo: 1000.00 Titular: Rodrigo | Saldo: 850.00 Retirada rechazada por saldo insuficiente. Errores frecuentes Exponer toda la lógica en main.c y perder modularidad. No validar punteros ni importes antes de operar. Copiar cadenas sin límite y arriesgar desbordamientos. Pensar que esto es POO completa: en C no hay herencia ni métodos nativos. Aplicación práctica Este patrón te sirve para:\ndiseñar módulos mantenibles en C, separar API pública y detalles internos, preparar código base para proyectos más grandes. Es un enfoque útil cuando quieres estructura de “objeto” sin salir del lenguaje C.\nSiguiente ejercicio recomendado Struct en C: ejercicio resuelto con arrays de estructuras Malloc y free en C: ejercicios resueltos Puntero a puntero en C: ejercicio resuelto con cambio de referencia Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Se puede hacer orientación a objetos real en C? No de forma nativa. Puedes simular parte del diseño con struct, funciones y punteros, pero sin herencia ni polimorfismo integrado.\n¿Por qué separar .h y .c en este ejercicio? Porque mejora mantenimiento, facilita reutilización y deja clara la interfaz pública del módulo.\n¿Esto es útil para entrevistas o solo para proyectos grandes? Para ambos casos. En entrevistas demuestra diseño limpio, y en proyectos reales evita código monolítico difícil de mantener.",
+    "description": "Ejercicio resuelto para simular clases en C usando struct y funciones, separando interfaz en .h e implementación en .c.",
+    "tags": [
+      "Clases en C Con Struct",
+      "Struct en C Ejercicio Resuelto",
+      "Diseño Modular en C",
+      "Encapsulación en C",
+      "Ejercicios C Intermedio"
+    ],
+    "title": "Clases en C con struct: ejercicio resuelto de diseño modular",
+    "uri": "/ejercicios/simular-clases-con-struct-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Conversiones en C",
+    "uri": "/tags/conversiones-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Diseño Modular en C",
+    "uri": "/tags/dise%C3%B1o-modular-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicio Resuelto C",
+    "uri": "/tags/ejercicio-resuelto-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Encapsulación en C",
+    "uri": "/tags/encapsulaci%C3%B3n-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Sizeof en C",
+    "uri": "/tags/sizeof-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Struct en C Ejercicio Resuelto",
+    "uri": "/tags/struct-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Tipos de datos en C: ejercicio resuelto Si buscas tipos de datos en C ejercicio resuelto, este ejemplo te ayuda a entender tamaños, rangos y conversiones básicas.\nEnunciado Crea un programa que:\nmuestre el tamaño de tipos numéricos comunes, convierta float a int, convierta int a double. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e int main(void) { int n = 42; float x = 7.75f; printf(\"sizeof(char): %zu\\n\", sizeof(char)); printf(\"sizeof(int): %zu\\n\", sizeof(int)); printf(\"sizeof(float): %zu\\n\", sizeof(float)); printf(\"sizeof(double): %zu\\n\", sizeof(double)); int truncado = (int)x; double convertido = (double)n; printf(\"float -\u003e int: %d\\n\", truncado); printf(\"int -\u003e double: %.2f\\n\", convertido); return 0; } Salida esperada 1 2 3 4 5 6 sizeof(char): 1 sizeof(int): 4 sizeof(float): 4 sizeof(double): 8 float -\u003e int: 7 int -\u003e double: 42.00 Errores frecuentes Asumir tamaños fijos en todas las plataformas. Mezclar tipos sin conversión y perder precisión. Ignorar truncamiento al pasar de float a int. Aplicación práctica Dominar tipos y conversiones en C reduce errores de precisión, overflow y comportamiento inesperado.\nSiguiente ejercicio recomendado Struct en C: ejercicio resuelto Punteros en C: ejercicios resueltos Matrices en C: ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿sizeof(int) siempre es 4? No necesariamente. En la práctica suele ser 4, pero depende de arquitectura y compilador.\n¿Qué pasa al convertir float a int? Se elimina la parte decimal (truncamiento), no hay redondeo automático.\n¿Cuándo conviene usar conversiones explícitas? Cuando quieres controlar el resultado y evitar conversiones implícitas ambiguas.",
+    "description": "Ejercicio resuelto de tipos de datos en C usando sizeof y conversiones explícitas para evitar errores comunes.",
+    "tags": [
+      "Tipos en C",
+      "Sizeof en C",
+      "Conversiones en C",
+      "Ejercicio Resuelto C",
+      "C Basico"
+    ],
+    "title": "Tipos de datos en C: ejercicio resuelto con sizeof y conversiones",
+    "uri": "/ejercicios/tipos-de-datos-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Tipos en C",
+    "uri": "/tags/tipos-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays en C",
+    "uri": "/tags/arrays-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arreglos en C Ejercicios Resueltos",
+    "uri": "/tags/arreglos-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Arreglos y vectores en C: ejercicios resueltos paso a paso Si buscas ejercicios de vectores en C, aquí tienes una práctica guiada con operaciones fundamentales que se repiten en clase, exámenes y entrevistas técnicas iniciales.\nVas a trabajar lectura segura por teclado, suma acumulada, búsqueda de máximo y conteo por condición.\nEnunciado Implementa un programa que:\npida el tamaño del vector con validación, lea los elementos por teclado, calcule la suma total, encuentre el valor máximo, cuente cuántos elementos son mayores que un umbral dado. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 #include \u003cstdio.h\u003e #define MAX_TAM 100 int leer_tamano(void) { int n; do { printf(\"Introduce tamaño del vector (1..%d): \", MAX_TAM); scanf(\"%d\", \u0026n); } while (n \u003c 1 || n \u003e MAX_TAM); return n; } void leer_vector(int v[], int n) { for (int i = 0; i \u003c n; i++) { printf(\"v[%d] = \", i); scanf(\"%d\", \u0026v[i]); } } int suma_vector(const int v[], int n) { int suma = 0; for (int i = 0; i \u003c n; i++) { suma += v[i]; } return suma; } int maximo_vector(const int v[], int n) { int maximo = v[0]; for (int i = 1; i \u003c n; i++) { if (v[i] \u003e maximo) { maximo = v[i]; } } return maximo; } int contar_mayores_que(const int v[], int n, int umbral) { int contador = 0; for (int i = 0; i \u003c n; i++) { if (v[i] \u003e umbral) { contador++; } } return contador; } int main(void) { int v[MAX_TAM]; int n = leer_tamano(); leer_vector(v, n); int suma = suma_vector(v, n); int maximo = maximo_vector(v, n); int umbral = 10; int mayores = contar_mayores_que(v, n, umbral); printf(\"\\nSuma total: %d\\n\", suma); printf(\"Máximo: %d\\n\", maximo); printf(\"Mayores que %d: %d\\n\", umbral, mayores); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 Introduce tamaño del vector (1..100): 5 v[0] = 4 v[1] = 12 v[2] = 7 v[3] = 20 v[4] = 10 Suma total: 53 Máximo: 20 Mayores que 10: 2 Errores frecuentes No validar el tamaño y terminar con índices fuera de rango. Usar i \u003c= n en vez de i \u003c n al recorrer el vector. Inicializar mal el máximo (por ejemplo a 0 cuando hay negativos). Mezclar lectura y procesamiento en un bloque difícil de depurar. Aplicación práctica Estos ejercicios de vectores en C te preparan para:\nestadísticas simples sobre listas de datos, filtros por condición, bases para ordenación, búsqueda y matrices. Es práctica directa para resolver problemas reales con arrays antes de pasar a estructuras más avanzadas.\nSiguiente ejercicio recomendado For en C: ejercicios resueltos con acumuladores y contadores Matriz en C: ejercicios resueltos Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre vector y arreglo en C? En C se usan como sinónimos en la práctica: una secuencia de elementos del mismo tipo almacenados en memoria contigua.\n¿Cómo evito errores de índice fuera de rango? Valida el tamaño de entrada, usa siempre i \u003c n y define un máximo fijo como MAX_TAM para controlar límites.\n¿Qué debería practicar después de estos ejercicios? El siguiente paso natural es combinar vectores con ordenación y búsqueda, y luego pasar a matrices y ficheros.",
+    "description": "Ejercicios resueltos de vectores en C con lectura por teclado, suma, máximo y conteo con recorrido seguro.",
+    "tags": [
+      "Ejercicios De Vectores en C",
+      "Arreglos en C Ejercicios Resueltos",
+      "Arrays en C",
+      "Lectura Por Teclado en C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "Arreglos y vectores en C: ejercicios resueltos básicos",
+    "uri": "/ejercicios/arreglos-vectores-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicios De Vectores en C",
+    "uri": "/tags/ejercicios-de-vectores-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Inicializar Memoria C",
+    "uri": "/tags/inicializar-memoria-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lectura Por Teclado en C",
+    "uri": "/tags/lectura-por-teclado-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Memset en C",
+    "uri": "/tags/memset-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "memset en C: ejercicio resuelto Si buscas memset en C ejercicio resuelto, aquí tienes un caso práctico para inicializar buffers de texto y arrays numéricos.\nEnunciado Crea un programa que:\ninicialice un buffer de texto con '*', inicialice un array de enteros a 0, imprima los resultados para verificar el estado final. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char buffer[11]; int nums[5]; memset(buffer, '*', 10); buffer[10] = '\\0'; memset(nums, 0, sizeof(nums)); printf(\"Buffer: %s\\n\", buffer); printf(\"Nums: \"); for (int i = 0; i \u003c 5; i++) printf(\"%d \", nums[i]); printf(\"\\n\"); return 0; } Salida esperada 1 2 Buffer: ********** Nums: 0 0 0 0 0 Errores frecuentes Usar memset para poner un array de int a valores distintos de 0. Pasar mal el tamaño (usar número de elementos en vez de bytes). Olvidar el terminador \\0 en buffers de texto. Aplicación práctica memset se usa para limpiar estructuras, reiniciar buffers y preparar memoria antes de procesarla.\nSiguiente ejercicio recomendado Tipos de datos en C: ejercicio resuelto malloc y realloc en C: ejercicio resuelto Ficheros en C: ejercicio resuelto Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿memset sirve para cualquier tipo de dato? Sirve para escribir bytes. Funciona muy bien para 0, pero no para todos los valores numéricos en cualquier tipo.\n¿Por qué sizeof(array) es clave con memset? Porque memset recibe bytes, no número de elementos.\n¿memset es más rápido que un bucle? En muchos casos sí, porque suele estar optimizado a bajo nivel.",
+    "description": "Ejercicio resuelto de memset en C para inicializar memoria de forma correcta y segura.",
+    "tags": [
+      "Memset en C",
+      "Inicializar Memoria C",
+      "Arrays en C",
+      "Ejercicio Resuelto C",
+      "C Basico"
+    ],
+    "title": "memset en C: ejercicio resuelto para inicializar arrays y buffers",
+    "uri": "/ejercicios/memset-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C Intermedio",
+    "uri": "/tags/c-intermedio/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Condicionales en C",
+    "uri": "/tags/condicionales-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: If Anidado en C",
+    "uri": "/tags/if-anidado-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: If Else en C Ejercicios Resueltos",
+    "uri": "/tags/if-else-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "If else en C: ejercicios resueltos Si buscas ejercicios condicionales en C, esta guía reúne casos típicos con if, if else, if else if y condicionales anidadas.\nLa clave es aprender a escribir decisiones claras y evitar ramas innecesarias.\nEnunciado Resuelve estos 4 mini ejercicios:\nclasificar un número como positivo, negativo o cero, convertir una nota numérica en calificación por rangos, decidir si un año es bisiesto, validar acceso con dos condiciones lógicas. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include \u003cstdio.h\u003e void clasificar_numero(int n) { if (n \u003e 0) { printf(\"%d es positivo\\n\", n); } else if (n \u003c 0) { printf(\"%d es negativo\\n\", n); } else { printf(\"%d es cero\\n\", n); } } const char *calificacion(int nota) { if (nota \u003e= 90) return \"Sobresaliente\"; else if (nota \u003e= 70) return \"Notable\"; else if (nota \u003e= 50) return \"Aprobado\"; else return \"Suspenso\"; } int es_bisiesto(int anio) { if (anio % 400 == 0) return 1; if (anio % 100 == 0) return 0; if (anio % 4 == 0) return 1; return 0; } int acceso_permitido(int edad, int tiene_autorizacion) { if (edad \u003e= 18 || (edad \u003e= 16 \u0026\u0026 tiene_autorizacion)) { return 1; } return 0; } int main(void) { clasificar_numero(-8); printf(\"Nota 76 =\u003e %s\\n\", calificacion(76)); printf(\"Año 2024 bisiesto: %s\\n\", es_bisiesto(2024) ? \"sí\" : \"no\"); printf(\"Acceso (17, autorizacion=1): %s\\n\", acceso_permitido(17, 1) ? \"permitido\" : \"denegado\"); return 0; } Resultado esperado 1 2 3 4 -8 es negativo Nota 76 =\u003e Notable Año 2024 bisiesto: sí Acceso (17, autorizacion=1): permitido Errores frecuentes Encadenar if independientes cuando necesitas else if. Escribir condiciones complejas sin paréntesis y cambiar la prioridad lógica. No cubrir casos borde (por ejemplo nota exacta 50 o 70). Anidar demasiado en vez de simplificar condiciones. Aplicación práctica Los condicionales aparecen en:\nvalidación de datos, reglas de negocio, control de acceso y permisos, clasificación de resultados por tramos. Dominar if else acelera el resto de estructuras de control y diseño de funciones.\nSiguiente ejercicio recomendado While y do while en C: ejercicios resueltos For en C: ejercicios resueltos con acumuladores y contadores Programación secuencial en C: ejercicios resueltos desde cero Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cómo sé si usar if else if o varios if? Si las condiciones son excluyentes, usa if else if. Si pueden cumplirse varias a la vez, usa if separados.\n¿Qué hago cuando la condición es muy larga? Divide la lógica en variables intermedias con nombres claros. Mejora legibilidad y reduce errores.\n¿Es malo usar condicionales anidadas en C? No, pero conviene limitar la profundidad. Si crece demasiado, suele ser mejor extraer funciones o simplificar reglas.",
+    "description": "Ejercicios resueltos de if else en C con condicionales simples, anidadas y operadores lógicos.",
+    "tags": [
+      "If Else en C Ejercicios Resueltos",
+      "Condicionales en C",
+      "If Anidado en C",
+      "Operadores Lógicos en C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "If else en C: ejercicios resueltos con condicionales anidadas",
+    "uri": "/ejercicios/if-else-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Malloc en C",
+    "uri": "/tags/malloc-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "malloc y realloc en C: ejercicio resuelto Si buscas malloc y realloc en C ejercicio resuelto, aquí tienes un ejemplo típico de array dinámico con crecimiento por capacidad.\nEnunciado Implementa un array dinámico de enteros en C que:\nempiece con capacidad 4, inserte 8 valores, duplique capacidad con realloc cuando se quede sin espacio. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { size_t cap = 4; size_t n = 0; int *v = malloc(cap * sizeof(int)); if (!v) return 1; for (int x = 10; x \u003c= 80; x += 10) { if (n == cap) { cap *= 2; int *tmp = realloc(v, cap * sizeof(int)); if (!tmp) { free(v); return 1; } v = tmp; } v[n++] = x; } printf(\"Tamano: %zu | Capacidad: %zu\\n\", n, cap); for (size_t i = 0; i \u003c n; i++) printf(\"%d \", v[i]); printf(\"\\n\"); free(v); return 0; } Salida esperada 1 2 Tamano: 8 | Capacidad: 8 10 20 30 40 50 60 70 80 Errores frecuentes Sobrescribir el puntero original con realloc sin usar puntero temporal. No comprobar NULL en malloc y realloc. Olvidar free al final. Aplicación práctica Este patrón se usa en listas dinámicas, buffers y estructuras de datos que crecen en tiempo de ejecución.\nSiguiente ejercicio recomendado malloc y free en C: ejercicios resueltos Punteros en C: ejercicios resueltos Struct en C: ejercicio resuelto Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo usar realloc en C? Cuando necesitas redimensionar memoria ya reservada sin copiar manualmente bloque a bloque.\n¿Es seguro hacer v = realloc(v, ...) directamente? No es lo ideal. Usa un temporal para no perder la referencia original si falla.\n¿Qué estrategia de crecimiento conviene? Duplicar capacidad suele ser una estrategia práctica y eficiente para inserciones sucesivas.",
+    "description": "Ejercicio resuelto de malloc y realloc en C para construir un array dinámico que crece por capacidad.",
+    "tags": [
+      "Malloc en C",
+      "Realloc en C",
+      "Memoria Dinamica C",
+      "Ejercicio Resuelto C",
+      "C Intermedio"
+    ],
+    "title": "malloc y realloc en C: ejercicio resuelto con array dinámico",
+    "uri": "/ejercicios/malloc-realloc-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Memoria Dinamica C",
+    "uri": "/tags/memoria-dinamica-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Operadores Lógicos en C",
+    "uri": "/tags/operadores-l%C3%B3gicos-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Realloc en C",
+    "uri": "/tags/realloc-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Bucles en C",
+    "uri": "/tags/bucles-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Do While en C Ejercicios",
+    "uri": "/tags/do-while-en-c-ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Validación De Entrada en C",
+    "uri": "/tags/validaci%C3%B3n-de-entrada-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: While en C Ejercicios Resueltos",
+    "uri": "/tags/while-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "While y do while en C: ejercicios resueltos paso a paso Si buscas ejercicios while do while en C, aquí tienes ejemplos resueltos y explicados con casos reales de práctica.\nLa diferencia principal es esta:\nwhile evalúa la condición antes de ejecutar, do while ejecuta al menos una vez y luego evalúa. Enunciado Resuelve estos 4 mini ejercicios:\npedir un número positivo con do while, contar cuántos dígitos tiene un número con while, sumar números hasta introducir 0 con while, menú de opciones repetitivo con do while. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e int pedir_positivo(void) { int n; do { printf(\"Introduce un número positivo: \"); scanf(\"%d\", \u0026n); } while (n \u003c= 0); return n; } int contar_digitos(int n) { int contador = 0; if (n == 0) return 1; if (n \u003c 0) n = -n; while (n \u003e 0) { n /= 10; contador++; } return contador; } int suma_hasta_cero(void) { int suma = 0; int valor; printf(\"Introduce números (0 para terminar):\\n\"); while (1) { scanf(\"%d\", \u0026valor); if (valor == 0) break; suma += valor; } return suma; } void menu_simple(void) { int opcion; do { printf(\"\\nMenú:\\n\"); printf(\"1) Saludar\\n\"); printf(\"2) Mostrar info\\n\"); printf(\"0) Salir\\n\"); printf(\"Opción: \"); scanf(\"%d\", \u0026opcion); if (opcion == 1) { printf(\"Hola, seguimos practicando C.\\n\"); } else if (opcion == 2) { printf(\"Do while garantiza al menos una ejecución.\\n\"); } } while (opcion != 0); } int main(void) { int positivo = pedir_positivo(); printf(\"Número válido: %d\\n\", positivo); printf(\"Dígitos de %d: %d\\n\", positivo, contar_digitos(positivo)); int suma = suma_hasta_cero(); printf(\"Suma total: %d\\n\", suma); menu_simple(); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Introduce un número positivo: -3 Introduce un número positivo: 145 Número válido: 145 Dígitos de 145: 3 Introduce números (0 para terminar): 5 10 -2 0 Suma total: 13 Menú: 1) Saludar 2) Mostrar info 0) Salir ... Errores frecuentes Usar while cuando necesitas ejecutar el bloque al menos una vez. No actualizar la variable de control dentro del bucle y quedar en ciclo infinito. No validar entradas del usuario en bucles de consola. Romper el flujo con break mal colocado. Aplicación práctica while y do while se usan mucho en:\nvalidación de formularios por consola, menús interactivos, lectura repetitiva de datos hasta condición de fin. Son estructuras básicas para cualquier programa que dependa de entrada del usuario.\nSiguiente ejercicio recomendado For en C: ejercicios resueltos con acumuladores y contadores If else en C: ejercicios resueltos con condicionales anidadas Arreglos y vectores en C: ejercicios resueltos básicos Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo uso while y cuándo do while en C? Usa while cuando la condición puede ser falsa desde el principio. Usa do while cuando quieres ejecutar al menos una vez.\n¿Cómo evito bucles infinitos? Asegúrate de actualizar la variable de control en cada iteración y de que la condición de salida sea alcanzable.\n¿Es importante practicar menús con do while? Sí, porque mezclan lógica de control, entrada de usuario y validación, que son habilidades básicas en C.",
+    "description": "Ejercicios resueltos de while y do while en C con validación de entrada, conteo de dígitos y bucles por condición.",
+    "tags": [
+      "While en C Ejercicios Resueltos",
+      "Do While en C Ejercicios",
+      "Bucles en C",
+      "Validación De Entrada en C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "While y do while en C: ejercicios resueltos",
+    "uri": "/ejercicios/while-do-while-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "¿Merece la pena aprender C en 2026? Si te preguntas si merece la pena aprender C en 2026, la respuesta corta es sí para perfiles técnicos que tocan rendimiento, sistemas o hardware.\nNo es obligatorio para todo el mundo, pero sigue siendo uno de los lenguajes que más criterio técnico te da.\nDónde C sigue siendo diferencial Firmware y embebidos (microcontroladores, automocion, IoT). Sistemas y tooling de bajo nivel. Librerias de alto rendimiento. Seguridad ofensiva/defensiva donde entender memoria importa. Entrevistas técnicas que piden punteros, memoria y estructuras. Cuándo no es tu primera opción Si solo quieres lanzar producto web rápido. Si no vas a tocar nunca rendimiento, memoria ni sistemas. Si tu objetivo inmediato es automatización sencilla con alto nivel. Retorno real de aprender C Objetivo Lo que te aporta C Mejorar entrevistas técnicas Dominas preguntas de punteros, memoria y complejidad Programar embebidos Base directa para firmware profesional Entender como funciona software Mejor modelo mental de memoria, CPU y rendimiento Ser mejor en otros lenguajes Tomas mejores decisiones en Rust, Go, C++, Python o Java Plan práctico de 30 días Días 1-7: sintaxis base y funciones. Días 8-14: punteros, arrays y cadenas. Días 15-21: memoria dinámica y errores comunes. Días 22-30: estructuras de datos y ejercicios tipo entrevista. Práctica guiada y libro completo Si quieres convertir esta decisión en progreso real, combina ejercicios gratuitos con una ruta cerrada de 100 ejercicios:\nProgramación en C en 100 ejercicios resueltos Ejercicios C gratuitos en esta web Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿C tiene salida profesional en 2026? Sí, especialmente en sistemas, firmware, tooling de rendimiento y ciertos entornos de seguridad.\n¿Se puede aprender C sin universidad? Totalmente. Con ejercicios diarios y constancia, es una ruta muy realista.\n¿Debo empezar por C o por Python? Depende del objetivo. Para resultados rápidos, Python suele ser mejor entrada. Para base técnica profunda, C te da más recorrido a medio plazo.",
+    "description": "Guía útil para decidir si merece la pena aprender C en 2026 según salidas reales, retorno técnico y plan de aprendizaje accionable.",
+    "tags": [
+      "Merece La Pena Aprender C",
+      "Aprender C en 2026",
+      "Lenguaje C Sigue Valiendo La Pena",
+      "Programacion De Sistemas",
+      "Programacion C"
+    ],
+    "title": "¿Merece la pena aprender C en 2026? Guía práctica para decidir",
+    "uri": "/ejercicios/merece-la-pena-aprender-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Acumuladores en C",
+    "uri": "/tags/acumuladores-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Aprender C en 2026",
+    "uri": "/tags/aprender-c-en-2026/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Bucle for en C",
+    "uri": "/tags/bucle-for-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Contadores en C",
+    "uri": "/tags/contadores-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: For en C Ejercicios Resueltos",
+    "uri": "/tags/for-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "For en C: ejercicios resueltos paso a paso Si buscas ejercicios for en C resueltos, aquí tienes un bloque práctico con casos típicos de clase y entrevistas iniciales.\nEl objetivo es dominar tres patrones clave del bucle for: acumulación, conteo y recorrido de arrays.\nEnunciado Resuelve estos 4 mini ejercicios usando for:\ncalcular la suma de 1..n, contar cuántos pares hay en un array, obtener el máximo de un array, calcular la media de un array. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include \u003cstdio.h\u003e int suma_1_n(int n) { int suma = 0; for (int i = 1; i \u003c= n; i++) { suma += i; } return suma; } int contar_pares(const int a[], int n) { int contador = 0; for (int i = 0; i \u003c n; i++) { if (a[i] % 2 == 0) { contador++; } } return contador; } int maximo_array(const int a[], int n) { int maximo = a[0]; for (int i = 1; i \u003c n; i++) { if (a[i] \u003e maximo) { maximo = a[i]; } } return maximo; } double media_array(const int a[], int n) { int suma = 0; for (int i = 0; i \u003c n; i++) { suma += a[i]; } return (double)suma / n; } int main(void) { int n = 10; int datos[] = {7, 2, 9, 4, 6, 3}; int tam = (int)(sizeof(datos) / sizeof(datos[0])); printf(\"suma_1_n(%d) = %d\\n\", n, suma_1_n(n)); printf(\"pares_en_array = %d\\n\", contar_pares(datos, tam)); printf(\"maximo_array = %d\\n\", maximo_array(datos, tam)); printf(\"media_array = %.2f\\n\", media_array(datos, tam)); return 0; } Resultado esperado 1 2 3 4 suma_1_n(10) = 55 pares_en_array = 3 maximo_array = 9 media_array = 5.17 Errores frecuentes Empezar y terminar mal el rango (i \u003c= n frente a i \u003c n). No inicializar acumuladores o contadores en 0. Dividir enteros al calcular media y perder decimales. Acceder fuera de rango en arrays (i \u003c= n en lugar de i \u003c n). Aplicación práctica Estos patrones de for aparecen en casi cualquier ejercicio inicial de C:\nprocesamiento de listas de datos, estadísticas simples, validaciones y filtros por condición. Si dominas estos 4 casos, te será más fácil pasar a problemas de arrays, matrices y ordenación.\nSiguiente ejercicio recomendado While y do while en C: ejercicios resueltos Arreglos y vectores en C: ejercicios resueltos básicos Inserción directa en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿For en C es mejor que while para empezar? No es mejor ni peor en general, pero para recorridos con número de iteraciones conocido suele ser más claro.\n¿Qué diferencia hay entre acumulador y contador? Un acumulador suma o combina valores (por ejemplo suma += a[i]). Un contador incrementa ocurrencias (por ejemplo contador++).\n¿Cómo practicar bucles for más rápido? Empieza con problemas de una sola variable, luego añade arrays y finalmente combina dos condiciones dentro del mismo bucle.",
+    "description": "Ejercicios resueltos de for en C con acumuladores, contadores, máximo de array y cálculo de media.",
+    "tags": [
+      "For en C Ejercicios Resueltos",
+      "Bucle for en C",
+      "Acumuladores en C",
+      "Contadores en C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "For en C: ejercicios resueltos con acumuladores y contadores",
+    "uri": "/ejercicios/for-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lenguaje C Sigue Valiendo La Pena",
+    "uri": "/tags/lenguaje-c-sigue-valiendo-la-pena/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Merece La Pena Aprender C",
+    "uri": "/tags/merece-la-pena-aprender-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programacion C",
+    "uri": "/tags/programacion-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programacion De Sistemas",
+    "uri": "/tags/programacion-de-sistemas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos De Ordenación en C",
+    "uri": "/tags/algoritmos-de-ordenaci%C3%B3n-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Binary Insertion Sort C",
+    "uri": "/tags/binary-insertion-sort-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Inserción Binaria en C",
+    "uri": "/tags/inserci%C3%B3n-binaria-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Método de inserción binaria en C Si buscas inserción binaria en C ejercicio resuelto, aquí tienes una implementación completa con la idea clave: separar la búsqueda de posición y el desplazamiento de elementos.\nInserción binaria es una variante de inserción directa. Reduce comparaciones usando búsqueda binaria para encontrar dónde insertar, pero sigue necesitando mover elementos en el array.\nEnunciado Implementa inserción binaria para ordenar un array de enteros en orden ascendente.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 #include \u003cstdio.h\u003e int posicion_insercion(const int a[], int left, int right, int key) { while (left \u003c= right) { int mid = left + (right - left) / 2; if (a[mid] \u003c= key) { left = mid + 1; } else { right = mid - 1; } } return left; } void insercion_binaria(int a[], int n) { for (int i = 1; i \u003c n; i++) { int key = a[i]; int pos = posicion_insercion(a, 0, i - 1, key); for (int j = i - 1; j \u003e= pos; j--) { a[j + 1] = a[j]; } a[pos] = key; } } int main(void) { int a[] = {37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54, 54}; int n = (int)(sizeof(a) / sizeof(a[0])); insercion_binaria(a, n); for (int i = 0; i \u003c n; i++) { printf(\"%d \", a[i]); } printf(\"\\n\"); return 0; } Resultado esperado 1 0 12 17 23 31 37 46 54 54 72 88 100 Errores frecuentes Buscar posición en un rango incorrecto (0..i en lugar de 0..i-1). Olvidar desplazar elementos antes de insertar key. Usar una condición errónea con repetidos y perder estabilidad. Pensar que pasa a O(n log n): el desplazamiento sigue siendo lineal. Aplicación práctica Este ejercicio sirve para:\nentender bien la diferencia entre coste de comparación y coste de movimiento, practicar implementación de búsqueda binaria sobre un prefijo ordenado, preparar entrevistas donde te piden optimizar inserción directa sin cambiar estructura. Siguiente ejercicio recomendado Ordenación por inserción directa en C: ejercicio resuelto Shell sort en C: ejercicio resuelto paso a paso Merge sort en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Inserción binaria en C es más rápida que inserción directa? Reduce comparaciones gracias a la búsqueda binaria, pero sigue desplazando elementos, así que no elimina el coste cuadrático en peor caso.\n¿Cuál es su complejidad temporal? En promedio y peor caso se mantiene en O(n²) por los desplazamientos. La búsqueda de posición cuesta O(log n), pero no domina el total.\n¿Cuándo merece la pena usarla en práctica? Cuando quieres mejorar inserción directa en arrays pequeños o medianos y practicar técnicas de búsqueda y ordenación en un mismo ejercicio.",
+    "description": "Ejercicio resuelto de inserción binaria en C con búsqueda de posición por binary search y desplazamiento lineal.",
+    "tags": [
+      "Inserción Binaria en C",
+      "Binary Insertion Sort C",
+      "Ejercicio Resuelto C",
+      "Algoritmos De Ordenación en C",
+      "Ejercicios C Intermedio"
+    ],
+    "title": "Inserción binaria en C: ejercicio resuelto de ordenación",
+    "uri": "/ejercicios/insercion-binaria-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Aprender C Desde Cero",
+    "uri": "/tags/aprender-c-desde-cero/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Inserción Directa en C",
+    "uri": "/tags/inserci%C3%B3n-directa-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Insertion Sort en C",
+    "uri": "/tags/insertion-sort-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Libro Programacion C",
+    "uri": "/tags/libro-programacion-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Mejor Libro De C",
+    "uri": "/tags/mejor-libro-de-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Mejores Libros Para Aprender C",
+    "uri": "/tags/mejores-libros-para-aprender-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Mejores libros para aprender C en 2026 Si buscas mejores libros para aprender C, la mejor estrategia no es elegir uno solo: funciona mejor combinar un clásico de fundamentos con práctica guiada.\nEn esta guía tienes una comparativa clara para decidir según tu nivel y lo que quieres conseguir.\nRanking práctico por objetivo Libro Nivel recomendado Punto fuerte Límite principal Cuándo elegirlo C Programming: A Modern Approach (K. N. King) Principiante-intermedio Muy didáctico y progresivo Menos centrado en entrevistas Si empiezas desde cero y quieres base sólida The C Programming Language (Kernighan y Ritchie) Intermedio Referencia clásica y compacta Denso para empezar Si ya conoces sintaxis y quieres afinar criterio Expert C Programming: Deep C Secrets (van der Linden) Intermedio-avanzado Errores reales y trampas típicas No es una ruta desde cero Si quieres subir nivel técnico y evitar fallos sutiles Modern C (Jens Gustedt) Intermedio-avanzado C moderno (C11/C17), buenas prácticas Curva inicial más exigente Si te interesa C actual para proyectos serios Programación en C en 100 ejercicios resueltos Principiante-avanzado Práctica guiada con progresión diaria Menos teoría histórica Si quieres aprender haciendo ejercicios desde el día 1 Cómo elegir según tu punto de partida Si empiezas de cero: prioriza claridad + ejercicios progresivos. Si ya programas algo: combina un clásico (K\u0026R o King) con ejercicios de punteros, memoria y estructuras. Si preparas entrevistas técnicas: busca libros con problemas prácticos y repasos de complejidad. Ruta recomendada de estudio (6 a 8 semanas) Semana 1-2: sintaxis, control de flujo y funciones. Semana 3-4: punteros, arrays y memoria dinámica. Semana 5-6: estructuras de datos básicas (listas, pilas, colas). Semana 7-8: ficheros, depuracion y ejercicios tipo entrevista. Práctica guiada y libro completo Si quieres convertir la teoría en progreso medible, usa esta combinación:\nProgramación en C en 100 ejercicios resueltos Ejercicios C gratuitos en esta web Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es el mejor libro para aprender C desde cero? El que te permita practicar cada día con feedback rápido. Si no haces ejercicios, avanzar en C se vuelve mucho más lento.\n¿Los libros clásicos de C siguen siendo útiles en 2026? Sí. Siguen siendo muy valiosos para fundamentos, pero conviene complementarlos con ejercicios y ejemplos actuales.\n¿Merece la pena Kindle Unlimited para aprender C? Si ya usas Kindle Unlimited, suele ser una forma muy eficiente de acceder a libros técnicos sin coste adicional por título.",
+    "description": "Comparativa útil de libros clásicos y actuales para aprender C en 2026 por nivel, ejercicios, enfoque práctico y ruta recomendada.",
+    "tags": [
+      "Mejores Libros Para Aprender C",
+      "Mejor Libro De C",
+      "Libro Programacion C",
+      "Aprender C Desde Cero",
+      "Programacion en C"
+    ],
+    "title": "Mejores libros para aprender C en 2026: comparativa por nivel y enfoque",
+    "uri": "/ejercicios/mejores-libros-para-aprender-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Método de inserción directa en C Si buscas inserción directa en C ejercicio resuelto, este post te muestra la implementación completa y el razonamiento detrás del algoritmo.\nLa idea es la misma que cuando ordenas cartas en la mano: tomas el siguiente elemento y lo insertas en la posición correcta dentro de la parte que ya está ordenada.\nEnunciado Implementa el algoritmo de inserción directa para ordenar un array de enteros en orden ascendente.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 #include \u003cstdio.h\u003e void insercion_directa(int a[], int n) { for (int i = 1; i \u003c n; i++) { int clave = a[i]; int j = i - 1; while (j \u003e= 0 \u0026\u0026 a[j] \u003e clave) { a[j + 1] = a[j]; j--; } a[j + 1] = clave; } } int main(void) { int a[] = {12, 11, 13, 5, 6}; int n = (int)(sizeof(a) / sizeof(a[0])); insercion_directa(a, n); for (int i = 0; i \u003c n; i++) { printf(\"%d \", a[i]); } printf(\"\\n\"); return 0; } Salida esperada 1 5 6 11 12 13 Errores frecuentes Olvidar guardar el elemento actual en clave antes de desplazar. Escribir mal la posición final (a[j + 1] = clave). Confundir j \u003e= 0 con j \u003e 0 y perder comparaciones. No entender que el coste viene de los desplazamientos. Aplicación práctica Inserción directa es útil cuando:\nel array es pequeño, la entrada está casi ordenada, quieres una base sólida antes de pasar a shell sort o merge sort. También aparece mucho en ejercicios iniciales de estructuras y en entrevistas de nivel junior.\nSiguiente ejercicio recomendado Shell sort en C: ejercicio resuelto paso a paso Inserción binaria en C: ejercicio resuelto de ordenación Ordenación burbuja en C: ejercicio resuelto paso a paso Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Inserción directa en C sirve para aprender desde cero? Sí. Es uno de los mejores algoritmos para entender bucles, comparaciones y desplazamientos de elementos.\n¿Cuál es la complejidad de inserción directa? Peor y promedio: O(n²). Mejor caso (array casi ordenado): O(n).\n¿Cómo practicar inserción directa para no atascarme? Haz trazas manuales con arrays de 5 a 8 elementos y cuenta cuántos desplazamientos haces en cada iteración.",
+    "description": "Ejercicio resuelto de inserción directa en C con traza paso a paso, complejidad y errores típicos en entrevistas y exámenes.",
+    "tags": [
+      "Inserción Directa en C",
+      "Insertion Sort en C",
+      "Ejercicio Resuelto C",
+      "Algoritmos De Ordenación en C",
+      "Ejercicios C Básicos"
+    ],
+    "title": "Ordenación por inserción directa en C: ejercicio resuelto",
+    "uri": "/ejercicios/insercion-directa-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Programacion en C",
+    "uri": "/tags/programacion-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicio Resuelto Shell Sort C",
+    "uri": "/tags/ejercicio-resuelto-shell-sort-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Shell Sort en C",
+    "uri": "/tags/shell-sort-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Método de ordenación shell sort en C Si buscas shell sort en C ejercicio resuelto, este ejemplo te ayuda a entender la lógica completa, no solo el código final.\nShell sort mejora la inserción directa usando saltos (gaps). En lugar de comparar siempre elementos contiguos, compara elementos alejados y va reduciendo el salto hasta llegar a 1. Es un algoritmo in-situ (no necesita un array auxiliar grande) y suele rendir mejor que burbuja o inserción directa en arrays medianos.\nEstrategia de shell sort Elige un gap inicial, normalmente n / 2. Recorre el array aplicando inserción directa, pero entre posiciones separadas por gap. Reduce el gap (gap /= 2) y repite. Cuando gap llega a 1, haces la última pasada equivalente a inserción directa clásica. Enunciado Implementa shell sort para ordenar un array de enteros en orden ascendente.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e void shell_sort(int a[], int n) { for (int gap = n / 2; gap \u003e 0; gap /= 2) { for (int i = gap; i \u003c n; i++) { int tmp = a[i]; int j = i; while (j \u003e= gap \u0026\u0026 a[j - gap] \u003e tmp) { a[j] = a[j - gap]; j -= gap; } a[j] = tmp; } } } int main(void) { int a[] = {29, 10, 14, 37, 13, 5, 42, 8}; int n = (int)(sizeof(a) / sizeof(a[0])); shell_sort(a, n); for (int i = 0; i \u003c n; i++) { printf(\"%d \", a[i]); } printf(\"\\n\"); return 0; } Salida esperada 1 5 8 10 13 14 29 37 42 Errores frecuentes Reducir mal el gap y quedarse en bucle infinito. No guardar el valor temporal (tmp) antes de desplazar. Usar condición incorrecta en el while y perder elementos. Pensar que la complejidad es fija: depende de la secuencia de gaps. Aplicación práctica Shell sort es útil cuando:\nquieres una solución sencilla de implementar, buscas mejor rendimiento que inserción directa sin usar mucha memoria, trabajas con tamaños de entrada donde quicksort puede ser excesivo para un ejercicio didáctico. Siguiente ejercicio recomendado Ordenación por inserción directa en C: ejercicio resuelto Inserción binaria en C: ejercicio resuelto de ordenación Merge sort en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Shell sort en C es mejor que inserción directa? En muchos casos sí, porque adelanta trabajo con gaps grandes y deja menos desorden para la pasada final.\n¿Qué complejidad tiene shell sort? Depende de la secuencia de gaps. Con divisiones simples por 2 puede acercarse a O(n²), pero en práctica suele mejorar mucho frente a inserción directa.\n¿Cómo practico shell sort sin memorizar? Traza dos pasadas a mano con gap = n/2 y gap = n/4, luego compáralo contra inserción directa con el mismo array.",
+    "description": "Ejercicio resuelto de shell sort en C con secuencia de gaps, implementación completa y comparación frente a inserción directa.",
+    "tags": [
+      "Shell Sort en C",
+      "Ejercicio Resuelto Shell Sort C",
+      "Algoritmos De Ordenación en C",
+      "Inserción Directa en C",
+      "Ejercicios C Intermedio"
+    ],
+    "title": "Shell sort en C: ejercicio resuelto paso a paso",
+    "uri": "/ejercicios/shell-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Estructuras De Datos en C",
+    "uri": "/tags/estructuras-de-datos-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Circular C Ejercicio Resuelto",
+    "uri": "/tags/lista-circular-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Circular en C",
+    "uri": "/tags/lista-circular-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Lista circular en C: ejercicio resuelto Si buscas lista circular en C ejercicio resuelto, este ejemplo te enseña cómo insertar nodos y recorrer la lista sin bucles infinitos.\nEnunciado Implementa una lista circular simple con:\ninserción al final, recorrido completo, liberación de memoria. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Node { int value; struct Node *next; } Node; void insert_end(Node **head, int x) { Node *n = malloc(sizeof(Node)); if (!n) return; n-\u003evalue = x; if (*head == NULL) { n-\u003enext = n; *head = n; return; } Node *cur = *head; while (cur-\u003enext != *head) cur = cur-\u003enext; cur-\u003enext = n; n-\u003enext = *head; } void print_list(Node *head) { if (!head) return; Node *cur = head; do { printf(\"%d \", cur-\u003evalue); cur = cur-\u003enext; } while (cur != head); printf(\"\\n\"); } void free_list(Node **head) { if (!*head) return; Node *cur = (*head)-\u003enext; while (cur != *head) { Node *tmp = cur; cur = cur-\u003enext; free(tmp); } free(*head); *head = NULL; } int main(void) { Node *head = NULL; insert_end(\u0026head, 5); insert_end(\u0026head, 10); insert_end(\u0026head, 15); print_list(head); free_list(\u0026head); return 0; } Salida esperada 1 5 10 15 Errores frecuentes Recorrer con while (cur != NULL) en lugar de do-while. No cerrar el ciclo apuntando al head. Liberar memoria sin romper el recorrido circular. Aplicación práctica Las listas circulares se usan en planificación round-robin y buffers con rotación.\nSiguiente ejercicio recomendado Árbol binario en C: ejercicio resuelto de inserción y búsqueda Lista doblemente enlazada en C: ejercicio resuelto con inserción y recorrido fread y fwrite en C: ejercicio resuelto con archivo binario Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Qué diferencia hay entre lista simple y lista circular? En la circular, el último nodo apunta al primero. En la simple, el último termina en NULL.\n¿Para qué sirve una lista circular en proyectos reales? Para repartir turnos, tareas repetitivas y estructuras cíclicas de procesamiento.\n¿Cómo evitar bucles infinitos al recorrerla? Usa un puntero inicial de referencia y detén el recorrido cuando vuelvas a ese nodo.",
+    "description": "Ejercicio resuelto de lista circular en C con inserción al final, recorrido seguro y casos borde habituales.",
+    "tags": [
+      "Lista Circular en C",
+      "Listas Enlazadas C",
+      "Lista Circular C Ejercicio Resuelto",
+      "Estructuras De Datos en C"
+    ],
+    "title": "Lista circular en C: ejercicio resuelto con inserción y recorrido",
+    "uri": "/ejercicios/lista-circular-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Listas Enlazadas C",
+    "uri": "/tags/listas-enlazadas-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ejercicios C Avanzados",
+    "uri": "/tags/ejercicios-c-avanzados/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Merge Sort C Ejercicio Resuelto",
+    "uri": "/tags/merge-sort-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Merge Sort en C",
+    "uri": "/tags/merge-sort-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Método de ordenamiento merge sort en C Si buscas merge sort en C ejercicio resuelto, este ejemplo te sirve para entender la idea completa y no solo copiar el código.\nMerge sort es un algoritmo recursivo basado en divide y vencerás. Divide el problema en mitades, ordena cada mitad y luego las mezcla. Su rendimiento temporal es O(n log n) en mejor, medio y peor caso. Se atribuye a John von Neumann (1945) y sigue siendo una referencia para entender algoritmos eficientes de ordenación.\nEstrategia de merge sort La estrategia es esta:\nSi el array tiene 0 o 1 elemento, ya está ordenado. Si tiene 2 o más, se divide en dos mitades. Se ordena cada mitad con el mismo procedimiento. Se mezclan las dos mitades ordenadas en un solo array final. Esta forma de trabajar evita comparaciones innecesarias y mantiene un coste estable incluso cuando la entrada ya viene casi ordenada.\nPseudocódigo de merge sort 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 function merge_sort(A, l, r, aux): if l \u003e= r: return m = l + (r - l) / 2 merge_sort(A, l, m, aux) merge_sort(A, m + 1, r, aux) merge(A, l, m, r, aux) function merge(A, l, m, r, aux): i = l j = m + 1 k = l while i \u003c= m and j \u003c= r: if A[i] \u003c= A[j]: aux[k] = A[i] i = i + 1 else: aux[k] = A[j] j = j + 1 k = k + 1 copiar restantes de izquierda copiar restantes de derecha copiar aux[l..r] en A[l..r] Enunciado Implementa merge sort para ordenar un array de enteros en orden ascendente.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e static void merge(int a[], int aux[], int l, int m, int r) { int i = l; int j = m + 1; int k = l; while (i \u003c= m \u0026\u0026 j \u003c= r) { if (a[i] \u003c= a[j]) { aux[k++] = a[i++]; } else { aux[k++] = a[j++]; } } while (i \u003c= m) { aux[k++] = a[i++]; } while (j \u003c= r) { aux[k++] = a[j++]; } for (i = l; i \u003c= r; i++) { a[i] = aux[i]; } } static void merge_sort_rec(int a[], int aux[], int l, int r) { if (l \u003e= r) { return; } int m = l + (r - l) / 2; merge_sort_rec(a, aux, l, m); merge_sort_rec(a, aux, m + 1, r); merge(a, aux, l, m, r); } void merge_sort(int a[], int n) { if (n \u003c= 1) { return; } int *aux = malloc((size_t)n * sizeof(int)); if (!aux) { fprintf(stderr, \"Error: no se pudo reservar memoria auxiliar\\n\"); exit(EXIT_FAILURE); } merge_sort_rec(a, aux, 0, n - 1); free(aux); } int main(void) { int a[] = {38, 27, 43, 3, 9, 82, 10}; int n = sizeof(a) / sizeof(a[0]); merge_sort(a, n); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Salida esperada 1 3 9 10 27 38 43 82 Desglose rápido del código merge_sort reserva un array auxiliar una sola vez. merge_sort_rec divide el problema en mitades hasta llegar a subarrays de tamaño 1. merge une dos mitades ya ordenadas comparando elementos en tiempo lineal. Complejidad de merge sort en C Tiempo (mejor, medio y peor caso): O(n log n) Memoria extra: O(n) Por eso merge sort se usa cuando quieres rendimiento predecible y estabilidad en la ordenación.\nErrores frecuentes Usar mal los límites de cada mitad (l, m, r). Olvidar copiar de aux a a al final del merge. Escribir m = (l + r) / 2 sin pensar en overflow en índices grandes. No contemplar el caso base y entrar en recursividad infinita. Aplicación práctica Merge sort te conviene cuando:\nnecesitas una ordenación estable, quieres comportamiento temporal consistente, trabajas con datos grandes y no te importa usar memoria auxiliar. Si priorizas memoria y promedio rápido, quicksort puede ser mejor según el caso.\nSiguiente ejercicio recomendado Quicksort en C: ejercicio resuelto con particion de Lomuto Búsqueda binaria en C: ejercicio resuelto en array ordenado Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Merge sort en C sirve para entrevistas técnicas? Sí. Es muy común en entrevistas y pruebas porque combina recursividad, índices y análisis de complejidad.\n¿Merge sort siempre tarda O(n log n)? Sí, en tiempo asintótico. Esa es una de sus ventajas frente a otros algoritmos de ordenación.\n¿Cómo practicar merge sort para dominarlo de verdad? Empieza con arrays pequeños, traza cada merge a mano, y luego prueba repetidos, negativos y arrays inversos.",
+    "description": "Método de ordenación merge sort en C explicado paso a paso, con pseudocódigo, solución completa y complejidad O(n log n).",
+    "tags": [
+      "Merge Sort en C",
+      "Método De Ordenación Merge Sort",
+      "Merge Sort C Ejercicio Resuelto",
+      "Algoritmos De Ordenación en C",
+      "Ejercicios C Avanzados"
+    ],
+    "title": "Merge sort en C: ejercicio resuelto con divide y vencerás",
+    "uri": "/ejercicios/merge-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Método De Ordenación Merge Sort",
+    "uri": "/tags/m%C3%A9todo-de-ordenaci%C3%B3n-merge-sort/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arbol Binario C Ejercicio Resuelto",
+    "uri": "/tags/arbol-binario-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arbol Binario en C",
+    "uri": "/tags/arbol-binario-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Árbol binario en C: ejercicio resuelto Si buscas árbol binario en C ejercicio resuelto, aquí tienes un BST básico con inserción y búsqueda.\nEnunciado Implementa un árbol binario de búsqueda con:\ninserción de valores, búsqueda de valor, salida indicando si existe o no. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int v; struct Nodo *izq, *der; } Nodo; Nodo *insertar(Nodo *r, int v) { if (!r) { Nodo *n = malloc(sizeof(Nodo)); if (!n) return NULL; n-\u003ev = v; n-\u003eizq = n-\u003eder = NULL; return n; } if (v \u003c r-\u003ev) r-\u003eizq = insertar(r-\u003eizq, v); else if (v \u003e r-\u003ev) r-\u003eder = insertar(r-\u003eder, v); return r; } int buscar(Nodo *r, int v) { if (!r) return 0; if (r-\u003ev == v) return 1; if (v \u003c r-\u003ev) return buscar(r-\u003eizq, v); return buscar(r-\u003eder, v); } void liberar(Nodo *r) { if (!r) return; liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *r = NULL; r = insertar(r, 20); r = insertar(r, 10); r = insertar(r, 30); printf(\"Existe 10: %d\\n\", buscar(r, 10)); printf(\"Existe 40: %d\\n\", buscar(r, 40)); liberar(r); return 0; } Salida esperada 1 2 Existe 10: 1 Existe 40: 0 Errores frecuentes No tratar duplicados en inserción. Romper la propiedad BST al insertar. No liberar nodos al final. Aplicación práctica Los árboles siguen presentes en índices en memoria, jerarquías y buscadores internos.\nSiguiente ejercicio recomendado Lista circular en C: ejercicio resuelto con inserción y recorrido Lista doblemente enlazada en C: ejercicio resuelto con inserción y recorrido fread y fwrite en C: ejercicio resuelto con archivo binario Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de árbol binario de búsqueda en C con inserción de nodos y búsqueda recursiva.",
+    "tags": [
+      "Arbol Binario en C",
+      "Bst en C",
+      "Arbol Binario C Ejercicio Resuelto",
+      "Estructuras De Datos en C",
+      "C Intermedio"
+    ],
+    "title": "Árbol binario en C: ejercicio resuelto de inserción y búsqueda",
+    "uri": "/ejercicios/arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Bst en C",
+    "uri": "/tags/bst-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Entrada Salida en C",
+    "uri": "/tags/entrada-salida-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ficheros Binarios en C",
+    "uri": "/tags/ficheros-binarios-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fread Fwrite Ejercicio Resuelto",
+    "uri": "/tags/fread-fwrite-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fread Y Fwrite en C",
+    "uri": "/tags/fread-y-fwrite-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "fread y fwrite en C: ejercicio resuelto Si buscas fread y fwrite en C ejercicio resuelto, este ejemplo te enseña el flujo completo de escritura y lectura binaria.\nEnunciado Guarda un array de enteros en un archivo binario y cárgalo después en otro array.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #include \u003cstdio.h\u003e int main(void) { int datos[] = {4, 8, 15, 16, 23, 42}; int copia[6] = {0}; FILE *f = fopen(\"datos.bin\", \"wb\"); if (!f) return 1; fwrite(datos, sizeof(int), 6, f); fclose(f); f = fopen(\"datos.bin\", \"rb\"); if (!f) return 1; fread(copia, sizeof(int), 6, f); fclose(f); for (int i = 0; i \u003c 6; i++) printf(\"%d \", copia[i]); printf(\"\\n\"); return 0; } Salida esperada 1 4 8 15 16 23 42 Errores frecuentes Abrir en modo texto (w/r) en vez de binario (wb/rb). No comprobar elementos realmente leídos/escritos. Ignorar compatibilidad de tipos/tamaños entre sistemas. Aplicación práctica El formato binario se usa para datasets compactos, telemetría y snapshots de estado.\nSiguiente ejercicio recomendado Ficheros en C: ejercicio resuelto para contar lineas y caracteres Cadenas en C: ejercicios resueltos con strlen, strcpy y strcmp Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de ficheros binarios en C con fwrite y fread para guardar y recuperar arrays de enteros.",
+    "tags": [
+      "Fread Y Fwrite en C",
+      "Ficheros Binarios en C",
+      "Fread Fwrite Ejercicio Resuelto",
+      "Entrada Salida en C",
+      "C Intermedio"
+    ],
+    "title": "fread y fwrite en C: ejercicio resuelto con archivo binario",
+    "uri": "/ejercicios/fread-fwrite-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Array De Estructuras",
+    "uri": "/tags/array-de-estructuras/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Struct en C",
+    "uri": "/tags/struct-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Struct en C: ejercicio resuelto Si buscas struct en C ejercicio resuelto, este ejemplo te ayuda a modelar datos reales con C.\nEnunciado Define una estructura Estudiante con nombre y nota. Guarda varios estudiantes en un array y calcula la media.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e typedef struct { char nombre[20]; float nota; } Estudiante; int main(void) { Estudiante e[] = { {\"Ana\", 8.0f}, {\"Luis\", 7.5f}, {\"Marta\", 9.0f} }; float suma = 0.0f; int n = sizeof(e) / sizeof(e[0]); for (int i = 0; i \u003c n; i++) suma += e[i].nota; printf(\"Media: %.2f\\n\", suma / n); return 0; } Salida esperada 1 Media: 8.17 Errores frecuentes No inicializar bien campos de la estructura. Confundir acceso . y -\u003e. Duplicar lógica en lugar de usar funciones auxiliares. Aplicación práctica struct es base para modelar objetos de dominio (usuarios, pedidos, eventos) en C.\nSiguiente ejercicio recomendado Punteros en C: ejercicios resueltos de paso por referencia Malloc y free en C: ejercicio resuelto de memoria dinamica Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de struct en C para modelar datos de estudiantes y calcular media con arrays de estructuras.",
+    "tags": [
+      "Struct en C",
+      "Struct en C Ejercicio Resuelto",
+      "Array De Estructuras",
+      "Tipos De Datos en C",
+      "C Basico"
+    ],
+    "title": "Struct en C: ejercicio resuelto con arrays de estructuras",
+    "uri": "/ejercicios/struct-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Tipos De Datos en C",
+    "uri": "/tags/tipos-de-datos-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas en C",
+    "uri": "/tags/cadenas-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Cadenas en C: ejercicio resuelto Si buscas cadenas en C ejercicios resueltos, este ejemplo cubre las operaciones más pedidas con string.h.\nEnunciado Compara dos cadenas, copia una de ellas y muestra su longitud.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char a[32] = \"hola\"; char b[32] = \"hola\"; char copia[32]; int cmp = strcmp(a, b); strcpy(copia, a); printf(\"cmp=%d\\n\", cmp); printf(\"copia=%s\\n\", copia); printf(\"len=%zu\\n\", strlen(copia)); return 0; } Salida esperada 1 2 3 cmp=0 copia=hola len=4 Caso borde recomendado Prueba con cadenas en el límite del buffer para verificar \\0:\n1 a = \"1234567890123456789012345678901\" // 31 chars Si no dejas espacio para el terminador, tendrás desbordamiento.\nErrores frecuentes No reservar espacio para \\0. Usar strcpy sin validar tamanos. Comparar cadenas con == en vez de strcmp. Olvidar limpiar \\n al leer con fgets y fallar comparaciones. Complejidad temporal y espacial strlen, strcpy, strcmp: O(n) sobre la longitud de la cadena. Espacio extra: O(1) (sin contar buffers de entrada/salida). Aplicación práctica La manipulacion de cadenas es clave para parsear logs, comandos y datos de entrada.\nSiguiente ejercicio recomendado Matrices en C: ejercicio resuelto de diagonal principal y secundaria Ficheros en C: ejercicio resuelto para contar lineas y caracteres Ordenacion burbuja en C: ejercicio resuelto paso a paso Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de cadenas en C usando strlen, strcpy y strcmp para comparar, copiar y validar texto correctamente.",
+    "tags": [
+      "Cadenas en C",
+      "Strings en C Ejercicios Resueltos",
+      "Strlen Strcpy Strcmp",
+      "Manipulacion De Cadenas C",
+      "C Basico"
+    ],
+    "title": "Cadenas en C: ejercicios resueltos con strlen, strcpy y strcmp",
+    "uri": "/ejercicios/cadenas-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Manipulacion De Cadenas C",
+    "uri": "/tags/manipulacion-de-cadenas-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Strings en C Ejercicios Resueltos",
+    "uri": "/tags/strings-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Strlen Strcpy Strcmp",
+    "uri": "/tags/strlen-strcpy-strcmp/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Double Pointer en C",
+    "uri": "/tags/double-pointer-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Memoria Dinamica en C",
+    "uri": "/tags/memoria-dinamica-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Puntero a Puntero en C",
+    "uri": "/tags/puntero-a-puntero-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Puntero a puntero en C: ejercicio resuelto Si buscas puntero a puntero en C ejercicio resuelto, este ejemplo explica como cambiar un puntero original dentro de una función.\nEnunciado Crea una función que reciba int **p y redirija *p hacia otro entero.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e void redirigir(int **p, int *nuevo_objetivo) { *p = nuevo_objetivo; } int main(void) { int a = 10; int b = 99; int *p = \u0026a; printf(\"Antes: %d\\n\", *p); redirigir(\u0026p, \u0026b); printf(\"Despues: %d\\n\", *p); return 0; } Salida esperada 1 2 Antes: 10 Despues: 99 Aplicación práctica funciones que reservan memoria y devuelven puntero, estructuras enlazadas (insertar/borrar cabeza), APIs que necesitan reescribir referencias. Errores frecuentes Pasar p en lugar de \u0026p. No diferenciar p, *p y **p. Desreferenciar punteros no inicializados. Siguiente ejercicio recomendado Malloc y free en C: ejercicio resuelto de memoria dinamica Punteros en C: ejercicios resueltos de paso por referencia Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de puntero a puntero en C para modificar direcciones desde una función de forma segura.",
+    "tags": [
+      "Puntero a Puntero en C",
+      "Double Pointer en C",
+      "Punteros en C Ejercicio Resuelto",
+      "Memoria Dinamica en C",
+      "C Intermedio"
+    ],
+    "title": "Puntero a puntero en C: ejercicio resuelto con cambio de referencia",
+    "uri": "/ejercicios/puntero-a-puntero-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros en C Ejercicio Resuelto",
+    "uri": "/tags/punteros-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Malloc Free C Ejercicio Resuelto",
+    "uri": "/tags/malloc-free-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Malloc Y Free en C",
+    "uri": "/tags/malloc-y-free-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Malloc y free en C: ejercicio resuelto Si buscas malloc y free en C ejercicios resueltos, este ejemplo cubre reserva, redimensionado y liberacion segura.\nEnunciado Reserva un array dinamico, rellenalo, redimensionalo con realloc, muestra valores y libera memoria.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int n = 3; int *a = malloc(n * sizeof(int)); if (a == NULL) { fprintf(stderr, \"Error al reservar memoria\\n\"); return 1; } for (int i = 0; i \u003c n; i++) a[i] = (i + 1) * 10; int nuevo_n = 5; int *tmp = realloc(a, nuevo_n * sizeof(int)); if (tmp == NULL) { free(a); fprintf(stderr, \"Error al redimensionar memoria\\n\"); return 1; } a = tmp; for (int i = n; i \u003c nuevo_n; i++) a[i] = (i + 1) * 10; for (int i = 0; i \u003c nuevo_n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); free(a); return 0; } Salida esperada 1 10 20 30 40 50 Errores frecuentes No comprobar malloc/realloc. Sobrescribir el puntero original con realloc sin variable temporal. Hacer free doble o olvidar free. Aplicación práctica La memoria dinamica es clave en procesamiento de streams, buffers y estructuras de datos de tamano variable.\nSiguiente ejercicio recomendado Puntero a puntero en C: ejercicio resuelto con cambio de referencia Punteros en C: ejercicios resueltos de paso por referencia Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de memoria dinamica en C con malloc, validación de puntero, uso de realloc y liberacion con free.",
+    "tags": [
+      "Malloc Y Free en C",
+      "Memoria Dinamica en C",
+      "Malloc Free C Ejercicio Resuelto",
+      "Punteros en C",
+      "C Intermedio"
+    ],
+    "title": "Malloc y free en C: ejercicio resuelto de memoria dinamica",
+    "uri": "/ejercicios/malloc-free-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros en C",
+    "uri": "/tags/punteros-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos en C",
+    "uri": "/tags/algoritmos-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ordenacion Rapida en C",
+    "uri": "/tags/ordenacion-rapida-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Quicksort C Ejercicio Resuelto",
+    "uri": "/tags/quicksort-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Quicksort en C",
+    "uri": "/tags/quicksort-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Quicksort en C: ejercicio resuelto Si buscas quicksort en C ejercicio resuelto, este ejemplo implementa la versión clásica con particion de Lomuto.\nEnunciado Ordena un array de enteros con quicksort y muestra el resultado final.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e int particion(int a[], int l, int r) { int piv = a[r]; int i = l - 1; for (int j = l; j \u003c r; j++) { if (a[j] \u003c= piv) { i++; int tmp = a[i]; a[i] = a[j]; a[j] = tmp; } } int tmp = a[i + 1]; a[i + 1] = a[r]; a[r] = tmp; return i + 1; } void quicksort(int a[], int l, int r) { if (l \u003c r) { int p = particion(a, l, r); quicksort(a, l, p - 1); quicksort(a, p + 1, r); } } int main(void) { int a[] = {10, 7, 8, 9, 1, 5}; int n = sizeof(a) / sizeof(a[0]); quicksort(a, 0, n - 1); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Salida esperada 1 1 5 7 8 9 10 Complejidad Promedio: O(n log n) Peor caso: O(n^2) Errores frecuentes Elegir mal limites en recursión (p - 1, p + 1). No controlar pivot en arrays casi ordenados. Confundir particion de Lomuto y Hoare. Aplicación práctica La idea de quicksort aparece en motores de ordenacion, ranking y preprocesado de datos para consultas rápidas.\nSiguiente ejercicio recomendado Merge sort en C: ejercicio resuelto con divide y vencerás Búsqueda binaria en C: ejercicio resuelto en array ordenado Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de quicksort en C usando particion de Lomuto para ordenar arrays de forma eficiente.",
+    "tags": [
+      "Quicksort en C",
+      "Ordenacion Rapida en C",
+      "Quicksort C Ejercicio Resuelto",
+      "Algoritmos en C",
+      "C Intermedio"
+    ],
+    "title": "Quicksort en C: ejercicio resuelto con particion de Lomuto",
+    "uri": "/ejercicios/quicksort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos De Ordenacion",
+    "uri": "/tags/algoritmos-de-ordenacion/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Bubble Sort en C",
+    "uri": "/tags/bubble-sort-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ordenacion Burbuja en C",
+    "uri": "/tags/ordenacion-burbuja-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Ordenacion burbuja en C: ejercicio resuelto Si buscas ordenacion burbuja en C ejercicio resuelto, este ejemplo explica el algoritmo y su optimizacion más común.\nEnunciado Ordena un array de enteros de menor a mayor con burbuja e incluye una salida anticipada cuando no hay intercambios.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 #include \u003cstdio.h\u003e void burbuja(int a[], int n) { for (int i = 0; i \u003c n - 1; i++) { int hubo_swap = 0; for (int j = 0; j \u003c n - 1 - i; j++) { if (a[j] \u003e a[j + 1]) { int tmp = a[j]; a[j] = a[j + 1]; a[j + 1] = tmp; hubo_swap = 1; } } if (!hubo_swap) break; } } int main(void) { int a[] = {9, 3, 7, 1, 4}; int n = sizeof(a) / sizeof(a[0]); burbuja(a, n); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Salida esperada 1 1 3 4 7 9 Complejidad Peor caso: O(n^2) Mejor caso (optimizada): O(n) Errores frecuentes Olvidar acortar el rango interno con - i. No reiniciar la bandera de intercambio. Confundir estabilidad con rendimiento. Aplicación práctica No es el algoritmo más rápido, pero es ideal para aprendizaje, pruebas y conjuntos muy pequenos.\nSiguiente ejercicio recomendado Búsqueda binaria en C: ejercicio resuelto en array ordenado Merge sort en C: ejercicio resuelto con divide y vencerás Cadenas en C: ejercicios resueltos con strlen, strcpy y strcmp Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de ordenacion burbuja en C con comparaciones, swaps y optimizacion por bandera de intercambio.",
+    "tags": [
+      "Ordenacion Burbuja en C",
+      "Bubble Sort en C",
+      "Ordenacion en C Ejercicio Resuelto",
+      "Algoritmos De Ordenacion",
+      "C Basico"
+    ],
+    "title": "Ordenacion burbuja en C: ejercicio resuelto paso a paso",
+    "uri": "/ejercicios/ordenacion-burbuja-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ordenacion en C Ejercicio Resuelto",
+    "uri": "/tags/ordenacion-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Busqueda Binaria C Ejercicio Resuelto",
+    "uri": "/tags/busqueda-binaria-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Busqueda Binaria en C",
+    "uri": "/tags/busqueda-binaria-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Búsqueda binaria en C: ejercicio resuelto Si buscas búsqueda binaria en C ejercicio resuelto, este ejemplo incluye implementación iterativa y claves de complejidad.\nEnunciado Dado un array ordenado, devuelve el índice del valor objetivo o -1 si no existe.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #include \u003cstdio.h\u003e int busqueda_binaria(int a[], int n, int objetivo) { int l = 0, r = n - 1; while (l \u003c= r) { int m = l + (r - l) / 2; if (a[m] == objetivo) return m; if (a[m] \u003c objetivo) l = m + 1; else r = m - 1; } return -1; } int main(void) { int a[] = {2, 5, 9, 12, 18, 25}; int idx = busqueda_binaria(a, 6, 12); printf(\"Indice: %d\\n\", idx); return 0; } Salida esperada 1 Indice: 3 Complejidad Tiempo: O(log n) Espacio: O(1) Errores frecuentes Ejecutarla sobre arrays no ordenados. Calcular mal el punto medio. Cortar mal el rango (l y r). Aplicación práctica La búsqueda binaria se usa en catálogos ordenados, índices y consultas de alto rendimiento.\nSiguiente ejercicio recomendado Merge sort en C: ejercicio resuelto con divide y vencerás Ordenacion burbuja en C: ejercicio resuelto paso a paso Cola en C (queue): ejercicio resuelto con array circular Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de búsqueda binaria en C para encontrar índices en arrays ordenados con complejidad O(log n).",
+    "tags": [
+      "Busqueda Binaria en C",
+      "Busqueda Binaria C Ejercicio Resuelto",
+      "Algoritmos en C",
+      "Arrays en C",
+      "C Intermedio"
+    ],
+    "title": "Búsqueda binaria en C: ejercicio resuelto en array ordenado",
+    "uri": "/ejercicios/busqueda-binaria-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Array Circular",
+    "uri": "/tags/array-circular/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cola en C",
+    "uri": "/tags/cola-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Cola en C: ejercicio resuelto Si buscas cola en C ejercicio resuelto, este ejemplo muestra una implementación de cola FIFO con array circular.\nEnunciado Implementa una cola con operaciones:\nenqueue, dequeue, control de llena y vacía. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 #include \u003cstdio.h\u003e #define CAP 5 typedef struct { int data[CAP]; int front, rear, size; } Queue; void init(Queue *q) { q-\u003efront = 0; q-\u003erear = -1; q-\u003esize = 0; } int is_empty(Queue *q) { return q-\u003esize == 0; } int is_full(Queue *q) { return q-\u003esize == CAP; } int enqueue(Queue *q, int x) { if (is_full(q)) return 0; q-\u003erear = (q-\u003erear + 1) % CAP; q-\u003edata[q-\u003erear] = x; q-\u003esize++; return 1; } int dequeue(Queue *q, int *out) { if (is_empty(q)) return 0; *out = q-\u003edata[q-\u003efront]; q-\u003efront = (q-\u003efront + 1) % CAP; q-\u003esize--; return 1; } int main(void) { Queue q; int v; init(\u0026q); enqueue(\u0026q, 7); enqueue(\u0026q, 8); enqueue(\u0026q, 9); dequeue(\u0026q, \u0026v); printf(\"Sale: %d\\n\", v); dequeue(\u0026q, \u0026v); printf(\"Sale: %d\\n\", v); return 0; } Salida esperada 1 2 Sale: 7 Sale: 8 Errores frecuentes No usar módulo % CAP para circular. Mezclar estado de vacía con front == rear sin usar size. No comprobar underflow en dequeue. Aplicación práctica Las colas FIFO son base en sistemas de mensajeria, pipelines y procesamiento de tareas asíncronas.\nSiguiente ejercicio recomendado Lista simplemente enlazada en C: ejercicio resuelto con inserción y borrado Pila en C (stack): ejercicio resuelto con push, pop y peek Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de cola en C usando array circular con enqueue y dequeue en complejidad O(1).",
+    "tags": [
+      "Cola en C",
+      "Queue en C",
+      "Cola en C Ejercicio Resuelto",
+      "Array Circular",
+      "Estructuras De Datos en C"
+    ],
+    "title": "Cola en C (queue): ejercicio resuelto con array circular",
+    "uri": "/ejercicios/cola-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cola en C Ejercicio Resuelto",
+    "uri": "/tags/cola-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Queue en C",
+    "uri": "/tags/queue-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Pila en C",
+    "uri": "/tags/pila-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Pila en C: ejercicio resuelto Si buscas pila en C ejercicio resuelto, aquí tienes una implementación clara de stack con validaciones.\nEnunciado Implementa una pila de enteros con:\npush, pop, peek, funciones de comprobacion de estado. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 #include \u003cstdio.h\u003e #define CAP 5 typedef struct { int data[CAP]; int top; } Stack; void init(Stack *s) { s-\u003etop = -1; } int is_empty(Stack *s) { return s-\u003etop \u003c 0; } int is_full(Stack *s) { return s-\u003etop == CAP - 1; } int push(Stack *s, int x) { if (is_full(s)) return 0; s-\u003edata[++s-\u003etop] = x; return 1; } int pop(Stack *s, int *out) { if (is_empty(s)) return 0; *out = s-\u003edata[s-\u003etop--]; return 1; } int peek(Stack *s, int *out) { if (is_empty(s)) return 0; *out = s-\u003edata[s-\u003etop]; return 1; } int main(void) { Stack s; int v; init(\u0026s); push(\u0026s, 10); push(\u0026s, 20); push(\u0026s, 30); peek(\u0026s, \u0026v); printf(\"Top: %d\\n\", v); pop(\u0026s, \u0026v); printf(\"Pop: %d\\n\", v); peek(\u0026s, \u0026v); printf(\"Top: %d\\n\", v); return 0; } Salida esperada 1 2 3 Top: 30 Pop: 30 Top: 20 Caso borde recomendado Prueba estos dos escenarios en la misma ejecución:\nhacer pop sobre pila vacía (underflow), intentar push cuando top == CAP - 1 (overflow). Así validas que las funciones devuelven 0 en error sin corromper estado.\nErrores frecuentes No controlar overflow al hacer push. No controlar underflow al hacer pop. Olvidar inicializar top en -1. Incrementar/decrementar top en el orden incorrecto y leer fuera de rango. Complejidad temporal y espacial push, pop y peek: O(1). Espacio total: O(n) por el array de capacidad fija CAP. Aplicación práctica Las pilas aparecen en parseo, deshacer/rehacer y evaluacion de expresiones.\nSiguiente ejercicio recomendado Cola en C (queue): ejercicio resuelto con array circular Lista simplemente enlazada en C: ejercicio resuelto con inserción y borrado Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de pila en C con operaciones push, pop y peek sobre array fijo y control de overflow/underflow.",
+    "tags": [
+      "Pila en C",
+      "Stack en C",
+      "Pila en C Ejercicio Resuelto",
+      "Estructuras De Datos en C",
+      "C Intermedio"
+    ],
+    "title": "Pila en C (stack): ejercicio resuelto con push, pop y peek",
+    "uri": "/ejercicios/pila-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Pila en C Ejercicio Resuelto",
+    "uri": "/tags/pila-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Stack en C",
+    "uri": "/tags/stack-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Enlazada C Ejercicio Resuelto",
+    "uri": "/tags/lista-enlazada-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Simplemente Enlazada en C",
+    "uri": "/tags/lista-simplemente-enlazada-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Lista simplemente enlazada en C: ejercicio resuelto Si buscas lista simplemente enlazada en C ejercicio resuelto, este ejemplo cubre operaciones básicas reales: insertar, buscar y borrar.\nEnunciado Implementa una lista enlazada simple con funciones para:\ninsertar al inicio, buscar un valor, borrar un nodo, liberar memoria. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *insertar_inicio(Nodo *head, int valor) { Nodo *n = malloc(sizeof(Nodo)); if (!n) return head; n-\u003evalor = valor; n-\u003esig = head; return n; } Nodo *borrar_valor(Nodo *head, int valor) { Nodo *act = head, *prev = NULL; while (act \u0026\u0026 act-\u003evalor != valor) { prev = act; act = act-\u003esig; } if (!act) return head; if (!prev) head = act-\u003esig; else prev-\u003esig = act-\u003esig; free(act); return head; } int contiene(Nodo *head, int valor) { while (head) { if (head-\u003evalor == valor) return 1; head = head-\u003esig; } return 0; } void imprimir(Nodo *head) { while (head) { printf(\"%d \", head-\u003evalor); head = head-\u003esig; } printf(\"\\n\"); } void liberar(Nodo *head) { while (head) { Nodo *tmp = head; head = head-\u003esig; free(tmp); } } int main(void) { Nodo *lista = NULL; lista = insertar_inicio(lista, 30); lista = insertar_inicio(lista, 20); lista = insertar_inicio(lista, 10); printf(\"Contiene 20: %d\\n\", contiene(lista, 20)); lista = borrar_valor(lista, 20); imprimir(lista); liberar(lista); return 0; } Salida esperada 1 2 Contiene 20: 1 10 30 Errores frecuentes Perder el nuevo head al insertar o borrar. No tratar el borrado del primer nodo. No liberar memoria al final. Aplicación práctica Las listas simples se usan en colas de trabajo ligeras y procesamiento incremental de eventos.\nSiguiente ejercicio recomendado Cola en C (queue): ejercicio resuelto con array circular Pila en C (stack): ejercicio resuelto con push, pop y peek Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de lista simplemente enlazada en C con inserción al inicio, búsqueda por valor y borrado de nodos.",
+    "tags": [
+      "Lista Simplemente Enlazada en C",
+      "Lista Enlazada C Ejercicio Resuelto",
+      "Estructuras De Datos en C",
+      "Punteros en C",
+      "C Intermedio"
+    ],
+    "title": "Lista simplemente enlazada en C: ejercicio resuelto con inserción y borrado",
+    "uri": "/ejercicios/lista-simplemente-enlazada-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Archivo De Texto C",
+    "uri": "/tags/archivo-de-texto-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays Bidimensionales en C",
+    "uri": "/tags/arrays-bidimensionales-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: C Avanzado",
+    "uri": "/tags/c-avanzado/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Diagonal Principal Y Secundaria",
+    "uri": "/tags/diagonal-principal-y-secundaria/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fgetc en C",
+    "uri": "/tags/fgetc-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ficheros en C",
+    "uri": "/tags/ficheros-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Ficheros en C Ejercicios Resueltos",
+    "uri": "/tags/ficheros-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Ficheros en C: ejercicio resuelto Si buscas ficheros en C ejercicios resueltos, este ejemplo cubre un caso real muy común: abrir un archivo, recorrerlo carácter a carácter y calcular métricas básicas.\nEnunciado Abre un archivo de texto en modo lectura y cuenta:\nnúmero de lineas, número total de caracteres. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 #include \u003cstdio.h\u003e int main(void) { FILE *f = fopen(\"datos.txt\", \"r\"); if (f == NULL) { perror(\"No se pudo abrir datos.txt\"); return 1; } int c; int lineas = 0; int caracteres = 0; while ((c = fgetc(f)) != EOF) { caracteres++; if (c == '\\n') { lineas++; } } fclose(f); printf(\"Lineas: %d\\n\", lineas); printf(\"Caracteres: %d\\n\", caracteres); return 0; } Salida esperada 1 2 Lineas: 3 Caracteres: 74 Los valores exactos dependen del contenido de datos.txt.\nCaso borde recomendado Prueba un archivo sin salto de línea final.\nEjemplo de contenido:\n1 2 3 uno dos tres Si no termina en \\n, el conteo de líneas puede quedar una unidad por debajo si no lo contemplas.\nErrores frecuentes No comprobar si fopen devolvió NULL. No cerrar el archivo con fclose. No considerar que EOF no es un carácter real del archivo. Asumir que todas las líneas terminan en \\n y contar mal la última línea. Complejidad temporal y espacial Tiempo: O(n), recorriendo cada carácter una vez. Espacio extra: O(1). Aplicación práctica Este patrón se usa para procesar logs, trazas y ficheros de eventos, algo muy útil en observabilidad y sistemas.\nSiguiente ejercicio recomendado Cadenas en C: ejercicios resueltos con strlen, strcpy y strcmp fread y fwrite en C: ejercicio resuelto con archivo binario Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para aprender entrada y salida en C? Sí. Es una base directa para pasar luego a escritura (fprintf) y ficheros binarios (fread/fwrite).\n¿Dónde seguir con practica guiada? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de ficheros en C con fopen y fgetc para contar lineas y caracteres con manejo de errores.",
+    "tags": [
+      "Ficheros en C",
+      "Ficheros en C Ejercicios Resueltos",
+      "Fopen en C",
+      "Fgetc en C",
+      "Archivo De Texto C",
+      "C Intermedio"
+    ],
+    "title": "Ficheros en C: ejercicio resuelto para contar lineas y caracteres",
+    "uri": "/ejercicios/ficheros-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fopen en C",
+    "uri": "/tags/fopen-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Funciones Recursivas en C",
+    "uri": "/tags/funciones-recursivas-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intercambiar Variables C",
+    "uri": "/tags/intercambiar-variables-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Invertir Cadena en C",
+    "uri": "/tags/invertir-cadena-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Doblemente Enlazada C Ejercicio Resuelto",
+    "uri": "/tags/lista-doblemente-enlazada-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Lista Doblemente Enlazada en C",
+    "uri": "/tags/lista-doblemente-enlazada-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Lista doblemente enlazada en C: ejercicio resuelto Si buscas lista doblemente enlazada en C ejercicio resuelto, este ejemplo te enseña exactamente lo que suele pedirse en prácticas, entrevistas y exámenes: insertar nodos, recorrer en ambos sentidos y liberar memoria correctamente.\nEnunciado Implementa una lista doblemente enlazada con nodos que incluyan:\nvalor puntero siguiente puntero anterior Crea funciones para:\ninsertar al final, recorrer hacia adelante, recorrer hacia atras, liberar toda la lista. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *siguiente; struct Nodo *anterior; } Nodo; Nodo *insertar_final(Nodo *cabeza, int valor) { Nodo *nuevo = (Nodo *)malloc(sizeof(Nodo)); if (nuevo == NULL) { fprintf(stderr, \"Error al reservar memoria.\\n\"); return cabeza; } nuevo-\u003evalor = valor; nuevo-\u003esiguiente = NULL; nuevo-\u003eanterior = NULL; if (cabeza == NULL) { return nuevo; } Nodo *actual = cabeza; while (actual-\u003esiguiente != NULL) { actual = actual-\u003esiguiente; } actual-\u003esiguiente = nuevo; nuevo-\u003eanterior = actual; return cabeza; } Nodo *obtener_ultimo(Nodo *cabeza) { if (cabeza == NULL) { return NULL; } while (cabeza-\u003esiguiente != NULL) { cabeza = cabeza-\u003esiguiente; } return cabeza; } void recorrer_adelante(Nodo *cabeza) { printf(\"Recorrido hacia adelante:\\n\"); while (cabeza != NULL) { printf(\"%d \", cabeza-\u003evalor); cabeza = cabeza-\u003esiguiente; } printf(\"\\n\"); } void recorrer_atras(Nodo *cola) { printf(\"Recorrido hacia atras:\\n\"); while (cola != NULL) { printf(\"%d \", cola-\u003evalor); cola = cola-\u003eanterior; } printf(\"\\n\"); } void liberar_lista(Nodo *cabeza) { while (cabeza != NULL) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esiguiente; free(tmp); } } int main(void) { Nodo *lista = NULL; lista = insertar_final(lista, 10); lista = insertar_final(lista, 20); lista = insertar_final(lista, 30); recorrer_adelante(lista); recorrer_atras(obtener_ultimo(lista)); liberar_lista(lista); return 0; } Salida esperada 1 2 3 4 Recorrido hacia adelante: 10 20 30 Recorrido hacia atras: 30 20 10 Complejidad y puntos clave insertar_final: O(n) por recorrer hasta la cola. recorrer_adelante y recorrer_atras: O(n). Espacio extra: O(1) aparte de los nodos. Errores frecuentes No actualizar anterior al enlazar el nuevo nodo. Perder la referencia de cabeza. No liberar la memoria al final. Aplicación práctica Este patrón se usa mucho en problemas actuales de procesamiento de eventos (logs, colas de cambios, historicos) donde necesitas navegar hacia delante y hacia atras en la secuencia.\nSiguiente ejercicio recomendado Árbol binario en C: ejercicio resuelto de inserción y búsqueda Lista circular en C: ejercicio resuelto con inserción y recorrido fread y fwrite en C: ejercicio resuelto con archivo binario Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio de lista doblemente enlazada en C es avanzado? Es nivel intermedio-alto. Si ya dominas punteros basicos, es un siguiente paso natural.\n¿Dónde hay más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C. También puedes leerlo en Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Aprende lista doblemente enlazada en C con un ejercicio resuelto: inserción al final, recorrido en ambos sentidos y liberacion de memoria sin fugas.",
+    "tags": [
+      "Lista Doblemente Enlazada en C",
+      "Lista Doblemente Enlazada C Ejercicio Resuelto",
+      "Estructuras De Datos en C",
+      "Punteros en C",
+      "Memoria Dinamica en C",
+      "C Avanzado"
+    ],
+    "title": "Lista doblemente enlazada en C: ejercicio resuelto con inserción y recorrido",
+    "uri": "/ejercicios/lista-doblemente-enlazada-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Matrices en C",
+    "uri": "/tags/matrices-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Matrices en C Ejercicios Resueltos",
+    "uri": "/tags/matrices-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Matrices en C: ejercicio resuelto Si llegas buscando matrices en C ejercicios resueltos, este es uno de los ejercicios más utiles para dominar índices en arrays bidimensionales.\nEnunciado Dada una matriz cuadrada 3x3, calcula:\nsuma de diagonal principal, suma de diagonal secundaria. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e int main(void) { int m[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} }; int suma_principal = 0; int suma_secundaria = 0; for (int i = 0; i \u003c 3; i++) { suma_principal += m[i][i]; suma_secundaria += m[i][2 - i]; } printf(\"Diagonal principal: %d\\n\", suma_principal); printf(\"Diagonal secundaria: %d\\n\", suma_secundaria); return 0; } Salida esperada 1 2 Diagonal principal: 15 Diagonal secundaria: 15 Caso borde recomendado Prueba también una matriz 1x1:\n1 2 3 { {7} } Diagonal principal: 7 Diagonal secundaria: 7 Errores frecuentes Intercambiar fórmulas: principal es m[i][i] y secundaria es m[i][n - 1 - i]. Fijar el 2 - i solo para 3x3 y romper el código al cambiar de tamaño. No reiniciar acumuladores en 0 cuando repites pruebas. Usar una matriz no cuadrada y esperar diagonales equivalentes. Complejidad temporal y espacial Tiempo: O(n) para calcular ambas diagonales en una matriz n x n. Espacio extra: O(1), solo variables acumuladoras. Aplicación práctica Este patrón de recorrido aparece en análisis de tablas, transformaciones de datos y problemas de optimizacion matricial.\nSiguiente ejercicio recomendado Cadenas en C: ejercicios resueltos con strlen, strcpy y strcmp Ficheros en C: ejercicio resuelto para contar lineas y caracteres Ordenacion burbuja en C: ejercicio resuelto paso a paso Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio de matrices en C es para principiantes? Sí, es nivel basico-intermedio y muy bueno para consolidar bucles e índices.\n¿Dónde seguir con más ejercicios resueltos? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de matrices en C para calcular suma de diagonal principal y secundaria en matrices cuadradas.",
+    "tags": [
+      "Matrices en C",
+      "Matrices en C Ejercicios Resueltos",
+      "Diagonal Principal Y Secundaria",
+      "Arrays Bidimensionales en C",
+      "C Basico"
+    ],
+    "title": "Matrices en C: ejercicio resuelto de diagonal principal y secundaria",
+    "uri": "/ejercicios/matrices-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Paso Por Referencia en C",
+    "uri": "/tags/paso-por-referencia-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros en C Ejercicios Resueltos",
+    "uri": "/tags/punteros-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Punteros en C: ejercicio resuelto Si has llegado por punteros en C ejercicios resueltos, este ejemplo ataca una base real: modificar valores desde una función con paso por referencia.\nEnunciado Crea una función intercambiar que reciba dos enteros por referencia y cambie sus valores. Muestra el estado antes y después.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e void intercambiar(int *a, int *b) { int tmp = *a; *a = *b; *b = tmp; } int main(void) { int x = 12; int y = 45; printf(\"Antes: x=%d, y=%d\\n\", x, y); intercambiar(\u0026x, \u0026y); printf(\"Despues: x=%d, y=%d\\n\", x, y); return 0; } Salida esperada 1 2 Antes: x=12, y=45 Despues: x=45, y=12 Caso borde recomendado Prueba también valores iguales:\n1 2 Antes: x=7, y=7 Despues: x=7, y=7 Sirve para confirmar que la función es correcta incluso cuando no hay cambio visible.\nQué aprendes en este ejercicio operador direccion \u0026, desreferenciacion con *, paso por referencia en C, modificacion de datos fuera de la función. Errores frecuentes Pasar x en lugar de \u0026x. Usar punteros no inicializados. Confundir *p (valor) con p (direccion). Llamar a la función con punteros NULL en versiones más generales. Complejidad temporal y espacial Tiempo: O(1). Espacio extra: O(1). Aplicación práctica Este patrón se usa constantemente en codigo de alto rendimiento y en sistemas donde necesitas modificar estructuras grandes sin copiar memoria.\nSiguiente ejercicio recomendado Struct en C: ejercicio resuelto con arrays de estructuras Malloc y free en C: ejercicio resuelto de memoria dinamica Búsqueda binaria en C: ejercicio resuelto en array ordenado Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para empezar con punteros en C? Sí. Es uno de los primeros ejercicios que conviene dominar antes de memoria dinamica y listas enlazadas.\n¿Dónde seguir practicando? Puedes seguir en Programación en C en 100 ejercicios resueltos y leerlo también en Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de punteros en C para dominar paso por referencia, intercambio de variables y errores tipicos con punteros.",
+    "tags": [
+      "Punteros en C",
+      "Punteros en C Ejercicios Resueltos",
+      "Paso Por Referencia en C",
+      "Intercambiar Variables C",
+      "C Intermedio"
+    ],
+    "title": "Punteros en C: ejercicios resueltos de paso por referencia",
+    "uri": "/ejercicios/punteros-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Recursividad en C",
+    "uri": "/tags/recursividad-en-c/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Recursividad en C Ejercicio Resuelto",
+    "uri": "/tags/recursividad-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios resueltos en C (paso a paso)",
+    "content": "Recursividad en C: ejercicio resuelto Si buscas recursividad en C ejercicio resuelto, este ejemplo te enseña una estructura clásica: caso base, llamada recursiva y trabajo al volver.\nEnunciado Implementa una función recursiva que imprima una cadena al revés sin usar arrays auxiliares.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 #include \u003cstdio.h\u003e void imprimir_reves(const char *s) { if (*s == '\\0') { return; } imprimir_reves(s + 1); putchar(*s); } int main(void) { const char *texto = \"programacion\"; printf(\"Original: %s\\n\", texto); printf(\"Invertida: \"); imprimir_reves(texto); putchar('\\n'); return 0; } Salida esperada 1 2 Original: programacion Invertida: noicamargorp Caso borde recomendado Prueba dos entradas mínimas:\n1 2 3 4 5 Original: \"\" Invertida: \"\" Original: \"A\" Invertida: A Sirve para verificar que el caso base corta la recursión correctamente.\nCómo pensar la recursión aquí caso base: cadena vacía, avance: s + 1, fase de retorno: imprimir carácter actual. Errores frecuentes Olvidar el caso base. Crear recursión infinita. Confundir el orden de impresión (antes o después de llamar). No avanzar el puntero (s + 1) y quedarse en la misma dirección de memoria. Complejidad temporal y espacial Tiempo: O(n), se visita cada carácter una vez. Espacio extra: O(n) por la pila de llamadas recursivas. Aplicación práctica La recursión sigue apareciendo en parseo de estructuras jerárquicas, navegación de árboles y análisis de datos anidados.\nSiguiente ejercicio recomendado Búsqueda binaria en C: ejercicio resuelto en array ordenado Cola en C (queue): ejercicio resuelto con array circular Ficheros en C: ejercicio resuelto para contar lineas y caracteres Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo usar recursión en C y cuándo no? Úsala cuando el problema sea naturalmente recursivo. Para casos lineales simples, una versión iterativa suele ser más eficiente.\n¿Dónde hay más ejercicios de recursión y C? En Programación en C en 100 ejercicios resueltos y en la sección de Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de recursividad en C para invertir cadenas, entender caso base y evitar errores frecuentes de recursión.",
+    "tags": [
+      "Recursividad en C",
+      "Recursividad en C Ejercicio Resuelto",
+      "Invertir Cadena en C",
+      "Funciones Recursivas en C",
+      "C Intermedio"
+    ],
+    "title": "Recursividad en C: ejercicio resuelto para invertir una cadena",
+    "uri": "/ejercicios/recursividad-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Programación en C en 100 ejercicios resueltos",
+    "content": "Código del libro C en 100 ejercicios Accede al código completo del libro en el formato que prefieras y ponlo en marcha al instante.\nRepositorio en GitHub Descarga en ZIP Plantilla Devcontainer Erratas y sugerencias ¿Quieres seguir aprendiendo? Apúntate a la newsletter: tecnología, educación, programación, cultura de internet y herramientas útiles.",
+    "description": "Descarga el repositorio, ZIP y Devcontainer del libro Programación en C en 100 ejercicios resueltos.",
+    "tags": [],
+    "title": "Código del libro",
+    "uri": "/c100/code/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Programación en C en 100 ejercicios resueltos",
+    "content": "¿Has visto algo raro en el libro? Gracias por ayudar a mejorar Programación en C en 100 Ejercicios Resueltos. Aquí verás correcciones y podrás reportar nuevas erratas.\nReportar una errata Abre una incidencia con capítulo, página y detalle. Así todos los lectores pueden seguirla y comentar.\nAbrir issue en GitHub ← Volver a la página principal",
+    "description": "Consulta y reporta erratas del libro Programación en C en 100 ejercicios resueltos.",
+    "tags": [],
+    "title": "Erratas",
+    "uri": "/c100/erratas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Programación en C en 100 ejercicios resueltos",
+    "content": "¡Gracias por tu interés! Tu envío se ha procesado correctamente. Aquí tienes los recursos del pack por si el correo se retrasa o lo pierdes.\nChuleta A4 de Lenguaje C (PDF) Plantilla Devcontainer Repositorio completo de ejercicios Apúntate a la newsletter Tecnología, educación, programación, cultura de internet y herramientas útiles.\n← Volver a la página principal",
+    "description": "Accede de nuevo a la chuleta, Devcontainer y ejercicios del libro Programación en C en 100 ejercicios resueltos.",
+    "tags": [],
+    "title": "Gracias",
+    "uri": "/c100/gracias/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Programación en C en 100 ejercicios resueltos",
+    "content": "Tu pack del lector está listo Recibe por email la chuleta A4 del Lenguaje C, la plantilla con tests y el Devcontainer preparado.\nNombre\nCorreo electrónico *\nQuiero el pack Recibirás un correo con los enlaces. Si no lo ves, revisa spam o visita la página de Gracias. Al enviar aceptas la Política de Privacidad.\nMás recursos Repositorio del código Erratas y sugerencias Suscribirte a la newsletter Error Ha ocurrido un problema.\nCerrar",
+    "description": "Recibe la chuleta de C, plantilla de proyecto y Devcontainer del libro Programación en C en 100 ejercicios resueltos.",
+    "tags": [],
+    "title": "Pack del lector – Programación en C en 100 ejercicios",
+    "uri": "/c100/pack/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "Programación en C en 100 ejercicios resueltos Aprende C haciendo: 100 ejercicios explicados paso a paso ¿Quieres dominar C de verdad? Este libro te enseña programación práctica desde los fundamentos hasta técnicas avanzadas. Cada ejercicio incluye enunciado claro, solución razonada y explicación detallada.\n📚 Comprar en Amazon 🇪🇸 📖 Versión en Español Programación en C Comprar en Amazon.es 🇪🇸 🇺🇸 🇬🇧 📄 English Version Programming in C Buy on Amazon.com 🇺🇸 Puedes leerlo también con Kindle Unlimited (gratis con suscripción activa o periodo de prueba).\nLo que aprenderás Fundamentos sólidos de C Variables, tipos de datos y operadores para entender cómo trabaja C desde la base.\nControl de flujo y lógica Condicionales y bucles (`if`, `switch`, `for`, `while`) para resolver problemas reales paso a paso.\nFunciones y recursividad Descomposición de problemas, reutilización de código y técnicas recursivas con criterio.\nPunteros y memoria dinámica Gestión de direcciones, `malloc/free` y buenas prácticas para evitar errores comunes.\nArrays, cadenas y estructuras Modelado de datos con arrays, strings y `struct` para construir soluciones más completas.\nFicheros y entrada/salida Lectura y escritura en archivos, además de manejo de recursos para programas robustos.\nNo es solo teoría: es práctica real Cada ejercicio está diseñado para que escribas código desde el primer día. No solo lees, programas y aprendes haciendo.\n🎁 Recursos complementarios incluidos Además del libro, tienes acceso a recursos gratuitos que te ayudarán a aprender más rápido:\nRecursos disponibles 🎁 📦 Pack del lector Recibe gratis por email:\nChuleta A4 del Lenguaje C en PDF Plantilla de proyecto con tests Devcontainer configurado para VS Code Solicitar pack gratuito 🐙📁 💻 Código fuente Accede al código completo de los 100 ejercicios:\nRepositorio en GitHub Descarga directa en ZIP Plantilla lista para usar Ver código en GitHub 📄🔎 🐛 Erratas y correcciones ¿Has encontrado algún error en el libro?\nReporta erratas Consulta correcciones publicadas Mantén tu libro actualizado Ver erratas ¿Te gustó el libro? Apúntate a la newsletter: tecnología, educación, programación, cultura de internet y herramientas útiles.\nEjercicios resueltos de C para empezar hoy Si quieres practicar antes de comprar, aquí tienes ejercicios resueltos de programación en C por temas clave:\nPunteros en C: ejercicios resueltos Recursividad en C: ejercicios resueltos Pila en C (stack): ejercicio resuelto Cola en C (queue): ejercicio resuelto Lista simplemente enlazada en C: ejercicio resuelto Lista doblemente enlazada en C: ejercicio resuelto Matrices en C: ejercicios resueltos Ficheros en C: ejercicios resueltos Ver todos los ejercicios de C Si prefieres la ruta completa con progresión guiada, puedes conseguir el libro en Amazon y leerlo también con Kindle Unlimited.",
+    "description": "Aprende programación en C con 100 ejercicios explicados paso a paso. Enunciados claros, soluciones razonadas y recursos prácticos para avanzar con confianza.",
+    "tags": [],
+    "title": "Programación en C en 100 ejercicios resueltos",
+    "uri": "/c100/index.html"
+  }
+]
