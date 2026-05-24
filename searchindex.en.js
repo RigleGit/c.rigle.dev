@@ -186,6 +186,14 @@ var relearn_searchindex = [
     "uri": "/en/c100/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Pointers \u0026 memory",
+    "uri": "/en/ejercicios/punteros-memoria/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
     "content": "Inheritance in C with composition: solved exercise If you are searching for inheritance in C, the practical approach is composition plus function pointers, since C has no native inheritance model.\nThis pattern lets you model simple hierarchies and runtime behavior in plain C.\nProblem statement Model a basic hierarchy:\nbase type Animal with name and speak behavior, Dog and Cat types that extend Animal through composition, iterate over an Animal* array and execute polymorphic behavior. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 #include \u003cstdio.h\u003e typedef struct Animal Animal; typedef void (*SpeakFn)(const Animal *); struct Animal { const char *name; SpeakFn speak; }; typedef struct { Animal base; int energy; } Dog; typedef struct { Animal base; int lives; } Cat; void dog_speak(const Animal *a) { const Dog *d = (const Dog *)a; printf(\"Dog %s: woof (energy=%d)\\n\", d-\u003ebase.name, d-\u003eenergy); } void cat_speak(const Animal *a) { const Cat *c = (const Cat *)a; printf(\"Cat %s: meow (lives=%d)\\n\", c-\u003ebase.name, c-\u003elives); } Dog dog_create(const char *name, int energy) { Dog d; d.base.name = name; d.base.speak = dog_speak; d.energy = energy; return d; } Cat cat_create(const char *name, int lives) { Cat c; c.base.name = name; c.base.speak = cat_speak; c.lives = lives; return c; } int main(void) { Dog d = dog_create(\"Toby\", 80); Cat c = cat_create(\"Misu\", 9); Animal *group[] = {(Animal *)\u0026d, (Animal *)\u0026c}; int n = (int)(sizeof(group) / sizeof(group[0])); for (int i = 0; i \u003c n; i++) { group[i]-\u003espeak(group[i]); } return 0; } Expected output 1 2 Dog Toby: woof (energy=80) Cat Misu: meow (lives=9) Common mistakes Copying only the base type instead of using pointers to composed objects. Forgetting to initialize the function pointer. Casting between incompatible types. Trying to replicate full OOP inheritance complexity in C when not needed. Practical use This pattern is useful for:\ncallback-driven engines and libraries, plugin systems with a shared interface, reducing coupling across modules. It is a practical design skill for systems-level C code.\nRecommended next exercise Classes in C with struct: solved modular design exercise Struct in C: solved exercise with arrays of structures Pointer to pointer in C: solved exercise with reference updates All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Does C have native inheritance? No. In C, inheritance-like design is simulated with composition, pointers, and function tables or callbacks.\nWhen should I use function pointers? When you need swappable runtime behavior, such as strategy patterns, callbacks, or driver abstractions.\nCan this pattern fully replace OOP? Not fully. C does not provide all OOP abstractions, but this approach covers many practical modular-design cases.",
     "description": "Solved inheritance-style exercise in C using composition and function pointers to simulate polymorphic behavior.",
@@ -218,14 +226,6 @@ var relearn_searchindex = [
     ],
     "title": "If else in C: solved exercises with nested conditions",
     "uri": "/en/ejercicios/fundamentos/if-else-en-c-ejercicios-resueltos/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Pointers \u0026 memory",
-    "uri": "/en/ejercicios/punteros-memoria/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Resources \u0026 guides",
@@ -359,6 +359,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
+    "content": "calloc in C: solved exercise step by step If you searched for a solved calloc exercise in C, here is the practical difference between calloc and malloc, and when to use each one.\ncalloc allocates memory for an array of n elements of size bytes each and initializes all of them to zero, unlike malloc which leaves the content undefined.\ncalloc signature 1 void *calloc(size_t n, size_t size); n — number of elements. size — size in bytes of each element. Returns a pointer to the allocated block, or NULL on failure. Problem statement Allocate a dynamic array of 5 integers with calloc and print the initial values (all must be 0). Fill it with the squares of 1 to 5 and print the result. Free the memory with free. Then allocate the same array with malloc and observe that the initial values are undefined. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int n = 5; /* --- calloc: memory initialized to zero --- */ int *arr_calloc = calloc(n, sizeof(int)); if (arr_calloc == NULL) { fprintf(stderr, \"Error: calloc failed\\n\"); return 1; } printf(\"Initial values with calloc:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } for (int i = 0; i \u003c n; i++) { arr_calloc[i] = (i + 1) * (i + 1); } printf(\"\\nAfter filling:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } free(arr_calloc); /* --- malloc: memory NOT initialized --- */ int *arr_malloc = malloc(n * sizeof(int)); if (arr_malloc == NULL) { fprintf(stderr, \"Error: malloc failed\\n\"); return 1; } printf(\"\\nInitial values with malloc (undefined):\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_malloc[%d] = %d\\n\", i, arr_malloc[i]); } free(arr_malloc); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Initial values with calloc: arr_calloc[0] = 0 arr_calloc[1] = 0 arr_calloc[2] = 0 arr_calloc[3] = 0 arr_calloc[4] = 0 After filling: arr_calloc[0] = 1 arr_calloc[1] = 4 arr_calloc[2] = 9 arr_calloc[3] = 16 arr_calloc[4] = 25 Initial values with malloc (undefined): arr_malloc[0] = \u003cgarbage_value\u003e ... malloc vs calloc vs realloc Function Initializes to 0 Resizes Typical use malloc(n) No No temporary buffer, single struct calloc(n, size) Yes No arrays where zero is meaningful realloc(ptr, n) No Yes arrays that grow dynamically Common mistakes Not checking if calloc returns NULL (out of memory). Forgetting free, causing a memory leak. Assuming malloc initializes to zero: it never guarantees that. Passing parameters in the wrong order: first n (count), then size (bytes per element). Practical use calloc is preferred over malloc when:\na zero initial value is meaningful (counters, empty matrices, byte buffers), you want to avoid accidentally reading garbage during development. Recommended next exercise Malloc and free in C: solved exercise malloc and realloc in C: solved exercise Function pointers in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is calloc slower than malloc? On most systems calloc can be as fast or even faster than malloc + memset because the OS may supply already-zeroed pages. In practice the difference is negligible for small arrays.\nCan I use realloc on memory allocated with calloc? Yes. realloc works with any pointer obtained from malloc, calloc, or a previous realloc call. The new block is not zero-initialized.\nWhen is calloc strictly required? When code assumes array elements are zero before any write. If you always write before reading, malloc is sufficient.",
+    "description": "Solved calloc exercise in C: differences from malloc, zero initialization, and when to use each dynamic memory allocation function.",
+    "tags": [
+      "Intermediate",
+      "Dynamic-Memory"
+    ],
+    "title": "calloc in C: solved exercise with zero-initialized dynamic array",
+    "uri": "/en/ejercicios/punteros-memoria/calloc-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "While and do while in C: solved exercises step by step If you are looking for while and do while exercises in C, this post gives solved examples with practical loop scenarios.\nCore difference:\nwhile checks the condition before running, do while runs at least once and then checks the condition. Problem statement Solve these 4 mini exercises:\nread a positive number using do while, count digits of a number using while, sum values until 0 is entered using while, build a simple menu loop using do while. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e int read_positive(void) { int n; do { printf(\"Enter a positive number: \"); scanf(\"%d\", \u0026n); } while (n \u003c= 0); return n; } int count_digits(int n) { int count = 0; if (n == 0) return 1; if (n \u003c 0) n = -n; while (n \u003e 0) { n /= 10; count++; } return count; } int sum_until_zero(void) { int sum = 0; int value; printf(\"Enter values (0 to stop):\\n\"); while (1) { scanf(\"%d\", \u0026value); if (value == 0) break; sum += value; } return sum; } void simple_menu(void) { int option; do { printf(\"\\nMenu:\\n\"); printf(\"1) Say hello\\n\"); printf(\"2) Show info\\n\"); printf(\"0) Exit\\n\"); printf(\"Option: \"); scanf(\"%d\", \u0026option); if (option == 1) { printf(\"Hello, still practicing C.\\n\"); } else if (option == 2) { printf(\"Do while guarantees at least one execution.\\n\"); } } while (option != 0); } int main(void) { int positive = read_positive(); printf(\"Valid number: %d\\n\", positive); printf(\"Digits of %d: %d\\n\", positive, count_digits(positive)); int sum = sum_until_zero(); printf(\"Total sum: %d\\n\", sum); simple_menu(); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Enter a positive number: -3 Enter a positive number: 145 Valid number: 145 Digits of 145: 3 Enter values (0 to stop): 5 10 -2 0 Total sum: 13 Menu: 1) Say hello 2) Show info 0) Exit ... Common mistakes Using while when you need the block to run at least once. Forgetting to update the loop control variable. Skipping input validation in console loops. Using break in the wrong place and breaking expected flow. Practical use while and do while are common in:\nconsole input validation, interactive menus, repeated reads until a sentinel value appears. These structures are foundational in user-driven C programs.\nRecommended next exercise For loop in C: solved exercises with accumulators and counters If else in C: solved exercises with nested conditions Arrays and vectors in C: solved exercises All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When should I use while vs do while in C? Use while when the condition may fail immediately. Use do while when you must execute at least once.\nHow do I avoid infinite loops? Update control variables every iteration and make sure the exit condition is reachable.\nIs menu practice with do while useful? Yes. It combines control flow, user input, and validation, which are core C skills.",
     "description": "Solved while and do while exercises in C with input validation, digit counting, and condition-driven loops.",
@@ -419,6 +430,28 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
+    "content": "Function pointers in C: solved exercise step by step If you searched for a solved function pointer exercise in C, here are the three most common uses: direct call, function table, and callback in qsort.\nA function pointer stores the address of a function with a specific signature. It lets you choose which function to invoke at runtime without needing switch or if-else.\nFunction pointer syntax 1 return_type (*name)(param_type1, param_type2, ...); For example, a pointer to a function that takes two int arguments and returns int:\n1 int (*operation)(int, int); Problem statement Define four basic arithmetic operations as separate functions. Call one of them through a function pointer. Create a table (array) of function pointers to iterate over all operations. Use a function pointer as a callback in qsort to sort an integer array in descending order. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e /* 1. Arithmetic functions */ int add(int a, int b) { return a + b; } int subtract(int a, int b) { return a - b; } int multiply(int a, int b) { return a * b; } int divide(int a, int b) { return (b != 0) ? a / b : 0; } /* 4. Comparator for qsort: descending order */ int compare_desc(const void *p1, const void *p2) { int a = *(const int *)p1; int b = *(const int *)p2; return b - a; /* b-a = descending; a-b = ascending */ } int main(void) { int x = 12, y = 4; /* 2. Call through a pointer */ int (*op)(int, int) = add; printf(\"Pointer to add: %d + %d = %d\\n\", x, y, op(x, y)); op = multiply; printf(\"Pointer to multiply: %d * %d = %d\\n\", x, y, op(x, y)); /* 3. Function pointer table */ int (*table[])(int, int) = { add, subtract, multiply, divide }; const char *names[] = { \"add\", \"subtract\", \"multiply\", \"divide\" }; printf(\"\\nOperation table with x=%d, y=%d:\\n\", x, y); for (int i = 0; i \u003c 4; i++) { printf(\" %s -\u003e %d\\n\", names[i], table[i](x, y)); } /* 4. qsort with callback */ int data[] = { 5, 1, 8, 3, 9, 2 }; int n = (int)(sizeof(data) / sizeof(data[0])); qsort(data, n, sizeof(int), compare_desc); printf(\"\\nSorted descending: \"); for (int i = 0; i \u003c n; i++) { printf(\"%d \", data[i]); } printf(\"\\n\"); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 Pointer to add: 12 + 4 = 16 Pointer to multiply: 12 * 4 = 48 Operation table with x=12, y=4: add -\u003e 16 subtract -\u003e 8 multiply -\u003e 48 divide -\u003e 3 Sorted descending: 9 8 5 3 2 1 Common mistakes Forgetting parentheses in the declaration: int *f(int) declares a function returning int*, not a function pointer. Mismatching the pointer signature with the assigned function’s signature. In qsort, using a plain subtraction (return a - b) can overflow with large integers; the safe form is return (a \u003e b) - (a \u003c b). Calling a NULL function pointer without checking. Practical use Function pointers appear in:\nsorting callbacks (qsort, bsearch), plugin systems or interchangeable strategies, state machines where each state has its own processing function, C APIs that accept user-supplied functions (signals, threads). Recommended next exercise calloc in C: solved exercise Pointer to pointer in C: solved exercise Quicksort in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the difference between (*op)(x, y) and op(x, y)? Both forms are equivalent in C. The first explicitly dereferences the pointer; the second uses the shorthand notation accepted since C89. The second form is more common in modern code.\nCan I pass a function pointer as an argument? Yes. That is the callback mechanism: void apply(int a, int b, int (*f)(int, int)) { printf(\"%d\\n\", f(a, b)); }.\nAre function pointers safe? They are safe as long as they point to a valid function. The risks are calling a NULL pointer without checking, or assigning a function with an incompatible signature (undefined behavior).",
+    "description": "Solved function pointer exercise in C: declaration, assignment, direct call, array of function pointers, and callback with qsort.",
+    "tags": [
+      "Intermediate",
+      "Pointers"
+    ],
+    "title": "Function pointers in C: solved exercise with callbacks",
+    "uri": "/en/ejercicios/punteros-memoria/punteros-a-funciones-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Functions in C: solved exercises step by step If you searched for C functions solved exercises, here are the patterns that appear in any introductory C exam.\nThe goal is to master four key situations: void functions, functions that return a value, pass by value, and pass by reference using pointers.\nProblem statement Solve these 4 mini exercises using functions:\nprint a greeting (void function with no parameters), compute the square of a number (function with return value), swap two integers (pass by reference with pointers), compute the factorial of n iteratively. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 #include \u003cstdio.h\u003e /* 1. Void function: returns nothing */ void greet(void) { printf(\"Hello from a C function\\n\"); } /* 2. Function with return value: returns the square */ int square(int x) { return x * x; } /* 3. Pass by reference: swaps two integers */ void swap(int *a, int *b) { int tmp = *a; *a = *b; *b = tmp; } /* 4. Iterative function: factorial */ long factorial(int n) { long result = 1; for (int i = 2; i \u003c= n; i++) { result *= i; } return result; } int main(void) { greet(); int n = 7; printf(\"square(%d) = %d\\n\", n, square(n)); int x = 3, y = 9; swap(\u0026x, \u0026y); printf(\"after swap: x=%d, y=%d\\n\", x, y); printf(\"factorial(6) = %ld\\n\", factorial(6)); return 0; } Expected output 1 2 3 4 Hello from a C function square(7) = 49 after swap: x=9, y=3 factorial(6) = 720 Common mistakes Forgetting to declare the function prototype before main when it is defined afterward. Confusing pass by value with pass by reference: modifying the local parameter does not change the original variable. Omitting return in non-void functions. Using void as the return type when the function actually returns something. Practical use Functions are the foundation of any real C program:\nthey split logic into reusable blocks, they allow pass by reference to modify the caller’s variables, they make unit testing and maintenance much easier. Mastering pass by reference with pointers is essential before working with arrays and data structures.\nRecommended next exercise Switch case in C: solved exercise Pointers in C: solved exercises Recursion in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When should I use void as the return type? When the function does not need to return any value to the caller: it prints output, modifies variables by reference, or performs an action with no result.\nWhat is the difference between pass by value and pass by reference? Pass by value copies the data; the function works on the copy and the original is unchanged. Pass by reference passes the memory address (\u0026variable) and the function can modify the original through the pointer.\nCan a C function return more than one value? Not directly. The usual approach is to return one value via return and the rest by reference (pointers), or group them in a struct.",
+    "description": "Solved exercises on functions in C: declaration, pass by value, pass by reference with pointers, and functions that return a value.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "Functions in C: solved exercises step by step",
+    "uri": "/en/ejercicios/fundamentos/funciones-en-c-ejercicios-resueltos/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Shell sort method in C If you are looking for a shell sort in C solved exercise, this post explains the full logic, not just the final code.\nShell sort improves insertion sort by using gaps. Instead of comparing only adjacent values, it compares values that are farther apart and progressively reduces the gap until it reaches 1. It is an in-place algorithm and often performs better than bubble sort or insertion sort on medium-sized arrays.\nProblem statement Implement shell sort to sort an integer array in ascending order.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e void shell_sort(int a[], int n) { for (int gap = n / 2; gap \u003e 0; gap /= 2) { for (int i = gap; i \u003c n; i++) { int tmp = a[i]; int j = i; while (j \u003e= gap \u0026\u0026 a[j - gap] \u003e tmp) { a[j] = a[j - gap]; j -= gap; } a[j] = tmp; } } } int main(void) { int a[] = {29, 10, 14, 37, 13, 5, 42, 8}; int n = (int)(sizeof(a) / sizeof(a[0])); shell_sort(a, n); for (int i = 0; i \u003c n; i++) { printf(\"%d \", a[i]); } printf(\"\\n\"); return 0; } Expected output 1 5 8 10 13 14 29 37 42 Common mistakes Reducing gap incorrectly and causing infinite loops. Forgetting the temporary value (tmp) before shifting values. Using a wrong while condition and overwriting data. Assuming fixed complexity: runtime depends on the chosen gap sequence. Practical use Shell sort is useful when:\nyou want a simple implementation, you need better average behavior than insertion sort with low memory overhead, you are practicing sorting techniques before moving to more advanced algorithms. Recommended next exercise Insertion sort in C: solved exercise Binary insertion sort in C: solved exercise Merge sort in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is shell sort better than insertion sort in C? In many practical scenarios, yes. Large initial gaps reduce disorder early and make the final pass cheaper.\nWhat is shell sort complexity? It depends on the gap sequence. With basic n/2 gaps, worst-case behavior can approach O(n²), but practical results are often better than insertion sort.\nHow should I practice shell sort effectively? Trace two passes manually (gap = n/2 and gap = n/4) and compare the number of shifts with insertion sort on the same input.",
     "description": "Solved shell sort exercise in C with gap sequence, complete implementation, and practical comparison with insertion sort.",
@@ -439,6 +472,17 @@ var relearn_searchindex = [
     ],
     "title": "Binary tree in C: solved insertion and search exercise",
     "uri": "/en/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Switch case in C: solved exercise step by step If you searched for a solved switch case exercise in C, here is the most common pattern: an interactive menu with several options and a default case for invalid input.\nswitch is the natural alternative to a chained if-else when comparing the same integer (or character) variable against multiple constant values.\nProblem statement Write a program that implements a basic console calculator. The user selects an operation from a numbered menu (1–4) and enters two operands. The program prints the result and warns on invalid options or division by zero.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include \u003cstdio.h\u003e int main(void) { int option; double a, b; printf(\"=== Calculator ===\\n\"); printf(\"1. Add\\n\"); printf(\"2. Subtract\\n\"); printf(\"3. Multiply\\n\"); printf(\"4. Divide\\n\"); printf(\"Option: \"); scanf(\"%d\", \u0026option); printf(\"Enter two numbers: \"); scanf(\"%lf %lf\", \u0026a, \u0026b); switch (option) { case 1: printf(\"%.2f + %.2f = %.2f\\n\", a, b, a + b); break; case 2: printf(\"%.2f - %.2f = %.2f\\n\", a, b, a - b); break; case 3: printf(\"%.2f * %.2f = %.2f\\n\", a, b, a * b); break; case 4: if (b == 0.0) { printf(\"Error: division by zero\\n\"); } else { printf(\"%.2f / %.2f = %.2f\\n\", a, b, a / b); } break; default: printf(\"Invalid option\\n\"); break; } return 0; } Expected output With inputs 1, 3.0, 4.0:\n1 2 3 4 5 6 7 8 === Calculator === 1. Add 2. Subtract 3. Multiply 4. Divide Option: 1 Enter two numbers: 3.0 4.0 3.00 + 4.00 = 7.00 Common mistakes Forgetting break at the end of each case: without it, execution falls through to the next case. Using non-constant or floating-point expressions as case labels (does not compile). Omitting default and leaving invalid input unhandled. Trying to use switch with strings: it only works with integer types (int, char, enum). When to use switch instead of if-else Situation Prefer Comparing one variable against many constants switch Range checks or complex expressions if-else Comparing strings if-else with strcmp Two or three branches either Practical use switch appears in:\nconsole menus and state machines, command or keystroke processing, decoding error codes or operation codes. Recommended next exercise Functions in C: solved exercises If else in C: solved exercises All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is fall-through in switch? If there is no break at the end of a case, execution continues into the next case even if its label does not match. This can be intentional to share code between cases, but is usually a bug.\nCan switch compare strings in C? No. switch only works with integer types (int, char, short, long, enum). To compare strings use if-else with strcmp.\nIs switch faster than if-else? With many cases, many compilers compile switch as a jump table, which can be faster than a chain of if-else. With few branches the difference is negligible.",
+    "description": "Solved switch-case exercise in C with an interactive menu, multiple cases, default case, and comparison with if-else.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "Switch case in C: solved exercise with interactive menu",
+    "uri": "/en/ejercicios/fundamentos/switch-case-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises",
@@ -471,12 +515,31 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Linear search in C: solved exercise step by step If you searched for a solved linear search exercise in C, here is the full implementation with index return and the element-not-found case.\nLinear search (also called sequential search) scans the array element by element until it finds the target value or reaches the end. It is the simplest search algorithm and the only one that works on unsorted arrays.\nProblem statement Implement linear_search that receives an array, its size, and a target value, and returns the index of the first occurrence or -1 if not found. Test it with a successful search and a value that is not in the array. Also implement linear_search_all that returns every index where the value appears (for repeated elements). C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e /* Returns the index of the first occurrence of target, or -1 if not found */ int linear_search(const int a[], int n, int target) { for (int i = 0; i \u003c n; i++) { if (a[i] == target) { return i; } } return -1; } /* Prints every index where target appears */ void linear_search_all(const int a[], int n, int target) { int found = 0; for (int i = 0; i \u003c n; i++) { if (a[i] == target) { printf(\" Found at index %d\\n\", i); found = 1; } } if (!found) { printf(\" Not found\\n\"); } } int main(void) { int data[] = { 7, 3, 9, 3, 1, 5, 3, 8 }; int n = (int)(sizeof(data) / sizeof(data[0])); /* Successful search */ int idx = linear_search(data, n, 5); printf(\"Search 5: index %d\\n\", idx); /* Failed search */ idx = linear_search(data, n, 42); printf(\"Search 42: index %d (not found)\\n\", idx); /* All occurrences of 3 */ printf(\"All positions of 3:\\n\"); linear_search_all(data, n, 3); return 0; } Expected output 1 2 3 4 5 6 Search 5: index 5 Search 42: index -1 (not found) All positions of 3: Found at index 1 Found at index 3 Found at index 6 Complexity Case Comparisons Complexity Best case (first element) 1 O(1) Average case n/2 O(n) Worst case (last or not found) n O(n) Linear search vs binary search Feature Linear Binary Requires sorted array No Yes Complexity O(n) O(log n) Implementation Very simple Moderate Best for Small or unsorted arrays Large already-sorted arrays Common mistakes Returning 0 instead of -1 when not found: 0 is the valid index of the first element. Using \u003e= instead of \u003c in the loop condition and going out of bounds. Continuing the loop after finding the element when only the first occurrence is needed. Practical use Linear search is used when:\nthe array is unsorted and sorting it is not worth the cost, the array is small (\u003c ~100 elements) and performance difference is irrelevant, you need to find all occurrences of a value, not just the first. Recommended next exercise Binary search in C: solved exercise Bubble sort in C: solved exercise Recursion in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When is linear search better than binary search? When the array is unsorted. Sorting it first would cost O(n log n), which only pays off if you need to run many searches afterward.\nCan linear search work on string arrays? Yes, but you must use strcmp instead of ==: if (strcmp(a[i], target) == 0).\nIs there a standard linear search function in C? Not directly. bsearch from \u003cstdlib.h\u003e performs binary search (requires a sorted array). For linear search you need to implement it manually.",
+    "description": "Solved linear search exercise in C: sequential array traversal, index return, and comparison with binary search.",
+    "tags": [
+      "Beginner",
+      "Search"
+    ],
+    "title": "Linear search in C: solved exercise on unsorted arrays",
+    "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tag :: Beginner",
     "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Dynamic-Memory",
+    "uri": "/en/tags/dynamic-memory/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -507,8 +570,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Resources",
-    "uri": "/en/tags/resources/index.html"
+    "title": "Tag :: Pointers",
+    "uri": "/en/tags/pointers/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Search",
+    "uri": "/en/tags/search/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -517,6 +588,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Resources",
+    "uri": "/en/tags/resources/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -549,22 +628,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Strings",
     "uri": "/en/tags/strings/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Dynamic-Memory",
-    "uri": "/en/tags/dynamic-memory/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -605,14 +668,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Search",
-    "uri": "/en/tags/search/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

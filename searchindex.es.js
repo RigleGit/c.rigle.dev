@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -170,6 +170,14 @@ var relearn_searchindex = [
     "uri": "/ejercicios/arrays-cadenas/matrices-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
+    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones",
+    "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
+    "tags": [],
+    "title": "Punteros y memoria",
+    "uri": "/ejercicios/punteros-memoria/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
     "content": "Herencia en C con composición: ejercicio resuelto Si buscas herencia en C, el enfoque práctico es simularla con composición y punteros a función, porque C no incluye herencia nativa.\nEste patrón te permite modelar jerarquías simples y comportamiento dinámico sin salir de C puro.\nEnunciado Modela una jerarquía básica:\ntipo base Animal con nombre y función hablar, tipo Perro y tipo Gato que “extienden” a Animal por composición, recorrido de un array de Animal* para ejecutar comportamiento polimórfico. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 #include \u003cstdio.h\u003e typedef struct Animal Animal; typedef void (*HablarFn)(const Animal *); struct Animal { const char *nombre; HablarFn hablar; }; typedef struct { Animal base; int energia; } Perro; typedef struct { Animal base; int vidas; } Gato; void perro_hablar(const Animal *a) { const Perro *p = (const Perro *)a; printf(\"Perro %s: guau (energía=%d)\\n\", p-\u003ebase.nombre, p-\u003eenergia); } void gato_hablar(const Animal *a) { const Gato *g = (const Gato *)a; printf(\"Gato %s: miau (vidas=%d)\\n\", g-\u003ebase.nombre, g-\u003evidas); } Perro perro_crear(const char *nombre, int energia) { Perro p; p.base.nombre = nombre; p.base.hablar = perro_hablar; p.energia = energia; return p; } Gato gato_crear(const char *nombre, int vidas) { Gato g; g.base.nombre = nombre; g.base.hablar = gato_hablar; g.vidas = vidas; return g; } int main(void) { Perro p = perro_crear(\"Toby\", 80); Gato g = gato_crear(\"Misu\", 9); Animal *grupo[] = {(Animal *)\u0026p, (Animal *)\u0026g}; int n = (int)(sizeof(grupo) / sizeof(grupo[0])); for (int i = 0; i \u003c n; i++) { grupo[i]-\u003ehablar(grupo[i]); } return 0; } Resultado esperado 1 2 Perro Toby: guau (energía=80) Gato Misu: miau (vidas=9) Errores frecuentes Copiar solo el tipo base en vez de trabajar con punteros al tipo compuesto. Olvidar inicializar el puntero a función y provocar fallo en tiempo de ejecución. Hacer cast de tipos no compatibles. Intentar replicar herencia compleja de POO clásica en C sin necesidad. Aplicación práctica Este patrón se usa para:\ndiseñar motores y librerías con callbacks, modelar plugins y controladores con interfaz común, reducir acoplamiento entre módulos. Es una habilidad útil para C de sistemas y código mantenible.\nSiguiente ejercicio recomendado Clases en C con struct: ejercicio resuelto de diseño modular Struct en C: ejercicio resuelto con arrays de estructuras Puntero a puntero en C: ejercicio resuelto con cambio de referencia Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿La herencia en C existe de forma nativa? No. En C se simula con composición, punteros y funciones para compartir interfaz y comportamiento.\n¿Cuándo merece la pena usar punteros a función? Cuando necesitas comportamiento intercambiable en tiempo de ejecución, por ejemplo estrategias, callbacks o controladores.\n¿Este patrón sustituye por completo a la POO? No. C no ofrece todas las abstracciones de POO, pero este enfoque cubre muchos casos prácticos de diseño modular.",
     "description": "Ejercicio resuelto de herencia en C usando composición y punteros a función para simular comportamiento polimórfico.",
@@ -202,14 +210,6 @@ var relearn_searchindex = [
     ],
     "title": "If else en C: ejercicios resueltos con condicionales anidadas",
     "uri": "/ejercicios/fundamentos/if-else-en-c-ejercicios-resueltos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc",
-    "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
-    "tags": [],
-    "title": "Punteros y memoria",
-    "uri": "/ejercicios/punteros-memoria/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Recursos y guías",
@@ -343,6 +343,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "calloc en C: ejercicio resuelto paso a paso Si buscas un ejercicio de calloc en C resuelto, aquí tienes la diferencia práctica entre calloc y malloc, y cuándo conviene usar cada una.\nLa función calloc reserva memoria para un array de n elementos de size bytes cada uno y los inicializa todos a cero, a diferencia de malloc que deja el contenido sin definir.\nFirma de calloc 1 void *calloc(size_t n, size_t size); n — número de elementos. size — tamaño en bytes de cada elemento. Devuelve un puntero al bloque reservado, o NULL si falla. Enunciado Reserva con calloc un array dinámico de 5 enteros e imprime sus valores iniciales (todos deben ser 0). Rellénalo con los cuadrados de 1 a 5 e imprímelo. Libera la memoria con free. A continuación reserva el mismo array con malloc y observa que los valores iniciales son indefinidos. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int n = 5; /* --- calloc: memoria inicializada a cero --- */ int *arr_calloc = calloc(n, sizeof(int)); if (arr_calloc == NULL) { fprintf(stderr, \"Error: calloc fallo\\n\"); return 1; } printf(\"Valores iniciales con calloc:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } for (int i = 0; i \u003c n; i++) { arr_calloc[i] = (i + 1) * (i + 1); } printf(\"\\nDespues de rellenar:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } free(arr_calloc); /* --- malloc: memoria NO inicializada --- */ int *arr_malloc = malloc(n * sizeof(int)); if (arr_malloc == NULL) { fprintf(stderr, \"Error: malloc fallo\\n\"); return 1; } printf(\"\\nValores iniciales con malloc (indefinidos):\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_malloc[%d] = %d\\n\", i, arr_malloc[i]); } free(arr_malloc); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Valores iniciales con calloc: arr_calloc[0] = 0 arr_calloc[1] = 0 arr_calloc[2] = 0 arr_calloc[3] = 0 arr_calloc[4] = 0 Despues de rellenar: arr_calloc[0] = 1 arr_calloc[1] = 4 arr_calloc[2] = 9 arr_calloc[3] = 16 arr_calloc[4] = 25 Valores iniciales con malloc (indefinidos): arr_malloc[0] = \u003cvalor_basura\u003e ... malloc vs calloc vs realloc Función Inicializa a 0 Redimensiona Uso típico malloc(n) No No buffer temporal, estructura única calloc(n, size) Sí No arrays donde el cero es válido realloc(ptr, n) No Sí arrays que crecen dinámicamente Errores frecuentes No comprobar si calloc devuelve NULL (fallo de memoria). Olvidar free y provocar una fuga de memoria. Asumir que malloc inicializa a cero: nunca lo garantiza. Pasar los parámetros en orden incorrecto: primero n (cantidad), luego size (tamaño por elemento). Aplicación práctica calloc es preferible a malloc cuando:\nel valor inicial cero tiene significado (contadores, matrices vacías, buffers de bytes), se quiere evitar leer basura accidentalmente durante el desarrollo. Siguiente ejercicio recomendado Malloc y free en C: ejercicio resuelto malloc y realloc en C: ejercicio resuelto Punteros a funciones en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿calloc es más lento que malloc? En la mayoría de sistemas calloc puede ser tan rápido o incluso más rápido que malloc + memset porque el sistema operativo puede entregar páginas ya puestas a cero. En la práctica la diferencia es negligible para arrays pequeños.\n¿Puedo usar realloc con memoria reservada con calloc? Sí. realloc funciona con cualquier puntero obtenido de malloc, calloc o una llamada anterior a realloc. El bloque nuevo no está inicializado a cero.\n¿Cuándo es obligatorio usar calloc? Cuando el código asume que los elementos del array valen cero antes de escribirlos. Si siempre vas a escribir antes de leer, malloc basta.",
+    "description": "Ejercicio resuelto de calloc en C: diferencias con malloc, inicialización a cero, y cuándo usar cada función de asignación dinámica de memoria.",
+    "tags": [
+      "Intermedio",
+      "Memoria-Dinamica"
+    ],
+    "title": "calloc en C: ejercicio resuelto con array dinámico inicializado a cero",
+    "uri": "/ejercicios/punteros-memoria/calloc-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "While y do while en C: ejercicios resueltos paso a paso Si buscas ejercicios while do while en C, aquí tienes ejemplos resueltos y explicados con casos reales de práctica.\nLa diferencia principal es esta:\nwhile evalúa la condición antes de ejecutar, do while ejecuta al menos una vez y luego evalúa. Enunciado Resuelve estos 4 mini ejercicios:\npedir un número positivo con do while, contar cuántos dígitos tiene un número con while, sumar números hasta introducir 0 con while, menú de opciones repetitivo con do while. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e int pedir_positivo(void) { int n; do { printf(\"Introduce un número positivo: \"); scanf(\"%d\", \u0026n); } while (n \u003c= 0); return n; } int contar_digitos(int n) { int contador = 0; if (n == 0) return 1; if (n \u003c 0) n = -n; while (n \u003e 0) { n /= 10; contador++; } return contador; } int suma_hasta_cero(void) { int suma = 0; int valor; printf(\"Introduce números (0 para terminar):\\n\"); while (1) { scanf(\"%d\", \u0026valor); if (valor == 0) break; suma += valor; } return suma; } void menu_simple(void) { int opcion; do { printf(\"\\nMenú:\\n\"); printf(\"1) Saludar\\n\"); printf(\"2) Mostrar info\\n\"); printf(\"0) Salir\\n\"); printf(\"Opción: \"); scanf(\"%d\", \u0026opcion); if (opcion == 1) { printf(\"Hola, seguimos practicando C.\\n\"); } else if (opcion == 2) { printf(\"Do while garantiza al menos una ejecución.\\n\"); } } while (opcion != 0); } int main(void) { int positivo = pedir_positivo(); printf(\"Número válido: %d\\n\", positivo); printf(\"Dígitos de %d: %d\\n\", positivo, contar_digitos(positivo)); int suma = suma_hasta_cero(); printf(\"Suma total: %d\\n\", suma); menu_simple(); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Introduce un número positivo: -3 Introduce un número positivo: 145 Número válido: 145 Dígitos de 145: 3 Introduce números (0 para terminar): 5 10 -2 0 Suma total: 13 Menú: 1) Saludar 2) Mostrar info 0) Salir ... Errores frecuentes Usar while cuando necesitas ejecutar el bloque al menos una vez. No actualizar la variable de control dentro del bucle y quedar en ciclo infinito. No validar entradas del usuario en bucles de consola. Romper el flujo con break mal colocado. Aplicación práctica while y do while se usan mucho en:\nvalidación de formularios por consola, menús interactivos, lectura repetitiva de datos hasta condición de fin. Son estructuras básicas para cualquier programa que dependa de entrada del usuario.\nSiguiente ejercicio recomendado For en C: ejercicios resueltos con acumuladores y contadores If else en C: ejercicios resueltos con condicionales anidadas Arreglos y vectores en C: ejercicios resueltos básicos Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo uso while y cuándo do while en C? Usa while cuando la condición puede ser falsa desde el principio. Usa do while cuando quieres ejecutar al menos una vez.\n¿Cómo evito bucles infinitos? Asegúrate de actualizar la variable de control en cada iteración y de que la condición de salida sea alcanzable.\n¿Es importante practicar menús con do while? Sí, porque mezclan lógica de control, entrada de usuario y validación, que son habilidades básicas en C.",
     "description": "Ejercicios resueltos de while y do while en C con validación de entrada, conteo de dígitos y bucles por condición.",
@@ -396,11 +407,33 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
     "uri": "/ejercicios/algoritmos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "Funciones en C: ejercicios resueltos paso a paso Si buscas ejercicios de funciones en C resueltos, aquí tienes los patrones que aparecen en cualquier examen de introducción a C.\nEl objetivo es dominar cuatro situaciones clave: funciones sin retorno, funciones que devuelven un valor, paso por valor y paso por referencia mediante punteros.\nEnunciado Resuelve estos 4 mini ejercicios con funciones:\nimprimir un saludo (función void sin parámetros), calcular el cuadrado de un número (función con retorno), intercambiar dos enteros (paso por referencia con punteros), calcular el factorial de n de forma iterativa. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 #include \u003cstdio.h\u003e /* 1. Función void: no devuelve nada */ void saludar(void) { printf(\"Hola desde una función en C\\n\"); } /* 2. Función con retorno: devuelve el cuadrado */ int cuadrado(int x) { return x * x; } /* 3. Paso por referencia: intercambia dos enteros */ void intercambiar(int *a, int *b) { int tmp = *a; *a = *b; *b = tmp; } /* 4. Función iterativa: factorial */ long factorial(int n) { long resultado = 1; for (int i = 2; i \u003c= n; i++) { resultado *= i; } return resultado; } int main(void) { saludar(); int n = 7; printf(\"cuadrado(%d) = %d\\n\", n, cuadrado(n)); int x = 3, y = 9; intercambiar(\u0026x, \u0026y); printf(\"tras intercambiar: x=%d, y=%d\\n\", x, y); printf(\"factorial(6) = %ld\\n\", factorial(6)); return 0; } Resultado esperado 1 2 3 4 Hola desde una función en C cuadrado(7) = 49 tras intercambiar: x=9, y=3 factorial(6) = 720 Errores frecuentes Olvidar declarar el prototipo de la función antes de main cuando se define después. Confundir paso por valor con paso por referencia: modificar el parámetro local no afecta a la variable original. No poner return en funciones que no son void. Usar void como tipo de retorno cuando la función sí devuelve algo. Aplicación práctica Las funciones son la base de cualquier programa C real:\nseparan la lógica en bloques reutilizables, permiten pasar datos por referencia para modificar variables del llamador, facilitan las pruebas unitarias y el mantenimiento. Dominar el paso por referencia con punteros es imprescindible para trabajar después con arrays y estructuras de datos.\nSiguiente ejercicio recomendado Switch case en C: ejercicio resuelto Punteros en C: ejercicios resueltos Recursividad en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo usar void como tipo de retorno? Cuando la función no necesita devolver ningún valor al llamador: imprime, modifica variables por referencia o realiza una acción sin resultado.\n¿Qué diferencia hay entre paso por valor y paso por referencia? En paso por valor se copia el dato; la función trabaja con la copia y el original no cambia. En paso por referencia se pasa la dirección de memoria (\u0026variable) y la función puede modificar el original a través del puntero.\n¿Se puede devolver más de un valor desde una función en C? No directamente. La solución habitual es devolver uno por return y los demás por referencia (punteros), o agruparlos en un struct.",
+    "description": "Ejercicios resueltos de funciones en C: declaración, paso por valor, paso por referencia con punteros y funciones que devuelven valor.",
+    "tags": [
+      "Principiante",
+      "Fundamentos"
+    ],
+    "title": "Funciones en C: ejercicios resueltos paso a paso",
+    "uri": "/ejercicios/fundamentos/funciones-en-c-ejercicios-resueltos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "Punteros a funciones en C: ejercicio resuelto paso a paso Si buscas un ejercicio de punteros a funciones en C resuelto, aquí tienes los tres usos más comunes: llamada directa, tabla de funciones y callback en qsort.\nUn puntero a función almacena la dirección de una función con una firma concreta. Permite elegir en tiempo de ejecución qué función invocar sin necesidad de switch o if-else.\nFirma de un puntero a función 1 tipo_retorno (*nombre)(tipo_param1, tipo_param2, ...); Por ejemplo, un puntero a función que recibe dos int y devuelve un int:\n1 int (*operacion)(int, int); Enunciado Define cuatro operaciones aritméticas básicas como funciones independientes. Llama a una de ellas a través de un puntero a función. Crea una tabla (array) de punteros a función para recorrer todas las operaciones. Usa un puntero a función como callback en qsort para ordenar un array de enteros de mayor a menor. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e /* 1. Funciones aritméticas */ int sumar(int a, int b) { return a + b; } int restar(int a, int b) { return a - b; } int multiplicar(int a, int b) { return a * b; } int dividir(int a, int b) { return (b != 0) ? a / b : 0; } /* 4. Comparador para qsort: orden descendente */ int comparar_desc(const void *p1, const void *p2) { int a = *(const int *)p1; int b = *(const int *)p2; return b - a; /* b-a = descendente; a-b = ascendente */ } int main(void) { int x = 12, y = 4; /* 2. Llamada a través de puntero */ int (*op)(int, int) = sumar; printf(\"Puntero a sumar: %d + %d = %d\\n\", x, y, op(x, y)); op = multiplicar; printf(\"Puntero a multiplicar: %d * %d = %d\\n\", x, y, op(x, y)); /* 3. Tabla de punteros a función */ int (*tabla[])(int, int) = { sumar, restar, multiplicar, dividir }; const char *nombres[] = { \"suma\", \"resta\", \"mult\", \"div\" }; printf(\"\\nTabla de operaciones con x=%d, y=%d:\\n\", x, y); for (int i = 0; i \u003c 4; i++) { printf(\" %s -\u003e %d\\n\", nombres[i], tabla[i](x, y)); } /* 4. qsort con callback */ int datos[] = { 5, 1, 8, 3, 9, 2 }; int n = (int)(sizeof(datos) / sizeof(datos[0])); qsort(datos, n, sizeof(int), comparar_desc); printf(\"\\nArray ordenado descendente: \"); for (int i = 0; i \u003c n; i++) { printf(\"%d \", datos[i]); } printf(\"\\n\"); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 Puntero a sumar: 12 + 4 = 16 Puntero a multiplicar: 12 * 4 = 48 Tabla de operaciones con x=12, y=4: suma -\u003e 16 resta -\u003e 8 mult -\u003e 48 div -\u003e 3 Array ordenado descendente: 9 8 5 3 2 1 Errores frecuentes Olvidar los paréntesis en la declaración: int *f(int) declara una función que devuelve int*, no un puntero a función. No coincidir la firma del puntero con la firma de la función asignada. Llamar al puntero sin desreferenciarlo: tanto (*op)(x, y) como op(x, y) son válidos en C moderno, pero la segunda forma es más habitual. En qsort, hacer la resta directamente (return a - b) puede desbordarse con enteros grandes; la forma segura es devolver (a \u003e b) - (a \u003c b). Aplicación práctica Los punteros a función aparecen en:\ncallbacks de ordenación (qsort, bsearch), sistemas de plugins o estrategias intercambiables, máquinas de estados donde cada estado tiene su propia función de procesamiento, APIs de C que aceptan funciones de usuario (señales, threads). Siguiente ejercicio recomendado calloc en C: ejercicio resuelto Puntero a puntero en C: ejercicio resuelto Quicksort en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre (*op)(x, y) y op(x, y)? Ambas formas son equivalentes en C. La primera desreferencia explícitamente el puntero; la segunda usa la notación abreviada que el compilador acepta desde C89. La segunda es más común en código moderno.\n¿Puedo pasar un puntero a función como argumento? Sí. Es el mecanismo de callback: void aplicar(int a, int b, int (*f)(int,int)) { printf(\"%d\\n\", f(a, b)); }.\n¿Los punteros a función son seguros? Son seguros siempre que apunten a una función válida. El riesgo es asignarles NULL y llamarlos sin comprobar, o asignar una función con firma incompatible (comportamiento indefinido).",
+    "description": "Ejercicio resuelto de punteros a funciones en C: declaración, asignación, llamada directa, array de punteros a función y callback en qsort.",
+    "tags": [
+      "Intermedio",
+      "Punteros"
+    ],
+    "title": "Punteros a funciones en C: ejercicio resuelto con callbacks",
+    "uri": "/ejercicios/punteros-memoria/punteros-a-funciones-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
@@ -423,6 +456,17 @@ var relearn_searchindex = [
     ],
     "title": "Árbol binario en C: ejercicio resuelto de inserción y búsqueda",
     "uri": "/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "Switch case en C: ejercicio resuelto paso a paso Si buscas un ejercicio de switch case en C resuelto, aquí tienes el patrón más habitual: un menú interactivo con varias opciones y un caso default para entradas inválidas.\nEl switch es la alternativa natural al if-else encadenado cuando se compara una misma variable entera (o carácter) contra múltiples valores constantes.\nEnunciado Escribe un programa que implemente una calculadora básica de consola. El usuario elige la operación mediante un menú numérico (1–4) e introduce dos operandos. El programa muestra el resultado y avisa si la operación no existe o si hay división por cero.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include \u003cstdio.h\u003e int main(void) { int opcion; double a, b; printf(\"=== Calculadora ===\\n\"); printf(\"1. Suma\\n\"); printf(\"2. Resta\\n\"); printf(\"3. Multiplicacion\\n\"); printf(\"4. Division\\n\"); printf(\"Opcion: \"); scanf(\"%d\", \u0026opcion); printf(\"Introduce dos numeros: \"); scanf(\"%lf %lf\", \u0026a, \u0026b); switch (opcion) { case 1: printf(\"%.2f + %.2f = %.2f\\n\", a, b, a + b); break; case 2: printf(\"%.2f - %.2f = %.2f\\n\", a, b, a - b); break; case 3: printf(\"%.2f * %.2f = %.2f\\n\", a, b, a * b); break; case 4: if (b == 0.0) { printf(\"Error: division por cero\\n\"); } else { printf(\"%.2f / %.2f = %.2f\\n\", a, b, a / b); } break; default: printf(\"Opcion no valida\\n\"); break; } return 0; } Resultado esperado Con entradas 1, 3.0, 4.0:\n1 2 3 4 5 6 7 8 === Calculadora === 1. Suma 2. Resta 3. Multiplicacion 4. Division Opcion: 1 Introduce dos numeros: 3.0 4.0 3.00 + 4.00 = 7.00 Errores frecuentes Olvidar el break al final de cada case: sin él, la ejecución cae al siguiente caso (fall-through). Usar expresiones no constantes o flotantes como etiquetas de case (no compila). No incluir default y dejar entradas inválidas sin gestionar. Intentar usar switch con cadenas: solo funciona con tipos enteros (int, char, enum). Cuándo usar switch en lugar de if-else Situación Preferir Comparar una variable contra muchos valores constantes switch Condiciones con rangos o expresiones complejas if-else Comparar cadenas if-else con strcmp Pocas ramas (2–3) cualquiera Aplicación práctica El switch aparece en:\nmenús de consola y máquinas de estados, procesamiento de comandos o teclas, decodificación de códigos de error o códigos de operación. Siguiente ejercicio recomendado Funciones en C: ejercicios resueltos If else en C: ejercicios resueltos Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Qué es el fall-through en switch? Si no hay break al final de un case, la ejecución continúa en el siguiente case aunque su etiqueta no coincida. Esto puede usarse intencionadamente para compartir código entre casos, pero normalmente es un bug.\n¿Puede switch comparar cadenas en C? No. switch solo funciona con tipos enteros (int, char, short, long, enum). Para comparar cadenas usa if-else con strcmp.\n¿switch es más rápido que if-else? En muchos compiladores el switch con muchos casos se compila como una tabla de saltos (jump table), lo que puede ser más rápido que una cadena de if-else. Para pocos casos la diferencia es insignificante.",
+    "description": "Ejercicio resuelto de switch case en C con menú interactivo, casos múltiples, caso por defecto y comparación con if-else.",
+    "tags": [
+      "Principiante",
+      "Fundamentos"
+    ],
+    "title": "Switch case en C: ejercicio resuelto con menú interactivo",
+    "uri": "/ejercicios/fundamentos/switch-case-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
@@ -455,12 +499,31 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Búsqueda lineal en C: ejercicio resuelto paso a paso Si buscas un ejercicio de búsqueda lineal en C resuelto, aquí tienes la implementación completa con retorno del índice y el caso de elemento no encontrado.\nLa búsqueda lineal (o secuencial) recorre el array elemento por elemento hasta encontrar el valor buscado o llegar al final. Es el algoritmo de búsqueda más simple y el único que funciona en arrays no ordenados.\nEnunciado Implementa busqueda_lineal que recibe un array, su tamaño y un valor objetivo, y devuelve el índice de la primera aparición o -1 si no existe. Pruébala con una búsqueda exitosa y con un valor que no está en el array. Implementa también busqueda_lineal_todas que devuelve todos los índices donde aparece el valor (para elementos repetidos). Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e /* Devuelve el índice de la primera aparición de objetivo, o -1 si no existe */ int busqueda_lineal(const int a[], int n, int objetivo) { for (int i = 0; i \u003c n; i++) { if (a[i] == objetivo) { return i; } } return -1; } /* Imprime todos los índices donde aparece objetivo */ void busqueda_lineal_todas(const int a[], int n, int objetivo) { int encontrado = 0; for (int i = 0; i \u003c n; i++) { if (a[i] == objetivo) { printf(\" Encontrado en indice %d\\n\", i); encontrado = 1; } } if (!encontrado) { printf(\" No encontrado\\n\"); } } int main(void) { int datos[] = { 7, 3, 9, 3, 1, 5, 3, 8 }; int n = (int)(sizeof(datos) / sizeof(datos[0])); /* Búsqueda exitosa */ int idx = busqueda_lineal(datos, n, 5); printf(\"Buscar 5: indice %d\\n\", idx); /* Búsqueda fallida */ idx = busqueda_lineal(datos, n, 42); printf(\"Buscar 42: indice %d (no encontrado)\\n\", idx); /* Todas las ocurrencias de 3 */ printf(\"Todas las posiciones de 3:\\n\"); busqueda_lineal_todas(datos, n, 3); return 0; } Resultado esperado 1 2 3 4 5 6 Buscar 5: indice 5 Buscar 42: indice -1 (no encontrado) Todas las posiciones de 3: Encontrado en indice 1 Encontrado en indice 3 Encontrado en indice 6 Complejidad Caso Comparaciones Complejidad Mejor caso (primer elemento) 1 O(1) Caso promedio n/2 O(n) Peor caso (último o no existe) n O(n) Búsqueda lineal vs búsqueda binaria Característica Lineal Binaria Requiere array ordenado No Sí Complejidad O(n) O(log n) Implementación Muy simple Moderada Mejor para Arrays pequeños o no ordenados Arrays grandes ya ordenados Errores frecuentes Devolver 0 en lugar de -1 cuando no se encuentra: 0 es el índice válido del primer elemento. Usar \u003e= en lugar de \u003e en la condición del bucle y acceder fuera del array. Continuar el bucle tras encontrar el elemento cuando solo se quiere la primera aparición. Aplicación práctica La búsqueda lineal se usa cuando:\nel array no está ordenado y no vale la pena ordenarlo, el array es pequeño (\u003c ~100 elementos) y la diferencia de rendimiento es irrelevante, se buscan todas las ocurrencias de un valor, no solo la primera. Siguiente ejercicio recomendado Búsqueda binaria en C: ejercicio resuelto Ordenación burbuja en C: ejercicio resuelto Recursividad en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo es mejor la búsqueda lineal que la binaria? Cuando el array no está ordenado. Ordenarlo primero costaría O(n log n), lo que solo compensa si vas a hacer muchas búsquedas posteriores.\n¿La búsqueda lineal puede buscar en arrays de strings? Sí, pero hay que usar strcmp en lugar de ==: if (strcmp(a[i], objetivo) == 0).\n¿Existe una función estándar de búsqueda lineal en C? No directamente. bsearch de \u003cstdlib.h\u003e hace búsqueda binaria (requiere array ordenado). Para búsqueda lineal hay que implementarla manualmente.",
+    "description": "Ejercicio resuelto de búsqueda lineal en C: recorrido secuencial de un array, retorno del índice encontrado y comparación con búsqueda binaria.",
+    "tags": [
+      "Principiante",
+      "Busqueda"
+    ],
+    "title": "Búsqueda lineal en C: ejercicio resuelto en arrays no ordenados",
+    "uri": "/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "",
     "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
     "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
     "tags": [],
     "title": "Aprende C — ejercicios resueltos",
     "uri": "/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Busqueda",
+    "uri": "/tags/busqueda/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -491,6 +554,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Etiqueta :: Memoria-Dinamica",
+    "uri": "/tags/memoria-dinamica/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Etiqueta :: Principiante",
     "uri": "/tags/principiante/index.html"
   },
@@ -499,8 +570,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Recursos",
-    "uri": "/tags/recursos/index.html"
+    "title": "Etiqueta :: Punteros",
+    "uri": "/tags/punteros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -509,6 +580,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Recursos",
+    "uri": "/tags/recursos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -541,22 +620,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Cadenas",
     "uri": "/tags/cadenas/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Memoria-Dinamica",
-    "uri": "/tags/memoria-dinamica/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Punteros",
-    "uri": "/tags/punteros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -597,14 +660,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Ficheros",
     "uri": "/tags/ficheros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Busqueda",
-    "uri": "/tags/busqueda/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
