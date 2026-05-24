@@ -1,0 +1,378 @@
+/* ============================================================
+   C100 — Página del libro completo
+   ============================================================ */
+
+/* --- Reset de estilos del tema en c100 --- */
+.page.single.special {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.page.single.special h1,
+.page.single.special h2,
+.page.single.special h3 {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* --- HERO --- */
+.c100-hero-panel {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem 0 2.5rem;
+  border-bottom: 2px solid #e8f5f2;
+  margin-bottom: 2.5rem;
+}
+
+.c100-hero-title {
+  flex: 1;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: #1a3a35 !important;
+  margin: 0 !important;
+  text-transform: none !important;
+}
+
+.c100-book-cover {
+  width: 200px;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transition: transform 0.2s;
+}
+
+.c100-book-cover:hover {
+  transform: translateY(-4px);
+}
+
+/* --- INTRO --- */
+.c100-intro {
+  margin-bottom: 2.5rem;
+}
+
+.c100-intro h2 {
+  font-size: 1.4rem !important;
+  color: #1a3a35 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* --- AMAZON BOX --- */
+.c100-amazon-box {
+  background: #f7fdfb;
+  border: 1.5px solid #2A9D8F;
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.c100-amazon-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #1a3a35 !important;
+  margin: 0 0 1rem !important;
+  text-transform: none !important;
+}
+
+.c100-buy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.c100-buy-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1.25rem 1rem 1rem;
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: #fff !important;
+  transition: transform 0.15s, box-shadow 0.15s;
+  overflow: hidden;
+}
+
+.c100-buy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-decoration: none !important;
+}
+
+.c100-buy-card-es {
+  background: linear-gradient(135deg, #2A9D8F 0%, #1d7a6e 100%);
+}
+
+.c100-buy-card-en {
+  background: linear-gradient(135deg, #264653 0%, #1a3040 100%);
+}
+
+.c100-buy-corner {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.6rem;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.c100-buy-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
+
+.c100-buy-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.c100-buy-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.c100-buy-cta {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.18);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.c100-kindle-note {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0.75rem 0 0;
+}
+
+/* --- LEARNING GRID --- */
+.c100-learning {
+  margin-bottom: 2.5rem;
+}
+
+.c100-learning h2 {
+  font-size: 1.4rem !important;
+  color: #1a3a35 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.c100-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.c100-learning-card {
+  background: #f7fdfb;
+  border: 1px solid #c8e6e1;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.c100-learning-card h3 {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1d7a6e !important;
+  margin: 0 0 0.4rem !important;
+  text-transform: none !important;
+}
+
+.c100-learning-card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- PRACTICE --- */
+.c100-practice {
+  background: #1d7a6e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.c100-practice h2 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin: 0 0 0.5rem !important;
+}
+
+.c100-practice p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* --- DIVIDER --- */
+.c100-divider,
+.page.single.special hr {
+  border: none;
+  border-top: 2px solid #e8f5f2;
+  margin: 2rem 0;
+}
+
+/* --- RESOURCES GRID --- */
+.c100-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.c100-resource-card {
+  border-radius: 10px;
+  padding: 1.25rem 1.1rem;
+  border: 1.5px solid #c8e6e1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.c100-resource-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.c100-resource-card h3 {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #1a3a35 !important;
+  margin: 0 !important;
+  text-transform: none !important;
+}
+
+.c100-resource-title-chip {
+  margin-right: 0.3rem;
+}
+
+.c100-resource-card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0;
+}
+
+.c100-resource-card ul {
+  font-size: 0.82rem;
+  color: #555;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.c100-resource-card ul li {
+  margin-bottom: 0.2rem;
+}
+
+.c100-resource-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2A9D8F !important;
+  text-decoration: none;
+  border-bottom: 1.5px solid #2A9D8F;
+  padding-bottom: 1px;
+}
+
+.c100-resource-card a:hover {
+  color: #1d7a6e !important;
+  border-bottom-color: #1d7a6e;
+}
+
+.c100-resource-pack   { border-color: #2A9D8F; }
+.c100-resource-code   { border-color: #264653; }
+.c100-resource-errata { border-color: #e9c46a; }
+
+/* ============================================================
+   Ejercicios — Página de sección
+   ============================================================ */
+
+/* Reduce el h1 uppercase del tema en páginas de sección de ejercicios */
+article.default h1 {
+  font-size: 1.8rem !important;
+  text-transform: none !important;
+  line-height: 1.25 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Feature grid (Qué encontrarás) */
+.exercise-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.exercise-feature-card {
+  background: #f7fdfb;
+  border: 1px solid #c8e6e1;
+  border-radius: 8px;
+  padding: 1.1rem 1rem;
+}
+
+.exercise-feature-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  color: #2A9D8F;
+  font-weight: 700;
+}
+
+.exercise-feature-card h3 {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1d7a6e !important;
+  margin: 0 0 0.4rem !important;
+  text-transform: none !important;
+}
+
+.exercise-feature-card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .exercise-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  .c100-hero-panel {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .c100-book-cover {
+    width: 160px;
+    min-width: 160px;
+  }
+
+  .c100-buy-grid,
+  .c100-learning-grid,
+  .c100-resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .c100-learning-grid,
+  .c100-resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
