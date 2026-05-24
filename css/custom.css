@@ -298,7 +298,8 @@
    ============================================================ */
 
 /* Reduce el h1 uppercase del tema en páginas de sección de ejercicios */
-article.default h1 {
+article.default h1,
+article h1 {
   font-size: 1.8rem !important;
   text-transform: none !important;
   line-height: 1.25 !important;
