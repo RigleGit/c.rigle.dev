@@ -504,6 +504,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Enum and typedef in C: solved exercise with states This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e typedef enum { ESTADO_PENDIENTE = 0, ESTADO_EN_PROGRESO = 1, ESTADO_HECHO = 2 } EstadoTarea; const char *estado_a_texto(EstadoTarea e) { switch (e) { case ESTADO_PENDIENTE: return \"Pendiente\"; case ESTADO_EN_PROGRESO: return \"En progreso\"; case ESTADO_HECHO: return \"Hecho\"; default: return \"Desconocido\"; } } int main(void) { EstadoTarea estado = ESTADO_EN_PROGRESO; printf(\"Estado actual: %s\\n\", estado_a_texto(estado)); return 0; } Expected output 1 Estado actual: En progreso Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Recommended next exercise All C exercises Programming in C in 100 Solved Exercises",
+    "description": "Solved enum and typedef exercise in C to model readable states and avoid magic numbers.",
+    "tags": [
+      "Intermediate",
+      "Fundamentals"
+    ],
+    "title": "Enum and typedef in C: solved exercise with states",
+    "uri": "/en/ejercicios/fundamentos/enum-typedef-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Quicksort in C: solved exercise If you searched for quicksort in C solved exercise, this example implements the classic Lomuto partition version.\nProblem statement Sort an integer array using quicksort and print the final order.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e int partition(int a[], int l, int r) { int piv = a[r]; int i = l - 1; for (int j = l; j \u003c r; j++) { if (a[j] \u003c= piv) { i++; int tmp = a[i]; a[i] = a[j]; a[j] = tmp; } } int tmp = a[i + 1]; a[i + 1] = a[r]; a[r] = tmp; return i + 1; } void quicksort(int a[], int l, int r) { if (l \u003c r) { int p = partition(a, l, r); quicksort(a, l, p - 1); quicksort(a, p + 1, r); } } int main(void) { int a[] = {10, 7, 8, 9, 1, 5}; int n = sizeof(a) / sizeof(a[0]); quicksort(a, 0, n - 1); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Expected output 1 1 5 7 8 9 10 Complexity Average: O(n log n) Worst case: O(n^2) Common mistakes Wrong recursion bounds (p - 1, p + 1). Ignoring pivot behavior on nearly sorted input. Mixing Lomuto with Hoare partition logic. Practical use Quicksort ideas appear in ranking engines and preprocessing for fast lookup workflows.\nRecommended next exercise Merge sort in C: solved exercise with divide and conquer Binary search in C: solved exercise on sorted arrays Binary tree in C: solved insertion and search exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved quicksort exercise in C using Lomuto partition to sort arrays efficiently.",
@@ -530,22 +541,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Dynamic-Memory",
-    "uri": "/en/tags/dynamic-memory/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Fundamentals",
     "uri": "/en/tags/fundamentals/index.html"
   },
@@ -566,6 +561,30 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tags",
+    "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Dynamic-Memory",
+    "uri": "/en/tags/dynamic-memory/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
@@ -580,14 +599,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Search",
     "uri": "/en/tags/search/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tags",
-    "uri": "/en/tags/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

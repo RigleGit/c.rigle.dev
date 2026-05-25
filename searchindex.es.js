@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -488,6 +488,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "Enum y typedef en C: ejercicio resuelto con estados Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e typedef enum { ESTADO_PENDIENTE = 0, ESTADO_EN_PROGRESO = 1, ESTADO_HECHO = 2 } EstadoTarea; const char *estado_a_texto(EstadoTarea e) { switch (e) { case ESTADO_PENDIENTE: return \"Pendiente\"; case ESTADO_EN_PROGRESO: return \"En progreso\"; case ESTADO_HECHO: return \"Hecho\"; default: return \"Desconocido\"; } } int main(void) { EstadoTarea estado = ESTADO_EN_PROGRESO; printf(\"Estado actual: %s\\n\", estado_a_texto(estado)); return 0; } Resultado esperado 1 Estado actual: En progreso Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Siguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos",
+    "description": "Ejercicio resuelto de enum y typedef en C para modelar estados legibles y evitar números mágicos.",
+    "tags": [
+      "Intermedio",
+      "Fundamentos"
+    ],
+    "title": "Enum y typedef en C: ejercicio resuelto con estados",
+    "uri": "/ejercicios/fundamentos/enum-typedef-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
     "content": "Quicksort en C: ejercicio resuelto Si buscas quicksort en C ejercicio resuelto, este ejemplo implementa la versión clásica con particion de Lomuto.\nEnunciado Ordena un array de enteros con quicksort y muestra el resultado final.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e int particion(int a[], int l, int r) { int piv = a[r]; int i = l - 1; for (int j = l; j \u003c r; j++) { if (a[j] \u003c= piv) { i++; int tmp = a[i]; a[i] = a[j]; a[j] = tmp; } } int tmp = a[i + 1]; a[i + 1] = a[r]; a[r] = tmp; return i + 1; } void quicksort(int a[], int l, int r) { if (l \u003c r) { int p = particion(a, l, r); quicksort(a, l, p - 1); quicksort(a, p + 1, r); } } int main(void) { int a[] = {10, 7, 8, 9, 1, 5}; int n = sizeof(a) / sizeof(a[0]); quicksort(a, 0, n - 1); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Salida esperada 1 1 5 7 8 9 10 Complejidad Promedio: O(n log n) Peor caso: O(n^2) Errores frecuentes Elegir mal limites en recursión (p - 1, p + 1). No controlar pivot en arrays casi ordenados. Confundir particion de Lomuto y Hoare. Aplicación práctica La idea de quicksort aparece en motores de ordenacion, ranking y preprocesado de datos para consultas rápidas.\nSiguiente ejercicio recomendado Merge sort en C: ejercicio resuelto con divide y vencerás Búsqueda binaria en C: ejercicio resuelto en array ordenado Árbol binario en C: ejercicio resuelto de inserción y búsqueda Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de quicksort en C usando particion de Lomuto para ordenar arrays de forma eficiente.",
@@ -518,14 +529,6 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Busqueda",
-    "uri": "/tags/busqueda/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -550,6 +553,22 @@ var relearn_searchindex = [
     "uri": "/tags/intermedio/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Busqueda",
+    "uri": "/tags/busqueda/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -572,14 +591,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Punteros",
     "uri": "/tags/punteros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
