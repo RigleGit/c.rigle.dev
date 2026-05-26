@@ -526,6 +526,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "scanf and printf in C: solved input-output exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { int edad; double altura; printf(\"Introduce edad y altura (m): \"); if (scanf(\"%d %lf\", \u0026edad, \u0026altura) != 2) { printf(\"Entrada invalida\\n\"); return 1; } printf(\"Edad: %d anos\\n\", edad); printf(\"Altura: %.2f m\\n\", altura); return 0; } Expected output 1 2 Edad: 21 anos Altura: 1.74 m Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use scanf and printf are C’s standard I/O functions, present in almost every console program and system utility.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved scanf and printf exercise in C with simple input validation.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "scanf and printf in C: solved input-output exercise",
+    "uri": "/en/ejercicios/fundamentos/scanf-printf-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Linear search in C: solved exercise step by step If you searched for a solved linear search exercise in C, here is the full implementation with index return and the element-not-found case.\nLinear search (also called sequential search) scans the array element by element until it finds the target value or reaches the end. It is the simplest search algorithm and the only one that works on unsorted arrays.\nProblem statement Implement linear_search that receives an array, its size, and a target value, and returns the index of the first occurrence or -1 if not found. Test it with a successful search and a value that is not in the array. Also implement linear_search_all that returns every index where the value appears (for repeated elements). C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e /* Returns the index of the first occurrence of target, or -1 if not found */ int linear_search(const int a[], int n, int target) { for (int i = 0; i \u003c n; i++) { if (a[i] == target) { return i; } } return -1; } /* Prints every index where target appears */ void linear_search_all(const int a[], int n, int target) { int found = 0; for (int i = 0; i \u003c n; i++) { if (a[i] == target) { printf(\" Found at index %d\\n\", i); found = 1; } } if (!found) { printf(\" Not found\\n\"); } } int main(void) { int data[] = { 7, 3, 9, 3, 1, 5, 3, 8 }; int n = (int)(sizeof(data) / sizeof(data[0])); /* Successful search */ int idx = linear_search(data, n, 5); printf(\"Search 5: index %d\\n\", idx); /* Failed search */ idx = linear_search(data, n, 42); printf(\"Search 42: index %d (not found)\\n\", idx); /* All occurrences of 3 */ printf(\"All positions of 3:\\n\"); linear_search_all(data, n, 3); return 0; } Expected output 1 2 3 4 5 6 Search 5: index 5 Search 42: index -1 (not found) All positions of 3: Found at index 1 Found at index 3 Found at index 6 Complexity Case Comparisons Complexity Best case (first element) 1 O(1) Average case n/2 O(n) Worst case (last or not found) n O(n) Linear search vs binary search Feature Linear Binary Requires sorted array No Yes Complexity O(n) O(log n) Implementation Very simple Moderate Best for Small or unsorted arrays Large already-sorted arrays Common mistakes Returning 0 instead of -1 when not found: 0 is the valid index of the first element. Using \u003e= instead of \u003c in the loop condition and going out of bounds. Continuing the loop after finding the element when only the first occurrence is needed. Practical use Linear search is used when:\nthe array is unsorted and sorting it is not worth the cost, the array is small (\u003c ~100 elements) and performance difference is irrelevant, you need to find all occurrences of a value, not just the first. Recommended next exercise Binary search in C: solved exercise Bubble sort in C: solved exercise Recursion in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When is linear search better than binary search? When the array is unsorted. Sorting it first would cost O(n log n), which only pays off if you need to run many searches afterward.\nCan linear search work on string arrays? Yes, but you must use strcmp instead of ==: if (strcmp(a[i], target) == 0).\nIs there a standard linear search function in C? Not directly. bsearch from \u003cstdlib.h\u003e performs binary search (requires a sorted array). For linear search you need to implement it manually.",
     "description": "Solved linear search exercise in C: sequential array traversal, index return, and comparison with binary search.",
@@ -541,16 +552,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "",
@@ -573,8 +584,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

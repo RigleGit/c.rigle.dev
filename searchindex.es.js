@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -510,6 +510,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "scanf y printf en C: ejercicio resuelto de entrada y salida Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { int edad; double altura; printf(\"Introduce edad y altura (m): \"); if (scanf(\"%d %lf\", \u0026edad, \u0026altura) != 2) { printf(\"Entrada invalida\\n\"); return 1; } printf(\"Edad: %d anos\\n\", edad); printf(\"Altura: %.2f m\\n\", altura); return 0; } Resultado esperado 1 2 Edad: 21 anos Altura: 1.74 m Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica scanf y printf son las funciones de E/S estándar de C, presentes en casi todos los programas de consola y utilidades de sistema.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de scanf y printf en C con validación simple de entrada.",
+    "tags": [
+      "Principiante",
+      "Fundamentos"
+    ],
+    "title": "scanf y printf en C: ejercicio resuelto de entrada y salida",
+    "uri": "/ejercicios/fundamentos/scanf-printf-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
     "content": "Búsqueda lineal en C: ejercicio resuelto paso a paso Si buscas un ejercicio de búsqueda lineal en C resuelto, aquí tienes la implementación completa con retorno del índice y el caso de elemento no encontrado.\nLa búsqueda lineal (o secuencial) recorre el array elemento por elemento hasta encontrar el valor buscado o llegar al final. Es el algoritmo de búsqueda más simple y el único que funciona en arrays no ordenados.\nEnunciado Implementa busqueda_lineal que recibe un array, su tamaño y un valor objetivo, y devuelve el índice de la primera aparición o -1 si no existe. Pruébala con una búsqueda exitosa y con un valor que no está en el array. Implementa también busqueda_lineal_todas que devuelve todos los índices donde aparece el valor (para elementos repetidos). Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e /* Devuelve el índice de la primera aparición de objetivo, o -1 si no existe */ int busqueda_lineal(const int a[], int n, int objetivo) { for (int i = 0; i \u003c n; i++) { if (a[i] == objetivo) { return i; } } return -1; } /* Imprime todos los índices donde aparece objetivo */ void busqueda_lineal_todas(const int a[], int n, int objetivo) { int encontrado = 0; for (int i = 0; i \u003c n; i++) { if (a[i] == objetivo) { printf(\" Encontrado en indice %d\\n\", i); encontrado = 1; } } if (!encontrado) { printf(\" No encontrado\\n\"); } } int main(void) { int datos[] = { 7, 3, 9, 3, 1, 5, 3, 8 }; int n = (int)(sizeof(datos) / sizeof(datos[0])); /* Búsqueda exitosa */ int idx = busqueda_lineal(datos, n, 5); printf(\"Buscar 5: indice %d\\n\", idx); /* Búsqueda fallida */ idx = busqueda_lineal(datos, n, 42); printf(\"Buscar 42: indice %d (no encontrado)\\n\", idx); /* Todas las ocurrencias de 3 */ printf(\"Todas las posiciones de 3:\\n\"); busqueda_lineal_todas(datos, n, 3); return 0; } Resultado esperado 1 2 3 4 5 6 Buscar 5: indice 5 Buscar 42: indice -1 (no encontrado) Todas las posiciones de 3: Encontrado en indice 1 Encontrado en indice 3 Encontrado en indice 6 Complejidad Caso Comparaciones Complejidad Mejor caso (primer elemento) 1 O(1) Caso promedio n/2 O(n) Peor caso (último o no existe) n O(n) Búsqueda lineal vs búsqueda binaria Característica Lineal Binaria Requiere array ordenado No Sí Complejidad O(n) O(log n) Implementación Muy simple Moderada Mejor para Arrays pequeños o no ordenados Arrays grandes ya ordenados Errores frecuentes Devolver 0 en lugar de -1 cuando no se encuentra: 0 es el índice válido del primer elemento. Usar \u003e= en lugar de \u003e en la condición del bucle y acceder fuera del array. Continuar el bucle tras encontrar el elemento cuando solo se quiere la primera aparición. Aplicación práctica La búsqueda lineal se usa cuando:\nel array no está ordenado y no vale la pena ordenarlo, el array es pequeño (\u003c ~100 elementos) y la diferencia de rendimiento es irrelevante, se buscan todas las ocurrencias de un valor, no solo la primera. Siguiente ejercicio recomendado Búsqueda binaria en C: ejercicio resuelto Ordenación burbuja en C: ejercicio resuelto Recursividad en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo es mejor la búsqueda lineal que la binaria? Cuando el array no está ordenado. Ordenarlo primero costaría O(n log n), lo que solo compensa si vas a hacer muchas búsquedas posteriores.\n¿La búsqueda lineal puede buscar en arrays de strings? Sí, pero hay que usar strcmp en lugar de ==: if (strcmp(a[i], objetivo) == 0).\n¿Existe una función estándar de búsqueda lineal en C? No directamente. bsearch de \u003cstdlib.h\u003e hace búsqueda binaria (requiere array ordenado). Para búsqueda lineal hay que implementarla manualmente.",
     "description": "Ejercicio resuelto de búsqueda lineal en C: recorrido secuencial de un array, retorno del índice encontrado y comparación con búsqueda binaria.",
@@ -549,8 +560,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -559,6 +570,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -575,14 +594,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Memoria-Dinamica",
     "uri": "/tags/memoria-dinamica/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
