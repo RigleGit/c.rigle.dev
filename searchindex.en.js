@@ -548,6 +548,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "const in C: solved exercise with read-only parameters This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int suma_array(const int a[], int n) { int suma = 0; for (int i = 0; i \u003c n; i++) suma += a[i]; return suma; } int main(void) { const int datos[] = {2, 4, 6, 8}; int n = (int)(sizeof(datos) / sizeof(datos[0])); printf(\"Suma = %d\\n\", suma_array(datos, n)); return 0; } Expected output 1 Suma = 20 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use The const qualifier is used to define symbolic constants and protect function parameters that must not be modified.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved const exercise in C to protect data and avoid accidental mutations.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "const in C: solved exercise with read-only parameters",
+    "uri": "/en/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",

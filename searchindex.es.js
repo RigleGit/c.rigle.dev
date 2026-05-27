@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C const en C",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -530,6 +530,17 @@ var relearn_searchindex = [
     ],
     "title": "Búsqueda lineal en C: ejercicio resuelto en arrays no ordenados",
     "uri": "/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "const en C: ejercicio resuelto con parámetros de solo lectura Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int suma_array(const int a[], int n) { int suma = 0; for (int i = 0; i \u003c n; i++) suma += a[i]; return suma; } int main(void) { const int datos[] = {2, 4, 6, 8}; int n = (int)(sizeof(datos) / sizeof(datos[0])); printf(\"Suma = %d\\n\", suma_array(datos, n)); return 0; } Resultado esperado 1 Suma = 20 Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica El modificador const se usa para definir constantes simbólicas y proteger parámetros de funciones que no deben modificarse.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de const en C para proteger datos y evitar modificaciones accidentales.",
+    "tags": [
+      "Principiante",
+      "Fundamentos"
+    ],
+    "title": "const en C: ejercicio resuelto con parámetros de solo lectura",
+    "uri": "/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "",
