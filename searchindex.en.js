@@ -559,6 +559,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "sizeof in C: solved exercise with types and arrays This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e int main(void) { int a[10]; size_t bytes = sizeof(a); size_t elementos = sizeof(a) / sizeof(a[0]); printf(\"Bytes del array: %zu\\n\", bytes); printf(\"Elementos del array: %zu\\n\", elementos); return 0; } Expected output 1 2 Bytes del array: 40 Elementos del array: 10 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use sizeof is essential when allocating dynamic memory, defining buffer sizes, and ensuring cross-platform portability.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved sizeof exercise in C to compute type sizes and array length.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "sizeof in C: solved exercise with types and arrays",
+    "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
