@@ -93,6 +93,14 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/recursividad-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Arrays \u0026 strings",
+    "uri": "/en/ejercicios/arrays-cadenas/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "Sequential programming in C: solved exercises to start If you are looking for sequential programming in C, this post gives beginner-friendly solved exercises using the core model: input, processing, and output.\nThey are simple by design, but critical for building strong fundamentals before loops, advanced conditionals, and data structures.\nProblem statement Solve these 4 sequential mini exercises:\nconvert Celsius to Fahrenheit, compute rectangle area and perimeter, compute average of 3 scores, compute final price with 21% VAT. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 #include \u003cstdio.h\u003e double celsius_to_fahrenheit(double c) { return (c * 9.0 / 5.0) + 32.0; } void rectangle(double base, double height, double *area, double *perimeter) { *area = base * height; *perimeter = 2.0 * (base + height); } double average_three(double a, double b, double c) { return (a + b + c) / 3.0; } double price_with_vat(double base_price) { const double VAT = 0.21; return base_price * (1.0 + VAT); } int main(void) { double c = 25.0; printf(\"%.2f C = %.2f F\\n\", c, celsius_to_fahrenheit(c)); double area, perimeter; rectangle(8.0, 3.0, \u0026area, \u0026perimeter); printf(\"Rectangle -\u003e area: %.2f, perimeter: %.2f\\n\", area, perimeter); printf(\"Average of 7.5, 8.0, 6.5 = %.2f\\n\", average_three(7.5, 8.0, 6.5)); double base = 100.0; printf(\"Base price %.2f -\u003e final price with VAT: %.2f\\n\", base, price_with_vat(base)); return 0; } Expected output 1 2 3 4 25.00 C = 77.00 F Rectangle -\u003e area: 24.00, perimeter: 22.00 Average of 7.5, 8.0, 6.5 = 7.33 Base price 100.00 -\u003e final price with VAT: 121.00 Common mistakes Using integer division where decimal precision is required. Mixing units or formula steps in conversions. Keeping all logic inside main instead of using helper functions. Not validating results with simple reference cases. Practical use Sequential C programming is useful for:\nfirst calculator-style scripts, beginner academic practice, reinforcing syntax and numeric operations. Mastering this base makes loops, conditionals, and modular design much easier.\nRecommended next exercise If else in C: solved exercises with nested conditions For loop in C: solved exercises with accumulators and counters While and do while in C: solved exercises All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What does sequential programming mean in C? It means executing instructions in order, top to bottom, without complex branching. It is the base of all programs.\nWhy begin with sequential exercises? They help you lock in syntax, variable handling, and numeric operations before adding extra control-flow complexity.\nWhat should I study after this? Move to conditionals and loops, then practice arrays and functions with real problem sets.",
     "description": "Solved sequential programming exercises in C using input, processing, and output for complete beginners.",
@@ -113,14 +121,6 @@ var relearn_searchindex = [
     ],
     "title": "Classes in C with struct: solved modular design exercise",
     "uri": "/en/ejercicios/struct-ficheros/simular-clases-con-struct-en-c/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Arrays \u0026 strings",
-    "uri": "/en/ejercicios/arrays-cadenas/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Resources \u0026 guides",
@@ -359,6 +359,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "strcpy and strncpy in C: solved safe-copy exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char origen[] = \"programacion en c\"; char destino1[32]; char destino2[8]; strcpy(destino1, origen); strncpy(destino2, origen, sizeof(destino2) - 1); destino2[sizeof(destino2) - 1] = '\\0'; printf(\"destino1: %s\\n\", destino1); printf(\"destino2: %s\\n\", destino2); return 0; } Expected output 1 2 destino1: programacion en c destino2: program Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use strcpy and strncpy are the foundation of string copying in C, used in name assignment, file paths, and messages.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved strcpy and strncpy exercise in C to copy strings while avoiding overflows.",
+    "tags": [
+      "Intermediate",
+      "Strings"
+    ],
+    "title": "strcpy and strncpy in C: solved safe-copy exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/strcpy-strncpy-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
     "content": "calloc in C: solved exercise step by step If you searched for a solved calloc exercise in C, here is the practical difference between calloc and malloc, and when to use each one.\ncalloc allocates memory for an array of n elements of size bytes each and initializes all of them to zero, unlike malloc which leaves the content undefined.\ncalloc signature 1 void *calloc(size_t n, size_t size); n — number of elements. size — size in bytes of each element. Returns a pointer to the allocated block, or NULL on failure. Problem statement Allocate a dynamic array of 5 integers with calloc and print the initial values (all must be 0). Fill it with the squares of 1 to 5 and print the result. Free the memory with free. Then allocate the same array with malloc and observe that the initial values are undefined. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int n = 5; /* --- calloc: memory initialized to zero --- */ int *arr_calloc = calloc(n, sizeof(int)); if (arr_calloc == NULL) { fprintf(stderr, \"Error: calloc failed\\n\"); return 1; } printf(\"Initial values with calloc:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } for (int i = 0; i \u003c n; i++) { arr_calloc[i] = (i + 1) * (i + 1); } printf(\"\\nAfter filling:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } free(arr_calloc); /* --- malloc: memory NOT initialized --- */ int *arr_malloc = malloc(n * sizeof(int)); if (arr_malloc == NULL) { fprintf(stderr, \"Error: malloc failed\\n\"); return 1; } printf(\"\\nInitial values with malloc (undefined):\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_malloc[%d] = %d\\n\", i, arr_malloc[i]); } free(arr_malloc); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Initial values with calloc: arr_calloc[0] = 0 arr_calloc[1] = 0 arr_calloc[2] = 0 arr_calloc[3] = 0 arr_calloc[4] = 0 After filling: arr_calloc[0] = 1 arr_calloc[1] = 4 arr_calloc[2] = 9 arr_calloc[3] = 16 arr_calloc[4] = 25 Initial values with malloc (undefined): arr_malloc[0] = \u003cgarbage_value\u003e ... malloc vs calloc vs realloc Function Initializes to 0 Resizes Typical use malloc(n) No No temporary buffer, single struct calloc(n, size) Yes No arrays where zero is meaningful realloc(ptr, n) No Yes arrays that grow dynamically Common mistakes Not checking if calloc returns NULL (out of memory). Forgetting free, causing a memory leak. Assuming malloc initializes to zero: it never guarantees that. Passing parameters in the wrong order: first n (count), then size (bytes per element). Practical use calloc is preferred over malloc when:\na zero initial value is meaningful (counters, empty matrices, byte buffers), you want to avoid accidentally reading garbage during development. Recommended next exercise Malloc and free in C: solved exercise malloc and realloc in C: solved exercise Function pointers in C: solved exercise All C exercises Guided practice and next step If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is calloc slower than malloc? On most systems calloc can be as fast or even faster than malloc + memset because the OS may supply already-zeroed pages. In practice the difference is negligible for small arrays.\nCan I use realloc on memory allocated with calloc? Yes. realloc works with any pointer obtained from malloc, calloc, or a previous realloc call. The new block is not zero-initialized.\nWhen is calloc strictly required? When code assumes array elements are zero before any write. If you always write before reading, malloc is sufficient.",
     "description": "Solved calloc exercise in C: differences from malloc, zero initialization, and when to use each dynamic memory allocation function.",
@@ -574,16 +585,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -592,6 +595,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -606,8 +617,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -664,14 +683,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Arrays",
     "uri": "/en/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

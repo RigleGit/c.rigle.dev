@@ -85,6 +85,14 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/recursividad-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C",
+    "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
+    "tags": [],
+    "title": "Arrays y cadenas",
+    "uri": "/ejercicios/arrays-cadenas/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "Programación secuencial en C: ejercicios resueltos para empezar Si buscas programación secuencial en C, aquí tienes ejercicios básicos resueltos con el patrón más importante al inicio: entrada, proceso y salida.\nSon problemas simples, pero clave para construir una base sólida antes de bucles, condicionales complejos y estructuras de datos.\nEnunciado Resuelve estos 4 mini ejercicios secuenciales:\nconvertir grados Celsius a Fahrenheit, calcular el área y perímetro de un rectángulo, calcular la media de 3 notas, calcular el precio final con IVA del 21%. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 #include \u003cstdio.h\u003e double celsius_a_fahrenheit(double c) { return (c * 9.0 / 5.0) + 32.0; } void rectangulo(double base, double altura, double *area, double *perimetro) { *area = base * altura; *perimetro = 2.0 * (base + altura); } double media_tres(double a, double b, double c) { return (a + b + c) / 3.0; } double precio_con_iva(double precio_base) { const double IVA = 0.21; return precio_base * (1.0 + IVA); } int main(void) { double c = 25.0; printf(\"%.2f C = %.2f F\\n\", c, celsius_a_fahrenheit(c)); double area, perimetro; rectangulo(8.0, 3.0, \u0026area, \u0026perimetro); printf(\"Rectángulo -\u003e área: %.2f, perímetro: %.2f\\n\", area, perimetro); printf(\"Media de 7.5, 8.0 y 6.5 = %.2f\\n\", media_tres(7.5, 8.0, 6.5)); double base = 100.0; printf(\"Precio base %.2f -\u003e precio final con IVA: %.2f\\n\", base, precio_con_iva(base)); return 0; } Resultado esperado 1 2 3 4 25.00 C = 77.00 F Rectángulo -\u003e área: 24.00, perímetro: 22.00 Media de 7.5, 8.0 y 6.5 = 7.33 Precio base 100.00 -\u003e precio final con IVA: 121.00 Errores frecuentes Hacer divisiones enteras sin decimales donde necesitas double. Mezclar unidades o fórmulas (por ejemplo Celsius/Fahrenheit mal aplicada). Escribir todo en main sin separar cálculos en funciones. No comprobar resultados con casos sencillos de referencia. Aplicación práctica La programación secuencial en C se usa para:\nprimeros scripts de cálculo, prácticas académicas iniciales, consolidar sintaxis y operaciones numéricas. Dominar esta base acelera el aprendizaje de condicionales, bucles y modularidad.\nSiguiente ejercicio recomendado If else en C: ejercicios resueltos con condicionales anidadas For en C: ejercicios resueltos con acumuladores y contadores While y do while en C: ejercicios resueltos Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Qué significa programación secuencial en C? Es ejecutar instrucciones en orden, de arriba abajo, sin saltos complejos. Es la base de cualquier programa.\n¿Por qué empezar por ejercicios secuenciales? Porque te permite dominar sintaxis, variables y operaciones antes de añadir más complejidad.\n¿Después de esto qué conviene estudiar? Lo más rentable es pasar a condicionales y bucles, y luego practicar arrays y funciones con problemas reales.",
     "description": "Ejercicios resueltos de programación secuencial en C con entrada, proceso y salida para quienes empiezan desde cero.",
@@ -105,14 +113,6 @@ var relearn_searchindex = [
     ],
     "title": "Clases en C con struct: ejercicio resuelto de diseño modular",
     "uri": "/ejercicios/struct-ficheros/simular-clases-con-struct-en-c/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings)",
-    "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
-    "tags": [],
-    "title": "Arrays y cadenas",
-    "uri": "/ejercicios/arrays-cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Recursos y guías",
@@ -343,6 +343,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "strcpy y strncpy en C: ejercicio resuelto de copia segura Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char origen[] = \"programacion en c\"; char destino1[32]; char destino2[8]; strcpy(destino1, origen); strncpy(destino2, origen, sizeof(destino2) - 1); destino2[sizeof(destino2) - 1] = '\\0'; printf(\"destino1: %s\\n\", destino1); printf(\"destino2: %s\\n\", destino2); return 0; } Resultado esperado 1 2 destino1: programacion en c destino2: program Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica strcpy y strncpy son la base de la copia de cadenas en C, usadas en asignación de nombres, rutas de archivo y mensajes.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de strcpy y strncpy en C para copiar cadenas evitando desbordamientos.",
+    "tags": [
+      "Intermedio",
+      "Cadenas"
+    ],
+    "title": "strcpy y strncpy en C: ejercicio resuelto de copia segura",
+    "uri": "/ejercicios/arrays-cadenas/strcpy-strncpy-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
     "content": "calloc en C: ejercicio resuelto paso a paso Si buscas un ejercicio de calloc en C resuelto, aquí tienes la diferencia práctica entre calloc y malloc, y cuándo conviene usar cada una.\nLa función calloc reserva memoria para un array de n elementos de size bytes cada uno y los inicializa todos a cero, a diferencia de malloc que deja el contenido sin definir.\nFirma de calloc 1 void *calloc(size_t n, size_t size); n — número de elementos. size — tamaño en bytes de cada elemento. Devuelve un puntero al bloque reservado, o NULL si falla. Enunciado Reserva con calloc un array dinámico de 5 enteros e imprime sus valores iniciales (todos deben ser 0). Rellénalo con los cuadrados de 1 a 5 e imprímelo. Libera la memoria con free. A continuación reserva el mismo array con malloc y observa que los valores iniciales son indefinidos. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int n = 5; /* --- calloc: memoria inicializada a cero --- */ int *arr_calloc = calloc(n, sizeof(int)); if (arr_calloc == NULL) { fprintf(stderr, \"Error: calloc fallo\\n\"); return 1; } printf(\"Valores iniciales con calloc:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } for (int i = 0; i \u003c n; i++) { arr_calloc[i] = (i + 1) * (i + 1); } printf(\"\\nDespues de rellenar:\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_calloc[%d] = %d\\n\", i, arr_calloc[i]); } free(arr_calloc); /* --- malloc: memoria NO inicializada --- */ int *arr_malloc = malloc(n * sizeof(int)); if (arr_malloc == NULL) { fprintf(stderr, \"Error: malloc fallo\\n\"); return 1; } printf(\"\\nValores iniciales con malloc (indefinidos):\\n\"); for (int i = 0; i \u003c n; i++) { printf(\"arr_malloc[%d] = %d\\n\", i, arr_malloc[i]); } free(arr_malloc); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Valores iniciales con calloc: arr_calloc[0] = 0 arr_calloc[1] = 0 arr_calloc[2] = 0 arr_calloc[3] = 0 arr_calloc[4] = 0 Despues de rellenar: arr_calloc[0] = 1 arr_calloc[1] = 4 arr_calloc[2] = 9 arr_calloc[3] = 16 arr_calloc[4] = 25 Valores iniciales con malloc (indefinidos): arr_malloc[0] = \u003cvalor_basura\u003e ... malloc vs calloc vs realloc Función Inicializa a 0 Redimensiona Uso típico malloc(n) No No buffer temporal, estructura única calloc(n, size) Sí No arrays donde el cero es válido realloc(ptr, n) No Sí arrays que crecen dinámicamente Errores frecuentes No comprobar si calloc devuelve NULL (fallo de memoria). Olvidar free y provocar una fuga de memoria. Asumir que malloc inicializa a cero: nunca lo garantiza. Pasar los parámetros en orden incorrecto: primero n (cantidad), luego size (tamaño por elemento). Aplicación práctica calloc es preferible a malloc cuando:\nel valor inicial cero tiene significado (contadores, matrices vacías, buffers de bytes), se quiere evitar leer basura accidentalmente durante el desarrollo. Siguiente ejercicio recomendado Malloc y free en C: ejercicio resuelto malloc y realloc en C: ejercicio resuelto Punteros a funciones en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y siguiente paso Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿calloc es más lento que malloc? En la mayoría de sistemas calloc puede ser tan rápido o incluso más rápido que malloc + memset porque el sistema operativo puede entregar páginas ya puestas a cero. En la práctica la diferencia es negligible para arrays pequeños.\n¿Puedo usar realloc con memoria reservada con calloc? Sí. realloc funciona con cualquier puntero obtenido de malloc, calloc o una llamada anterior a realloc. El bloque nuevo no está inicializado a cero.\n¿Cuándo es obligatorio usar calloc? Cuando el código asume que los elementos del array valen cero antes de escribirlos. Si siempre vas a escribir antes de leer, malloc basta.",
     "description": "Ejercicio resuelto de calloc en C: diferencias con malloc, inicialización a cero, y cuándo usar cada función de asignación dinámica de memoria.",
@@ -562,12 +573,36 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -584,22 +619,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Principiante",
     "uri": "/tags/principiante/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -656,14 +675,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arrays",
     "uri": "/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
