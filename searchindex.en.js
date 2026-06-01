@@ -537,6 +537,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "memcpy and memmove in C: solved overlap exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char txt[] = \"abcdef\"; memcpy(txt, txt + 2, 3); txt[3] = '\\0'; printf(\"Tras memcpy (solapado, no seguro): %s\\n\", txt); char txt2[] = \"abcdef\"; memmove(txt2, txt2 + 2, 3); txt2[3] = '\\0'; printf(\"Tras memmove (solapado, seguro): %s\\n\", txt2); return 0; } Expected output 1 Tras memmove (solapado, seguro): cde Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use memcpy and memmove are essential for buffer copying, structure serialization, and efficient memory block handling.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved memcpy and memmove exercise in C to copy memory with and without overlap.",
+    "tags": [
+      "Intermediate",
+      "Arrays"
+    ],
+    "title": "memcpy and memmove in C: solved overlap exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/memcpy-memmove-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "Enum and typedef in C: solved exercise with states This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e typedef enum { ESTADO_PENDIENTE = 0, ESTADO_EN_PROGRESO = 1, ESTADO_HECHO = 2 } EstadoTarea; const char *estado_a_texto(EstadoTarea e) { switch (e) { case ESTADO_PENDIENTE: return \"Pendiente\"; case ESTADO_EN_PROGRESO: return \"En progreso\"; case ESTADO_HECHO: return \"Hecho\"; default: return \"Desconocido\"; } } int main(void) { EstadoTarea estado = ESTADO_EN_PROGRESO; printf(\"Estado actual: %s\\n\", estado_a_texto(estado)); return 0; } Expected output 1 Estado actual: En progreso Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use Enums and typedef improve code readability and are widely used in state machines, menu options, and custom types.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved enum and typedef exercise in C to model readable states and avoid magic numbers.",
@@ -607,6 +618,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Intermediate",
     "uri": "/en/tags/intermediate/index.html"
   },
@@ -619,20 +638,20 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -697,14 +716,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Structs",
     "uri": "/en/tags/structs/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
