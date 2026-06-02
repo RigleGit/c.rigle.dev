@@ -433,6 +433,14 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Algorithms",
+    "uri": "/en/ejercicios/algoritmos/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "strcmp and strncmp in C: solved string-comparison exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { const char *a = \"casa\"; const char *b = \"caso\"; printf(\"strcmp: %d\\n\", strcmp(a, b)); printf(\"strncmp(3): %d\\n\", strncmp(a, b, 3)); return 0; } Expected output 1 2 strcmp: -1 strncmp(3): 0 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use strcmp and strncmp are used for key comparison, string sorting, and password validation in C applications.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved strcmp and strncmp exercise in C for full and prefix-based comparisons.",
@@ -442,14 +450,6 @@ var relearn_searchindex = [
     ],
     "title": "strcmp and strncmp in C: solved string-comparison exercise",
     "uri": "/en/ejercicios/arrays-cadenas/strcmp-strncmp-en-c-ejercicio-resuelto/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Algorithms",
-    "uri": "/en/ejercicios/algoritmos/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
@@ -592,6 +592,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "qsort in C: solved exercise with custom comparator This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int cmp_asc(const void *a, const void *b) { int x = *(const int *)a; int y = *(const int *)b; return (x \u003e y) - (x \u003c y); } int main(void) { int v[] = {9, 1, 5, 3, 7}; int n = (int)(sizeof(v) / sizeof(v[0])); qsort(v, n, sizeof(int), cmp_asc); for (int i = 0; i \u003c n; i++) printf(\"%d \", v[i]); printf(\"\\n\"); return 0; } Expected output 1 1 3 5 7 9 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use The C standard library qsort is the most used sorting function in real C code due to its flexibility with custom comparators.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved qsort exercise in C to sort arrays with ascending and descending comparators.",
+    "tags": [
+      "Intermediate",
+      "Sorting-Algorithms"
+    ],
+    "title": "qsort in C: solved exercise with custom comparator",
+    "uri": "/en/ejercicios/algoritmos/qsort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "const in C: solved exercise with read-only parameters This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int suma_array(const int a[], int n) { int suma = 0; for (int i = 0; i \u003c n; i++) suma += a[i]; return suma; } int main(void) { const int datos[] = {2, 4, 6, 8}; int n = (int)(sizeof(datos) / sizeof(datos[0])); printf(\"Suma = %d\\n\", suma_array(datos, n)); return 0; } Expected output 1 Suma = 20 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use The const qualifier is used to define symbolic constants and protect function parameters that must not be modified.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved const exercise in C to protect data and avoid accidental mutations.",
@@ -618,14 +629,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Intermediate",
     "uri": "/en/tags/intermediate/index.html"
   },
@@ -638,12 +641,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Sorting-Algorithms",
+    "uri": "/en/tags/sorting-algorithms/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -724,14 +743,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Loops",
     "uri": "/en/tags/loops/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
