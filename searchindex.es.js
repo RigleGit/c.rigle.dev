@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -620,20 +620,31 @@ var relearn_searchindex = [
     "uri": "/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
-    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
-    "tags": [],
-    "title": "Aprende C — ejercicios resueltos",
-    "uri": "/index.html"
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Selection sort en C: ejercicio resuelto paso a paso Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e void selection_sort(int a[], int n) { for (int i = 0; i \u003c n - 1; i++) { int min = i; for (int j = i + 1; j \u003c n; j++) { if (a[j] \u003c a[min]) min = j; } int tmp = a[i]; a[i] = a[min]; a[min] = tmp; } } int main(void) { int v[] = {6, 2, 9, 1, 5}; int n = (int)(sizeof(v) / sizeof(v[0])); selection_sort(v, n); for (int i = 0; i \u003c n; i++) printf(\"%d \", v[i]); printf(\"\\n\"); return 0; } Resultado esperado 1 1 2 5 6 9 Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Selection sort se usa en contextos con pocas escrituras permitidas, ya que realiza el mínimo número de intercambios posible.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de selection sort en C para entender selección del mínimo en cada pasada.",
+    "tags": [
+      "Intermedio",
+      "Algoritmos-Ordenacion"
+    ],
+    "title": "Selection sort en C: ejercicio resuelto paso a paso",
+    "uri": "/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Busqueda",
-    "uri": "/tags/busqueda/index.html"
+    "title": "Etiqueta :: Algoritmos-Ordenacion",
+    "uri": "/tags/algoritmos-ordenacion/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
+    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
+    "tags": [],
+    "title": "Aprende C — ejercicios resueltos",
+    "uri": "/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -664,8 +675,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Algoritmos-Ordenacion",
-    "uri": "/tags/algoritmos-ordenacion/index.html"
+    "title": "Etiqueta :: Busqueda",
+    "uri": "/tags/busqueda/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
