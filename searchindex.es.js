@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -631,6 +631,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Heap sort en C: ejercicio resuelto con max-heap Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 #include \u003cstdio.h\u003e void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; } void heapify(int a[], int n, int i) { int mayor = i, izq = 2 * i + 1, der = 2 * i + 2; if (izq \u003c n \u0026\u0026 a[izq] \u003e a[mayor]) mayor = izq; if (der \u003c n \u0026\u0026 a[der] \u003e a[mayor]) mayor = der; if (mayor != i) { swap(\u0026a[i], \u0026a[mayor]); heapify(a, n, mayor); } } void heap_sort(int a[], int n) { for (int i = n / 2 - 1; i \u003e= 0; i--) heapify(a, n, i); for (int i = n - 1; i \u003e 0; i--) { swap(\u0026a[0], \u0026a[i]); heapify(a, i, 0); } } int main(void) { int v[] = {4, 10, 3, 5, 1}; int n = (int)(sizeof(v) / sizeof(v[0])); heap_sort(v, n); for (int i = 0; i \u003c n; i++) printf(\"%d \", v[i]); printf(\"\\n\"); return 0; } Resultado esperado 1 1 3 4 5 10 Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Heap sort garantiza O(n log n) en el peor caso y no necesita memoria extra, por lo que se usa cuando hay restricciones de espacio.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de heap sort en C construyendo un max-heap para ordenar en O(n log n).",
+    "tags": [
+      "Avanzado",
+      "Algoritmos-Ordenacion"
+    ],
+    "title": "Heap sort en C: ejercicio resuelto con max-heap",
+    "uri": "/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -647,6 +658,14 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -655,20 +674,20 @@ var relearn_searchindex = [
     "uri": "/ejercicios/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -733,14 +752,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Recursos",
     "uri": "/tags/recursos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
