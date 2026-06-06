@@ -359,6 +359,14 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Data structures",
+    "uri": "/en/ejercicios/estructuras-datos/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "strcpy and strncpy in C: solved safe-copy exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char origen[] = \"programacion en c\"; char destino1[32]; char destino2[8]; strcpy(destino1, origen); strncpy(destino2, origen, sizeof(destino2) - 1); destino2[sizeof(destino2) - 1] = '\\0'; printf(\"destino1: %s\\n\", destino1); printf(\"destino2: %s\\n\", destino2); return 0; } Expected output 1 2 destino1: programacion en c destino2: program Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use strcpy and strncpy are the foundation of string copying in C, used in name assignment, file paths, and messages.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved strcpy and strncpy exercise in C to copy strings while avoiding overflows.",
@@ -401,14 +409,6 @@ var relearn_searchindex = [
     ],
     "title": "Binary insertion sort in C: solved sorting exercise",
     "uri": "/en/ejercicios/algoritmos/insercion-binaria-en-c-ejercicio-resuelto/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Data structures",
-    "uri": "/en/ejercicios/estructuras-datos/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
@@ -494,6 +494,17 @@ var relearn_searchindex = [
     ],
     "title": "Binary tree in C: solved insertion and search exercise",
     "uri": "/en/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "AVL tree in C: solved exercise with basic rotations This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int clave; int altura; struct Nodo *izq, *der; } Nodo; int max(int a, int b) { return (a \u003e b) ? a : b; } int altura(Nodo *n) { return n ? n-\u003ealtura : 0; } Nodo *nuevo(int clave) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); n-\u003eclave = clave; n-\u003ealtura = 1; n-\u003eizq = n-\u003eder = NULL; return n; } void inorden(Nodo *r) { if (!r) return; inorden(r-\u003eizq); printf(\"%d \", r-\u003eclave); inorden(r-\u003eder); } int main(void) { Nodo *raiz = nuevo(30); raiz-\u003eizq = nuevo(20); raiz-\u003eder = nuevo(40); printf(\"Inorden AVL ejemplo: \"); inorden(raiz); printf(\"\\n\"); return 0; } Expected output 1 Inorden AVL ejemplo: 20 30 40 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use AVL trees are used in databases, file systems, and any structure where balanced search is critical.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved AVL tree exercise in C with insertion and rotations to keep balance.",
+    "tags": [
+      "Advanced",
+      "Trees"
+    ],
+    "title": "AVL tree in C: solved exercise with basic rotations",
+    "uri": "/en/ejercicios/estructuras-datos/arbol-avl-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
@@ -674,20 +685,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Trees",
+    "uri": "/en/tags/trees/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Sorting-Algorithms",
+    "uri": "/en/tags/sorting-algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -784,14 +803,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Linked-Lists",
     "uri": "/en/tags/linked-lists/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Trees",
-    "uri": "/en/tags/trees/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
