@@ -548,6 +548,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Hash table in C: solved exercise with chaining This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define TAM 7 typedef struct Nodo { int clave; struct Nodo *sig; } Nodo; int hash(int clave) { return clave % TAM; } void insertar(Nodo *tabla[], int clave) { int i = hash(clave); Nodo *n = (Nodo *)malloc(sizeof(Nodo)); n-\u003eclave = clave; n-\u003esig = tabla[i]; tabla[i] = n; } int main(void) { Nodo *tabla[TAM] = {0}; insertar(tabla, 10); insertar(tabla, 17); insertar(tabla, 24); printf(\"Bucket de 10: %d\\n\", hash(10)); return 0; } Expected output 1 Bucket de 10: 3 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use Hash tables are the structure behind dictionaries, caches, sets, and almost every O(1) amortized lookup.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved hash table exercise in C with collisions handled through chaining.",
+    "tags": [
+      "Advanced",
+      "Structs"
+    ],
+    "title": "Hash table in C: solved exercise with chaining",
+    "uri": "/en/ejercicios/estructuras-datos/tabla-hash-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "memcpy and memmove in C: solved overlap exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char txt[] = \"abcdef\"; memcpy(txt, txt + 2, 3); txt[3] = '\\0'; printf(\"Tras memcpy (solapado, no seguro): %s\\n\", txt); char txt2[] = \"abcdef\"; memmove(txt2, txt2 + 2, 3); txt2[3] = '\\0'; printf(\"Tras memmove (solapado, seguro): %s\\n\", txt2); return 0; } Expected output 1 Tras memmove (solapado, seguro): cde Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use memcpy and memmove are essential for buffer copying, structure serialization, and efficient memory block handling.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved memcpy and memmove exercise in C to copy memory with and without overlap.",
@@ -685,6 +696,14 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Structs",
+    "uri": "/en/tags/structs/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
@@ -779,14 +798,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Resources",
     "uri": "/en/tags/resources/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Structs",
-    "uri": "/en/tags/structs/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
