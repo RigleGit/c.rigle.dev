@@ -257,6 +257,14 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/ordenacion-burbuja-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C",
+    "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
+    "tags": [],
+    "title": "Struct y ficheros",
+    "uri": "/ejercicios/struct-ficheros/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Recursos y guías",
     "content": "C vs Rust vs C++ vs C#: respuesta rápida Si buscas C vs Rust, C vs C++ o C vs C#, la decisión correcta depende del tipo de proyecto y del plazo en el que necesitas producir resultados.\nComparativa por criterio clave Lenguaje Rendimiento Seguridad de memoria Curva de aprendizaje Casos típicos C Muy alto Baja (manual) Media Embebidos, sistemas, librerías core Rust Muy alto Alta (por diseño) Alta Sistemas modernos y tooling seguro C++ Muy alto Media-baja (según disciplina) Alta Motores, trading, software de alto rendimiento C# Alto Alta (runtime gestionado) Media Backend empresarial, apps desktop y juegos con Unity Recomendación por objetivo real Quieres entender memoria a fondo: empieza por C. Quieres seguridad + rendimiento: Rust suele ser mejor apuesta. Estás en ecosistema legacy/performance extremo: C++. Priorizas productividad en backend/app: C#. Ruta práctica si eliges C como base Domina punteros, memoria dinámica y estructuras. Resuelve problemas de listas, pilas, colas y archivos. Después salta a Rust o C++ con base sólida. Siguiente recurso recomendado Punteros en C: ejercicios resueltos malloc y free en C: ejercicio resuelto Lista doblemente enlazada en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta estructurada para aprender C y usarlo como base técnica:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Rust sustituirá completamente a C? No a corto plazo. Rust crece mucho, pero C sigue dominante en muchos sistemas y entornos embebidos.\n¿C++ es mejor que C para empezar? Depende del objetivo. Si quieres base de memoria limpia, C suele ser más directo.\n¿C# compite con C en lo mismo? No siempre. C# prioriza productividad en runtime gestionado; C prioriza control de bajo nivel.",
     "description": "Comparativa clara entre C, Rust, C++ y C# según rendimiento, curva de aprendizaje, empleabilidad y tipo de proyecto real.",
@@ -266,14 +274,6 @@ var relearn_searchindex = [
     ],
     "title": "C vs Rust vs C++ vs C#: comparativa práctica para elegir en 2026",
     "uri": "/ejercicios/recursos/c-vs-rust-vs-cpp-vs-csharp-comparativa-practica/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite",
-    "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
-    "tags": [],
-    "title": "Struct y ficheros",
-    "uri": "/ejercicios/struct-ficheros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
@@ -415,6 +415,17 @@ var relearn_searchindex = [
     ],
     "title": "Cola en C (queue): ejercicio resuelto con array circular",
     "uri": "/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "union en C: ejercicio resuelto para ahorrar memoria Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e typedef union { int i; float f; char c; } Dato; int main(void) { Dato d; d.i = 65; printf(\"int: %d\\n\", d.i); d.c = 'A'; printf(\"char: %c\\n\", d.c); printf(\"Tamano union: %zu\\n\", sizeof(Dato)); return 0; } Resultado esperado 1 2 int: 65 char: A Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Las uniones se usan en protocolos de comunicación, variantes de tipos y parsing de formatos binarios de bajo nivel.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de union en C para compartir memoria entre distintos tipos.",
+    "tags": [
+      "Intermedio",
+      "Structs"
+    ],
+    "title": "union en C: ejercicio resuelto para ahorrar memoria",
+    "uri": "/ejercicios/struct-ficheros/union-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
@@ -672,14 +683,6 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -692,8 +695,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Estructuras",
-    "uri": "/tags/estructuras/index.html"
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Structs",
+    "uri": "/tags/structs/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -702,6 +713,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Estructuras",
+    "uri": "/tags/estructuras/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -718,14 +745,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Algoritmos-Ordenacion",
     "uri": "/tags/algoritmos-ordenacion/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -790,14 +809,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Recursos",
     "uri": "/tags/recursos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Structs",
-    "uri": "/tags/structs/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

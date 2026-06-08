@@ -273,6 +273,14 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/ordenacion-burbuja-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Structs \u0026 files",
+    "uri": "/en/ejercicios/struct-ficheros/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Resources \u0026 guides",
     "content": "C vs Rust vs C++ vs C#: quick answer If you are researching C vs Rust, C vs C++, or C vs C#, the right choice depends on the product constraints and your delivery timeline.\nComparison by key criteria Language Performance Memory safety Learning curve Typical use cases C Very high Low (manual) Medium Embedded, systems, core libraries Rust Very high High (by design) High Modern systems and safer tooling C++ Very high Medium-low (discipline dependent) High Engines, trading, high-performance software C# High High (managed runtime) Medium Enterprise backend, desktop apps, Unity Recommendation by real goal Deep memory fundamentals: start with C. Safety + performance: Rust is often the best fit. Legacy/performance-heavy ecosystem: C++. Fast product development in managed stack: C#. Practical path if you choose C first Master pointers, dynamic memory, and core data structures. Solve list, stack, queue, and file exercises. Move to Rust or C++ with stronger fundamentals. Recommended next resource Pointers in C: solved pass-by-reference exercises Malloc and free in C: solved dynamic memory exercise Doubly linked list in C: solved exercise All C exercises Guided practice and full book If you want a structured C path you can use as a technical base:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Will Rust fully replace C soon? Not in the short term. Rust is growing fast, but C remains foundational in many systems and embedded domains.\nIs C++ better than C for beginners? It depends on your objective. If memory fundamentals are your focus, C is often cleaner to start with.\nDoes C# compete directly with C? Not in every context. C# optimizes productivity in managed environments, while C focuses on low-level control.",
     "description": "Clear comparison of C, Rust, C++, and C# by performance, memory safety, learning curve, and real-world project fit.",
@@ -282,14 +290,6 @@ var relearn_searchindex = [
     ],
     "title": "C vs Rust vs C++ vs C#: practical comparison to choose in 2026",
     "uri": "/en/ejercicios/recursos/c-vs-rust-vs-cpp-vs-csharp-comparativa-practica/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Structs \u0026 files",
-    "uri": "/en/ejercicios/struct-ficheros/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
@@ -431,6 +431,17 @@ var relearn_searchindex = [
     ],
     "title": "Queue in C: solved exercise with circular array",
     "uri": "/en/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "union in C: solved exercise to save memory This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e typedef union { int i; float f; char c; } Dato; int main(void) { Dato d; d.i = 65; printf(\"int: %d\\n\", d.i); d.c = 'A'; printf(\"char: %c\\n\", d.c); printf(\"Tamano union: %zu\\n\", sizeof(Dato)); return 0; } Expected output 1 2 int: 65 char: A Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use Unions are used in communication protocols, type variants, and parsing low-level binary formats.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved union exercise in C to share memory among different types.",
+    "tags": [
+      "Intermediate",
+      "Structs"
+    ],
+    "title": "union in C: solved exercise to save memory",
+    "uri": "/en/ejercicios/struct-ficheros/union-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises",
@@ -684,8 +695,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -716,6 +727,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Trees",
     "uri": "/en/tags/trees/index.html"
   },
@@ -726,14 +745,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Sorting-Algorithms",
     "uri": "/en/tags/sorting-algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
