@@ -507,6 +507,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "Bitfields in C: solved exercise for compact flags This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 #include \u003cstdio.h\u003e typedef struct { unsigned int lectura : 1; unsigned int escritura : 1; unsigned int ejecucion : 1; } Permisos; int main(void) { Permisos p = {1, 0, 1}; printf(\"R:%u W:%u X:%u\\n\", p.lectura, p.escritura, p.ejecucion); return 0; } Expected output 1 R:1 W:0 X:1 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use Bit fields are used in network protocols, embedded hardware registers, and compact data formats.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved bitfields exercise in C to store flags in few bits.",
+    "tags": [
+      "Advanced",
+      "Structs"
+    ],
+    "title": "Bitfields in C: solved exercise for compact flags",
+    "uri": "/en/ejercicios/struct-ficheros/bitfields-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "AVL tree in C: solved exercise with basic rotations This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int clave; int altura; struct Nodo *izq, *der; } Nodo; int max(int a, int b) { return (a \u003e b) ? a : b; } int altura(Nodo *n) { return n ? n-\u003ealtura : 0; } Nodo *nuevo(int clave) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); n-\u003eclave = clave; n-\u003ealtura = 1; n-\u003eizq = n-\u003eder = NULL; return n; } void inorden(Nodo *r) { if (!r) return; inorden(r-\u003eizq); printf(\"%d \", r-\u003eclave); inorden(r-\u003eder); } int main(void) { Nodo *raiz = nuevo(30); raiz-\u003eizq = nuevo(20); raiz-\u003eder = nuevo(40); printf(\"Inorden AVL ejemplo: \"); inorden(raiz); printf(\"\\n\"); return 0; } Expected output 1 Inorden AVL ejemplo: 20 30 40 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use AVL trees are used in databases, file systems, and any structure where balanced search is critical.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved AVL tree exercise in C with insertion and rotations to keep balance.",
@@ -695,8 +706,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "",
@@ -727,8 +738,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

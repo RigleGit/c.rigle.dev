@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -491,6 +491,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "Bitfields en C: ejercicio resuelto para flags compactas Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 #include \u003cstdio.h\u003e typedef struct { unsigned int lectura : 1; unsigned int escritura : 1; unsigned int ejecucion : 1; } Permisos; int main(void) { Permisos p = {1, 0, 1}; printf(\"R:%u W:%u X:%u\\n\", p.lectura, p.escritura, p.ejecucion); return 0; } Resultado esperado 1 R:1 W:0 X:1 Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Los campos de bits se usan en protocolos de red, registros de hardware embebido y formatos compactos de datos.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de bitfields en C para almacenar banderas en pocos bits.",
+    "tags": [
+      "Avanzado",
+      "Structs"
+    ],
+    "title": "Bitfields en C: ejercicio resuelto para flags compactas",
+    "uri": "/ejercicios/struct-ficheros/bitfields-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Árbol AVL en C: ejercicio resuelto con rotaciones básicas Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int clave; int altura; struct Nodo *izq, *der; } Nodo; int max(int a, int b) { return (a \u003e b) ? a : b; } int altura(Nodo *n) { return n ? n-\u003ealtura : 0; } Nodo *nuevo(int clave) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); n-\u003eclave = clave; n-\u003ealtura = 1; n-\u003eizq = n-\u003eder = NULL; return n; } void inorden(Nodo *r) { if (!r) return; inorden(r-\u003eizq); printf(\"%d \", r-\u003eclave); inorden(r-\u003eder); } int main(void) { Nodo *raiz = nuevo(30); raiz-\u003eizq = nuevo(20); raiz-\u003eder = nuevo(40); printf(\"Inorden AVL ejemplo: \"); inorden(raiz); printf(\"\\n\"); return 0; } Resultado esperado 1 Inorden AVL ejemplo: 20 30 40 Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Los árboles AVL se usan en bases de datos, sistemas de archivos y cualquier estructura donde la búsqueda equilibrada es crítica.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de árbol AVL en C con inserción y rotaciones para mantener balance.",
@@ -683,20 +694,20 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -719,8 +730,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
