@@ -625,6 +625,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "fprintf and fscanf in C: solved exercise with text file This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e int main(void) { FILE *f = fopen(\"datos.txt\", \"w\"); if (!f) return 1; fprintf(f, \"%s %d\\n\", \"Ana\", 28); fclose(f); char nombre[32]; int edad; f = fopen(\"datos.txt\", \"r\"); if (!f) return 1; if (fscanf(f, \"%31s %d\", nombre, \u0026edad) == 2) printf(\"%s tiene %d anos\\n\", nombre, edad); fclose(f); return 0; } Expected output 1 Ana tiene 28 anos Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use fprintf and fscanf allow reading and writing formatted data to files, useful for logs, configurations, and reports.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved fprintf and fscanf exercise in C to persist and recover text data.",
+    "tags": [
+      "Intermediate",
+      "Files"
+    ],
+    "title": "fprintf and fscanf in C: solved exercise with text file",
+    "uri": "/en/ejercicios/struct-ficheros/fprintf-fscanf-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "scanf and printf in C: solved input-output exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { int edad; double altura; printf(\"Introduce edad y altura (m): \"); if (scanf(\"%d %lf\", \u0026edad, \u0026altura) != 2) { printf(\"Entrada invalida\\n\"); return 1; } printf(\"Edad: %d anos\\n\", edad); printf(\"Altura: %.2f m\\n\", altura); return 0; } Expected output 1 2 Edad: 21 anos Altura: 1.74 m Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use scanf and printf are C’s standard I/O functions, present in almost every console program and system utility.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved scanf and printf exercise in C with simple input validation.",
@@ -717,16 +728,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -749,6 +760,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Advanced",
     "uri": "/en/tags/advanced/index.html"
   },
@@ -759,14 +778,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Structs",
     "uri": "/en/tags/structs/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
