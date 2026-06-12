@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -640,6 +640,17 @@ var relearn_searchindex = [
     ],
     "title": "Búsqueda lineal en C: ejercicio resuelto en arrays no ordenados",
     "uri": "/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "Archivos binarios y struct en C: ejercicio resuelto Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #include \u003cstdio.h\u003e typedef struct { int id; char nombre[16]; } Alumno; int main(void) { Alumno a = {1, \"Ana\"}; FILE *f = fopen(\"alumnos.bin\", \"wb\"); if (!f) return 1; fwrite(\u0026a, sizeof(Alumno), 1, f); fclose(f); Alumno b; f = fopen(\"alumnos.bin\", \"rb\"); if (!f) return 1; fread(\u0026b, sizeof(Alumno), 1, f); fclose(f); printf(\"%d %s\\n\", b.id, b.nombre); return 0; } Resultado esperado 1 1 Ana Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Los archivos binarios con structs son la base de formatos de datos propietarios, bases de datos simples y serialización eficiente.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de fwrite y fread con struct en C para guardar registros binarios.",
+    "tags": [
+      "Intermedio",
+      "Ficheros"
+    ],
+    "title": "Archivos binarios y struct en C: ejercicio resuelto",
+    "uri": "/ejercicios/struct-ficheros/archivos-binarios-struct-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
