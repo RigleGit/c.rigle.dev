@@ -691,6 +691,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "Error handling with errno in C: solved exercise This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e #include \u003cerrno.h\u003e #include \u003cstring.h\u003e int main(void) { FILE *f = fopen(\"no-existe.txt\", \"r\"); if (!f) { perror(\"fopen\"); printf(\"errno=%d (%s)\\n\", errno, strerror(errno)); return 1; } fclose(f); return 0; } Expected output 1 fopen: No such file or directory Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use errno and perror are C’s standard mechanism for reporting system errors in I/O operations and OS calls.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved errno and perror exercise in C to diagnose I/O failures.",
+    "tags": [
+      "Advanced",
+      "Files"
+    ],
+    "title": "Error handling with errno in C: solved exercise",
+    "uri": "/en/ejercicios/struct-ficheros/manejo-de-errores-con-errno-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "bsearch in C: solved exercise on sorted array This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int cmp_int(const void *a, const void *b) { int x = *(const int *)a; int y = *(const int *)b; return (x \u003e y) - (x \u003c y); } int main(void) { int v[] = {1, 3, 5, 7, 9, 11}; int n = (int)(sizeof(v) / sizeof(v[0])); int clave = 7; int *p = bsearch(\u0026clave, v, n, sizeof(int), cmp_int); if (p) printf(\"Encontrado: %d\\n\", *p); else printf(\"No encontrado\\n\"); return 0; } Expected output 1 Encontrado: 7 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use The C standard library bsearch is useful when the array is already sorted and efficient search is needed without implementing the algorithm.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved bsearch exercise in C to search sorted arrays using a comparator.",
@@ -739,16 +750,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
   },
   {
     "breadcrumb": "",
@@ -771,16 +782,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
