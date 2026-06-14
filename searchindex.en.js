@@ -724,6 +724,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Relational and logical operators in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 #include \u003cstdio.h\u003e int main(void) { int a = 7, b = 4; printf(\"a \u003e b: %d\\n\", a \u003e b); printf(\"a == b: %d\\n\", a == b); printf(\"(a \u003e b) \u0026\u0026 (b \u003e 0): %d\\n\", (a \u003e b) \u0026\u0026 (b \u003e 0)); return 0; } Expected output 1 2 a \u003e b: 1 a == b: 0 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Relational and logical operators are the foundation of all conditions in C: validations, filters, and flow control.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise on relational and logical operators in C with basic truth tables.",
+    "tags": [
+      "Beginner",
+      "Fundamentals"
+    ],
+    "title": "Relational and logical operators in C: solved exercise",
+    "uri": "/en/ejercicios/fundamentos/operadores-relacionales-logicos-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Selection sort in C: solved exercise step by step This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cstdio.h\u003e void selection_sort(int a[], int n) { for (int i = 0; i \u003c n - 1; i++) { int min = i; for (int j = i + 1; j \u003c n; j++) { if (a[j] \u003c a[min]) min = j; } int tmp = a[i]; a[i] = a[min]; a[min] = tmp; } } int main(void) { int v[] = {6, 2, 9, 1, 5}; int n = (int)(sizeof(v) / sizeof(v[0])); selection_sort(v, n); for (int i = 0; i \u003c n; i++) printf(\"%d \", v[i]); printf(\"\\n\"); return 0; } Expected output 1 1 2 5 6 9 Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use Selection sort is used when writes are expensive, as it performs the minimum number of swaps possible.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved selection sort exercise in C to understand minimum selection at each pass.",
@@ -750,16 +761,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "",
@@ -782,16 +793,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -840,14 +859,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Strings",
     "uri": "/en/tags/strings/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
