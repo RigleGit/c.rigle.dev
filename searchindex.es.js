@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -609,6 +609,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Array bidimensional en C: ejercicio resuelto con matriz Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e int main(void) { int m[2][3] = {{1,2,3},{4,5,6}}; int suma = 0; for (int i = 0; i \u003c 2; i++) for (int j = 0; j \u003c 3; j++) suma += m[i][j]; printf(\"Suma matriz = %d\\n\", suma); return 0; } Resultado esperado 1 Suma matriz = 21 Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica Los arrays bidimensionales son la base de matrices, imágenes en escala de grises, tableros de juego y tablas de datos.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de arrays bidimensionales en C para recorrer y sumar matrices.",
+    "tags": [
+      "Intermedio",
+      "Arrays"
+    ],
+    "title": "Array bidimensional en C: ejercicio resuelto con matriz",
+    "uri": "/ejercicios/arrays-cadenas/array-bidimensional-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
     "content": "fprintf y fscanf en C: ejercicio resuelto con archivo de texto Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e int main(void) { FILE *f = fopen(\"datos.txt\", \"w\"); if (!f) return 1; fprintf(f, \"%s %d\\n\", \"Ana\", 28); fclose(f); char nombre[32]; int edad; f = fopen(\"datos.txt\", \"r\"); if (!f) return 1; if (fscanf(f, \"%31s %d\", nombre, \u0026edad) == 2) printf(\"%s tiene %d anos\\n\", nombre, edad); fclose(f); return 0; } Resultado esperado 1 Ana tiene 28 anos Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica fprintf y fscanf permiten leer y escribir datos formateados en ficheros, útiles en logs, configuraciones y reportes.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de fprintf y fscanf en C para persistir y recuperar datos de texto.",
@@ -771,12 +782,36 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -795,14 +830,6 @@ var relearn_searchindex = [
     "uri": "/tags/principiante/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -817,14 +844,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Ficheros",
     "uri": "/tags/ficheros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -865,14 +884,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Busqueda",
     "uri": "/tags/busqueda/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

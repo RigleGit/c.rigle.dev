@@ -625,6 +625,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "2D array in C: solved matrix exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e int main(void) { int m[2][3] = {{1,2,3},{4,5,6}}; int suma = 0; for (int i = 0; i \u003c 2; i++) for (int j = 0; j \u003c 3; j++) suma += m[i][j]; printf(\"Suma matriz = %d\\n\", suma); return 0; } Expected output 1 Suma matriz = 21 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Two-dimensional arrays are the foundation of matrices, grayscale images, game boards, and data tables.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved 2D-array exercise in C to traverse and sum matrix values.",
+    "tags": [
+      "Intermediate",
+      "Arrays"
+    ],
+    "title": "2D array in C: solved matrix exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/array-bidimensional-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
     "content": "fprintf and fscanf in C: solved exercise with text file This exercise is scheduled for daily publication and follows the same didactic structure used across the site: clear statement, compilable code, and expected output.\nProblem statement Implement a practical example of the topic and validate the output in the console.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e int main(void) { FILE *f = fopen(\"datos.txt\", \"w\"); if (!f) return 1; fprintf(f, \"%s %d\\n\", \"Ana\", 28); fclose(f); char nombre[32]; int edad; f = fopen(\"datos.txt\", \"r\"); if (!f) return 1; if (fscanf(f, \"%31s %d\", nombre, \u0026edad) == 2) printf(\"%s tiene %d anos\\n\", nombre, edad); fclose(f); return 0; } Expected output 1 Ana tiene 28 anos Common mistakes Not validating input and standard-library return values. Ignoring edge cases (buffers, limits, null pointers). Skipping basic compile/run verification. Practical use fprintf and fscanf allow reading and writing formatted data to files, useful for logs, configurations, and reports.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved fprintf and fscanf exercise in C to persist and recover text data.",
@@ -783,16 +794,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -815,6 +826,22 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Advanced",
     "uri": "/en/tags/advanced/index.html"
   },
@@ -825,14 +852,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -865,14 +884,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Search",
     "uri": "/en/tags/search/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
