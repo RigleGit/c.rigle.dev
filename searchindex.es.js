@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -695,6 +695,17 @@ var relearn_searchindex = [
     ],
     "title": "const en C: ejercicio resuelto con parámetros de solo lectura",
     "uri": "/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Contar vocales en C: ejercicio resuelto Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int es_vocal(char c) { return c=='a'||c=='e'||c=='i'||c=='o'||c=='u'|| c=='A'||c=='E'||c=='I'||c=='O'||c=='U'; } int main(void) { char s[] = \"Programacion\"; int c = 0; for (int i = 0; s[i] != '\\0'; i++) if (es_vocal(s[i])) c++; printf(\"Vocales: %d\\n\", c); return 0; } Resultado esperado 1 Vocales: 5 Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica El conteo de caracteres es útil en validaciones de formularios, análisis lingüístico y compresión básica de datos.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para contar vocales en una cadena en C.",
+    "tags": [
+      "Intermedio",
+      "Cadenas"
+    ],
+    "title": "Contar vocales en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/contar-vocales-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
