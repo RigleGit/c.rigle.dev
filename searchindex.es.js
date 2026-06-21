@@ -417,6 +417,14 @@ var relearn_searchindex = [
     "uri": "/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C",
+    "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
+    "tags": [],
+    "title": "Algoritmos",
+    "uri": "/ejercicios/algoritmos/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
     "content": "union en C: ejercicio resuelto para ahorrar memoria Este ejercicio está programado para publicación diaria y mantiene la misma estructura didáctica del resto del sitio: enunciado claro, código compilable y salida esperada.\nEnunciado Implementa un caso práctico del tema y valida el resultado por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e typedef union { int i; float f; char c; } Dato; int main(void) { Dato d; d.i = 65; printf(\"int: %d\\n\", d.i); d.c = 'A'; printf(\"char: %c\\n\", d.c); printf(\"Tamano union: %zu\\n\", sizeof(Dato)); return 0; } Resultado esperado 1 2 int: 65 char: A Errores frecuentes No validar entradas o retornos de funciones estándar. No controlar casos borde (buffers, límites, punteros nulos). Omitir comprobaciones básicas de compilación y ejecución. Aplicación práctica Las uniones se usan en protocolos de comunicación, variantes de tipos y parsing de formatos binarios de bajo nivel.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de union en C para compartir memoria entre distintos tipos.",
@@ -426,14 +434,6 @@ var relearn_searchindex = [
     ],
     "title": "union en C: ejercicio resuelto para ahorrar memoria",
     "uri": "/ejercicios/struct-ficheros/union-en-c-ejercicio-resuelto/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C",
-    "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
-    "tags": [],
-    "title": "Algoritmos",
-    "uri": "/ejercicios/algoritmos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
@@ -796,6 +796,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Counting sort en C: ejercicio resuelto Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e void counting_sort(int a[], int n, int maxv) { int c[101] = {0}; for (int i = 0; i \u003c n; i++) c[a[i]]++; int k = 0; for (int v = 0; v \u003c= maxv; v++) while (c[v]--) a[k++] = v; } int main(void) { int a[] = {4,2,2,8,3,3,1}; int n = (int)(sizeof(a)/sizeof(a[0])); counting_sort(a, n, 8); for (int i = 0; i \u003c n; i++) printf(\"%d \", a[i]); printf(\"\\n\"); return 0; } Resultado esperado 1 1 2 2 3 3 4 8 Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica Counting sort es óptimo para ordenar valores en rangos pequeños conocidos, como notas, edades o códigos de categoría.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de counting sort en C para enteros en rango acotado.",
+    "tags": [
+      "Intermedio",
+      "Algoritmos-Ordenacion"
+    ],
+    "title": "Counting sort en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/counting-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "Casting explícito en C: ejercicio resuelto Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 #include \u003cstdio.h\u003e int main(void) { int suma = 7, n = 2; double media = (double)suma / n; printf(\"Media = %.2f\\n\", media); return 0; } Resultado esperado 1 Media = 3.50 Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica El casting explícito es necesario en operaciones aritméticas mixtas, conversiones entre tipos numéricos y al trabajar con void pointers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de casting explícito en C para controlar conversiones entre tipos.",
@@ -807,20 +818,20 @@ var relearn_searchindex = [
     "uri": "/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos-Ordenacion",
+    "uri": "/tags/algoritmos-ordenacion/index.html"
+  },
+  {
     "breadcrumb": "",
     "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
     "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
     "tags": [],
     "title": "Aprende C — ejercicios resueltos",
     "uri": "/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -845,6 +856,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -909,14 +928,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arboles",
     "uri": "/tags/arboles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Algoritmos-Ordenacion",
-    "uri": "/tags/algoritmos-ordenacion/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
