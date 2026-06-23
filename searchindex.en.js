@@ -845,6 +845,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Interpolation search in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e int interpolation_search(int a[], int n, int x) { int lo = 0, hi = n - 1; while (lo \u003c= hi \u0026\u0026 x \u003e= a[lo] \u0026\u0026 x \u003c= a[hi]) { if (lo == hi) return (a[lo] == x) ? lo : -1; int pos = lo + (int)((double)(hi - lo) / (a[hi] - a[lo]) * (x - a[lo])); if (a[pos] == x) return pos; if (a[pos] \u003c x) lo = pos + 1; else hi = pos - 1; } return -1; } int main(void) { int a[] = {10,20,30,40,50,60}; printf(\"Indice: %d\\n\", interpolation_search(a, 6, 40)); return 0; } Expected output 1 Indice: 3 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Interpolation search outperforms binary search on uniformly distributed arrays, such as databases sorted by value.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved interpolation-search exercise in C on uniformly distributed sorted arrays.",
+    "tags": [
+      "Advanced",
+      "Search"
+    ],
+    "title": "Interpolation search in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
@@ -865,8 +876,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
+    "title": "Tag :: Search",
+    "uri": "/en/tags/search/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -875,6 +886,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Sorting-Algorithms",
+    "uri": "/en/tags/sorting-algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -939,14 +958,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Trees",
     "uri": "/en/tags/trees/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Search",
-    "uri": "/en/tags/search/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

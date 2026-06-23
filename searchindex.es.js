@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -829,12 +829,15 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Algoritmos-Ordenacion",
-    "uri": "/tags/algoritmos-ordenacion/index.html"
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Búsqueda por interpolación en C: ejercicio resuelto Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e int interpolation_search(int a[], int n, int x) { int lo = 0, hi = n - 1; while (lo \u003c= hi \u0026\u0026 x \u003e= a[lo] \u0026\u0026 x \u003c= a[hi]) { if (lo == hi) return (a[lo] == x) ? lo : -1; int pos = lo + (int)((double)(hi - lo) / (a[hi] - a[lo]) * (x - a[lo])); if (a[pos] == x) return pos; if (a[pos] \u003c x) lo = pos + 1; else hi = pos - 1; } return -1; } int main(void) { int a[] = {10,20,30,40,50,60}; printf(\"Indice: %d\\n\", interpolation_search(a, 6, 40)); return 0; } Resultado esperado 1 Indice: 3 Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica La búsqueda por interpolación supera a la binaria en arrays de distribución uniforme, como bases de datos ordenadas por valor.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de búsqueda por interpolación en C sobre arrays ordenados uniformes.",
+    "tags": [
+      "Avanzado",
+      "Busqueda"
+    ],
+    "title": "Búsqueda por interpolación en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "",
@@ -853,6 +856,14 @@ var relearn_searchindex = [
     "uri": "/tags/avanzado/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Busqueda",
+    "uri": "/tags/busqueda/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -867,6 +878,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos-Ordenacion",
+    "uri": "/tags/algoritmos-ordenacion/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -939,14 +958,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arboles",
     "uri": "/tags/arboles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Busqueda",
-    "uri": "/tags/busqueda/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
