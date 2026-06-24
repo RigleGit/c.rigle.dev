@@ -856,12 +856,31 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Euclidean algorithm (GCD) in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #include \u003cstdio.h\u003e int mcd(int a, int b) { while (b != 0) { int r = a % b; a = b; b = r; } return a; } int main(void) { printf(\"MCD(48,18) = %d\\n\", mcd(48, 18)); return 0; } Expected output 1 MCD(48,18) = 6 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use The GCD with Euclid’s algorithm is used in cryptography, fraction simplification, and solving Diophantine equations.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved Euclidean algorithm exercise in C to compute the greatest common divisor.",
+    "tags": [
+      "Intermediate",
+      "Algorithms"
+    ],
+    "title": "Euclidean algorithm (GCD) in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Algorithms",
+    "uri": "/en/tags/algorithms/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -870,14 +889,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Search",
-    "uri": "/en/tags/search/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -892,16 +903,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Search",
+    "uri": "/en/tags/search/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Sorting-Algorithms",
+    "uri": "/en/tags/sorting-algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
