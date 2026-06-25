@@ -625,6 +625,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Priority queue in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e #define MAX 10 int q[MAX], n = 0; void push(int x) { int i = n - 1; while (i \u003e= 0 \u0026\u0026 q[i] \u003c x) { q[i + 1] = q[i]; i--; } q[i + 1] = x; n++; } int pop(void) { return q[--n]; } int main(void) { push(3); push(10); push(5); printf(\"%d %d %d\\n\", pop(), pop(), pop()); return 0; } Expected output 1 3 5 10 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Priority queues are the foundation of algorithms like Dijkstra, task schedulers, and event management systems.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved priority-queue exercise in C with ordered insertion.",
+    "tags": [
+      "Advanced",
+      "Stacks-Queues"
+    ],
+    "title": "Priority queue in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/cola-de-prioridad-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "2D array in C: solved matrix exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e int main(void) { int m[2][3] = {{1,2,3},{4,5,6}}; int suma = 0; for (int i = 0; i \u003c 2; i++) for (int j = 0; j \u003c 3; j++) suma += m[i][j]; printf(\"Suma matriz = %d\\n\", suma); return 0; } Expected output 1 Suma matriz = 21 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Two-dimensional arrays are the foundation of matrices, grayscale images, game boards, and data tables.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved 2D-array exercise in C to traverse and sum matrix values.",
@@ -871,16 +882,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Algorithms",
-    "uri": "/en/tags/algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "",
@@ -889,6 +892,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Stacks-Queues",
+    "uri": "/en/tags/stacks-queues/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -903,8 +914,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Algorithms",
+    "uri": "/en/tags/algorithms/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1017,14 +1036,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Linked-Lists",
     "uri": "/en/tags/linked-lists/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Stacks-Queues",
-    "uri": "/en/tags/stacks-queues/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
