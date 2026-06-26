@@ -680,6 +680,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Graph adjacency list in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 #include \u003cstdio.h\u003e #define N 4 int g[N][N] = {0}; void add_edge(int u, int v) { g[u][v] = 1; g[v][u] = 1; } int main(void) { add_edge(0, 1); add_edge(0, 2); printf(\"0 conectado con 1: %d\\n\", g[0][1]); printf(\"2 conectado con 3: %d\\n\", g[2][3]); return 0; } Expected output 1 2 0 conectado con 1: 1 2 conectado con 3: 0 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Adjacency list graphs are the most memory-efficient representation for sparse graphs: networks, maps, and dependencies.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved graph-representation exercise in C using adjacency lists.",
+    "tags": [
+      "Advanced",
+      "Structs"
+    ],
+    "title": "Graph adjacency list in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/grafo-lista-adyacencia-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "Reverse string in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char s[] = \"hola\"; int i = 0, j = (int)strlen(s) - 1; while (i \u003c j) { char t = s[i]; s[i] = s[j]; s[j] = t; i++; j--; } printf(\"%s\\n\", s); return 0; } Expected output 1 aloh Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use String reversal appears in palindrome validation, basic encoding, and classic technical interview problems.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to reverse a string in C using two pointers.",
@@ -898,8 +909,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Stacks-Queues",
-    "uri": "/en/tags/stacks-queues/index.html"
+    "title": "Tag :: Structs",
+    "uri": "/en/tags/structs/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -908,6 +919,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Stacks-Queues",
+    "uri": "/en/tags/stacks-queues/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -980,14 +999,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Structs",
-    "uri": "/en/tags/structs/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
