@@ -171,7 +171,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones",
+    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C",
     "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
     "tags": [],
     "title": "Punteros y memoria",
@@ -489,6 +489,17 @@ var relearn_searchindex = [
     ],
     "title": "Árbol binario en C: ejercicio resuelto de inserción y búsqueda",
     "uri": "/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "Double free en C: ejercicio resuelto para evitar corrupción de memoria Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { int *p = (int *)malloc(sizeof(int)); if (!p) return 1; *p = 42; free(p); p = NULL; if (p) free(p); printf(\"Liberacion segura completada\\n\"); return 0; } Resultado esperado 1 Liberacion segura completada Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica El patrón de nulificar tras liberar previene bugs de seguridad graves como use-after-free y double-free en sistemas reales.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de double free en C con patrón seguro de liberación y nulificación.",
+    "tags": [
+      "Avanzado",
+      "Memoria-Dinamica"
+    ],
+    "title": "Double free en C: ejercicio resuelto para evitar corrupción de memoria",
+    "uri": "/ejercicios/punteros-memoria/doble-free-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
@@ -923,8 +934,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Estructuras",
-    "uri": "/tags/estructuras/index.html"
+    "title": "Etiqueta :: Memoria-Dinamica",
+    "uri": "/tags/memoria-dinamica/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -933,6 +944,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Estructuras",
+    "uri": "/tags/estructuras/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1029,14 +1048,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arboles",
     "uri": "/tags/arboles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Memoria-Dinamica",
-    "uri": "/tags/memoria-dinamica/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
