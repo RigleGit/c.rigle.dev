@@ -812,6 +812,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "Read CSV in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char linea[] = \"ana,28,madrid\"; char *tok = strtok(linea, \",\"); while (tok) { printf(\"%s\\n\", tok); tok = strtok(NULL, \",\"); } return 0; } Expected output 1 2 3 ana 28 madrid Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use The CSV format is the most widely used for tabular data exchange between applications, databases, and spreadsheets.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved CSV-reading exercise in C using fgets and strtok.",
+    "tags": [
+      "Intermediate",
+      "Files"
+    ],
+    "title": "Read CSV in C: solved exercise",
+    "uri": "/en/ejercicios/struct-ficheros/csv-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "DFS in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e void dfs(int nodo, int vis[]) { vis[nodo] = 1; printf(\"%d \", nodo); if (nodo == 0 \u0026\u0026 !vis[1]) dfs(1, vis); if (nodo == 1 \u0026\u0026 !vis[2]) dfs(2, vis); if (nodo == 2 \u0026\u0026 !vis[3]) dfs(3, vis); } int main(void) { int vis[4] = {0}; printf(\"DFS: \"); dfs(0, vis); printf(\"\\n\"); return 0; } Expected output 1 DFS: 0 1 2 3 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use DFS is used in cycle detection, topological sorting, maze solving, and connected component analysis.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved DFS traversal exercise in C with recursive approach.",
@@ -937,8 +948,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Dynamic-Memory",
-    "uri": "/en/tags/dynamic-memory/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -963,6 +974,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Dynamic-Memory",
+    "uri": "/en/tags/dynamic-memory/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1043,14 +1062,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Fundamentals",
     "uri": "/en/tags/fundamentals/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
