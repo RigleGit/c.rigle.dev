@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -849,6 +849,17 @@ var relearn_searchindex = [
     ],
     "title": "Selection sort en C: ejercicio resuelto paso a paso",
     "uri": "/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "Archivo temporal en C: ejercicio resuelto con tmpfile Este ejercicio está programado para publicación diaria y sigue la estructura estándar del sitio: enunciado, solución y resultado esperado.\nEnunciado Resuelve el caso práctico y comprueba la salida por consola.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int main(void) { FILE *f = tmpfile(); if (!f) return 1; fputs(\"hola temporal\", f); rewind(f); char buf[32]; fgets(buf, sizeof(buf), f); printf(\"%s\\n\", buf); fclose(f); return 0; } Resultado esperado 1 hola temporal Errores frecuentes No validar retornos de funciones estándar. Ignorar casos límite de índices, punteros o buffers. No probar con entradas de ejemplo antes de publicar. Aplicación práctica Los archivos temporales se usan en compiladores, editores de texto y sistemas que necesitan almacenamiento intermedio seguro.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para entrevistas y exámenes de C? Sí. Trabaja patrones que aparecen mucho en prácticas, entrevistas técnicas y evaluaciones de programación en C.\n¿Dónde seguir con más ejercicios resueltos de C? En Programación en C en 100 ejercicios resueltos y en Ejercicios C. Kindle Unlimited: Ver en Amazon.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de archivos temporales en C usando tmpfile y rewind.",
+    "tags": [
+      "Intermedio",
+      "Ficheros"
+    ],
+    "title": "Archivo temporal en C: ejercicio resuelto con tmpfile",
+    "uri": "/ejercicios/struct-ficheros/archivo-temporal-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
