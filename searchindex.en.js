@@ -878,6 +878,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "strtok in C: solved exercise for splitting CSV strings If you are looking for strtok in c: solved exercise for splitting csv strings, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Split rojo,verde,azul into comma-separated tokens and print them one per line.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char linea[] = \"rojo,verde,azul\"; char *token = strtok(linea, \",\"); while (token != NULL) { printf(\"%s\\n\", token); token = strtok(NULL, \",\"); } return 0; } Expected output 1 2 3 rojo verde azul Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern appears frequently in text handling, input validation, and buffer manipulation.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved strtok exercise in C to split a string by delimiters and iterate through tokens.",
+    "tags": [
+      "Intermediate",
+      "Strings"
+    ],
+    "title": "strtok in C: solved exercise for splitting CSV strings",
+    "uri": "/en/ejercicios/arrays-cadenas/strtok-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
     "content": "Temporary file in C: solved exercise with tmpfile This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e int main(void) { FILE *f = tmpfile(); if (!f) return 1; fputs(\"hola temporal\", f); rewind(f); char buf[32]; fgets(buf, sizeof(buf), f); printf(\"%s\\n\", buf); fclose(f); return 0; } Expected output 1 hola temporal Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use Temporary files are used in compilers, text editors, and systems that need secure intermediate storage.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved temporary-file exercise in C using tmpfile and rewind.",
@@ -970,14 +981,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Dynamic-Memory",
-    "uri": "/en/tags/dynamic-memory/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Intermediate",
     "uri": "/en/tags/intermediate/index.html"
   },
@@ -990,12 +993,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Dynamic-Memory",
+    "uri": "/en/tags/dynamic-memory/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1052,14 +1071,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Sorting-Algorithms",
     "uri": "/en/tags/sorting-algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
