@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -937,6 +937,17 @@ var relearn_searchindex = [
     ],
     "title": "Casting explícito en C: ejercicio resuelto",
     "uri": "/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Palíndromo en C: ejercicio resuelto con dos índices Si buscas palíndromo en c: ejercicio resuelto con dos índices, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Determina si reconocer es palíndroma devolviendo 1 si lo es.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int es_palindromo(const char *s) { int i = 0; int j = (int)strlen(s) - 1; while (i \u003c j) { if (s[i] != s[j]) { return 0; } i++; j--; } return 1; } int main(void) { printf(\"%d\\n\", es_palindromo(\"reconocer\")); return 0; } Salida esperada 1 1 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón aparece mucho en tratamiento de texto, validación de entrada y manipulación de buffers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para comprobar si una cadena es palíndroma usando recorrido desde ambos extremos.",
+    "tags": [
+      "Intermedio",
+      "Cadenas"
+    ],
+    "title": "Palíndromo en C: ejercicio resuelto con dos índices",
+    "uri": "/ejercicios/arrays-cadenas/palindromo-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
