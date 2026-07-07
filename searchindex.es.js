@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -959,6 +959,17 @@ var relearn_searchindex = [
     ],
     "title": "Radix sort en C: ejercicio resuelto",
     "uri": "/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Contar palabras en C: ejercicio resuelto Si buscas contar palabras en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Cuenta cuántas palabras hay en C en rigle dev ignorando espacios repetidos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cctype.h\u003e #include \u003cstdio.h\u003e int contar_palabras(const char *s) { int total = 0; int en_palabra = 0; for (int i = 0; s[i] != '\\0'; i++) { if (!isspace((unsigned char)s[i]) \u0026\u0026 !en_palabra) { total++; en_palabra = 1; } else if (isspace((unsigned char)s[i])) { en_palabra = 0; } } return total; } int main(void) { printf(\"%d\\n\", contar_palabras(\"C en rigle dev\")); return 0; } Salida esperada 1 4 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón aparece mucho en tratamiento de texto, validación de entrada y manipulación de buffers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para contar palabras en una cadena manejando espacios múltiples.",
+    "tags": [
+      "Intermedio",
+      "Cadenas"
+    ],
+    "title": "Contar palabras en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/contar-palabras-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
