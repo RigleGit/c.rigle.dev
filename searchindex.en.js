@@ -999,6 +999,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "Matrix transpose in C: solved exercise If you are looking for matrix transpose in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Generate the transpose of a 2x3 matrix and print it as a 3x2 matrix.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #include \u003cstdio.h\u003e int main(void) { int a[2][3] = {{1, 2, 3}, {4, 5, 6}}; int t[3][2]; for (int i = 0; i \u003c 2; i++) { for (int j = 0; j \u003c 3; j++) { t[j][i] = a[i][j]; } } for (int i = 0; i \u003c 3; i++) { for (int j = 0; j \u003c 2; j++) { printf(\"%d\", t[i][j]); if (j + 1 \u003c 2) { printf(\" \"); } } printf(\"\\n\"); } return 0; } Expected output 1 2 3 1 4 2 5 3 6 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern appears frequently in text handling, input validation, and buffer manipulation.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise to build the transpose of a 2x3 matrix in C.",
+    "tags": [
+      "Intermediate",
+      "Arrays"
+    ],
+    "title": "Matrix transpose in C: solved exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/matriz-transpuesta-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Euclidean algorithm (GCD) in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #include \u003cstdio.h\u003e int mcd(int a, int b) { while (b != 0) { int r = a % b; a = b; b = r; } return a; } int main(void) { printf(\"MCD(48,18) = %d\\n\", mcd(48, 18)); return 0; } Expected output 1 MCD(48,18) = 6 Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use The GCD with Euclid’s algorithm is used in cryptography, fraction simplification, and solving Diophantine equations.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved Euclidean algorithm exercise in C to compute the greatest common divisor.",
@@ -1008,6 +1019,14 @@ var relearn_searchindex = [
     ],
     "title": "Euclidean algorithm (GCD) in C: solved exercise",
     "uri": "/en/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1026,20 +1045,20 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1104,14 +1123,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Sorting-Algorithms",
     "uri": "/en/tags/sorting-algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
