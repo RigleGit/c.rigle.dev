@@ -1043,6 +1043,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Remove duplicates from a sorted array in C: solved exercise If you are looking for remove duplicates from a sorted array in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Compact a sorted array with repeated values so only {1,2,3,4} remains.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e int eliminar_duplicados(int a[], int n) { if (n == 0) { return 0; } int k = 1; for (int i = 1; i \u003c n; i++) { if (a[i] != a[k - 1]) { a[k++] = a[i]; } } return k; } int main(void) { int a[] = {1, 1, 2, 2, 2, 3, 4, 4}; int n = eliminar_duplicados(a, 8); for (int i = 0; i \u003c n; i++) { printf(\"%d\", a[i]); if (i + 1 \u003c n) { printf(\" \"); } } printf(\"\\n\"); return 0; } Expected output 1 1 2 3 4 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use The key idea is to identify a reusable pattern instead of stopping at “it works once”.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise to compact a sorted array in-place while keeping only unique values.",
+    "tags": [
+      "Intermediate",
+      "Arrays"
+    ],
+    "title": "Remove duplicates from a sorted array in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",

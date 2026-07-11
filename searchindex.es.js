@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1025,6 +1025,17 @@ var relearn_searchindex = [
     ],
     "title": "Suma de la diagonal principal en C: ejercicio resuelto",
     "uri": "/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Eliminar duplicados de un array ordenado en C: ejercicio resuelto Si buscas eliminar duplicados de un array ordenado en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Compacta un array ordenado con repetidos para dejar solo {1,2,3,4}.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e int eliminar_duplicados(int a[], int n) { if (n == 0) { return 0; } int k = 1; for (int i = 1; i \u003c n; i++) { if (a[i] != a[k - 1]) { a[k++] = a[i]; } } return k; } int main(void) { int a[] = {1, 1, 2, 2, 2, 3, 4, 4}; int n = eliminar_duplicados(a, 8); for (int i = 0; i \u003c n; i++) { printf(\"%d\", a[i]); if (i + 1 \u003c n) { printf(\" \"); } } printf(\"\\n\"); return 0; } Salida esperada 1 1 2 3 4 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica La idea clave aquí es identificar un patrón reutilizable y no quedarse solo con que el ejemplo funcione una vez.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para compactar in-place un array ordenado dejando solo valores únicos.",
+    "tags": [
+      "Intermedio",
+      "Arrays"
+    ],
+    "title": "Eliminar duplicados de un array ordenado en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "",
