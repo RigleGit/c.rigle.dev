@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1038,6 +1038,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Máximo subarray (Kadane) en C: ejercicio resuelto Si buscas máximo subarray (kadane) en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Calcula la suma máxima de un subarray contiguo en {-2,1,-3,4,-1,2,1,-5,4}.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e int kadane(const int a[], int n) { int mejor = a[0]; int actual = a[0]; for (int i = 1; i \u003c n; i++) { actual = (actual + a[i] \u003e a[i]) ? actual + a[i] : a[i]; mejor = (mejor \u003e actual) ? mejor : actual; } return mejor; } int main(void) { int a[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4}; printf(\"%d\\n\", kadane(a, 9)); return 0; } Salida esperada 1 6 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica La idea clave aquí es identificar un patrón reutilizable y no quedarse solo con que el ejemplo funcione una vez.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto del algoritmo de Kadane en C para hallar la suma máxima contigua.",
+    "tags": [
+      "Avanzado",
+      "Fundamentos"
+    ],
+    "title": "Máximo subarray (Kadane) en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/maximo-subarray-kadane-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "",
     "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
     "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
@@ -1050,8 +1061,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1066,8 +1077,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Fundamentos",
+    "uri": "/tags/fundamentos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1076,6 +1087,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1100,14 +1127,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Ficheros",
     "uri": "/tags/ficheros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1148,14 +1167,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Algoritmos-Ordenacion",
     "uri": "/tags/algoritmos-ordenacion/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Fundamentos",
-    "uri": "/tags/fundamentos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

@@ -1054,20 +1054,31 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Maximum subarray (Kadane) in C: solved exercise If you are looking for maximum subarray (kadane) in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Compute the maximum contiguous subarray sum in {-2,1,-3,4,-1,2,1,-5,4}.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include \u003cstdio.h\u003e int kadane(const int a[], int n) { int mejor = a[0]; int actual = a[0]; for (int i = 1; i \u003c n; i++) { actual = (actual + a[i] \u003e a[i]) ? actual + a[i] : a[i]; mejor = (mejor \u003e actual) ? mejor : actual; } return mejor; } int main(void) { int a[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4}; printf(\"%d\\n\", kadane(a, 9)); return 0; } Expected output 1 6 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use The key idea is to identify a reusable pattern instead of stopping at “it works once”.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved Kadane algorithm exercise in C to find the maximum contiguous sum.",
+    "tags": [
+      "Advanced",
+      "Fundamentals"
+    ],
+    "title": "Maximum subarray (Kadane) in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/maximo-subarray-kadane-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "",
@@ -1084,6 +1095,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1108,14 +1135,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1164,14 +1183,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Beginner",
     "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
