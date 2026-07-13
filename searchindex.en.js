@@ -1065,6 +1065,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/maximo-subarray-kadane-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Sieve of Eratosthenes in C: solved exercise If you are looking for sieve of eratosthenes in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement List all prime numbers less than or equal to 20.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #include \u003cstdio.h\u003e int main(void) { int limite = 20; int primo[21]; for (int i = 0; i \u003c= limite; i++) { primo[i] = 1; } primo[0] = 0; primo[1] = 0; for (int i = 2; i * i \u003c= limite; i++) { if (primo[i]) { for (int j = i * i; j \u003c= limite; j += i) { primo[j] = 0; } } } int primero = 1; for (int i = 2; i \u003c= limite; i++) { if (primo[i]) { if (!primero) { printf(\" \"); } printf(\"%d\", i); primero = 0; } } printf(\"\\n\"); return 0; } Expected output 1 2 3 5 7 11 13 17 19 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use The key idea is to identify a reusable pattern instead of stopping at “it works once”.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved Sieve of Eratosthenes exercise in C to list primes up to a given limit.",
+    "tags": [
+      "Advanced",
+      "Fundamentals"
+    ],
+    "title": "Sieve of Eratosthenes in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
