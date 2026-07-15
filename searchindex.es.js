@@ -171,7 +171,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C",
+    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C Arrays de punteros en C",
     "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
     "tags": [],
     "title": "Punteros y memoria",
@@ -761,6 +761,17 @@ var relearn_searchindex = [
     ],
     "title": "const en C: ejercicio resuelto con parámetros de solo lectura",
     "uri": "/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "Arrays de punteros en C: ejercicio resuelto Si buscas arrays de punteros en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Declara un array de punteros a cadenas e imprime todos sus elementos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e int main(void) { const char *palabras[] = {\"uno\", \"dos\", \"tres\"}; int n = (int)(sizeof(palabras) / sizeof(palabras[0])); for (int i = 0; i \u003c n; i++) { printf(\"%s\\n\", palabras[i]); } return 0; } Salida esperada 1 2 3 uno dos tres Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Aquí lo importante es entender bien qué dirección se recorre o reserva y cuándo deja de ser válida.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto con arrays de punteros a cadenas en C.",
+    "tags": [
+      "Intermedio",
+      "Punteros"
+    ],
+    "title": "Arrays de punteros en C: ejercicio resuelto",
+    "uri": "/ejercicios/punteros-memoria/arrays-de-punteros-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
