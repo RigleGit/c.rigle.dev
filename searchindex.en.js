@@ -845,6 +845,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
+    "content": "Void pointer in C: solved exercise If you are looking for void pointer in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Print an int and a double from a void * and a type tag.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e enum Tipo { T_INT, T_DOUBLE }; void imprimir(void *dato, enum Tipo tipo) { if (tipo == T_INT) { printf(\"%d\\n\", *(int *)dato); } else { printf(\"%.1f\\n\", *(double *)dato); } } int main(void) { int a = 42; double b = 3.5; imprimir(\u0026a, T_INT); imprimir(\u0026b, T_DOUBLE); return 0; } Expected output 1 2 42 3.5 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use The important part here is understanding which address is traversed or allocated and when it stops being valid.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved `void *` exercise in C with controlled typed access.",
+    "tags": [
+      "Advanced",
+      "Pointers"
+    ],
+    "title": "Void pointer in C: solved exercise",
+    "uri": "/en/ejercicios/punteros-memoria/void-pointer-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
     "content": "Read CSV in C: solved exercise This exercise is scheduled for daily publication and follows the standard site structure: statement, solution, and expected output.\nProblem statement Solve the practical case and verify the console output.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char linea[] = \"ana,28,madrid\"; char *tok = strtok(linea, \",\"); while (tok) { printf(\"%s\\n\", tok); tok = strtok(NULL, \",\"); } return 0; } Expected output 1 2 3 ana 28 madrid Common mistakes Not validating standard-function return values. Ignoring edge cases for indices, pointers, or buffers. Skipping example-based test runs before publishing. Practical use The CSV format is the most widely used for tabular data exchange between applications, databases, and spreadsheets.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful for C exams and technical interviews? Yes. It targets patterns that commonly appear in practice assignments, technical interviews, and C programming exams.\nWhere can I keep practicing with more solved C exercises? In Programming in C in 100 Solved Exercises and C Exercises. Kindle Unlimited: View on Amazon.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved CSV-reading exercise in C using fgets and strtok.",
@@ -1102,8 +1113,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "",
@@ -1134,8 +1145,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
