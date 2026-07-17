@@ -955,6 +955,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "Copy a file in C: solved exercise If you are looking for copy a file in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Create a source file, copy it into a destination file, and print the copied content.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #include \u003cstdio.h\u003e int main(void) { FILE *src = fopen(\"origen.txt\", \"w\"); if (!src) { return 1; } fputs(\"linea1\\nlinea2\\n\", src); fclose(src); src = fopen(\"origen.txt\", \"r\"); FILE *dst = fopen(\"destino.txt\", \"w\"); if (!src || !dst) { return 1; } int c; while ((c = fgetc(src)) != EOF) { fputc(c, dst); } fclose(src); fclose(dst); dst = fopen(\"destino.txt\", \"r\"); if (!dst) { return 1; } while ((c = fgetc(dst)) != EOF) { putchar(c); } fclose(dst); return 0; } Expected output 1 2 linea1 linea2 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern is common in CLI tools, simple persistence, and record processing.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise to copy the contents of a text file character by character in C.",
+    "tags": [
+      "Intermediate",
+      "Files"
+    ],
+    "title": "Copy a file in C: solved exercise",
+    "uri": "/en/ejercicios/struct-ficheros/copiar-archivo-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "strtol in C: solved exercise for converting text to integer If you are looking for strtol in c: solved exercise for converting text to integer, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Convert 123abc to an integer and print the parsed number and remaining text.\nC solution 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { const char *texto = \"123abc\"; char *fin; long valor = strtol(texto, \u0026fin, 10); printf(\"%ld\\n\", valor); printf(\"%s\\n\", fin); return 0; } Expected output 1 2 123 abc Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern appears frequently in text handling, input validation, and buffer manipulation.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved strtol exercise in C with detection of the non-numeric remainder in a string.",
@@ -1113,8 +1124,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -1123,14 +1142,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -1145,8 +1156,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Pointers",
+    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1179,14 +1198,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Dynamic-Memory",
     "uri": "/en/tags/dynamic-memory/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

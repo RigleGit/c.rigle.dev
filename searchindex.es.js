@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -939,6 +939,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "Copiar archivo en C: ejercicio resuelto Si buscas copiar archivo en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Crea un archivo origen, cópialo a un destino y muestra el contenido copiado.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #include \u003cstdio.h\u003e int main(void) { FILE *src = fopen(\"origen.txt\", \"w\"); if (!src) { return 1; } fputs(\"linea1\\nlinea2\\n\", src); fclose(src); src = fopen(\"origen.txt\", \"r\"); FILE *dst = fopen(\"destino.txt\", \"w\"); if (!src || !dst) { return 1; } int c; while ((c = fgetc(src)) != EOF) { fputc(c, dst); } fclose(src); fclose(dst); dst = fopen(\"destino.txt\", \"r\"); if (!dst) { return 1; } while ((c = fgetc(dst)) != EOF) { putchar(c); } fclose(dst); return 0; } Salida esperada 1 2 linea1 linea2 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón se usa mucho en herramientas de consola, persistencia sencilla y procesamiento de registros.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para copiar el contenido de un archivo de texto carácter a carácter en C.",
+    "tags": [
+      "Intermedio",
+      "Ficheros"
+    ],
+    "title": "Copiar archivo en C: ejercicio resuelto",
+    "uri": "/ejercicios/struct-ficheros/copiar-archivo-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
     "content": "strtol en C: ejercicio resuelto para convertir texto a entero Si buscas strtol en c: ejercicio resuelto para convertir texto a entero, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Convierte la cadena 123abc a entero e imprime el número obtenido y el resto pendiente.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e int main(void) { const char *texto = \"123abc\"; char *fin; long valor = strtol(texto, \u0026fin, 10); printf(\"%ld\\n\", valor); printf(\"%s\\n\", fin); return 0; } Salida esperada 1 2 123 abc Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón aparece mucho en tratamiento de texto, validación de entrada y manipulación de buffers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de strtol en C con detección del resto no numérico de una cadena.",
@@ -1101,14 +1112,6 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -1121,8 +1124,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Punteros",
-    "uri": "/tags/punteros/index.html"
+    "title": "Etiqueta :: Ficheros",
+    "uri": "/tags/ficheros/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1137,8 +1148,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros",
+    "uri": "/tags/punteros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1171,14 +1190,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Memoria-Dinamica",
     "uri": "/tags/memoria-dinamica/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Ficheros",
-    "uri": "/tags/ficheros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
