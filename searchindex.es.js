@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C fseek y ftell en C",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -981,6 +981,17 @@ var relearn_searchindex = [
     ],
     "title": "Casting explícito en C: ejercicio resuelto",
     "uri": "/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "fseek y ftell en C: ejercicio resuelto Si buscas fseek y ftell en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Escribe abcdef en un archivo temporal, mide su tamaño y luego lee el tercer carácter.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { FILE *f = tmpfile(); if (!f) { return 1; } fputs(\"abcdef\", f); fseek(f, 0, SEEK_END); printf(\"%ld\\n\", ftell(f)); fseek(f, 2, SEEK_SET); printf(\"%c\\n\", fgetc(f)); fclose(f); return 0; } Salida esperada 1 2 6 c Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón se usa mucho en herramientas de consola, persistencia sencilla y procesamiento de registros.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para mover el cursor de un archivo y consultar su posición en bytes.",
+    "tags": [
+      "Intermedio",
+      "Ficheros"
+    ],
+    "title": "fseek y ftell en C: ejercicio resuelto",
+    "uri": "/ejercicios/struct-ficheros/fseek-ftell-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
