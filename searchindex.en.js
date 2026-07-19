@@ -911,6 +911,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Insert into a sorted linked list in C: solved exercise If you are looking for insert into a sorted linked list in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Insert the value 30 into the sorted list 10 -\u003e 20 -\u003e 40 while keeping it ordered.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *insertar_ordenado(Nodo *cabeza, int valor) { Nodo *n = nuevo_nodo(valor); if (!n) { return cabeza; } if (cabeza == NULL || valor \u003c cabeza-\u003evalor) { n-\u003esig = cabeza; return n; } Nodo *actual = cabeza; while (actual-\u003esig \u0026\u0026 actual-\u003esig-\u003evalor \u003c valor) { actual = actual-\u003esig; } n-\u003esig = actual-\u003esig; actual-\u003esig = n; return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(40); cabeza = insertar_ordenado(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Expected output 1 10 20 30 40 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise to insert a node in ascending order into a singly linked list.",
+    "tags": [
+      "Advanced",
+      "Linked-Lists"
+    ],
+    "title": "Insert into a sorted linked list in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/insertar-en-lista-ordenada-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "strtok in C: solved exercise for splitting CSV strings If you are looking for strtok in c: solved exercise for splitting csv strings, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Split rojo,verde,azul into comma-separated tokens and print them one per line.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char linea[] = \"rojo,verde,azul\"; char *token = strtok(linea, \",\"); while (token != NULL) { printf(\"%s\\n\", token); token = strtok(NULL, \",\"); } return 0; } Expected output 1 2 3 rojo verde azul Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern appears frequently in text handling, input validation, and buffer manipulation.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved strtok exercise in C to split a string by delimiters and iterate through tokens.",
@@ -1135,16 +1146,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "",
@@ -1153,6 +1156,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Linked-Lists",
+    "uri": "/en/tags/linked-lists/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -1167,8 +1178,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Files",
+    "uri": "/en/tags/files/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1281,14 +1300,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Loops",
     "uri": "/en/tags/loops/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Linked-Lists",
-    "uri": "/en/tags/linked-lists/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

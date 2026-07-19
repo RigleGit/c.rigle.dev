@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -895,6 +895,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Insertar en una lista ordenada en C: ejercicio resuelto Si buscas insertar en una lista ordenada en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Inserta el valor 30 en la lista ordenada 10 -\u003e 20 -\u003e 40 manteniendo el orden.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *insertar_ordenado(Nodo *cabeza, int valor) { Nodo *n = nuevo_nodo(valor); if (!n) { return cabeza; } if (cabeza == NULL || valor \u003c cabeza-\u003evalor) { n-\u003esig = cabeza; return n; } Nodo *actual = cabeza; while (actual-\u003esig \u0026\u0026 actual-\u003esig-\u003evalor \u003c valor) { actual = actual-\u003esig; } n-\u003esig = actual-\u003esig; actual-\u003esig = n; return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(40); cabeza = insertar_ordenado(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Salida esperada 1 10 20 30 40 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para insertar un nodo en orden creciente dentro de una lista enlazada simple.",
+    "tags": [
+      "Avanzado",
+      "Listas-Enlazadas"
+    ],
+    "title": "Insertar en una lista ordenada en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/insertar-en-lista-ordenada-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
     "content": "strtok en C: ejercicio resuelto para trocear cadenas CSV Si buscas strtok en c: ejercicio resuelto para trocear cadenas csv, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Divide la cadena rojo,verde,azul en tokens separados por comas e imprímelos uno por línea.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char linea[] = \"rojo,verde,azul\"; char *token = strtok(linea, \",\"); while (token != NULL) { printf(\"%s\\n\", token); token = strtok(NULL, \",\"); } return 0; } Salida esperada 1 2 3 rojo verde azul Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón aparece mucho en tratamiento de texto, validación de entrada y manipulación de buffers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de strtok en C para separar una cadena por delimitadores y recorrer tokens.",
@@ -1123,12 +1134,36 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Listas-Enlazadas",
+    "uri": "/tags/listas-enlazadas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1145,22 +1180,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Intermedio",
     "uri": "/tags/intermedio/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1281,14 +1300,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Bucles",
     "uri": "/tags/bucles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Listas-Enlazadas",
-    "uri": "/tags/listas-enlazadas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
