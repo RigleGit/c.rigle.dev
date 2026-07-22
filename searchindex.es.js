@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -1049,6 +1049,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Recorrido inorden de un árbol binario en C: ejercicio resuelto Si buscas recorrido inorden de un árbol binario en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Recorre en inorden un árbol con raíz 4 y nodos 2 y 6 como hijos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *izq; struct Nodo *der; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003eizq = NULL; n-\u003eder = NULL; return n; } void inorden(Nodo *r, int *primero) { if (!r) { return; } inorden(r-\u003eizq, primero); if (!*primero) { printf(\" \"); } printf(\"%d\", r-\u003evalor); *primero = 0; inorden(r-\u003eder, primero); } void liberar(Nodo *r) { if (!r) { return; } liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *raiz = nuevo_nodo(4); raiz-\u003eizq = nuevo_nodo(2); raiz-\u003eder = nuevo_nodo(6); int primero = 1; inorden(raiz, \u0026primero); printf(\"\\n\"); liberar(raiz); return 0; } Salida esperada 1 2 4 6 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto de recorrido inorden en un árbol binario en C.",
+    "tags": [
+      "Avanzado",
+      "Arboles"
+    ],
+    "title": "Recorrido inorden de un árbol binario en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/recorrido-inorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
     "content": "Contar palabras en C: ejercicio resuelto Si buscas contar palabras en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Cuenta cuántas palabras hay en C en rigle dev ignorando espacios repetidos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cctype.h\u003e #include \u003cstdio.h\u003e int contar_palabras(const char *s) { int total = 0; int en_palabra = 0; for (int i = 0; s[i] != '\\0'; i++) { if (!isspace((unsigned char)s[i]) \u0026\u0026 !en_palabra) { total++; en_palabra = 1; } else if (isspace((unsigned char)s[i])) { en_palabra = 0; } } return total; } int main(void) { printf(\"%d\\n\", contar_palabras(\"C en rigle dev\")); return 0; } Salida esperada 1 4 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este patrón aparece mucho en tratamiento de texto, validación de entrada y manipulación de buffers.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto para contar palabras en una cadena manejando espacios múltiples.",
@@ -1160,6 +1171,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Etiqueta :: Arboles",
+    "uri": "/tags/arboles/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Etiqueta :: Avanzado",
     "uri": "/tags/avanzado/index.html"
   },
@@ -1172,20 +1191,20 @@ var relearn_searchindex = [
     "uri": "/ejercicios/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Listas-Enlazadas",
-    "uri": "/tags/listas-enlazadas/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Listas-Enlazadas",
+    "uri": "/tags/listas-enlazadas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1298,14 +1317,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Structs",
     "uri": "/tags/structs/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Arboles",
-    "uri": "/tags/arboles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

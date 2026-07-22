@@ -1065,6 +1065,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "In-order traversal of a binary tree in C: solved exercise If you are looking for in-order traversal of a binary tree in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Traverse in-order a tree with root 4 and nodes 2 and 6 as children.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *izq; struct Nodo *der; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003eizq = NULL; n-\u003eder = NULL; return n; } void inorden(Nodo *r, int *primero) { if (!r) { return; } inorden(r-\u003eizq, primero); if (!*primero) { printf(\" \"); } printf(\"%d\", r-\u003evalor); *primero = 0; inorden(r-\u003eder, primero); } void liberar(Nodo *r) { if (!r) { return; } liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *raiz = nuevo_nodo(4); raiz-\u003eizq = nuevo_nodo(2); raiz-\u003eder = nuevo_nodo(6); int primero = 1; inorden(raiz, \u0026primero); printf(\"\\n\"); liberar(raiz); return 0; } Expected output 1 2 4 6 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
+    "description": "Solved exercise on in-order traversal in a binary tree in C.",
+    "tags": [
+      "Advanced",
+      "Trees"
+    ],
+    "title": "In-order traversal of a binary tree in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/recorrido-inorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "Count words in C: solved exercise If you are looking for count words in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Count how many words are in C en rigle dev, ignoring repeated spaces.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #include \u003cctype.h\u003e #include \u003cstdio.h\u003e int contar_palabras(const char *s) { int total = 0; int en_palabra = 0; for (int i = 0; s[i] != '\\0'; i++) { if (!isspace((unsigned char)s[i]) \u0026\u0026 !en_palabra) { total++; en_palabra = 1; } else if (isspace((unsigned char)s[i])) { en_palabra = 0; } } return total; } int main(void) { printf(\"%d\\n\", contar_palabras(\"C en rigle dev\")); return 0; } Expected output 1 4 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This pattern appears frequently in text handling, input validation, and buffer manipulation.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to count words in a string while handling repeated spaces.",
@@ -1180,20 +1191,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Linked-Lists",
-    "uri": "/en/tags/linked-lists/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Trees",
+    "uri": "/en/tags/trees/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Linked-Lists",
+    "uri": "/en/tags/linked-lists/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1298,14 +1317,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Beginner",
     "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Trees",
-    "uri": "/en/tags/trees/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
