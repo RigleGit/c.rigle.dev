@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -1080,6 +1080,17 @@ var relearn_searchindex = [
     ],
     "title": "Búsqueda por interpolación en C: ejercicio resuelto",
     "uri": "/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Altura de un árbol binario en C: ejercicio resuelto Si buscas altura de un árbol binario en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Calcula la altura de un árbol binario de tres niveles.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *izq; struct Nodo *der; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003eizq = NULL; n-\u003eder = NULL; return n; } int maximo(int a, int b) { return (a \u003e b) ? a : b; } int altura(Nodo *r) { if (!r) { return 0; } return 1 + maximo(altura(r-\u003eizq), altura(r-\u003eder)); } void liberar(Nodo *r) { if (!r) { return; } liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *raiz = nuevo_nodo(10); raiz-\u003eizq = nuevo_nodo(5); raiz-\u003eder = nuevo_nodo(15); raiz-\u003eizq-\u003eizq = nuevo_nodo(3); printf(\"%d\\n\", altura(raiz)); liberar(raiz); return 0; } Salida esperada 1 3 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
+    "description": "Ejercicio resuelto para calcular la altura de un árbol binario de forma recursiva.",
+    "tags": [
+      "Avanzado",
+      "Arboles"
+    ],
+    "title": "Altura de un árbol binario en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/altura-arbol-binario-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
