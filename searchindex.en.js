@@ -1021,6 +1021,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Break and continue in C: solved exercise If you searched for a solved break and continue exercise in C, here are the two most common patterns: exiting a loop early with break and skipping an iteration with continue.\nBoth keywords work inside for, while, and do-while. The difference is straightforward: break exits the entire loop; continue moves to the next iteration, skipping the remainder of the current loop body.\nProblem statement Write a program that iterates from 1 to 20 and:\nPrints only odd numbers (use continue to skip even numbers). Stops printing upon reaching the first multiple of 7 greater than 10 (use break). C solution 1 2 3 4 5 6 7 8 9 10 #include \u003cstdio.h\u003e int main(void) { for (int i = 1; i \u003c= 20; i++) { if (i % 2 == 0) continue; /* skip even numbers */ if (i % 7 == 0 \u0026\u0026 i \u003e 10) break; /* stop at first multiple of 7 \u003e 10 */ printf(\"%d\\n\", i); } return 0; } Expected output 1 2 3 4 5 6 7 1 3 5 7 9 11 13 Common mistakes Using break inside a switch nested in a loop: it only exits the switch, not the outer loop. Confusing continue with break: continue does not end the loop, it only skips to the next cycle. Overusing both statements in ways that make the flow hard to follow; adjusting the loop condition is sometimes cleaner. Forgetting that in a for loop, continue jumps to the increment step, not directly to the condition. Practical use break is used to exit search loops as soon as the target is found. continue filters unwanted elements without extra nesting, keeping the code flat and readable.\nRecommended next exercise For in C: solved exercises While and do-while in C: solved exercises Switch case in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Does break inside a switch inside a for exit the for? No. break only exits the innermost enclosing block (switch, for, while, or do-while). To exit the for from inside a switch you need a control variable or carefully placed goto.\nDoes continue work the same in for, while, and do-while? Yes, but the jump target differs: in a for loop it jumps to the increment step (i++), while in while and do-while it jumps directly to the condition evaluation.\nWhen is it better to restructure the loop instead of using break or continue? When these statements make the code harder to read. Sometimes adjusting the loop’s exit condition or extracting the body into a function is cleaner than placing break or continue in the middle of the loop body.",
+    "description": "Solved break and continue exercise in C: how to exit a loop early with break and how to skip iterations with continue.",
+    "tags": [
+      "Beginner",
+      "Fundamentals",
+      "Loops"
+    ],
+    "title": "Break and continue in C: solved exercise with loops",
+    "uri": "/en/ejercicios/fundamentos/break-continue-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "Reverse a linked list in C: solved exercise If you are looking for reverse a linked list in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Reverse the list 1 -\u003e 2 -\u003e 3 -\u003e 4 and print the result.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *invertir(Nodo *cabeza) { Nodo *prev = NULL; Nodo *act = cabeza; while (act) { Nodo *sig = act-\u003esig; act-\u003esig = prev; prev = act; act = sig; } return prev; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(1); cabeza-\u003esig = nuevo_nodo(2); cabeza-\u003esig-\u003esig = nuevo_nodo(3); cabeza-\u003esig-\u003esig-\u003esig = nuevo_nodo(4); cabeza = invertir(cabeza); imprimir(cabeza); liberar(cabeza); return 0; } Expected output 1 4 3 2 1 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to reverse a singly linked list iteratively.",
@@ -1190,8 +1202,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "",
@@ -1202,12 +1222,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Loops",
+    "uri": "/en/tags/loops/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1248,14 +1284,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Pointers",
     "uri": "/en/tags/pointers/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1326,24 +1354,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Resources",
     "uri": "/en/tags/resources/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Loops",
-    "uri": "/en/tags/loops/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

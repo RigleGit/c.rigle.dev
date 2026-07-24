@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C const en C sizeof en C Operadores relacionales y lógicos en C Operador ternario en C Casting explícito en C",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C const en C sizeof en C Operadores relacionales y lógicos en C Operador ternario en C Casting explícito en C Break y continue",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -1005,6 +1005,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "Break y continue en C: ejercicio resuelto Si buscas break y continue en C con ejercicio resuelto, aquí tienes los dos patrones más habituales: salir anticipadamente de un bucle con break y saltar una iteración con continue.\nAmbas palabras clave funcionan en for, while y do-while. La diferencia es directa: break termina el bucle completo; continue pasa a la siguiente iteración ignorando el resto del cuerpo actual.\nEnunciado Escribe un programa que recorra los números del 1 al 20 y:\nImprima solo los impares (usa continue para saltar los pares). Detenga la impresión al alcanzar el primer múltiplo de 7 mayor que 10 (usa break). Solución en C 1 2 3 4 5 6 7 8 9 10 #include \u003cstdio.h\u003e int main(void) { for (int i = 1; i \u003c= 20; i++) { if (i % 2 == 0) continue; /* salta pares */ if (i % 7 == 0 \u0026\u0026 i \u003e 10) break; /* para en múltiplo de 7 \u003e 10 */ printf(\"%d\\n\", i); } return 0; } Resultado esperado 1 2 3 4 5 6 7 1 3 5 7 9 11 13 Errores frecuentes Usar break dentro de un switch anidado en un bucle: solo sale del switch, no del bucle exterior. Confundir continue con break: continue no termina el bucle, solo salta al siguiente ciclo. Abusar de ambas sentencias haciendo el flujo difícil de seguir; a veces es mejor ajustar la condición del bucle. Olvidar que en un for, continue salta al incremento (no a la condición directamente). Aplicación práctica break se usa para salir de bucles de búsqueda en cuanto se encuentra el elemento. continue filtra elementos no deseados sin anidar condicionales extra, manteniendo el código más plano y legible.\nSiguiente ejercicio recomendado For en C: ejercicios resueltos While y do-while en C: ejercicios resueltos Switch case en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿break dentro de un switch dentro de un for sale del for? No. break solo sale del bloque más cercano (switch, for, while o do-while). Para salir del for desde dentro de un switch necesitas una variable de control o usar goto (con precaución).\n¿continue funciona igual en for, while y do-while? Sí, pero el punto de salto varía: en for salta al incremento (i++), en while y do-while salta directamente a la evaluación de la condición.\n¿Cuándo es mejor reestructurar el bucle en lugar de usar break o continue? Cuando el uso de estas sentencias dificulta la lectura. A veces ajustar la condición de salida o extraer el cuerpo a una función resulta más claro que colocar break o continue en medio del cuerpo del bucle.",
+    "description": "Ejercicio resuelto de break y continue en C: cómo salir de un bucle con break y cómo saltar iteraciones con continue.",
+    "tags": [
+      "Principiante",
+      "Fundamentos",
+      "Bucles"
+    ],
+    "title": "Break y continue en C: ejercicio resuelto con bucles",
+    "uri": "/ejercicios/fundamentos/break-continue-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Invertir una lista enlazada en C: ejercicio resuelto Si buscas invertir una lista enlazada en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Invierte la lista 1 -\u003e 2 -\u003e 3 -\u003e 4 y muéstrala al final.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *invertir(Nodo *cabeza) { Nodo *prev = NULL; Nodo *act = cabeza; while (act) { Nodo *sig = act-\u003esig; act-\u003esig = prev; prev = act; act = sig; } return prev; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(1); cabeza-\u003esig = nuevo_nodo(2); cabeza-\u003esig-\u003esig = nuevo_nodo(3); cabeza-\u003esig-\u003esig-\u003esig = nuevo_nodo(4); cabeza = invertir(cabeza); imprimir(cabeza); liberar(cabeza); return 0; } Salida esperada 1 4 3 2 1 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto para invertir una lista enlazada simple de forma iterativa.",
@@ -1182,16 +1194,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arboles",
-    "uri": "/tags/arboles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
+    "title": "Etiqueta :: Bucles",
+    "uri": "/tags/bucles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1202,12 +1206,44 @@ var relearn_searchindex = [
     "uri": "/ejercicios/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fundamentos",
+    "uri": "/tags/fundamentos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arboles",
+    "uri": "/tags/arboles/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1240,14 +1276,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Punteros",
     "uri": "/tags/punteros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Fundamentos",
-    "uri": "/tags/fundamentos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1318,14 +1346,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Etiqueta :: Structs",
     "uri": "/tags/structs/index.html"
   },
@@ -1336,14 +1356,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Recursos",
     "uri": "/tags/recursos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Bucles",
-    "uri": "/tags/bucles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
