@@ -1077,6 +1077,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Bitwise operators in C: solved exercise If you searched for a solved bitwise operators exercise in C, here are all six binary operators applied to concrete values so you can see exactly which bit is set or cleared by each operation.\nBitwise operators work on the binary representation of integers and are essential in embedded systems, network protocols, configuration flags, and hardware register manipulation.\nProblem statement Given a = 12 (binary 1100) and b = 10 (binary 1010), compute and print the result of \u0026, |, ^, ~a, a \u003c\u003c 1, and a \u003e\u003e 1, also showing the hexadecimal representation where relevant.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { unsigned int a = 12u; /* 1100 in binary */ unsigned int b = 10u; /* 1010 in binary */ printf(\"a = %2u (0x%X)\\n\", a, a); printf(\"b = %2u (0x%X)\\n\", b, b); printf(\"a \u0026 b = %2u (0x%X) AND\\n\", a \u0026 b, a \u0026 b); printf(\"a | b = %2u (0x%X) OR\\n\", a | b, a | b); printf(\"a ^ b = %2u (0x%X) XOR\\n\", a ^ b, a ^ b); printf(\"~a = %u NOT\\n\", ~a); printf(\"a \u003c\u003c 1 = %2u left shift\\n\", a \u003c\u003c 1); printf(\"a \u003e\u003e 1 = %2u right shift\\n\", a \u003e\u003e 1); return 0; } Expected output 1 2 3 4 5 6 7 8 a = 12 (0xC) b = 10 (0xA) a \u0026 b = 8 (0x8) AND a | b = 14 (0xE) OR a ^ b = 6 (0x6) XOR ~a = 4294967283 NOT a \u003c\u003c 1 = 24 left shift a \u003e\u003e 1 = 6 right shift Common mistakes Confusing \u0026 (bitwise AND) with \u0026\u0026 (logical AND): they are completely different operators. Applying ~ to a signed int and getting unexpected negative results; use unsigned for bitwise manipulation. Shifting more bits than the type holds (a \u003c\u003c 32 on a 32-bit unsigned int is undefined behavior). Omitting parentheses around bitwise expressions in complex expressions: \u0026, |, and ^ have lower precedence than comparison operators. Practical use Bitwise operators are used to set, clear, or test individual flags in a bit field, mask parts of a byte in network protocols, and efficiently multiply or divide by powers of two using shifts.\nRecommended next exercise Data types in C: solved exercise sizeof in C: solved exercise Relational and logical operators in C All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the difference between \u0026 and \u0026\u0026 in C? \u0026 is the bitwise AND operator: it compares each bit of both operands. \u0026\u0026 is the logical AND operator: it evaluates whether both operands are non-zero and returns 0 or 1. They are completely different.\nWhy does ~12 give 4294967283 instead of -13? ~a flips all bits. On a 32-bit unsigned int, ~12 is 0xFFFFFFF3 = 4294967283. With a signed int the result is -13 (two’s complement), which is the same bit pattern interpreted differently.\nWhen should I use shifts instead of multiply or divide? x \u003c\u003c 1 equals x * 2 and x \u003e\u003e 1 equals x / 2 for non-negative unsigned integers. Modern compilers optimize this automatically, so use shifts when the code genuinely represents bit manipulation, not as a speed trick.",
+    "description": "Solved bitwise operators exercise in C: AND, OR, XOR, NOT and shift operations with practical examples.",
+    "tags": [
+      "Intermediate",
+      "Fundamentals"
+    ],
+    "title": "Bitwise operators in C: solved exercise",
+    "uri": "/en/ejercicios/fundamentos/operadores-bit-a-bit-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "In-order traversal of a binary tree in C: solved exercise If you are looking for in-order traversal of a binary tree in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Traverse in-order a tree with root 4 and nodes 2 and 6 as children.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *izq; struct Nodo *der; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003eizq = NULL; n-\u003eder = NULL; return n; } void inorden(Nodo *r, int *primero) { if (!r) { return; } inorden(r-\u003eizq, primero); if (!*primero) { printf(\" \"); } printf(\"%d\", r-\u003evalor); *primero = 0; inorden(r-\u003eder, primero); } void liberar(Nodo *r) { if (!r) { return; } liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *raiz = nuevo_nodo(4); raiz-\u003eizq = nuevo_nodo(2); raiz-\u003eder = nuevo_nodo(6); int primero = 1; inorden(raiz, \u0026primero); printf(\"\\n\"); liberar(raiz); return 0; } Expected output 1 2 4 6 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise on in-order traversal in a binary tree in C.",
@@ -1202,16 +1213,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -1222,20 +1233,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Loops",
-    "uri": "/en/tags/loops/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Loops",
+    "uri": "/en/tags/loops/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1268,14 +1287,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

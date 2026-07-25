@@ -1,7 +1,7 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C const en C sizeof en C Operadores relacionales y lógicos en C Operador ternario en C Casting explícito en C Break y continue",
+    "content": "El punto de partida para aprender C. Estos ejercicios cubren los bloques básicos del lenguaje: tipos de datos primitivos, estructuras de control (if/else, for, while, do-while) y la lógica secuencial que está detrás de cualquier programa. Si acabas de empezar, empieza aquí.\nTipos de datos Prog. secuencial If / else For While / do-while Funciones Switch case Enum y typedef en C scanf y printf en C const en C sizeof en C Operadores relacionales y lógicos en C Operador ternario en C Casting explícito en C Break y continue Operadores bit a bit",
     "description": "Ejercicios resueltos de fundamentos de C: tipos de datos, control de flujo con if/else y bucles for y while, y programación secuencial paso a paso.",
     "tags": [],
     "title": "Fundamentos",
@@ -1061,6 +1061,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
+    "content": "Operadores bit a bit en C: ejercicio resuelto Si buscas operadores bit a bit en C ejercicio resuelto, aquí tienes los seis operadores binarios de C aplicados sobre valores concretos para que veas exactamente qué bit se activa o apaga en cada operación.\nLos operadores bitwise operan sobre la representación binaria de los enteros y son fundamentales en sistemas embebidos, protocolos de red, flags de configuración y manipulación de registros hardware.\nEnunciado Dados a = 12 (binario 1100) y b = 10 (binario 1010), calcula e imprime el resultado de \u0026, |, ^, ~a, a \u003c\u003c 1 y a \u003e\u003e 1 mostrando también la representación hexadecimal donde sea relevante.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { unsigned int a = 12u; /* 1100 en binario */ unsigned int b = 10u; /* 1010 en binario */ printf(\"a = %2u (0x%X)\\n\", a, a); printf(\"b = %2u (0x%X)\\n\", b, b); printf(\"a \u0026 b = %2u (0x%X) AND bit a bit\\n\", a \u0026 b, a \u0026 b); printf(\"a | b = %2u (0x%X) OR bit a bit\\n\", a | b, a | b); printf(\"a ^ b = %2u (0x%X) XOR bit a bit\\n\", a ^ b, a ^ b); printf(\"~a = %u NOT bit a bit\\n\", ~a); printf(\"a \u003c\u003c 1 = %2u desplazamiento izquierda\\n\", a \u003c\u003c 1); printf(\"a \u003e\u003e 1 = %2u desplazamiento derecha\\n\", a \u003e\u003e 1); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 a = 12 (0xC) b = 10 (0xA) a \u0026 b = 8 (0x8) AND bit a bit a | b = 14 (0xE) OR bit a bit a ^ b = 6 (0x6) XOR bit a bit ~a = 4294967283 NOT bit a bit a \u003c\u003c 1 = 24 desplazamiento izquierda a \u003e\u003e 1 = 6 desplazamiento derecha Errores frecuentes Confundir \u0026 (AND bit a bit) con \u0026\u0026 (AND lógico): son operadores distintos. Aplicar ~ sobre int con signo y obtener resultados negativos inesperados; usa unsigned para manipulaciones bit a bit. Desplazar más bits de los que tiene el tipo (a \u003c\u003c 32 sobre un unsigned int de 32 bits es comportamiento indefinido). No usar paréntesis alrededor de expresiones bit a bit en expresiones complejas: la precedencia de \u0026, | y ^ es menor que la de comparaciones. Aplicación práctica Los operadores bit a bit se usan para activar, desactivar o comprobar flags individuales en un campo de bits, enmascarar partes de un byte en protocolos de red y dividir o multiplicar por potencias de dos de forma eficiente con desplazamientos.\nSiguiente ejercicio recomendado Tipos de datos en C: ejercicio resuelto sizeof en C: ejercicio resuelto Operadores relacionales y lógicos en C Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre \u0026 y \u0026\u0026 en C? \u0026 es el operador AND bit a bit: compara cada bit de los dos operandos. \u0026\u0026 es el operador AND lógico: evalúa si ambos operandos son distintos de cero y devuelve 0 o 1. Son completamente diferentes.\n¿Por qué ~12 da 4294967283 y no -13? ~a invierte todos los bits. En un unsigned int de 32 bits, ~12 es 0xFFFFFFF3 = 4294967283. Si usas int con signo el resultado es -13 (complemento a dos), que es lo mismo a nivel de bits pero se interpreta diferente.\n¿Cuándo usar desplazamiento en lugar de multiplicar o dividir? x \u003c\u003c 1 es equivalente a x * 2 y x \u003e\u003e 1 a x / 2 (para enteros sin signo no negativos). Los compiladores modernos optimizan esto automáticamente, así que úsalos cuando el código refleje manipulación de bits real, no como truco de velocidad.",
+    "description": "Ejercicio resuelto de operadores bit a bit en C: AND, OR, XOR, NOT y desplazamientos con ejemplos prácticos.",
+    "tags": [
+      "Intermedio",
+      "Fundamentos"
+    ],
+    "title": "Operadores bit a bit en C: ejercicio resuelto",
+    "uri": "/ejercicios/fundamentos/operadores-bit-a-bit-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Recorrido inorden de un árbol binario en C: ejercicio resuelto Si buscas recorrido inorden de un árbol binario en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Recorre en inorden un árbol con raíz 4 y nodos 2 y 6 como hijos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *izq; struct Nodo *der; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003eizq = NULL; n-\u003eder = NULL; return n; } void inorden(Nodo *r, int *primero) { if (!r) { return; } inorden(r-\u003eizq, primero); if (!*primero) { printf(\" \"); } printf(\"%d\", r-\u003evalor); *primero = 0; inorden(r-\u003eder, primero); } void liberar(Nodo *r) { if (!r) { return; } liberar(r-\u003eizq); liberar(r-\u003eder); free(r); } int main(void) { Nodo *raiz = nuevo_nodo(4); raiz-\u003eizq = nuevo_nodo(2); raiz-\u003eder = nuevo_nodo(6); int primero = 1; inorden(raiz, \u0026primero); printf(\"\\n\"); liberar(raiz); return 0; } Salida esperada 1 2 4 6 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto de recorrido inorden en un árbol binario en C.",
@@ -1190,14 +1201,6 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Bucles",
-    "uri": "/tags/bucles/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -1218,8 +1221,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1228,6 +1231,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Bucles",
+    "uri": "/tags/bucles/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1260,14 +1279,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Ficheros",
     "uri": "/tags/ficheros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
