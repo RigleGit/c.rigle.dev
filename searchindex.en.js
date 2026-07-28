@@ -1198,6 +1198,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
+    "content": "Arrays as parameters in C: solved exercise If you searched for a solved arrays as parameters exercise in C, here is the fundamental pattern: in C, arrays are passed to functions as a pointer to the first element, which means the function can modify the original array and the size must be passed separately.\nThis behavior — called array-to-pointer decay — is one of the first stumbling blocks for developers coming from Java or Python, where arrays carry their own size.\nProblem statement Write three functions:\nfill(arr, n): fills the array with values 0, 2, 4, …, 2*(n-1). sum(arr, n): returns the sum of all elements (without modifying the array). print_array(arr, n): prints all elements separated by spaces. Demonstrate that modifications made by fill are visible in main.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #include \u003cstdio.h\u003e void fill(int arr[], int n) { for (int i = 0; i \u003c n; i++) arr[i] = i * 2; } int sum(const int arr[], int n) { int s = 0; for (int i = 0; i \u003c n; i++) s += arr[i]; return s; } void print_array(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int v[5]; fill(v, 5); print_array(v, 5); printf(\"Sum: %d\\n\", sum(v, 5)); return 0; } Expected output 1 2 0 2 4 6 8 Sum: 20 Common mistakes Trying to get the array size inside the function using sizeof(arr): it returns the size of the pointer (8 bytes on 64-bit), not the array. Size must always be passed as a parameter. Forgetting const in functions that only read the array: the compiler cannot optimize or detect accidental modifications. Passing \u0026v instead of v: \u0026v is a pointer to array (int (*)[5]), a different type from what the function expects. Confusing stack arrays (int v[5]) with dynamic arrays (malloc): both are passed as a pointer, but their lifetimes differ. Practical use Passing arrays to functions is the foundation of sorting, searching, and transformation algorithms in C. Separating logic into functions with const allows the compiler to apply optimizations and helps the programmer reason about side effects.\nRecommended next exercise Arrays in C: solved exercises Pointers in C: solved exercises Functions in C: solved exercises All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why doesn’t sizeof(arr) give the array size inside the function? Because when an array is passed to a function, it decays to a pointer to its first element. The function receives only the memory address, not the length. sizeof on a pointer returns the pointer size (4 or 8 bytes depending on the architecture).\nWhat is the difference between int arr[] and int *arr as a function parameter? None in practice: both declarations are equivalent in the context of function parameters. C treats them identically. int arr[] is preferred for semantic clarity.\nHow do you pass a two-dimensional array to a function? For matrices, you must specify the number of columns: void f(int mat[][COLS], int rows). The column count must be a compile-time constant, or use pointer-to-pointer for fully dynamic dimensions.",
+    "description": "Solved arrays as function parameters exercise in C: why they are passed by implicit reference, use of const, and the size parameter.",
+    "tags": [
+      "Beginner",
+      "Fundamentals",
+      "Arrays"
+    ],
+    "title": "Arrays as parameters in C: solved exercise",
+    "uri": "/en/ejercicios/fundamentos/arrays-como-parametros-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Remove duplicates from a sorted array in C: solved exercise If you are looking for remove duplicates from a sorted array in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Compact a sorted array with repeated values so only {1,2,3,4} remains.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e int eliminar_duplicados(int a[], int n) { if (n == 0) { return 0; } int k = 1; for (int i = 1; i \u003c n; i++) { if (a[i] != a[k - 1]) { a[k++] = a[i]; } } return k; } int main(void) { int a[] = {1, 1, 2, 2, 2, 3, 4, 4}; int n = eliminar_duplicados(a, 8); for (int i = 0; i \u003c n; i++) { printf(\"%d\", a[i]); if (i + 1 \u003c n) { printf(\" \"); } } printf(\"\\n\"); return 0; } Expected output 1 1 2 3 4 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use The key idea is to identify a reusable pattern instead of stopping at “it works once”.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to compact a sorted array in-place while keeping only unique values.",
@@ -1235,16 +1247,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "",
@@ -1267,8 +1287,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1317,14 +1337,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Pointers",
     "uri": "/en/tags/pointers/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
