@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1227,20 +1227,32 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
-    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
-    "tags": [],
-    "title": "Aprende C — ejercicios resueltos",
-    "uri": "/index.html"
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Fibonacci en C: ejercicio resuelto Si buscas Fibonacci en C ejercicio resuelto, aquí tienes tres implementaciones con análisis de complejidad: la versión recursiva clásica (O(2^n)), la iterativa (O(n)) y la recursiva con memoización (O(n)).\nLa sucesión de Fibonacci es el ejemplo canónico para entender la diferencia entre una solución recursiva ingenua y una dinámica: el mismo subproblema se resuelve exponencialmente más veces sin caché.\nEnunciado Implementa tres funciones que devuelvan el n-ésimo número de Fibonacci (F(0)=0, F(1)=1):\nfib_recursivo(n): versión recursiva sin caché. fib_iterativo(n): versión iterativa con O(1) de espacio. fib_memo(n): versión recursiva con tabla de memoización. Imprime los primeros 10 términos con cada versión.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e #define MAX 64 /* Versión recursiva: O(2^n) tiempo */ long long fib_recursivo(int n) { if (n \u003c= 1) return n; return fib_recursivo(n - 1) + fib_recursivo(n - 2); } /* Versión iterativa: O(n) tiempo, O(1) espacio */ long long fib_iterativo(int n) { if (n \u003c= 1) return n; long long a = 0, b = 1; for (int i = 2; i \u003c= n; i++) { long long c = a + b; a = b; b = c; } return b; } /* Memoización */ static long long memo[MAX]; long long fib_memo(int n) { if (n \u003c= 1) return n; if (memo[n]) return memo[n]; memo[n] = fib_memo(n - 1) + fib_memo(n - 2); return memo[n]; } int main(void) { memset(memo, 0, sizeof(memo)); printf(\"Recursivo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_recursivo(i)); printf(\"\\nIterativo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_iterativo(i)); printf(\"\\nMemo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_memo(i)); printf(\"\\n\"); return 0; } Resultado esperado 1 2 3 Recursivo: 0 1 1 2 3 5 8 13 21 34 Iterativo: 0 1 1 2 3 5 8 13 21 34 Memo: 0 1 1 2 3 5 8 13 21 34 Errores frecuentes No definir el caso base: sin if (n \u003c= 1) return n la recursión es infinita y provoca un desbordamiento de pila. Usar int para n grandes: F(47) supera el rango de int (2.147.483.647); usar long long evita el desbordamiento hasta F(92). Olvidar inicializar la tabla de memo a cero: con static la memoria ya está a cero, pero si se declara en la pila hay que llamar a memset. Comparar la velocidad de la versión recursiva para n \u003e 40: el tiempo crece exponencialmente y puede bloquear el programa durante segundos. Aplicación práctica Fibonacci aparece en el análisis de algoritmos de divide y vencerás, en el cálculo de la complejidad de quicksort en el peor caso y en estructuras como los árboles de Fibonacci. La técnica de memoización es el primer paso hacia la programación dinámica.\nSiguiente ejercicio recomendado Recursividad en C: ejercicios resueltos Factorial en C: ejercicio resuelto Criba de Eratóstenes en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué la versión recursiva es tan lenta para valores grandes? Porque recalcula los mismos subproblemas múltiples veces. Para calcular F(5) se llama a F(3) dos veces y a F(2) tres veces. La complejidad es O(2^n): para F(40) se realizan más de mil millones de llamadas recursivas.\n¿Cuándo usar la versión iterativa frente a la memoizada? La iterativa es preferible cuando solo necesitas el n-ésimo término: usa O(1) de espacio. La memoizada es útil cuando necesitas múltiples términos en distintos momentos (llamadas separadas), ya que reutiliza el caché entre ellas.\n¿Existe una fórmula directa para calcular F(n)? Sí: la fórmula de Binet, F(n) = (φ^n − ψ^n) / √5 donde φ = (1+√5)/2. Sin embargo, usa double y acumula errores de redondeo para n \u003e 70, por lo que en C se prefiere la versión iterativa con enteros de 64 bits.",
+    "description": "Ejercicio resuelto de Fibonacci en C: versión recursiva, iterativa y con memoización. Comparativa de complejidad O(2^n) vs O(n).",
+    "tags": [
+      "Principiante",
+      "Algoritmos",
+      "Recursividad"
+    ],
+    "title": "Fibonacci en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
+    "title": "Etiqueta :: Algoritmos",
+    "uri": "/tags/algoritmos/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
+    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
+    "tags": [],
+    "title": "Aprende C — ejercicios resueltos",
+    "uri": "/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1255,16 +1267,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Fundamentos",
-    "uri": "/tags/fundamentos/index.html"
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
+    "title": "Etiqueta :: Recursividad",
+    "uri": "/tags/recursividad/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1273,6 +1285,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Fundamentos",
+    "uri": "/tags/fundamentos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1367,14 +1395,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Algoritmos",
-    "uri": "/tags/algoritmos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Etiqueta :: Busqueda",
     "uri": "/tags/busqueda/index.html"
   },
@@ -1401,14 +1421,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Recursos",
     "uri": "/tags/recursos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Recursividad",
-    "uri": "/tags/recursividad/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Libro completo",

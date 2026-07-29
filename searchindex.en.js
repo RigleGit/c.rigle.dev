@@ -1243,6 +1243,58 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Fibonacci in C: solved exercise If you searched for a solved Fibonacci exercise in C, here are three implementations with complexity analysis: the classic recursive version (O(2^n)), the iterative version (O(n)), and the memoized recursive version (O(n)).\nThe Fibonacci sequence is the canonical example for understanding the difference between a naive recursive solution and a dynamic one: without a cache, the same subproblem is solved exponentially more times.\nProblem statement Implement three functions that return the n-th Fibonacci number (F(0)=0, F(1)=1):\nfib_recursive(n): recursive version without cache. fib_iterative(n): iterative version with O(1) space. fib_memo(n): recursive version with a memoization table. Print the first 10 terms using each version.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e #define MAX 64 /* Recursive: O(2^n) time */ long long fib_recursive(int n) { if (n \u003c= 1) return n; return fib_recursive(n - 1) + fib_recursive(n - 2); } /* Iterative: O(n) time, O(1) space */ long long fib_iterative(int n) { if (n \u003c= 1) return n; long long a = 0, b = 1; for (int i = 2; i \u003c= n; i++) { long long c = a + b; a = b; b = c; } return b; } /* Memoization */ static long long memo[MAX]; long long fib_memo(int n) { if (n \u003c= 1) return n; if (memo[n]) return memo[n]; memo[n] = fib_memo(n - 1) + fib_memo(n - 2); return memo[n]; } int main(void) { memset(memo, 0, sizeof(memo)); printf(\"Recursive: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_recursive(i)); printf(\"\\nIterative: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_iterative(i)); printf(\"\\nMemo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_memo(i)); printf(\"\\n\"); return 0; } Expected output 1 2 3 Recursive: 0 1 1 2 3 5 8 13 21 34 Iterative: 0 1 1 2 3 5 8 13 21 34 Memo: 0 1 1 2 3 5 8 13 21 34 Common mistakes Not defining the base case: without if (n \u003c= 1) return n the recursion is infinite and causes a stack overflow. Using int for large n: F(47) exceeds the range of int (2,147,483,647); use long long to safely reach F(92). Forgetting to zero-initialize the memo table: static gives zero-initialized memory, but a stack-allocated array requires an explicit memset. Benchmarking the recursive version for n \u003e 40: the runtime grows exponentially and can freeze the program for several seconds. Practical use Fibonacci appears in the analysis of divide-and-conquer algorithms, in computing the worst-case complexity of quicksort, and in data structures like Fibonacci heaps. Memoization is the first step toward dynamic programming.\nRecommended next exercise Recursion in C: solved exercises Factorial in C: solved exercise Sieve of Eratosthenes in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why is the recursive version so slow for large values? Because it recomputes the same subproblems multiple times. To compute F(5), it calls F(3) twice and F(2) three times. The complexity is O(2^n): for F(40), over one billion recursive calls are made.\nWhen should I use the iterative version versus the memoized version? Use the iterative version when you only need the n-th term: it uses O(1) space. The memoized version is useful when you need multiple terms at different times (separate calls), since it reuses the cache across them.\nIs there a direct formula to compute F(n)? Yes: Binet’s formula, F(n) = (φ^n − ψ^n) / √5 where φ = (1+√5)/2. However, it uses double and accumulates rounding errors for n \u003e 70, so in C the iterative version with 64-bit integers is preferred.",
+    "description": "Solved Fibonacci exercise in C: recursive, iterative, and memoized versions. Complexity comparison O(2^n) vs O(n).",
+    "tags": [
+      "Beginner",
+      "Algorithms",
+      "Recursion"
+    ],
+    "title": "Fibonacci in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Algorithms",
+    "uri": "/en/tags/algorithms/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "Practical resources to learn C programming.\nSolved exercises C100 Book",
+    "description": "Solved C exercises step by step. From basics to advanced data structures.",
+    "tags": [],
+    "title": "Learn C — solved exercises",
+    "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Recursion",
+    "uri": "/en/tags/recursion/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tags",
+    "uri": "/en/tags/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
@@ -1255,32 +1307,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Fundamentals",
     "uri": "/en/tags/fundamentals/index.html"
-  },
-  {
-    "breadcrumb": "",
-    "content": "Practical resources to learn C programming.\nSolved exercises C100 Book",
-    "description": "Solved C exercises step by step. From basics to advanced data structures.",
-    "tags": [],
-    "title": "Learn C — solved exercises",
-    "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tags",
-    "uri": "/en/tags/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1375,14 +1403,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Algorithms",
-    "uri": "/en/tags/algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Search",
     "uri": "/en/tags/search/index.html"
   },
@@ -1401,14 +1421,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Resources",
     "uri": "/en/tags/resources/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Recursion",
-    "uri": "/en/tags/recursion/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Complete book",
