@@ -1267,44 +1267,24 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/factorial-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Two pointers in C: solved exercise If you searched for a solved two-pointer technique exercise in C, here are three classic applications: finding a pair with a target sum in a sorted array, reversing an array in-place, and removing duplicates from a sorted array — all in O(n) with no extra memory.\nThe two-pointer technique maintains two indices that move from opposite ends toward the center (or both from the left at different speeds) to avoid the O(n²) double loop.\nProblem statement Given the sorted array {1, 2, 3, 4, 6, 8, 11}:\nFind all pairs with sum 10. Reverse the array in-place. Given {1, 1, 2, 2, 3, 4, 4, 5}, remove duplicates and return the new length. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 #include \u003cstdio.h\u003e /* 1. Pairs with target sum in sorted array */ void pair_sum(const int arr[], int n, int target) { int left = 0, right = n - 1; printf(\"Pairs with sum %d: \", target); while (left \u003c right) { int s = arr[left] + arr[right]; if (s == target) { printf(\"(%d,%d) \", arr[left], arr[right]); left++; right--; } else if (s \u003c target) { left++; } else { right--; } } printf(\"\\n\"); } /* 2. Reverse array in-place */ void reverse_arr(int arr[], int n) { int left = 0, right = n - 1; while (left \u003c right) { int tmp = arr[left]; arr[left++] = arr[right]; arr[right--] = tmp; } } /* 3. Remove duplicates (sorted array), returns new length */ int remove_duplicates(int arr[], int n) { if (n == 0) return 0; int write = 0; for (int read = 1; read \u003c n; read++) { if (arr[read] != arr[write]) arr[++write] = arr[read]; } return write + 1; } int main(void) { int a[] = {1, 2, 3, 4, 6, 8, 11}; pair_sum(a, 7, 10); reverse_arr(a, 7); printf(\"Reversed: \"); for (int i = 0; i \u003c 7; i++) printf(\"%d \", a[i]); printf(\"\\n\"); int b[] = {1, 1, 2, 2, 3, 4, 4, 5}; int new_len = remove_duplicates(b, 8); printf(\"No duplicates (len=%d): \", new_len); for (int i = 0; i \u003c new_len; i++) printf(\"%d \", b[i]); printf(\"\\n\"); return 0; } Expected output 1 2 3 Pairs with sum 10: (2,8) (4,6) Reversed: 11 8 6 4 3 2 1 No duplicates (len=5): 1 2 3 4 5 Common mistakes Applying two pointers on an unsorted array for pair search: the technique only works if the array is sorted. Not advancing both pointers when a pair is found: staying at the same index causes an infinite loop. Confusing the read pointer with the write pointer in duplicate removal: the write pointer advances only when a new element is found. Using signed indices when the array size is 0: right = n - 1 with n = 0 gives -1 and the loop may not behave correctly on all compilers. Practical use Two pointers is a fundamental technique for array and string problems: three-sum, container with most water, palindromes, and array partitioning. It appears frequently in technical interviews and is the basis for more advanced algorithms like the sliding window.\nRecommended next exercise Maximum subarray: Kadane in C: solved exercise Remove duplicates from sorted array in C Binary search in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does the two-pointer technique require a sorted array? Because the movement logic relies on comparing the sum against the target: if the sum is too small, advancing the left pointer increases it (larger elements are to the right); if too large, retreating the right pointer decreases it. Without order there is no guarantee that moving a pointer changes the sum in the right direction.\nWhen should I use two pointers instead of a hash table? Two pointers runs in O(n) with O(1) extra space but requires a sorted array. A hash table also gives O(n) but uses O(n) space and does not require pre-sorting. Two pointers is preferred when space is limited or the array is already sorted.\nCan the technique be applied with more than two pointers? Yes. The three-sum problem fixes one element with an outer loop and applies two pointers inside, achieving O(n²) instead of the O(n³) brute-force approach.",
+    "description": "Solved two-pointer technique exercise in C: pair sum, remove duplicates, and reverse array in O(n) with no extra space.",
+    "tags": [
+      "Intermediate",
+      "Algorithms",
+      "Arrays"
+    ],
+    "title": "Two pointers in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/dos-punteros-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tag :: Algorithms",
     "uri": "/en/tags/algorithms/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
-  },
-  {
-    "breadcrumb": "",
-    "content": "Practical resources to learn C programming.\nSolved exercises C100 Book",
-    "description": "Solved C exercises step by step. From basics to advanced data structures.",
-    "tags": [],
-    "title": "Learn C — solved exercises",
-    "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Recursion",
-    "uri": "/en/tags/recursion/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tags",
-    "uri": "/en/tags/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1319,16 +1299,48 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "Practical resources to learn C programming.\nSolved exercises C100 Book",
+    "description": "Solved C exercises step by step. From basics to advanced data structures.",
+    "tags": [],
+    "title": "Learn C — solved exercises",
+    "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tags",
+    "uri": "/en/tags/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Recursion",
+    "uri": "/en/tags/recursion/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Fundamentals",
+    "uri": "/en/tags/fundamentals/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
