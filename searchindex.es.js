@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros Potencia rápida",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1263,6 +1263,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/dos-punteros-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Potencia rápida en C: ejercicio resuelto Si buscas potencia rápida en C ejercicio resuelto, aquí tienes la exponenciación binaria (fast exponentiation o binary exponentiation): calcula base^exp en O(log n) multiplicaciones en lugar de O(n), dividiendo el exponente entre 2 en cada paso.\nEste algoritmo es la base del cálculo modular en criptografía (base^exp mod m) y de la multiplicación de matrices en tiempo O(n³ log k).\nEnunciado Implementa:\npotencia_rapida(base, exp): versión iterativa, devuelve base^exp con long long. potencia_rapida_mod(base, exp, mod): versión con módulo para evitar desbordamiento. potencia_recursiva(base, exp): versión recursiva equivalente. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 #include \u003cstdio.h\u003e typedef long long ll; /* Iterativa: O(log exp) */ ll potencia_rapida(ll base, ll exp) { ll resultado = 1; while (exp \u003e 0) { if (exp \u0026 1) resultado *= base; /* exponente impar */ base *= base; exp \u003e\u003e= 1; /* dividir entre 2 */ } return resultado; } /* Con módulo: evita desbordamiento para valores grandes */ ll potencia_rapida_mod(ll base, ll exp, ll mod) { ll resultado = 1; base %= mod; while (exp \u003e 0) { if (exp \u0026 1) resultado = resultado * base % mod; base = base * base % mod; exp \u003e\u003e= 1; } return resultado; } /* Recursiva */ ll potencia_recursiva(ll base, ll exp) { if (exp == 0) return 1; ll mitad = potencia_recursiva(base, exp / 2); if (exp % 2 == 0) return mitad * mitad; return base * mitad * mitad; } int main(void) { printf(\"2^10 = %lld\\n\", potencia_rapida(2, 10)); printf(\"3^20 = %lld\\n\", potencia_rapida(3, 20)); printf(\"2^62 = %lld\\n\", potencia_rapida(2, 62)); /* Con módulo: 2^100 mod 1e9+7 */ ll MOD = 1000000007LL; printf(\"2^100 mod 10^9+7 = %lld\\n\", potencia_rapida_mod(2, 100, MOD)); printf(\"recursiva: 5^8 = %lld\\n\", potencia_recursiva(5, 8)); return 0; } Resultado esperado 1 2 3 4 5 2^10 = 1024 3^20 = 3486784401 2^62 = 4611686018427387904 2^100 mod 10^9+7 = 976371285 recursiva: 5^8 = 390625 Errores frecuentes Usar base * base antes de comprobar si el exponente es impar: el resultado puede desbordarse innecesariamente si no se aplica el módulo. No reducir base %= mod al inicio de la versión modular: si base ya supera mod, el primer cuadrado puede desbordar long long. Confundir exp \u0026 1 con exp % 2: son equivalentes para enteros positivos, pero \u0026 1 es más claro en el contexto de manipulación de bits. Olvidar el caso base exp == 0: cualquier número elevado a 0 es 1, incluso 0^0 se define como 1 en combinatoria y algoritmos. Aplicación práctica La exponenciación rápida es esencial en criptografía (RSA: m^e mod n), en test de primalidad de Miller-Rabin y en la multiplicación de matrices en tiempo logarítmico. En competición algorítmica es una herramienta básica para módulos grandes.\nSiguiente ejercicio recomendado Fibonacci en C: ejercicio resuelto Algoritmo de Euclides (MCD) en C: ejercicio resuelto Criba de Eratóstenes en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué la potencia rápida es O(log n) y no O(n)? Porque en cada iteración el exponente se divide entre 2 (exp \u003e\u003e= 1). Para calcular 2^1000 se necesitan solo 10 iteraciones (log₂ 1000 ≈ 10) en lugar de 1000. El número de multiplicaciones es proporcional al número de bits del exponente.\n¿Qué es la versión con módulo y cuándo se usa? La versión con módulo calcula base^exp mod m aplicando % mod en cada paso para mantener los valores pequeños y evitar desbordamiento. Se usa cuando se trabaja con números muy grandes en criptografía o teoría de números, donde el resultado exacto no importa pero sí el residuo.\n¿Funciona la potencia rápida con exponentes negativos? Con enteros no directamente: base^(-n) = 1/base^n requiere aritmética fraccionaria. Para el caso modular, el inverso modular de base^n mod p se puede calcular como base^(p-2) mod p cuando p es primo (pequeño teorema de Fermat).",
+    "description": "Ejercicio resuelto de exponenciación rápida en C: algoritmo de potencia binaria O(log n) con versión iterativa y recursiva.",
+    "tags": [
+      "Intermedio",
+      "Algoritmos"
+    ],
+    "title": "Potencia rápida en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -1277,14 +1288,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Aprende C — ejercicios resueltos",
     "uri": "/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1309,6 +1312,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

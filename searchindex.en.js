@@ -1279,20 +1279,23 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/dos-punteros-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Algorithms",
-    "uri": "/en/tags/algorithms/index.html"
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Fast exponentiation in C: solved exercise If you searched for a solved fast exponentiation exercise in C, here is binary exponentiation: it computes base^exp in O(log n) multiplications instead of O(n), halving the exponent at each step.\nThis algorithm is the backbone of modular arithmetic in cryptography (base^exp mod m) and of matrix exponentiation in O(n³ log k).\nProblem statement Implement:\nfast_pow(base, exp): iterative version returning base^exp as long long. fast_pow_mod(base, exp, mod): modular version to avoid overflow. recursive_pow(base, exp): equivalent recursive version. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 #include \u003cstdio.h\u003e typedef long long ll; /* Iterative: O(log exp) */ ll fast_pow(ll base, ll exp) { ll result = 1; while (exp \u003e 0) { if (exp \u0026 1) result *= base; /* odd exponent */ base *= base; exp \u003e\u003e= 1; /* divide by 2 */ } return result; } /* Modular version: prevents overflow for large values */ ll fast_pow_mod(ll base, ll exp, ll mod) { ll result = 1; base %= mod; while (exp \u003e 0) { if (exp \u0026 1) result = result * base % mod; base = base * base % mod; exp \u003e\u003e= 1; } return result; } /* Recursive version */ ll recursive_pow(ll base, ll exp) { if (exp == 0) return 1; ll half = recursive_pow(base, exp / 2); if (exp % 2 == 0) return half * half; return base * half * half; } int main(void) { printf(\"2^10 = %lld\\n\", fast_pow(2, 10)); printf(\"3^20 = %lld\\n\", fast_pow(3, 20)); printf(\"2^62 = %lld\\n\", fast_pow(2, 62)); /* Modular: 2^100 mod 1e9+7 */ ll MOD = 1000000007LL; printf(\"2^100 mod 10^9+7 = %lld\\n\", fast_pow_mod(2, 100, MOD)); printf(\"recursive: 5^8 = %lld\\n\", recursive_pow(5, 8)); return 0; } Expected output 1 2 3 4 5 2^10 = 1024 3^20 = 3486784401 2^62 = 4611686018427387904 2^100 mod 10^9+7 = 976371285 recursive: 5^8 = 390625 Common mistakes Squaring base before checking whether the exponent is odd: the result can overflow unnecessarily if the modulus is not applied. Not reducing base %= mod at the start of the modular version: if base already exceeds mod, the first square can overflow long long. Confusing exp \u0026 1 with exp % 2: they are equivalent for positive integers, but \u0026 1 is clearer in a bit-manipulation context. Forgetting the base case exp == 0: any number raised to 0 is 1, including 0^0, which is defined as 1 in combinatorics and algorithms. Practical use Fast exponentiation is essential in cryptography (RSA: m^e mod n), in Miller–Rabin primality testing, and in matrix exponentiation for linear recurrences. In competitive programming it is a standard tool for large-modulus problems.\nRecommended next exercise Fibonacci in C: solved exercise Euclidean algorithm (GCD) in C: solved exercise Sieve of Eratosthenes in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why is fast exponentiation O(log n) and not O(n)? Because in each iteration the exponent is halved (exp \u003e\u003e= 1). To compute 2^1000, only about 10 iterations are needed (log₂ 1000 ≈ 10) instead of 1000. The number of multiplications is proportional to the number of bits in the exponent.\nWhat is the modular version and when is it used? The modular version computes base^exp mod m by applying % mod at each step to keep values small and avoid overflow. It is used when working with very large numbers in cryptography or number theory, where only the remainder matters.\nDoes fast exponentiation work with negative exponents? Not directly with integers: base^(-n) = 1/base^n requires fractional arithmetic. For the modular case, the modular inverse of base^n mod p can be computed as base^(p-2) mod p when p is prime (Fermat’s little theorem).",
+    "description": "Solved fast exponentiation exercise in C: binary exponentiation algorithm O(log n) with iterative and recursive versions.",
+    "tags": [
+      "Intermediate",
+      "Algorithms"
+    ],
+    "title": "Fast exponentiation in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
+    "title": "Tag :: Algorithms",
+    "uri": "/en/tags/algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1317,6 +1320,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
