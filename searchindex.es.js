@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros Potencia rápida",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros Potencia rápida Dijkstra",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1274,6 +1274,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Dijkstra en C: ejercicio resuelto Si buscas Dijkstra en C ejercicio resuelto, aquí tienes la implementación clásica con matriz de adyacencia: encuentra el camino más corto desde un nodo origen hasta todos los demás nodos de un grafo dirigido y ponderado con pesos no negativos.\nLa implementación con matriz es O(V²), adecuada para grafos densos o pequeños. Para grafos dispersos grandes se usa una cola de prioridad (min-heap), que da O((V + E) log V).\nEnunciado Dado un grafo de 5 nodos (0–4) con las siguientes aristas:\n1 2 3 4 5 0→1 peso 10 0→3 peso 5 1→2 peso 1 1→3 peso 2 3→1 peso 3 3→2 peso 9 3→4 peso 2 4→2 peso 6 4→0 peso 7 2→4 peso 4 Encuentra las distancias mínimas desde el nodo 0 a todos los demás usando Dijkstra.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 #include \u003cstdio.h\u003e #include \u003climits.h\u003e #define V 5 #define INF INT_MAX int grafo[V][V] = { {0, 10, 0, 5, 0}, {0, 0, 1, 2, 0}, {0, 0, 0, 0, 4}, {0, 3, 9, 0, 2}, {7, 0, 6, 0, 0} }; int minimo_no_visitado(const int dist[], const int visitado[]) { int min = INF, idx = -1; for (int v = 0; v \u003c V; v++) { if (!visitado[v] \u0026\u0026 dist[v] \u003c min) { min = dist[v]; idx = v; } } return idx; } void dijkstra(int origen) { int dist[V], visitado[V] = {0}; for (int i = 0; i \u003c V; i++) dist[i] = INF; dist[origen] = 0; for (int iter = 0; iter \u003c V - 1; iter++) { int u = minimo_no_visitado(dist, visitado); if (u == -1) break; visitado[u] = 1; for (int v = 0; v \u003c V; v++) { if (!visitado[v] \u0026\u0026 grafo[u][v] \u0026\u0026 dist[u] != INF \u0026\u0026 dist[u] + grafo[u][v] \u003c dist[v]) { dist[v] = dist[u] + grafo[u][v]; } } } printf(\"Distancias desde nodo %d:\\n\", origen); for (int i = 0; i \u003c V; i++) { if (dist[i] == INF) printf(\" %d → %d : INF\\n\", origen, i); else printf(\" %d → %d : %d\\n\", origen, i, dist[i]); } } int main(void) { dijkstra(0); return 0; } Resultado esperado 1 2 3 4 5 6 Distancias desde nodo 0: 0 → 0 : 0 0 → 1 : 8 0 → 2 : 9 0 → 3 : 5 0 → 4 : 7 Errores frecuentes Usar pesos negativos: Dijkstra no funciona correctamente con aristas de peso negativo. Para ese caso se usa el algoritmo de Bellman-Ford. No inicializar todas las distancias a INF antes de empezar: distancias sin inicializar producen caminos incorrectos. Sumar INF + peso sin comprobar que dist[u] != INF: produce desbordamiento de entero. Confundir grafos dirigidos con no dirigidos en la matriz: si el grafo es no dirigido, grafo[u][v] == grafo[v][u]. Aplicación práctica Dijkstra es el algoritmo estándar para navegación GPS, enrutamiento de redes (OSPF), juegos de estrategia (búsqueda de caminos en mapas) y cualquier problema de camino mínimo con pesos no negativos. La versión con cola de prioridad es la que se usa en producción para grafos grandes.\nSiguiente ejercicio recomendado Búsqueda binaria en C: ejercicio resuelto Algoritmo de Euclides (MCD) en C: ejercicio resuelto Merge sort en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué Dijkstra no funciona con pesos negativos? Porque el algoritmo asume que una vez que un nodo se marca como visitado, su distancia ya es la mínima posible. Con pesos negativos podría existir un camino más corto que llegue a ese nodo más tarde, violando esa suposición. Bellman-Ford maneja pesos negativos en O(V·E).\n¿Cuándo usar la versión con cola de prioridad frente a la de matriz? La versión con cola de prioridad (min-heap) es O((V + E) log V) y se prefiere para grafos dispersos donde E « V². La versión con matriz es O(V²) y es más sencilla de implementar; es aceptable cuando V es pequeño (\u003c 1000) o el grafo es denso.\n¿Cómo reconstruir el camino, no solo la distancia? Se añade un array predecesor[V] inicializado a -1. Cuando se relaja una arista y se actualiza dist[v], se guarda predecesor[v] = u. Al final, se recorre el array de predecesores desde el destino hasta el origen para obtener la ruta.",
+    "description": "Ejercicio resuelto del algoritmo de Dijkstra en C: camino más corto con matriz de adyacencia, sin cola de prioridad, paso a paso.",
+    "tags": [
+      "Avanzado",
+      "Algoritmos",
+      "Grafos"
+    ],
+    "title": "Dijkstra en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -1290,6 +1302,14 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -1302,8 +1322,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Grafos",
+    "uri": "/tags/grafos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1312,6 +1332,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1360,14 +1388,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arboles",
     "uri": "/tags/arboles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

@@ -1290,6 +1290,26 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Dijkstra in C: solved exercise If you searched for a solved Dijkstra algorithm exercise in C, here is the classic adjacency-matrix implementation: it finds the shortest path from a source node to all other nodes in a directed, weighted graph with non-negative weights.\nThe matrix implementation is O(V²), suitable for dense or small graphs. For large sparse graphs, a priority queue (min-heap) gives O((V + E) log V).\nProblem statement Given a 5-node graph (0–4) with the following edges:\n1 2 3 4 5 0→1 weight 10 0→3 weight 5 1→2 weight 1 1→3 weight 2 3→1 weight 3 3→2 weight 9 3→4 weight 2 4→2 weight 6 4→0 weight 7 2→4 weight 4 Find the minimum distances from node 0 to all other nodes using Dijkstra.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 #include \u003cstdio.h\u003e #include \u003climits.h\u003e #define V 5 #define INF INT_MAX int graph[V][V] = { {0, 10, 0, 5, 0}, {0, 0, 1, 2, 0}, {0, 0, 0, 0, 4}, {0, 3, 9, 0, 2}, {7, 0, 6, 0, 0} }; int min_unvisited(const int dist[], const int visited[]) { int min = INF, idx = -1; for (int v = 0; v \u003c V; v++) { if (!visited[v] \u0026\u0026 dist[v] \u003c min) { min = dist[v]; idx = v; } } return idx; } void dijkstra(int source) { int dist[V], visited[V] = {0}; for (int i = 0; i \u003c V; i++) dist[i] = INF; dist[source] = 0; for (int iter = 0; iter \u003c V - 1; iter++) { int u = min_unvisited(dist, visited); if (u == -1) break; visited[u] = 1; for (int v = 0; v \u003c V; v++) { if (!visited[v] \u0026\u0026 graph[u][v] \u0026\u0026 dist[u] != INF \u0026\u0026 dist[u] + graph[u][v] \u003c dist[v]) { dist[v] = dist[u] + graph[u][v]; } } } printf(\"Distances from node %d:\\n\", source); for (int i = 0; i \u003c V; i++) { if (dist[i] == INF) printf(\" %d → %d : INF\\n\", source, i); else printf(\" %d → %d : %d\\n\", source, i, dist[i]); } } int main(void) { dijkstra(0); return 0; } Expected output 1 2 3 4 5 6 Distances from node 0: 0 → 0 : 0 0 → 1 : 8 0 → 2 : 9 0 → 3 : 5 0 → 4 : 7 Common mistakes Using negative weights: Dijkstra does not work correctly with negative-weight edges. Use Bellman-Ford for that case. Not initializing all distances to INF before starting: uninitialized distances produce incorrect paths. Adding INF + weight without checking that dist[u] != INF: causes integer overflow. Confusing directed and undirected graphs in the matrix: for undirected graphs, graph[u][v] == graph[v][u]. Practical use Dijkstra is the standard algorithm for GPS navigation, network routing (OSPF), strategy games (pathfinding on maps), and any shortest-path problem with non-negative weights. The priority-queue version is what is used in production for large graphs.\nRecommended next exercise Binary search in C: solved exercise Euclidean algorithm (GCD) in C: solved exercise Merge sort in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does Dijkstra not work with negative weights? Because the algorithm assumes that once a node is marked as visited, its distance is already the minimum possible. With negative weights, a shorter path might arrive at that node later, violating that assumption. Bellman-Ford handles negative weights in O(V·E).\nWhen should I use the priority queue version versus the matrix version? The priority-queue version (min-heap) is O((V + E) log V) and is preferred for sparse graphs where E « V². The matrix version is O(V²), simpler to implement, and acceptable when V is small (\u003c 1000) or the graph is dense.\nHow do I reconstruct the path, not just the distance? Add a predecessor[V] array initialized to -1. When an edge is relaxed and dist[v] is updated, store predecessor[v] = u. At the end, trace the predecessor array from the destination back to the source to recover the route.",
+    "description": "Solved Dijkstra algorithm exercise in C: shortest path with adjacency matrix, no priority queue, step by step.",
+    "tags": [
+      "Advanced",
+      "Algorithms",
+      "Graphs"
+    ],
+    "title": "Dijkstra in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
@@ -1302,8 +1322,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Graphs",
+    "uri": "/en/tags/graphs/index.html"
   },
   {
     "breadcrumb": "",
@@ -1320,6 +1340,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1360,14 +1388,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Loops",
     "uri": "/en/tags/loops/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
