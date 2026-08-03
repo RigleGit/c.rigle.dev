@@ -418,7 +418,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros Potencia rápida Dijkstra",
+    "content": "Ordenar y buscar eficientemente son habilidades fundamentales en programación. En esta sección encontrarás implementaciones comentadas de los algoritmos más importantes: ordenación por burbuja, inserción directa e inserción binaria, Quicksort, Merge Sort, Shell Sort, búsqueda binaria y recursividad. Cada uno resuelto con análisis de la lógica y el código.\nRecursividad Búsqueda binaria Burbuja Inserción directa Inserción binaria Shell sort Merge sort Quicksort Búsqueda lineal qsort en C bsearch en C Selection sort en C Heap sort en C Counting sort en C Radix sort en C Búsqueda por interpolación en C Algoritmo de Euclides (MCD) en C Merge de arrays ordenados en C Eliminar duplicados de un array ordenado en C Máximo subarray (Kadane) en C Criba de Eratóstenes en C Fibonacci Factorial Dos punteros Potencia rápida Dijkstra Bucket sort",
     "description": "Ejercicios resueltos de algoritmos en C: ordenación burbuja, inserción directa, quicksort, merge sort, shell sort, búsqueda binaria y recursividad.",
     "tags": [],
     "title": "Algoritmos",
@@ -1286,12 +1286,32 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
+    "content": "Bucket sort en C: ejercicio resuelto Si buscas bucket sort en C ejercicio resuelto, aquí tienes la implementación completa: distribuye los elementos en cubos (buckets), ordena cada cubo con inserción directa y los concatena, logrando O(n) esperado cuando los datos se distribuyen uniformemente en [0, 1).\nBucket sort es uno de los pocos algoritmos de ordenación que rompe la barrera Ω(n log n) de la ordenación por comparación, pero solo bajo el supuesto de distribución uniforme.\nEnunciado Ordena el array {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68} usando bucket sort con 10 cubos. Muestra el contenido de los cubos antes de ordenarlos y el array final.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define N 10 #define NB 10 /* número de cubos */ typedef struct Nodo { double val; struct Nodo *sig; } Nodo; /* Inserción ordenada en lista enlazada del cubo */ void insertar_ordenado(Nodo **cubo, double val) { Nodo *nuevo = malloc(sizeof(Nodo)); nuevo-\u003eval = val; nuevo-\u003esig = NULL; if (!*cubo || val \u003c (*cubo)-\u003eval) { nuevo-\u003esig = *cubo; *cubo = nuevo; return; } Nodo *cur = *cubo; while (cur-\u003esig \u0026\u0026 cur-\u003esig-\u003eval \u003c= val) cur = cur-\u003esig; nuevo-\u003esig = cur-\u003esig; cur-\u003esig = nuevo; } void liberar_cubo(Nodo *cubo) { while (cubo) { Nodo *t = cubo; cubo = cubo-\u003esig; free(t); } } void bucket_sort(double arr[], int n) { Nodo *cubos[NB] = {NULL}; /* Distribuir */ for (int i = 0; i \u003c n; i++) { int idx = (int)(arr[i] * NB); if (idx \u003e= NB) idx = NB - 1; insertar_ordenado(\u0026cubos[idx], arr[i]); } /* Mostrar cubos */ for (int i = 0; i \u003c NB; i++) { printf(\"cubo[%d]: \", i); for (Nodo *p = cubos[i]; p; p = p-\u003esig) printf(\"%.2f \", p-\u003eval); printf(\"\\n\"); } /* Concatenar */ int pos = 0; for (int i = 0; i \u003c NB; i++) { for (Nodo *p = cubos[i]; p; p = p-\u003esig) arr[pos++] = p-\u003eval; liberar_cubo(cubos[i]); } } int main(void) { double a[N] = {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68}; bucket_sort(a, N); printf(\"\\nOrdenado: \"); for (int i = 0; i \u003c N; i++) printf(\"%.2f \", a[i]); printf(\"\\n\"); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 cubo[0]: cubo[1]: 0.12 0.17 cubo[2]: 0.21 0.23 0.26 cubo[3]: 0.39 cubo[4]: cubo[5]: cubo[6]: 0.68 cubo[7]: 0.72 0.78 cubo[8]: cubo[9]: 0.94 Ordenado: 0.12 0.17 0.21 0.23 0.26 0.39 0.68 0.72 0.78 0.94 Errores frecuentes No liberar la memoria de los cubos: cada cubo es una lista enlazada que hay que liberar con free para evitar fugas de memoria. No comprobar que malloc devuelve NULL: en sistemas con poca memoria la asignación puede fallar. Calcular el índice del cubo con (int)(val * NB) sin clampear: si val == 1.0 el índice sería NB, fuera del array. Asumir que bucket sort es siempre O(n): en el peor caso (todos los elementos en el mismo cubo) degenera a O(n²) con inserción directa como algoritmo de cubo. Aplicación práctica Bucket sort se usa en sistemas de render (distribución de partículas por profundidad), en histogramas y en la fase de distribución de radix sort. Es especialmente eficiente cuando los datos vienen de una distribución uniforme, como números en coma flotante en [0, 1) generados aleatoriamente.\nSiguiente ejercicio recomendado Counting sort en C: ejercicio resuelto Radix sort en C: ejercicio resuelto Heap sort en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué bucket sort puede ser O(n) si tiene un bucle interno de inserción? Porque cuando los datos se distribuyen uniformemente, el número esperado de elementos por cubo es n/k (donde k es el número de cubos). Con k ≈ n cada cubo tiene en promedio 1 elemento, y la inserción directa en cada cubo es O(1). La suma de todos los cubos es O(n) en el caso promedio.\n¿Cuántos cubos debo usar? La regla general es usar tantos cubos como elementos (k = n), lo que da O(n) esperado. Con pocos cubos los tiempos de inserción dentro de cada cubo aumentan; con demasiados, el overhead de gestión de cubos vacíos domina.\n¿Puedo usar bucket sort con enteros? Sí, normalizando los valores al rango [0, 1) o usando directamente el valor como índice de cubo (equivalente a counting sort para rangos pequeños). Para enteros en un rango [min, max], el índice del cubo es (val - min) * NB / (max - min + 1).",
+    "description": "Ejercicio resuelto de bucket sort en C: ordenación por cubos para datos uniformes en [0,1] con O(n) esperado.",
+    "tags": [
+      "Avanzado",
+      "Algoritmos",
+      "Algoritmos-Ordenacion"
+    ],
+    "title": "Bucket sort en C: ejercicio resuelto",
+    "uri": "/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiqueta :: Algoritmos",
     "uri": "/tags/algoritmos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos-Ordenacion",
+    "uri": "/tags/algoritmos-ordenacion/index.html"
   },
   {
     "breadcrumb": "",
@@ -1318,20 +1338,20 @@ var relearn_searchindex = [
     "uri": "/ejercicios/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Grafos",
-    "uri": "/tags/grafos/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Grafos",
+    "uri": "/tags/grafos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1452,14 +1472,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Busqueda",
     "uri": "/tags/busqueda/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Algoritmos-Ordenacion",
-    "uri": "/tags/algoritmos-ordenacion/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

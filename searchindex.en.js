@@ -1302,6 +1302,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
+    "content": "Bucket sort in C: solved exercise If you searched for a solved bucket sort exercise in C, here is the full implementation: it distributes elements into buckets, sorts each bucket with insertion sort, and concatenates them, achieving expected O(n) when data is uniformly distributed in [0, 1).\nBucket sort is one of the few sorting algorithms that breaks the Ω(n log n) comparison-sort barrier, but only under the assumption of uniform distribution.\nProblem statement Sort the array {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68} using bucket sort with 10 buckets. Show the bucket contents before sorting them and the final array.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define N 10 #define NB 10 /* number of buckets */ typedef struct Node { double val; struct Node *next; } Node; /* Sorted insertion into the bucket's linked list */ void insert_sorted(Node **bucket, double val) { Node *node = malloc(sizeof(Node)); node-\u003eval = val; node-\u003enext = NULL; if (!*bucket || val \u003c (*bucket)-\u003eval) { node-\u003enext = *bucket; *bucket = node; return; } Node *cur = *bucket; while (cur-\u003enext \u0026\u0026 cur-\u003enext-\u003eval \u003c= val) cur = cur-\u003enext; node-\u003enext = cur-\u003enext; cur-\u003enext = node; } void free_bucket(Node *bucket) { while (bucket) { Node *t = bucket; bucket = bucket-\u003enext; free(t); } } void bucket_sort(double arr[], int n) { Node *buckets[NB] = {NULL}; /* Distribute */ for (int i = 0; i \u003c n; i++) { int idx = (int)(arr[i] * NB); if (idx \u003e= NB) idx = NB - 1; insert_sorted(\u0026buckets[idx], arr[i]); } /* Show buckets */ for (int i = 0; i \u003c NB; i++) { printf(\"bucket[%d]: \", i); for (Node *p = buckets[i]; p; p = p-\u003enext) printf(\"%.2f \", p-\u003eval); printf(\"\\n\"); } /* Concatenate */ int pos = 0; for (int i = 0; i \u003c NB; i++) { for (Node *p = buckets[i]; p; p = p-\u003enext) arr[pos++] = p-\u003eval; free_bucket(buckets[i]); } } int main(void) { double a[N] = {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68}; bucket_sort(a, N); printf(\"\\nSorted: \"); for (int i = 0; i \u003c N; i++) printf(\"%.2f \", a[i]); printf(\"\\n\"); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 bucket[0]: bucket[1]: 0.12 0.17 bucket[2]: 0.21 0.23 0.26 bucket[3]: 0.39 bucket[4]: bucket[5]: bucket[6]: 0.68 bucket[7]: 0.72 0.78 bucket[8]: bucket[9]: 0.94 Sorted: 0.12 0.17 0.21 0.23 0.26 0.39 0.68 0.72 0.78 0.94 Common mistakes Not freeing bucket memory: each bucket is a linked list that must be freed with free to avoid memory leaks. Not checking that malloc returns NULL: allocation can fail on low-memory systems. Computing the bucket index with (int)(val * NB) without clamping: if val == 1.0, the index would be NB, out of bounds. Assuming bucket sort is always O(n): in the worst case (all elements in the same bucket) it degenerates to O(n²) with insertion sort as the inner algorithm. Practical use Bucket sort is used in rendering systems (distributing particles by depth), in histogram computation, and in the distribution phase of radix sort. It is especially efficient when data comes from a uniform distribution, such as randomly generated floating-point numbers in [0, 1).\nRecommended next exercise Counting sort in C: solved exercise Radix sort in C: solved exercise Heap sort in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why can bucket sort be O(n) if it uses an inner insertion loop? Because when data is uniformly distributed, the expected number of elements per bucket is n/k (where k is the number of buckets). With k ≈ n, each bucket has on average 1 element, and insertion sort on each bucket is O(1). The total across all buckets is O(n) in the average case.\nHow many buckets should I use? The general rule is to use as many buckets as elements (k = n), giving expected O(n). Fewer buckets increase the insertion time per bucket; too many buckets increase the overhead of managing empty buckets.\nCan I use bucket sort with integers? Yes, either by normalizing values to [0, 1) or by using the value directly as a bucket index (equivalent to counting sort for small ranges). For integers in [min, max], the bucket index is (val - min) * NB / (max - min + 1).",
+    "description": "Solved bucket sort exercise in C: bucket-based sorting for uniform data in [0,1) with expected O(n) time.",
+    "tags": [
+      "Advanced",
+      "Algorithms",
+      "Sorting-Algorithms"
+    ],
+    "title": "Bucket sort in C: solved exercise",
+    "uri": "/en/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
@@ -1318,14 +1330,6 @@ var relearn_searchindex = [
     "uri": "/en/tags/algorithms/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Graphs",
-    "uri": "/en/tags/graphs/index.html"
-  },
-  {
     "breadcrumb": "",
     "content": "Practical resources to learn C programming.\nSolved exercises C100 Book",
     "description": "Solved C exercises step by step. From basics to advanced data structures.",
@@ -1334,12 +1338,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Sorting-Algorithms",
+    "uri": "/en/tags/sorting-algorithms/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Graphs",
+    "uri": "/en/tags/graphs/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1460,14 +1480,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Search",
     "uri": "/en/tags/search/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
