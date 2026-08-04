@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -1182,6 +1182,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "sprintf y snprintf en C: ejercicio resuelto Si buscas sprintf y snprintf en C ejercicio resuelto, aquí tienes los patrones más habituales: formatear números en cadenas, construir rutas de fichero dinámicamente y combinar campos en un único buffer, con la diferencia clave entre sprintf (sin límite) y snprintf (con límite seguro).\nsnprintf es la versión segura que nunca escribe más de n bytes incluyendo el terminador \\0. En código moderno siempre se prefiere snprintf frente a sprintf.\nEnunciado Usa sprintf para construir la cadena \"Resultado: 42 (0x2A)\". Usa snprintf para construir rutas con el patrón \"/logs/dia_03.log\". Detecta el truncamiento cuando el buffer es demasiado pequeño. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char buf[64]; /* 1. sprintf: número decimal y hexadecimal */ sprintf(buf, \"Resultado: %d (0x%X)\", 42, 42); printf(\"%s\\n\", buf); /* 2. snprintf: construir rutas de forma segura */ for (int dia = 1; dia \u003c= 3; dia++) { snprintf(buf, sizeof(buf), \"/logs/dia_%02d.log\", dia); printf(\"Ruta: %s\\n\", buf); } /* 3. Detectar truncamiento */ char pequeño[10]; int escrito = snprintf(pequeño, sizeof(pequeño), \"Cadena muy larga: %d\", 12345); if (escrito \u003e= (int)sizeof(pequeño)) { printf(\"Truncado: necesitaba %d bytes, buffer de %zu\\n\", escrito, sizeof(pequeño)); } printf(\"Buffer: \\\"%s\\\"\\n\", pequeño); return 0; } Resultado esperado 1 2 3 4 5 6 Resultado: 42 (0x2A) Ruta: /logs/dia_01.log Ruta: /logs/dia_02.log Ruta: /logs/dia_03.log Truncado: necesitaba 22 bytes, buffer de 10 Buffer: \"Cadena mu\" Errores frecuentes Usar sprintf con buffers de tamaño fijo: si el texto formateado supera el tamaño del buffer, se produce un desbordamiento de buffer (undefined behavior y vulnerabilidad de seguridad). No comprobar el valor de retorno de snprintf: devuelve el número de bytes que se habrían escrito sin el límite; si es \u003e= n, hay truncamiento. Confundir snprintf con strncpy: snprintf siempre termina con \\0; strncpy no lo garantiza si la cadena fuente es más larga que n. Olvidar el \\0 en el cálculo del tamaño: snprintf(buf, 10, ...) deja espacio para 9 caracteres más el terminador. Aplicación práctica snprintf es la función estándar para construir cadenas formateadas en C: nombres de fichero, mensajes de log, respuestas HTTP de texto plano y cualquier escenario donde se combinen datos numéricos y texto. Es la alternativa segura a la concatenación manual con strcat.\nSiguiente ejercicio recomendado strcat y strncat en C: ejercicio resuelto strcpy y strncpy en C: ejercicio resuelto strlen, strchr, strstr en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Qué devuelve snprintf exactamente? Devuelve el número de bytes que se habrían escrito si el buffer fuera suficientemente grande, sin contar el \\0 final. Si el valor devuelto es \u003e= n (el tamaño del buffer), la cadena fue truncada y hay que aumentar el buffer o gestionar el truncamiento.\n¿Por qué sprintf es considerado inseguro? Porque no tiene límite de escritura. Si el texto formateado supera el tamaño del buffer, sprintf escribe más allá del límite, corrompiendo memoria adyacente. Esto es un desbordamiento de buffer, que en código de red o con entradas externas es una vulnerabilidad explotable.\n¿Existe alguna alternativa más moderna? En C11 existe sprintf_s y snprintf_s (extensiones opcionales del Anexo K), pero su adopción es limitada. La práctica estándar es usar snprintf con sizeof(buffer) siempre.",
+    "description": "Ejercicio resuelto de sprintf y snprintf en C: formatear texto en un buffer, diferencias con printf y protección contra desbordamiento.",
+    "tags": [
+      "Principiante",
+      "Arrays-Cadenas",
+      "Cadenas"
+    ],
+    "title": "sprintf y snprintf en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/sprintf-snprintf-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "Arrays como parámetros en C: ejercicio resuelto Si buscas arrays como parámetros en C ejercicio resuelto, aquí tienes el patrón fundamental: en C los arrays se pasan a funciones como un puntero al primer elemento, lo que significa que la función puede modificar el array original y que el tamaño debe pasarse por separado.\nEste comportamiento —denominado decaimiento a puntero— es uno de los primeros puntos de confusión para quien viene de Java o Python, donde los arrays llevan su tamaño consigo.\nEnunciado Escribe tres funciones:\nrellenar(arr, n): rellena el array con los valores 0, 2, 4, …, 2*(n-1). suma(arr, n): devuelve la suma de todos los elementos (sin modificar el array). imprimir(arr, n): imprime todos los elementos separados por espacios. Demuestra que las modificaciones de rellenar son visibles en main.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #include \u003cstdio.h\u003e void rellenar(int arr[], int n) { for (int i = 0; i \u003c n; i++) arr[i] = i * 2; } int suma(const int arr[], int n) { int s = 0; for (int i = 0; i \u003c n; i++) s += arr[i]; return s; } void imprimir(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int v[5]; rellenar(v, 5); imprimir(v, 5); printf(\"Suma: %d\\n\", suma(v, 5)); return 0; } Resultado esperado 1 2 0 2 4 6 8 Suma: 20 Errores frecuentes Intentar obtener el tamaño del array dentro de la función con sizeof(arr): devuelve el tamaño del puntero (8 bytes en 64 bits), no el del array. El tamaño siempre debe pasarse como parámetro. Olvidar const en funciones que solo leen el array: el compilador no puede optimizar ni detectar modificaciones accidentales. Pasar \u0026v en lugar de v: \u0026v es un puntero a array (int (*)[5]), tipo diferente al esperado por la función. Confundir arrays en la pila (int v[5]) con arrays dinámicos (malloc): ambos se pasan como puntero, pero el ciclo de vida es distinto. Aplicación práctica El paso de arrays a funciones es la base de algoritmos de ordenación, búsqueda y transformación en C. Separar la lógica en funciones con const permite al compilador aplicar optimizaciones y al programador razonar mejor sobre los efectos secundarios.\nSiguiente ejercicio recomendado Arreglos y vectores en C: ejercicios resueltos Punteros en C: ejercicios resueltos Funciones en C: ejercicios resueltos Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué sizeof(arr) dentro de la función no da el tamaño del array? Porque cuando un array se pasa a una función, se decae a un puntero al primer elemento. La función recibe solo la dirección de memoria, no la longitud. sizeof de un puntero devuelve el tamaño del puntero (4 u 8 bytes según la arquitectura).\n¿Qué diferencia hay entre int arr[] e int *arr como parámetro de función? Ninguna en la práctica: ambas declaraciones son equivalentes en el contexto de parámetros de función. C las trata exactamente igual. Se prefiere int arr[] por claridad semántica.\n¿Cómo pasar un array de dos dimensiones a una función? Para matrices, hay que especificar el número de columnas: void f(int mat[][COLS], int filas). Las columnas deben ser constantes conocidas en tiempo de compilación, o usar punteros a puntero para dimensiones dinámicas.",
     "description": "Ejercicio resuelto de paso de arrays a funciones en C: por qué se pasan por referencia implícita, uso de const y el parámetro de tamaño.",
@@ -1298,6 +1310,54 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "",
+    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
+    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
+    "tags": [],
+    "title": "Aprende C — ejercicios resueltos",
+    "uri": "/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays-Cadenas",
+    "uri": "/tags/arrays-cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
+    "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
+    "tags": [],
+    "title": "Ejercicios resueltos en C (paso a paso)",
+    "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
@@ -1314,36 +1374,12 @@ var relearn_searchindex = [
     "uri": "/tags/algoritmos-ordenacion/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
-    "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
-    "tags": [],
-    "title": "Aprende C — ejercicios resueltos",
-    "uri": "/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiqueta :: Avanzado",
     "uri": "/tags/avanzado/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
-    "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
-    "tags": [],
-    "title": "Ejercicios resueltos en C (paso a paso)",
-    "uri": "/ejercicios/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1368,14 +1404,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arrays",
     "uri": "/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1432,14 +1460,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Punteros",
     "uri": "/tags/punteros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
