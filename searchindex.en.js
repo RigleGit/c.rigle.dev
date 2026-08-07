@@ -1279,6 +1279,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "Rotate array in C: solved exercise If you searched for a solved rotate array exercise in C, here is the three-reversal trick: rotate an array k positions left or right in O(n) time and O(1) extra space, with no auxiliary buffer needed.\nThe idea is that rotating an array is equivalent to reversing three sub-sequences: the block being shifted, the remainder, and then the entire array.\nProblem statement Given the array {1, 2, 3, 4, 5, 6, 7}:\nRotate it 3 positions to the left → {4, 5, 6, 7, 1, 2, 3}. Rotate it 2 positions to the right → {6, 7, 1, 2, 3, 4, 5}. Use the three-reversal algorithm in both cases.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 #include \u003cstdio.h\u003e void reverse(int arr[], int lo, int hi) { while (lo \u003c hi) { int tmp = arr[lo]; arr[lo++] = arr[hi]; arr[hi--] = tmp; } } /* Left rotation by k positions */ void rotate_left(int arr[], int n, int k) { k %= n; if (k == 0) return; reverse(arr, 0, k - 1); reverse(arr, k, n - 1); reverse(arr, 0, n - 1); } /* Right rotation by k positions */ void rotate_right(int arr[], int n, int k) { k %= n; if (k == 0) return; reverse(arr, 0, n - 1); reverse(arr, 0, k - 1); reverse(arr, k, n - 1); } void print_arr(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int a[] = {1, 2, 3, 4, 5, 6, 7}; int b[] = {1, 2, 3, 4, 5, 6, 7}; rotate_left(a, 7, 3); printf(\"Rotate left 3: \"); print_arr(a, 7); rotate_right(b, 7, 2); printf(\"Rotate right 2: \"); print_arr(b, 7); return 0; } Expected output 1 2 Rotate left 3: 4 5 6 7 1 2 3 Rotate right 2: 6 7 1 2 3 4 5 Common mistakes Not reducing k with k %= n: if k \u003e= n, computing k - 1 gives an out-of-bounds index. Confusing left with right: rotating left by k is equivalent to rotating right by n - k. Using an auxiliary buffer of size k: functionally correct but uses O(k) extra space; the three-reversal algorithm is O(1). Getting the three ranges wrong: for a left rotation they must be [0, k-1], [k, n-1], and [0, n-1], in that order. Practical use Array rotation is used in circular buffers, FIFO queue implementations with arrays, signal processing (sliding windows), and string problems such as detecting rotation anagrams.\nRecommended next exercise Maximum subarray: Kadane in C: solved exercise Two pointers in C: solved exercise Transposed matrix in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does the three-reversal algorithm work? Rotating left by k transforms [A|B] into [B|A]. Reversing A gives [A'|B], then reversing B gives [A'|B'], and finally reversing the whole array gives [B|A]. The three in-place reversals achieve the rotation without any copies.\nHow do you handle k larger than n? Use k %= n. Rotating by n positions is the same as not rotating. With the modulo, k = 9 on a 7-element array is equivalent to k = 2.\nCan the same algorithm rotate a string? Yes. A C string is an array of char, so reverse and rotate_left work identically by replacing int with char and passing strlen(s) as n.",
+    "description": "Solved rotate array exercise in C: left and right rotation using the three-reversal algorithm in O(n) time and O(1) space.",
+    "tags": [
+      "Intermediate",
+      "Arrays-Strings",
+      "Arrays"
+    ],
+    "title": "Rotate array in C: solved exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/rotar-array-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Fibonacci in C: solved exercise If you searched for a solved Fibonacci exercise in C, here are three implementations with complexity analysis: the classic recursive version (O(2^n)), the iterative version (O(n)), and the memoized recursive version (O(n)).\nThe Fibonacci sequence is the canonical example for understanding the difference between a naive recursive solution and a dynamic one: without a cache, the same subproblem is solved exponentially more times.\nProblem statement Implement three functions that return the n-th Fibonacci number (F(0)=0, F(1)=1):\nfib_recursive(n): recursive version without cache. fib_iterative(n): iterative version with O(1) space. fib_memo(n): recursive version with a memoization table. Print the first 10 terms using each version.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e #define MAX 64 /* Recursive: O(2^n) time */ long long fib_recursive(int n) { if (n \u003c= 1) return n; return fib_recursive(n - 1) + fib_recursive(n - 2); } /* Iterative: O(n) time, O(1) space */ long long fib_iterative(int n) { if (n \u003c= 1) return n; long long a = 0, b = 1; for (int i = 2; i \u003c= n; i++) { long long c = a + b; a = b; b = c; } return b; } /* Memoization */ static long long memo[MAX]; long long fib_memo(int n) { if (n \u003c= 1) return n; if (memo[n]) return memo[n]; memo[n] = fib_memo(n - 1) + fib_memo(n - 2); return memo[n]; } int main(void) { memset(memo, 0, sizeof(memo)); printf(\"Recursive: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_recursive(i)); printf(\"\\nIterative: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_iterative(i)); printf(\"\\nMemo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_memo(i)); printf(\"\\n\"); return 0; } Expected output 1 2 3 Recursive: 0 1 1 2 3 5 8 13 21 34 Iterative: 0 1 1 2 3 5 8 13 21 34 Memo: 0 1 1 2 3 5 8 13 21 34 Common mistakes Not defining the base case: without if (n \u003c= 1) return n the recursion is infinite and causes a stack overflow. Using int for large n: F(47) exceeds the range of int (2,147,483,647); use long long to safely reach F(92). Forgetting to zero-initialize the memo table: static gives zero-initialized memory, but a stack-allocated array requires an explicit memset. Benchmarking the recursive version for n \u003e 40: the runtime grows exponentially and can freeze the program for several seconds. Practical use Fibonacci appears in the analysis of divide-and-conquer algorithms, in computing the worst-case complexity of quicksort, and in data structures like Fibonacci heaps. Memoization is the first step toward dynamic programming.\nRecommended next exercise Recursion in C: solved exercises Factorial in C: solved exercise Sieve of Eratosthenes in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why is the recursive version so slow for large values? Because it recomputes the same subproblems multiple times. To compute F(5), it calls F(3) twice and F(2) three times. The complexity is O(2^n): for F(40), over one billion recursive calls are made.\nWhen should I use the iterative version versus the memoized version? Use the iterative version when you only need the n-th term: it uses O(1) space. The memoized version is useful when you need multiple terms at different times (separate calls), since it reuses the cache across them.\nIs there a direct formula to compute F(n)? Yes: Binet’s formula, F(n) = (φ^n − ψ^n) / √5 where φ = (1+√5)/2. However, it uses double and accumulates rounding errors for n \u003e 70, so in C the iterative version with 64-bit integers is preferred.",
     "description": "Solved Fibonacci exercise in C: recursive, iterative, and memoized versions. Complexity comparison O(2^n) vs O(n).",
@@ -1354,6 +1366,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Arrays-Strings",
     "uri": "/en/tags/arrays-strings/index.html"
   },
@@ -1362,8 +1382,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -1374,20 +1394,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1420,22 +1448,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Graphs",
     "uri": "/en/tags/graphs/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi Rotar array",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -1263,6 +1263,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Rotar array en C: ejercicio resuelto Si buscas rotar array en C ejercicio resuelto, aquí tienes el algoritmo de tres reversiones (three-reversal trick): rota un array k posiciones a la izquierda o a la derecha en O(n) tiempo y O(1) espacio extra, sin necesitar un buffer auxiliar.\nLa idea es que rotar un array equivale a invertir tres subsecuencias: el bloque que se desplaza, el resto y luego todo el array.\nEnunciado Dado el array {1, 2, 3, 4, 5, 6, 7}:\nRótalo 3 posiciones a la izquierda → {4, 5, 6, 7, 1, 2, 3}. Rótalo 2 posiciones a la derecha → {6, 7, 1, 2, 3, 4, 5}. Usa el algoritmo de tres reversiones en ambos casos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 #include \u003cstdio.h\u003e void invertir(int arr[], int ini, int fin) { while (ini \u003c fin) { int tmp = arr[ini]; arr[ini++] = arr[fin]; arr[fin--] = tmp; } } /* Rotación a la izquierda k posiciones */ void rotar_izquierda(int arr[], int n, int k) { k %= n; if (k == 0) return; invertir(arr, 0, k - 1); invertir(arr, k, n - 1); invertir(arr, 0, n - 1); } /* Rotación a la derecha k posiciones */ void rotar_derecha(int arr[], int n, int k) { k %= n; if (k == 0) return; invertir(arr, 0, n - 1); invertir(arr, 0, k - 1); invertir(arr, k, n - 1); } void imprimir(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int a[] = {1, 2, 3, 4, 5, 6, 7}; int b[] = {1, 2, 3, 4, 5, 6, 7}; rotar_izquierda(a, 7, 3); printf(\"Rotar izquierda 3: \"); imprimir(a, 7); rotar_derecha(b, 7, 2); printf(\"Rotar derecha 2: \"); imprimir(b, 7); return 0; } Resultado esperado 1 2 Rotar izquierda 3: 4 5 6 7 1 2 3 Rotar derecha 2: 6 7 1 2 3 4 5 Errores frecuentes No reducir k con k %= n: si k \u003e= n se intentan acceder índices fuera del array al calcular k - 1. Confundir izquierda con derecha: rotar a la izquierda k posiciones es equivalente a rotar a la derecha n - k posiciones. Usar un buffer auxiliar de tamaño k: correcto en funcionalidad pero usa O(k) espacio extra; el algoritmo de tres reversiones es O(1). Invertir los índices incorrectamente: los tres rangos deben ser [0, k-1], [k, n-1] y [0, n-1] para la rotación izquierda, en ese orden. Aplicación práctica La rotación de arrays se usa en buffers circulares, en la implementación de colas FIFO con array, en el procesamiento de señales (desplazamiento de ventanas) y en problemas de texto como la rotación de cadenas para detectar anagramas de rotación.\nSiguiente ejercicio recomendado Máximo subarray: Kadane en C: ejercicio resuelto Dos punteros en C: ejercicio resuelto Matriz transpuesta en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué el algoritmo de tres reversiones funciona? Rotar a la izquierda k posiciones transforma [A|B] en [B|A]. Si invertimos A → [A'|B], luego invertimos B → [A'|B'] y finalmente invertimos todo → [B|A]. Las tres inversiones in-place logran la rotación sin copias.\n¿Cómo manejar k mayor que n? Con k %= n. Rotar n posiciones equivale a no rotar. Con el módulo, k = 9 en un array de 7 elementos equivale a k = 2.\n¿Es posible rotar una cadena con el mismo algoritmo? Sí. Una cadena en C es un array de char, por lo que invertir y rotar_izquierda funcionan exactamente igual sustituyendo int por char y pasando strlen(s) como n.",
+    "description": "Ejercicio resuelto de rotar array en C: rotación a la izquierda y derecha con el algoritmo de tres reversiones en O(n) y O(1) de espacio.",
+    "tags": [
+      "Intermedio",
+      "Arrays-Cadenas",
+      "Arrays"
+    ],
+    "title": "Rotar array en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/rotar-array-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
     "content": "Fibonacci en C: ejercicio resuelto Si buscas Fibonacci en C ejercicio resuelto, aquí tienes tres implementaciones con análisis de complejidad: la versión recursiva clásica (O(2^n)), la iterativa (O(n)) y la recursiva con memoización (O(n)).\nLa sucesión de Fibonacci es el ejemplo canónico para entender la diferencia entre una solución recursiva ingenua y una dinámica: el mismo subproblema se resuelve exponencialmente más veces sin caché.\nEnunciado Implementa tres funciones que devuelvan el n-ésimo número de Fibonacci (F(0)=0, F(1)=1):\nfib_recursivo(n): versión recursiva sin caché. fib_iterativo(n): versión iterativa con O(1) de espacio. fib_memo(n): versión recursiva con tabla de memoización. Imprime los primeros 10 términos con cada versión.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e #define MAX 64 /* Versión recursiva: O(2^n) tiempo */ long long fib_recursivo(int n) { if (n \u003c= 1) return n; return fib_recursivo(n - 1) + fib_recursivo(n - 2); } /* Versión iterativa: O(n) tiempo, O(1) espacio */ long long fib_iterativo(int n) { if (n \u003c= 1) return n; long long a = 0, b = 1; for (int i = 2; i \u003c= n; i++) { long long c = a + b; a = b; b = c; } return b; } /* Memoización */ static long long memo[MAX]; long long fib_memo(int n) { if (n \u003c= 1) return n; if (memo[n]) return memo[n]; memo[n] = fib_memo(n - 1) + fib_memo(n - 2); return memo[n]; } int main(void) { memset(memo, 0, sizeof(memo)); printf(\"Recursivo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_recursivo(i)); printf(\"\\nIterativo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_iterativo(i)); printf(\"\\nMemo: \"); for (int i = 0; i \u003c 10; i++) printf(\"%lld \", fib_memo(i)); printf(\"\\n\"); return 0; } Resultado esperado 1 2 3 Recursivo: 0 1 1 2 3 5 8 13 21 34 Iterativo: 0 1 1 2 3 5 8 13 21 34 Memo: 0 1 1 2 3 5 8 13 21 34 Errores frecuentes No definir el caso base: sin if (n \u003c= 1) return n la recursión es infinita y provoca un desbordamiento de pila. Usar int para n grandes: F(47) supera el rango de int (2.147.483.647); usar long long evita el desbordamiento hasta F(92). Olvidar inicializar la tabla de memo a cero: con static la memoria ya está a cero, pero si se declara en la pila hay que llamar a memset. Comparar la velocidad de la versión recursiva para n \u003e 40: el tiempo crece exponencialmente y puede bloquear el programa durante segundos. Aplicación práctica Fibonacci aparece en el análisis de algoritmos de divide y vencerás, en el cálculo de la complejidad de quicksort en el peor caso y en estructuras como los árboles de Fibonacci. La técnica de memoización es el primer paso hacia la programación dinámica.\nSiguiente ejercicio recomendado Recursividad en C: ejercicios resueltos Factorial en C: ejercicio resuelto Criba de Eratóstenes en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué la versión recursiva es tan lenta para valores grandes? Porque recalcula los mismos subproblemas múltiples veces. Para calcular F(5) se llama a F(3) dos veces y a F(2) tres veces. La complejidad es O(2^n): para F(40) se realizan más de mil millones de llamadas recursivas.\n¿Cuándo usar la versión iterativa frente a la memoizada? La iterativa es preferible cuando solo necesitas el n-ésimo término: usa O(1) de espacio. La memoizada es útil cuando necesitas múltiples términos en distintos momentos (llamadas separadas), ya que reutiliza el caché entre ellas.\n¿Existe una fórmula directa para calcular F(n)? Sí: la fórmula de Binet, F(n) = (φ^n − ψ^n) / √5 donde φ = (1+√5)/2. Sin embargo, usa double y acumula errores de redondeo para n \u003e 70, por lo que en C se prefiere la versión iterativa con enteros de 64 bits.",
     "description": "Ejercicio resuelto de Fibonacci en C: versión recursiva, iterativa y con memoización. Comparativa de complejidad O(2^n) vs O(n).",
@@ -1346,16 +1358,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arrays-Cadenas",
-    "uri": "/tags/arrays-cadenas/index.html"
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
+    "title": "Etiqueta :: Arrays-Cadenas",
+    "uri": "/tags/arrays-cadenas/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1370,8 +1382,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1380,6 +1392,22 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1412,22 +1440,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Grafos",
     "uri": "/tags/grafos/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
