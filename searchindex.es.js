@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi Rotar array",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi Rotar array Producto de matrices",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -1287,6 +1287,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "Producto de matrices en C: ejercicio resuelto Si buscas producto de matrices en C ejercicio resuelto, aquí tienes la multiplicación de dos matrices con el orden de bucles ikj (más eficiente en caché que el orden ijk clásico) y la verificación del resultado elemento a elemento.\nLa multiplicación de matrices A (m×k) por B (k×n) produce C (m×n) donde C[i][j] = Σ A[i][p] * B[p][j] para p = 0..k-1. La complejidad es O(m·k·n).\nEnunciado Multiplica la matriz A (3×2) por la matriz B (2×4) y muestra el resultado C (3×4).\n1 2 3 A = | 1 2 | B = | 5 6 7 8 | | 3 4 | | 9 10 11 12 | | 5 6 | Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 #include \u003cstdio.h\u003e #define M 3 /* filas de A */ #define K 2 /* cols de A = filas de B */ #define N 4 /* cols de B */ void multiplicar(const int A[M][K], const int B[K][N], int C[M][N]) { /* Inicializar C a cero */ for (int i = 0; i \u003c M; i++) for (int j = 0; j \u003c N; j++) C[i][j] = 0; /* Orden ikj: mejor localidad de caché que ijk */ for (int i = 0; i \u003c M; i++) for (int p = 0; p \u003c K; p++) for (int j = 0; j \u003c N; j++) C[i][j] += A[i][p] * B[p][j]; } void imprimir_matriz(const char *nombre, const int mat[], int filas, int cols) { printf(\"%s:\\n\", nombre); for (int i = 0; i \u003c filas; i++) { printf(\" |\"); for (int j = 0; j \u003c cols; j++) printf(\" %3d\", mat[i * cols + j]); printf(\" |\\n\"); } } int main(void) { int A[M][K] = {{1, 2}, {3, 4}, {5, 6}}; int B[K][N] = {{5, 6, 7, 8}, {9, 10, 11, 12}}; int C[M][N]; multiplicar(A, B, C); imprimir_matriz(\"A\", (int *)A, M, K); imprimir_matriz(\"B\", (int *)B, K, N); imprimir_matriz(\"C = A x B\", (int *)C, M, N); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 A: | 1 2 | | 3 4 | | 5 6 | B: | 5 6 7 8 | | 9 10 11 12 | C = A x B: | 23 26 29 32 | | 51 58 65 72 | | 79 90 101 112 | Errores frecuentes No inicializar C a cero antes de acumular: los valores residuales de la pila producen resultados incorrectos. Usar el orden de bucles ijk sin pensar en caché: en el orden ijk el acceso a B[p][j] salta por columnas, lo que causa muchos cache misses. El orden ikj mantiene B[p][j] en la misma fila y es más eficiente. Confundir las dimensiones: A[m×k] × B[k×n] = C[m×n]. El número de columnas de A debe ser igual al número de filas de B. Usar int para matrices grandes: el producto de dos matrices 100×100 con valores de 1000 puede producir entradas de hasta 10^8, dentro del rango de int, pero con valores mayores conviene usar long long. Aplicación práctica La multiplicación de matrices es el núcleo de álgebra lineal numérica, redes neuronales (propagación hacia adelante), gráficos 3D (transformaciones) y computación científica. Bibliotecas como BLAS implementan versiones altamente optimizadas con SIMD y multihilo.\nSiguiente ejercicio recomendado Matrices en C: ejercicios resueltos Matriz transpuesta en C: ejercicio resuelto Suma de la diagonal principal en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué el orden de bucles ikj es más eficiente que ijk? Por la localidad de caché. En el orden ijk, el bucle interno accede a B[p][j] con p variando, lo que salta filas en la memoria (matrices en C son row-major). En el orden ikj, el bucle interno accede a B[p][j] con j variando, recorriendo una fila de forma secuencial y aprovechando las líneas de caché cargadas.\n¿Cómo verificar el resultado de la multiplicación? Calculando manualmente los primeros elementos: C[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] = 1*5 + 2*9 = 23. Comprueba también C[2][3] = 5*8 + 6*12 = 40 + 72 = 112.\n¿Qué es la multiplicación de matrices de Strassen? Es un algoritmo que multiplica matrices n×n en O(n^2.807) en lugar de O(n³), dividiendo cada matriz en cuatro submatrices y usando 7 multiplicaciones recursivas en lugar de 8. En la práctica se usa solo para matrices muy grandes (n \u003e 1000) porque la constante oculta es mayor que en el algoritmo estándar.",
+    "description": "Ejercicio resuelto de multiplicación de matrices en C: algoritmo ikj, complejidad O(n³) y verificación del resultado paso a paso.",
+    "tags": [
+      "Intermedio",
+      "Arrays-Cadenas",
+      "Matrices"
+    ],
+    "title": "Producto de matrices en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/producto-matrices-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
     "content": "Factorial en C: ejercicio resuelto Si buscas factorial en C ejercicio resuelto, aquí tienes tres implementaciones con análisis de desbordamiento: la versión recursiva clásica, la iterativa y una tabla precalculada para consultas O(1).\nEl factorial es el primer ejercicio donde el desbordamiento de enteros se vuelve un problema real: 13! ya supera el rango de int de 32 bits, y 21! supera el de long long.\nEnunciado Implementa tres versiones de la función factorial:\nfact_recursivo(n): usando recursión. fact_iterativo(n): usando un bucle. Una tabla fact_tabla[21] precalculada para consultas instantáneas. Imprime los factoriales de 0 a 20 con cada versión.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #include \u003cstdio.h\u003e /* Recursiva */ long long fact_recursivo(int n) { if (n \u003c= 1) return 1; return n * fact_recursivo(n - 1); } /* Iterativa */ long long fact_iterativo(int n) { long long r = 1; for (int i = 2; i \u003c= n; i++) r *= i; return r; } /* Tabla precalculada (válida hasta 20!) */ static long long fact_tabla[21]; void precalcular(void) { fact_tabla[0] = 1; for (int i = 1; i \u003c= 20; i++) fact_tabla[i] = fact_tabla[i - 1] * i; } int main(void) { precalcular(); printf(\"%-5s %-20s %-20s %-20s\\n\", \"n\", \"Recursivo\", \"Iterativo\", \"Tabla\"); for (int i = 0; i \u003c= 20; i++) { printf(\"%-5d %-20lld %-20lld %-20lld\\n\", i, fact_recursivo(i), fact_iterativo(i), fact_tabla[i]); } return 0; } Resultado esperado 1 2 3 4 5 6 7 n Recursivo Iterativo Tabla 0 1 1 1 1 1 1 1 2 2 2 2 3 6 6 6 ... 20 2432902008176640000 2432902008176640000 2432902008176640000 Errores frecuentes Usar int en lugar de long long: 13! = 6.227.020.800, que supera los 2.147.483.647 del int de 32 bits. El resultado se trunca silenciosamente dando un valor negativo o incorrecto. No tratar el caso n = 0: por definición 0! = 1; sin el caso base la función devuelve 0. Calcular factoriales de números negativos sin validar: el comportamiento es indefinido con la implementación recursiva. Confiar en la versión recursiva para n grande: la profundidad de pila crece linealmente y puede causar stack overflow en sistemas con pila pequeña. Aplicación práctica El factorial aparece en combinatoria (número de permutaciones, coeficientes binomiales), en la función gamma, en el análisis de algoritmos de fuerza bruta y en la generación de permutaciones. La tabla precalculada es el patrón estándar cuando el dominio es pequeño y las consultas son frecuentes.\nSiguiente ejercicio recomendado Fibonacci en C: ejercicio resuelto Recursividad en C: ejercicios resueltos Criba de Eratóstenes en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué 13! da un número negativo si uso int? Porque 13! = 6.227.020.800 supera el valor máximo de un int de 32 bits (2.147.483.647). El desbordamiento de enteros con signo es comportamiento indefinido en C, pero en la práctica los bits más significativos se descartan, produciendo un valor negativo.\n¿Qué pasa con 21! en long long? 21! = 51.090.942.171.709.440.000 supera el rango de long long (9.223.372.036.854.775.807). Para factoriales mayores se necesita aritmética de precisión arbitraria (__int128 en GCC llega hasta 33!) o una biblioteca de big integers.\n¿La versión recursiva o la iterativa es más eficiente? La iterativa: no genera marcos de pila adicionales y el compilador puede optimizarla con facilidad. La recursiva es equivalente en complejidad O(n) pero tiene sobrecarga de llamadas. Para factoriales, la diferencia es insignificante en la práctica dado el pequeño dominio válido (0–20 con long long).",
     "description": "Ejercicio resuelto de factorial en C: versión recursiva, iterativa y con tabla. Desbordamiento con enteros y solución con long long.",
@@ -1358,14 +1370,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arrays",
-    "uri": "/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Etiqueta :: Arrays-Cadenas",
     "uri": "/tags/arrays-cadenas/index.html"
   },
@@ -1386,12 +1390,28 @@ var relearn_searchindex = [
     "uri": "/tags/intermedio/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Matrices",
+    "uri": "/tags/matrices/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arrays",
+    "uri": "/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

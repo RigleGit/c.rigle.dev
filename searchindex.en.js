@@ -1303,6 +1303,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
+    "content": "Matrix multiplication in C: solved exercise If you searched for a solved matrix multiplication exercise in C, here is the implementation using the ikj loop order (more cache-friendly than the classic ijk order) and element-by-element result verification.\nMultiplying matrix A (m×k) by matrix B (k×n) produces C (m×n) where C[i][j] = Σ A[i][p] * B[p][j] for p = 0..k-1. The complexity is O(m·k·n).\nProblem statement Multiply matrix A (3×2) by matrix B (2×4) and display the result C (3×4).\n1 2 3 A = | 1 2 | B = | 5 6 7 8 | | 3 4 | | 9 10 11 12 | | 5 6 | C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 #include \u003cstdio.h\u003e #define M 3 /* rows of A */ #define K 2 /* cols of A = rows of B */ #define N 4 /* cols of B */ void multiply(const int A[M][K], const int B[K][N], int C[M][N]) { /* Initialize C to zero */ for (int i = 0; i \u003c M; i++) for (int j = 0; j \u003c N; j++) C[i][j] = 0; /* ikj order: better cache locality than ijk */ for (int i = 0; i \u003c M; i++) for (int p = 0; p \u003c K; p++) for (int j = 0; j \u003c N; j++) C[i][j] += A[i][p] * B[p][j]; } void print_matrix(const char *name, const int mat[], int rows, int cols) { printf(\"%s:\\n\", name); for (int i = 0; i \u003c rows; i++) { printf(\" |\"); for (int j = 0; j \u003c cols; j++) printf(\" %3d\", mat[i * cols + j]); printf(\" |\\n\"); } } int main(void) { int A[M][K] = {{1, 2}, {3, 4}, {5, 6}}; int B[K][N] = {{5, 6, 7, 8}, {9, 10, 11, 12}}; int C[M][N]; multiply(A, B, C); print_matrix(\"A\", (int *)A, M, K); print_matrix(\"B\", (int *)B, K, N); print_matrix(\"C = A x B\", (int *)C, M, N); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 A: | 1 2 | | 3 4 | | 5 6 | B: | 5 6 7 8 | | 9 10 11 12 | C = A x B: | 23 26 29 32 | | 51 58 65 72 | | 79 90 101 112 | Common mistakes Not initializing C to zero before accumulating: leftover stack values produce incorrect results. Using the ijk loop order without thinking about cache: in ijk, the inner loop accesses B[p][j] with p varying, jumping across rows in memory (C matrices are row-major). The ikj order keeps B[p][j] in the same row, making sequential access and cache lines efficient. Getting dimensions wrong: A[m×k] × B[k×n] = C[m×n]. The number of columns in A must equal the number of rows in B. Using int for large matrices: the product of two 100×100 matrices with values of 1000 can produce entries up to 10^8, within int range, but for larger values use long long. Practical use Matrix multiplication is the core of numerical linear algebra, neural networks (forward propagation), 3D graphics (transformations), and scientific computing. Libraries like BLAS implement highly optimized versions with SIMD and multithreading.\nRecommended next exercise Matrices in C: solved exercises Transposed matrix in C: solved exercise Sum of main diagonal in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why is the ikj loop order more efficient than ijk? Because of cache locality. In ijk, the inner loop accesses B[p][j] with p varying, which jumps across rows in memory (C stores matrices in row-major order). In ikj, the inner loop accesses B[p][j] with j varying, traversing a row sequentially and making full use of loaded cache lines.\nHow do you verify the multiplication result? Compute the first elements manually: C[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] = 1*5 + 2*9 = 23. Also check C[2][3] = 5*8 + 6*12 = 40 + 72 = 112.\nWhat is Strassen’s matrix multiplication? An algorithm that multiplies n×n matrices in O(n^2.807) instead of O(n³), by dividing each matrix into four submatrices and using 7 recursive multiplications instead of 8. In practice it is only used for very large matrices (n \u003e 1000) because the hidden constant is larger than in the standard algorithm.",
+    "description": "Solved matrix multiplication exercise in C: ikj loop order, O(n³) complexity, and step-by-step result verification.",
+    "tags": [
+      "Intermediate",
+      "Arrays-Strings",
+      "Matrices"
+    ],
+    "title": "Matrix multiplication in C: solved exercise",
+    "uri": "/en/ejercicios/arrays-cadenas/producto-matrices-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Algorithms",
     "content": "Factorial in C: solved exercise If you searched for a solved factorial exercise in C, here are three implementations with overflow analysis: the classic recursive version, the iterative version, and a precomputed lookup table for O(1) queries.\nFactorial is the first exercise where integer overflow becomes a real problem: 13! already exceeds the range of a 32-bit int, and 21! exceeds long long.\nProblem statement Implement three versions of the factorial function:\nfact_recursive(n): using recursion. fact_iterative(n): using a loop. A precomputed fact_table[21] for instant lookups. Print the factorials of 0 through 20 using each version.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #include \u003cstdio.h\u003e /* Recursive */ long long fact_recursive(int n) { if (n \u003c= 1) return 1; return n * fact_recursive(n - 1); } /* Iterative */ long long fact_iterative(int n) { long long r = 1; for (int i = 2; i \u003c= n; i++) r *= i; return r; } /* Precomputed table (valid up to 20!) */ static long long fact_table[21]; void precompute(void) { fact_table[0] = 1; for (int i = 1; i \u003c= 20; i++) fact_table[i] = fact_table[i - 1] * i; } int main(void) { precompute(); printf(\"%-5s %-20s %-20s %-20s\\n\", \"n\", \"Recursive\", \"Iterative\", \"Table\"); for (int i = 0; i \u003c= 20; i++) { printf(\"%-5d %-20lld %-20lld %-20lld\\n\", i, fact_recursive(i), fact_iterative(i), fact_table[i]); } return 0; } Expected output 1 2 3 4 5 6 7 n Recursive Iterative Table 0 1 1 1 1 1 1 1 2 2 2 2 3 6 6 6 ... 20 2432902008176640000 2432902008176640000 2432902008176640000 Common mistakes Using int instead of long long: 13! = 6,227,020,800 exceeds the int maximum (2,147,483,647). The result silently wraps to a negative or incorrect value. Not handling n = 0: by definition 0! = 1; without a base case the function returns 0. Computing factorials of negative numbers without validation: this causes undefined behavior in the recursive implementation. Relying on the recursive version for large n: stack depth grows linearly and can cause a stack overflow on systems with a small stack. Practical use Factorial appears in combinatorics (permutations, binomial coefficients), in the gamma function, in brute-force algorithm analysis, and in permutation generation. The precomputed table is the standard pattern when the domain is small and queries are frequent.\nRecommended next exercise Fibonacci in C: solved exercise Recursion in C: solved exercises Sieve of Eratosthenes in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does 13! give a negative number when using int? Because 13! = 6,227,020,800 exceeds the maximum value of a 32-bit int (2,147,483,647). Signed integer overflow is undefined behavior in C, but in practice the most significant bits are discarded, producing a negative value.\nWhat happens with 21! in long long? 21! = 51,090,942,171,709,440,000 exceeds the long long range (9,223,372,036,854,775,807). For larger factorials you need arbitrary-precision arithmetic (GCC’s __int128 reaches up to 33!) or a big-integer library.\nIs the recursive or iterative version more efficient? The iterative version: it does not create extra stack frames and the compiler can optimize it easily. The recursive version has the same O(n) complexity but carries function call overhead. For factorials the difference is negligible in practice given the small valid domain (0–20 with long long).",
     "description": "Solved factorial exercise in C: recursive, iterative, and lookup table versions. Integer overflow analysis and long long solution.",
@@ -1366,14 +1378,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Arrays-Strings",
     "uri": "/en/tags/arrays-strings/index.html"
   },
@@ -1394,12 +1398,28 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Matrices",
+    "uri": "/en/tags/matrices/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays",
+    "uri": "/en/tags/arrays/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
