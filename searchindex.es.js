@@ -86,7 +86,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi Rotar array Producto de matrices",
+    "content": "Los arrays son la estructura de datos más usada en C y la base de muchas otras. Aquí practicarás con vectores unidimensionales, matrices bidimensionales y cadenas de caracteres (char[]), además de funciones clave como memset. Cada ejercicio incluye código compilable y explicación detallada.\nArreglos y vectores Matrices memset Cadenas (strings) strcpy y strncpy en C strcmp y strncmp en C strlen, strchr y strstr en C memcpy y memmove en C Array bidimensional en C Invertir cadena en C Contar vocales en C Eliminar espacios en C strtok en C strtol en C Palíndromo en C Contar palabras en C Matriz transpuesta en C Suma de la diagonal principal en C sprintf y snprintf strcat y strncat atoi Rotar array Producto de matrices toupper y tolower",
     "description": "Ejercicios resueltos de arrays, vectores, matrices y cadenas en C. Incluye uso de memset y manejo de strings con la biblioteca estándar.",
     "tags": [],
     "title": "Arrays y cadenas",
@@ -1311,6 +1311,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/factorial-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
+    "content": "toupper y tolower en C: ejercicio resuelto Si buscas toupper y tolower en C ejercicio resuelto, aquí tienes los patrones esenciales: convertir un carácter individual, normalizar una cadena completa a mayúsculas o minúsculas, y realizar una búsqueda case-insensitive.\ntoupper y tolower están declaradas en \u003cctype.h\u003e y operan sobre un int (el valor del carácter cast a unsigned char). Si el carácter no es una letra, se devuelve sin modificar.\nEnunciado Convierte el carácter 'a' a mayúscula y 'Z' a minúscula. Normaliza la cadena \"Hola, MUNDO! 123\" a todo minúsculas y a todo mayúsculas. Compara dos cadenas ignorando mayúsculas/minúsculas sin modificar los originales. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 #include \u003cstdio.h\u003e #include \u003cctype.h\u003e #include \u003cstring.h\u003e void a_minusculas(const char *src, char *dst) { while (*src) *dst++ = (char)tolower((unsigned char)*src++); *dst = '\\0'; } void a_mayusculas(const char *src, char *dst) { while (*src) *dst++ = (char)toupper((unsigned char)*src++); *dst = '\\0'; } /* Comparación case-insensitive sin modificar las cadenas originales */ int strcmp_ci(const char *a, const char *b) { while (*a \u0026\u0026 *b) { int da = tolower((unsigned char)*a); int db = tolower((unsigned char)*b); if (da != db) return da - db; a++; b++; } return tolower((unsigned char)*a) - tolower((unsigned char)*b); } int main(void) { /* 1. Carácter individual */ printf(\"toupper('a') = '%c'\\n\", toupper('a')); printf(\"tolower('Z') = '%c'\\n\", tolower('Z')); /* 2. Cadena completa */ const char *original = \"Hola, MUNDO! 123\"; char buf[64]; a_minusculas(original, buf); printf(\"Minusculas: %s\\n\", buf); a_mayusculas(original, buf); printf(\"Mayusculas: %s\\n\", buf); /* 3. Comparación case-insensitive */ const char *s1 = \"Programacion\"; const char *s2 = \"PROGRAMACION\"; printf(\"strcmp_ci(\\\"%s\\\", \\\"%s\\\") = %d\\n\", s1, s2, strcmp_ci(s1, s2)); return 0; } Resultado esperado 1 2 3 4 5 toupper('a') = 'A' tolower('Z') = 'z' Minusculas: hola, mundo! 123 Mayusculas: HOLA, MUNDO! 123 strcmp_ci(\"Programacion\", \"PROGRAMACION\") = 0 Errores frecuentes Pasar char directamente sin cast a unsigned char: en plataformas donde char es con signo, caracteres con código \u003e 127 (acentos, ñ) se representan como valores negativos. El estándar exige que el argumento sea unsigned char o EOF. Modificar la cadena original cuando solo se necesita comparar: lo correcto es convertir a una copia o comparar carácter a carácter como en strcmp_ci. Asumir que toupper/tolower funciona con locales: las funciones de \u003cctype.h\u003e dependen del locale activo. Para caracteres ASCII básicos (a-z, A-Z) siempre funcionan. Para ñ, á, etc., hay que usar setlocale o funciones de la biblioteca de internacionalización. Olvidar el \\0 al final al construir la cadena destino: la función a_minusculas agrega el terminador explícitamente; sin él printf(\"%s\") leerá más allá del buffer. Aplicación práctica La normalización de cadenas a un caso uniforme se usa en búsquedas de texto, comparación de identificadores (comandos de shell, nombres de usuario), parseo de tokens de protocolos y cualquier sistema donde la entrada del usuario no tenga caso fijo.\nSiguiente ejercicio recomendado Contar vocales en C: ejercicio resuelto Palíndromo en C: ejercicio resuelto strcmp y strncmp en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué hay que hacer cast a unsigned char antes de toupper/tolower? Porque el estándar de C especifica que el argumento debe ser representable como unsigned char o debe ser EOF. En plataformas donde char tiene signo, un carácter con código \u003e 127 se convierte en un entero negativo, lo que produce comportamiento indefinido al pasarlo a toupper/tolower. El cast (unsigned char) convierte el valor al rango correcto (0–255).\n¿toupper y tolower modifican la cadena original? No. Son funciones puras que reciben un carácter y devuelven otro. Para modificar una cadena hay que iterar carácter a carácter y reemplazar cada elemento con el resultado, como hace a_mayusculas en este ejercicio.\n¿Cómo funciona la normalización con caracteres acentuados (á, é, ñ)? Las funciones de \u003cctype.h\u003e trabajan con el locale activo (setlocale). En el locale \"C\" (por defecto) solo tratan las letras ASCII. Para soportar caracteres UTF-8 como á o ñ hay que usar towupper/towlower de \u003cwctype.h\u003e con tipos wchar_t, o una biblioteca de internacionalización como ICU.",
+    "description": "Ejercicio resuelto de toupper y tolower en C: convertir mayúsculas y minúsculas, normalizar cadenas y buscar sin distinción de caso.",
+    "tags": [
+      "Principiante",
+      "Arrays-Cadenas",
+      "Cadenas"
+    ],
+    "title": "toupper y tolower en C: ejercicio resuelto",
+    "uri": "/ejercicios/arrays-cadenas/toupper-tolower-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Algoritmos",
     "content": "Dos punteros en C: ejercicio resuelto Si buscas dos punteros en C ejercicio resuelto, aquí tienes tres aplicaciones clásicas de la técnica: encontrar un par con suma objetivo en un array ordenado, revertir un array in-place y eliminar duplicados de un array ordenado, todos en O(n) y sin memoria adicional.\nLa técnica de dos punteros consiste en mantener dos índices que avanzan desde los extremos hacia el centro (o ambos hacia la derecha a velocidades distintas) para evitar el doble bucle O(n²).\nEnunciado Dado el array ordenado {1, 2, 3, 4, 6, 8, 11}:\nEncuentra todos los pares con suma 10. Revierte el array in-place. Dado {1, 1, 2, 2, 3, 4, 4, 5}, elimina los duplicados y devuelve la nueva longitud. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 #include \u003cstdio.h\u003e /* 1. Pares con suma objetivo en array ordenado */ void pares_suma(const int arr[], int n, int objetivo) { int izq = 0, der = n - 1; printf(\"Pares con suma %d: \", objetivo); while (izq \u003c der) { int s = arr[izq] + arr[der]; if (s == objetivo) { printf(\"(%d,%d) \", arr[izq], arr[der]); izq++; der--; } else if (s \u003c objetivo) { izq++; } else { der--; } } printf(\"\\n\"); } /* 2. Revertir array in-place */ void revertir(int arr[], int n) { int izq = 0, der = n - 1; while (izq \u003c der) { int tmp = arr[izq]; arr[izq++] = arr[der]; arr[der--] = tmp; } } /* 3. Eliminar duplicados (array ordenado), devuelve nueva longitud */ int sin_duplicados(int arr[], int n) { if (n == 0) return 0; int escritura = 0; for (int lectura = 1; lectura \u003c n; lectura++) { if (arr[lectura] != arr[escritura]) arr[++escritura] = arr[lectura]; } return escritura + 1; } int main(void) { int a[] = {1, 2, 3, 4, 6, 8, 11}; pares_suma(a, 7, 10); revertir(a, 7); printf(\"Revertido: \"); for (int i = 0; i \u003c 7; i++) printf(\"%d \", a[i]); printf(\"\\n\"); int b[] = {1, 1, 2, 2, 3, 4, 4, 5}; int nueva_len = sin_duplicados(b, 8); printf(\"Sin duplicados (len=%d): \", nueva_len); for (int i = 0; i \u003c nueva_len; i++) printf(\"%d \", b[i]); printf(\"\\n\"); return 0; } Resultado esperado 1 2 3 Pares con suma 10: (2,8) (4,6) Revertido: 11 8 6 4 3 2 1 Sin duplicados (len=5): 1 2 3 4 5 Errores frecuentes Aplicar dos punteros sobre un array no ordenado para la búsqueda de par: la técnica solo funciona si el array está ordenado. No actualizar ambos punteros cuando se encuentra el par: quedarse en el mismo índice provoca un bucle infinito. Confundir el puntero de lectura con el de escritura en la eliminación de duplicados: el puntero de escritura avanza solo cuando hay un elemento nuevo. Usar índices con signo cuando el array tiene tamaño 0: der = n - 1 con n = 0 da -1 y el bucle no se ejecuta correctamente en todos los compiladores. Aplicación práctica Dos punteros es una técnica fundamental en problemas de arrays y cadenas: suma de tres números, contenedor con más agua, palíndromos y partición de arrays. Aparece con frecuencia en entrevistas técnicas y es la base de algoritmos más complejos como la ventana deslizante.\nSiguiente ejercicio recomendado Máximo subarray: Kadane en C: ejercicio resuelto Eliminar duplicados en array ordenado en C Búsqueda binaria en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué la técnica de dos punteros requiere que el array esté ordenado? Porque la lógica de avance depende de comparar la suma con el objetivo: si la suma es demasiado pequeña, avanzar el puntero izquierdo aumenta la suma (elementos más grandes hacia la derecha); si es demasiado grande, retroceder el derecho la reduce. Sin orden, no hay garantía de que mover un puntero cambie la suma en la dirección correcta.\n¿Cuándo usar dos punteros frente a una tabla hash? Dos punteros funciona en O(n) con O(1) de espacio extra y requiere el array ordenado. Una tabla hash también da O(n) pero usa O(n) de espacio y no requiere ordenación previa. Se prefiere dos punteros cuando el espacio es limitado o el array ya está ordenado.\n¿Se puede aplicar la técnica con más de dos punteros? Sí. El problema de tres sumas (3-sum) fija un elemento con un bucle exterior y aplica dos punteros en el interior, logrando O(n²) en lugar del O(n³) del enfoque de fuerza bruta.",
     "description": "Ejercicio resuelto de la técnica de dos punteros en C: suma de par, eliminar duplicados y revertir array en O(n) sin espacio extra.",
@@ -1374,12 +1386,36 @@ var relearn_searchindex = [
     "uri": "/tags/arrays-cadenas/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiquetas",
+    "uri": "/tags/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1398,36 +1434,12 @@ var relearn_searchindex = [
     "uri": "/tags/matrices/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiquetas",
-    "uri": "/tags/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiqueta :: Arrays",
     "uri": "/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
