@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C Preorden árbol binario",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -1149,6 +1149,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Recorrido preorden de árbol binario en C: ejercicio resuelto Si buscas recorrido preorden de árbol binario en C ejercicio resuelto, aquí tienes las dos implementaciones canónicas: la versión recursiva (natural y concisa) y la iterativa con pila explícita (necesaria para árboles muy profundos que agotarían la pila del sistema).\nEn preorden el orden de visita es raíz → hijo izquierdo → hijo derecho (NLR: Node-Left-Right).\nEnunciado Dado el árbol:\n1 2 3 4 5 1 / \\ 2 3 / \\ \\ 4 5 6 Imprime los nodos en orden preorden de forma recursiva e iterativa.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int dato; struct Nodo *izq, *der; } Nodo; Nodo *nuevo(int dato) { Nodo *n = malloc(sizeof(Nodo)); n-\u003edato = dato; n-\u003eizq = n-\u003eder = NULL; return n; } /* --- Versión recursiva --- */ void preorden_rec(const Nodo *n) { if (!n) return; printf(\"%d \", n-\u003edato); preorden_rec(n-\u003eizq); preorden_rec(n-\u003eder); } /* --- Versión iterativa con pila --- */ #define MAX_PILA 64 void preorden_iter(const Nodo *raiz) { if (!raiz) return; const Nodo *pila[MAX_PILA]; int tope = 0; pila[tope++] = raiz; while (tope \u003e 0) { const Nodo *n = pila[--tope]; printf(\"%d \", n-\u003edato); /* Apilar derecho primero para procesar izquierdo antes */ if (n-\u003eder) pila[tope++] = n-\u003eder; if (n-\u003eizq) pila[tope++] = n-\u003eizq; } } void liberar(Nodo *n) { if (!n) return; liberar(n-\u003eizq); liberar(n-\u003eder); free(n); } int main(void) { Nodo *raiz = nuevo(1); raiz-\u003eizq = nuevo(2); raiz-\u003eder = nuevo(3); raiz-\u003eizq-\u003eizq = nuevo(4); raiz-\u003eizq-\u003eder = nuevo(5); raiz-\u003eder-\u003eder = nuevo(6); printf(\"Recursivo: \"); preorden_rec(raiz); printf(\"\\n\"); printf(\"Iterativo: \"); preorden_iter(raiz); printf(\"\\n\"); liberar(raiz); return 0; } Resultado esperado 1 2 Recursivo: 1 2 4 5 3 6 Iterativo: 1 2 4 5 3 6 Errores frecuentes En la versión iterativa, apilar el hijo izquierdo antes que el derecho: como la pila es LIFO, hay que apilar derecho primero para que izquierdo se procese antes. No comprobar NULL antes de acceder a los hijos: n-\u003eizq-\u003edato sin verificar que n-\u003eizq != NULL provoca segmentation fault. No liberar la memoria del árbol: cada nodo se asigna con malloc y debe liberarse con free recorriendo el árbol en postorden. Confundir preorden con inorden: preorden visita la raíz primero (NLR); inorden visita la raíz entre los hijos (LNR). Aplicación práctica El recorrido preorden se usa para serializar/copiar un árbol (el orden de inserción reconstruye la misma estructura), para evaluar expresiones en notación prefija (árboles de expresión) y para imprimir la jerarquía de directorios de un sistema de ficheros.\nSiguiente ejercicio recomendado Recorrido postorden de árbol binario en C: ejercicio resuelto Árbol binario en C: ejercicio resuelto Cola en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre preorden, inorden y postorden? Los tres recorren los mismos nodos pero en distinto orden:\nPreorden (NLR): raíz primero, luego subárbol izquierdo, luego derecho. Inorden (LNR): subárbol izquierdo, raíz, subárbol derecho. En un BST produce los valores ordenados. Postorden (LRN): subárboles primero, raíz al final. Útil para liberar memoria. ¿Cuándo usar la versión iterativa frente a la recursiva? La versión recursiva es más legible y suficiente para árboles de profundidad razonable. La iterativa es necesaria cuando el árbol puede ser muy profundo (miles de niveles) y la pila del sistema no es suficiente. En producción, los árboles auto-balanceados como AVL o Red-Black tienen profundidad O(log n), lo que hace la recursión segura.\n¿El recorrido preorden es único para un árbol dado? Sí: para un árbol binario dado, el preorden es único. Sin embargo, conocer solo el preorden no es suficiente para reconstruir el árbol; se necesita también el inorden (o marcar los nodos NULL explícitamente en la serialización).",
+    "description": "Ejercicio resuelto de recorrido preorden (preorder) de árbol binario en C: implementación recursiva e iterativa con pila explícita.",
+    "tags": [
+      "Intermedio",
+      "Estructuras-Datos",
+      "Arboles"
+    ],
+    "title": "Recorrido preorden de árbol binario en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/recorrido-preorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "Variables static en C: ejercicio resuelto Si buscas variables static en C ejercicio resuelto, aquí tienes el patrón clave: una variable static local mantiene su valor entre llamadas a la función, a diferencia de una variable local normal que se reinicia en cada llamada.\nstatic tiene dos usos en C. Dentro de una función: la variable persiste en memoria durante toda la ejecución del programa. A nivel de fichero: limita la visibilidad del símbolo al fichero de compilación (enlace interno).\nEnunciado Implementa una función incrementar() que lleve un contador interno de cuántas veces ha sido llamada, sin usar ninguna variable global. Llámala tres veces desde main e imprime también un contador global para comparar los dos enfoques.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e int llamadas_globales = 0; /* visible en todo el programa */ void incrementar(void) { static int llamadas = 0; /* se inicializa una sola vez a 0 */ llamadas++; llamadas_globales++; printf(\"static local=%d global=%d\\n\", llamadas, llamadas_globales); } int main(void) { incrementar(); incrementar(); incrementar(); return 0; } Resultado esperado 1 2 3 static local=1 global=1 static local=2 global=2 static local=3 global=3 Errores frecuentes Creer que static int x = 0 se reinicia a 0 en cada llamada: la inicialización solo ocurre una vez, en el arranque del programa. Confundir static local con static a nivel de fichero: son el mismo modificador pero con efectos distintos según el contexto. Usar una variable static en una función para guardar estado de forma no reentrante: si la función se llama desde varios hilos simultáneamente, hay una condición de carrera. No inicializar una variable static explícitamente: en C, las variables static se inicializan a cero automáticamente, pero es buena práctica ser explícito. Aplicación práctica Las variables static locales se usan en contadores de invocación, generadores de IDs únicos, caché de valores calculados y en el patrón singleton simplificado en C. La visibilidad static de fichero es clave en la encapsulación de módulos en proyectos C sin clases.\nSiguiente ejercicio recomendado Funciones en C: ejercicios resueltos Const en C: ejercicio resuelto Arrays como parámetros en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo se inicializa una variable static local? Una sola vez, antes de la primera ejecución del programa (o en el primer paso por la declaración, dependiendo del compilador y estándar). El valor inicial es 0 si no se especifica otro. A partir de ahí conserva su valor entre llamadas.\n¿Qué diferencia hay entre una variable static local y una variable global? Ambas persisten en memoria durante todo el programa. La diferencia es el ámbito: la variable static local solo es visible dentro de la función; la global es visible en todo el fichero (o en todo el programa si no es static).\n¿Las variables static son seguras en programas multihilo? No necesariamente. Si dos hilos llaman a la misma función simultáneamente, la variable static es compartida y puede producir condiciones de carrera. En código multihilo se prefiere almacenamiento local de hilo (_Thread_local en C11) o pasar el estado como parámetro.",
     "description": "Ejercicio resuelto de variables static en C: persistencia entre llamadas, diferencia con variables locales y uso con funciones.",
@@ -1382,16 +1394,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arrays-Cadenas",
-    "uri": "/tags/arrays-cadenas/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
+    "title": "Etiqueta :: Arboles",
+    "uri": "/tags/arboles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1406,8 +1410,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Principiante",
-    "uri": "/tags/principiante/index.html"
+    "title": "Etiqueta :: Estructuras-Datos",
+    "uri": "/tags/estructuras-datos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1422,8 +1434,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Arrays-Cadenas",
+    "uri": "/tags/arrays-cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Principiante",
+    "uri": "/tags/principiante/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1496,14 +1524,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Bucles",
     "uri": "/tags/bucles/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Arboles",
-    "uri": "/tags/arboles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

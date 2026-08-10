@@ -1165,6 +1165,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Binary tree preorder traversal in C: solved exercise If you searched for a solved preorder traversal of a binary tree in C, here are the two canonical implementations: the recursive version (natural and concise) and the iterative version with an explicit stack (required for very deep trees that would exhaust the system stack).\nIn preorder, the visit order is root → left child → right child (NLR: Node-Left-Right).\nProblem statement Given the tree:\n1 2 3 4 5 1 / \\ 2 3 / \\ \\ 4 5 6 Print the nodes in preorder using both the recursive and iterative approaches.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Node { int data; struct Node *left, *right; } Node; Node *new_node(int data) { Node *n = malloc(sizeof(Node)); n-\u003edata = data; n-\u003eleft = n-\u003eright = NULL; return n; } /* --- Recursive version --- */ void preorder_rec(const Node *n) { if (!n) return; printf(\"%d \", n-\u003edata); preorder_rec(n-\u003eleft); preorder_rec(n-\u003eright); } /* --- Iterative version with stack --- */ #define MAX_STACK 64 void preorder_iter(const Node *root) { if (!root) return; const Node *stack[MAX_STACK]; int top = 0; stack[top++] = root; while (top \u003e 0) { const Node *n = stack[--top]; printf(\"%d \", n-\u003edata); /* Push right first so left is processed first */ if (n-\u003eright) stack[top++] = n-\u003eright; if (n-\u003eleft) stack[top++] = n-\u003eleft; } } void free_tree(Node *n) { if (!n) return; free_tree(n-\u003eleft); free_tree(n-\u003eright); free(n); } int main(void) { Node *root = new_node(1); root-\u003eleft = new_node(2); root-\u003eright = new_node(3); root-\u003eleft-\u003eleft = new_node(4); root-\u003eleft-\u003eright = new_node(5); root-\u003eright-\u003eright = new_node(6); printf(\"Recursive: \"); preorder_rec(root); printf(\"\\n\"); printf(\"Iterative: \"); preorder_iter(root); printf(\"\\n\"); free_tree(root); return 0; } Expected output 1 2 Recursive: 1 2 4 5 3 6 Iterative: 1 2 4 5 3 6 Common mistakes In the iterative version, pushing the left child before the right: since the stack is LIFO, the right child must be pushed first so the left is processed first. Not checking NULL before accessing children: n-\u003eleft-\u003edata without verifying n-\u003eleft != NULL causes a segmentation fault. Not freeing tree memory: every node is allocated with malloc and must be freed with free by traversing the tree in postorder. Confusing preorder with inorder: preorder visits the root first (NLR); inorder visits the root between the children (LNR). Practical use Preorder traversal is used to serialize/copy a tree (insertion order reconstructs the same structure), to evaluate expressions in prefix notation (expression trees), and to print a filesystem directory hierarchy.\nRecommended next exercise Binary tree postorder traversal in C: solved exercise Binary tree in C: solved exercise Queue in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the difference between preorder, inorder, and postorder? All three visit the same nodes but in different order:\nPreorder (NLR): root first, then left subtree, then right subtree. Inorder (LNR): left subtree, root, right subtree. Produces sorted values in a BST. Postorder (LRN): subtrees first, root last. Useful for freeing memory. When should I use the iterative version instead of the recursive one? The recursive version is more readable and sufficient for trees of reasonable depth. The iterative version is necessary when the tree can be very deep (thousands of levels) and the system stack is insufficient. In production, self-balancing trees like AVL or Red-Black have O(log n) depth, making recursion safe.\nIs the preorder traversal unique for a given tree? Yes: for a given binary tree, the preorder sequence is unique. However, knowing only the preorder is not enough to reconstruct the tree; the inorder is also needed (or NULL nodes must be explicitly marked in the serialization).",
+    "description": "Solved preorder traversal of a binary tree in C: recursive and iterative implementation with an explicit stack.",
+    "tags": [
+      "Intermediate",
+      "Data-Structures",
+      "Trees"
+    ],
+    "title": "Binary tree preorder traversal in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/recorrido-preorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "Static variables in C: solved exercise If you searched for a solved static variables exercise in C, here is the key pattern: a static local variable retains its value between function calls, unlike a regular local variable which is re-initialized on every call.\nstatic has two uses in C. Inside a function: the variable persists in memory for the entire lifetime of the program. At file scope: it restricts the symbol’s visibility to the current translation unit (internal linkage).\nProblem statement Implement an increment() function that tracks internally how many times it has been called, without using any global variable. Call it three times from main and also print a global counter to compare both approaches.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include \u003cstdio.h\u003e int global_calls = 0; /* visible throughout the program */ void increment(void) { static int calls = 0; /* initialized only once to 0 */ calls++; global_calls++; printf(\"static local=%d global=%d\\n\", calls, global_calls); } int main(void) { increment(); increment(); increment(); return 0; } Expected output 1 2 3 static local=1 global=1 static local=2 global=2 static local=3 global=3 Common mistakes Thinking static int x = 0 resets to 0 on every call: initialization happens only once, at program startup. Confusing a local static with file-scope static: same keyword, different effects depending on context. Using a static variable in a function as non-reentrant state: if two threads call the function simultaneously, there is a data race. Not initializing a static variable explicitly: C zero-initializes static variables automatically, but being explicit is good practice. Practical use Local static variables are used in call counters, unique ID generators, cached computed values, and simplified singleton patterns in C. File-scope static is key for module encapsulation in C projects without classes.\nRecommended next exercise Functions in C: solved exercises Const in C: solved exercise Arrays as parameters in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When is a local static variable initialized? Only once, before the first execution of the program (or on the first pass through the declaration, depending on the compiler and standard). The default initial value is 0 if none is specified. After that it retains its value between calls.\nWhat is the difference between a local static variable and a global variable? Both persist in memory for the entire program. The difference is scope: a local static is only visible inside its function; a global is visible throughout the file (or the entire program if not static).\nAre static variables safe in multithreaded programs? Not necessarily. If two threads call the same function simultaneously, the static variable is shared and can cause a data race. In multithreaded code, prefer thread-local storage (_Thread_local in C11) or pass state as a parameter.",
     "description": "Solved static variables exercise in C: persistence between calls, difference from local variables, and use with functions.",
@@ -1390,16 +1402,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Arrays-Strings",
-    "uri": "/en/tags/arrays-strings/index.html"
+    "title": "Tag :: Data-Structures",
+    "uri": "/en/tags/data-structures/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -1408,14 +1420,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -1430,8 +1434,32 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Trees",
+    "uri": "/en/tags/trees/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Arrays-Strings",
+    "uri": "/en/tags/arrays-strings/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Beginner",
+    "uri": "/en/tags/beginner/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1504,14 +1532,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Loops",
     "uri": "/en/tags/loops/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Trees",
-    "uri": "/en/tags/trees/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
