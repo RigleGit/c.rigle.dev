@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C Preorden árbol binario Postorden árbol binario",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C Preorden árbol binario Postorden árbol binario Min-heap",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -1241,6 +1241,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Min-heap en C: ejercicio resuelto Si buscas min-heap en C ejercicio resuelto, aquí tienes la implementación completa con array: inserción O(log n), extracción del mínimo O(log n) y la operación de heapify que mantiene la propiedad de heap.\nUn min-heap es un árbol binario completo donde cada nodo es menor o igual que sus hijos. Se representa eficientemente con un array: el hijo izquierdo del nodo i está en 2*i+1, el derecho en 2*i+2 y el padre en (i-1)/2.\nEnunciado Implementa un min-heap con capacidad fija que soporte:\ninsertar(heap, valor): inserta un elemento y restaura la propiedad. extraer_min(heap): elimina y devuelve el elemento mínimo. imprimir(heap): muestra el array interno. Inserta los valores {5, 3, 8, 1, 4, 2} y extrae el mínimo tres veces.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define MAX_HEAP 64 typedef struct { int datos[MAX_HEAP]; int tamaño; } MinHeap; static void intercambiar(int *a, int *b) { int t = *a; *a = *b; *b = t; } /* Sube el nodo i hasta su posición correcta */ static void subir(MinHeap *h, int i) { while (i \u003e 0) { int padre = (i - 1) / 2; if (h-\u003edatos[padre] \u003c= h-\u003edatos[i]) break; intercambiar(\u0026h-\u003edatos[padre], \u0026h-\u003edatos[i]); i = padre; } } /* Baja el nodo i hasta su posición correcta */ static void bajar(MinHeap *h, int i) { while (1) { int menor = i; int izq = 2 * i + 1, der = 2 * i + 2; if (izq \u003c h-\u003etamaño \u0026\u0026 h-\u003edatos[izq] \u003c h-\u003edatos[menor]) menor = izq; if (der \u003c h-\u003etamaño \u0026\u0026 h-\u003edatos[der] \u003c h-\u003edatos[menor]) menor = der; if (menor == i) break; intercambiar(\u0026h-\u003edatos[i], \u0026h-\u003edatos[menor]); i = menor; } } void insertar(MinHeap *h, int val) { if (h-\u003etamaño \u003e= MAX_HEAP) { fprintf(stderr, \"Heap lleno\\n\"); return; } h-\u003edatos[h-\u003etamaño++] = val; subir(h, h-\u003etamaño - 1); } int extraer_min(MinHeap *h) { if (h-\u003etamaño == 0) { fprintf(stderr, \"Heap vacío\\n\"); return -1; } int min = h-\u003edatos[0]; h-\u003edatos[0] = h-\u003edatos[--h-\u003etamaño]; bajar(h, 0); return min; } void imprimir(const MinHeap *h) { printf(\"Heap [%d]: \", h-\u003etamaño); for (int i = 0; i \u003c h-\u003etamaño; i++) printf(\"%d \", h-\u003edatos[i]); printf(\"\\n\"); } int main(void) { MinHeap h = {.tamaño = 0}; int vals[] = {5, 3, 8, 1, 4, 2}; for (int i = 0; i \u003c 6; i++) { insertar(\u0026h, vals[i]); imprimir(\u0026h); } printf(\"\\nExtrayendo mínimos:\\n\"); for (int i = 0; i \u003c 3; i++) printf(\" extraer_min() = %d\\n\", extraer_min(\u0026h)); printf(\"\\nHeap final: \"); imprimir(\u0026h); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 Heap [1]: 5 Heap [2]: 3 5 Heap [3]: 3 5 8 Heap [4]: 1 3 8 5 Heap [5]: 1 3 8 5 4 Heap [6]: 1 3 2 5 4 8 Extrayendo mínimos: extraer_min() = 1 extraer_min() = 2 extraer_min() = 3 Heap final: Heap [3]: 4 5 8 Errores frecuentes Calcular mal los índices de hijos y padre: hijo izquierdo = 2*i+1, hijo derecho = 2*i+2, padre = (i-1)/2. Con indexación en 1 las fórmulas son distintas. No decrementar tamaño antes de llamar a bajar en extraer_min: si tamaño no se reduce, el último elemento que se colocó en la raíz se compara consigo mismo. Confundir min-heap con max-heap: en min-heap el padre es menor que los hijos; en max-heap es al revés. Solo cambia el signo de la comparación. No validar que el heap no esté vacío antes de extraer_min: acceder a datos[0] con tamaño == 0 es comportamiento indefinido. Aplicación práctica El min-heap es la estructura subyacente de las colas de prioridad, usadas en el algoritmo de Dijkstra, en la codificación de Huffman, en la planificación de tareas por prioridad y en el algoritmo de ordenación heapsort.\nSiguiente ejercicio recomendado Heap sort en C: ejercicio resuelto Cola en C: ejercicio resuelto Dijkstra en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué se usa un array y no un árbol con punteros para el heap? Porque el árbol binario completo se mapea perfectamente a un array sin necesidad de punteros: los índices de padre e hijos se calculan aritméticamente. Esto reduce el consumo de memoria, mejora la localidad de caché y simplifica el código.\n¿Qué es la operación de heapify (o build-heap)? Convierte un array arbitrario en un heap válido en O(n) aplicando bajar a todos los nodos internos de abajo a arriba (desde n/2 - 1 hasta 0). Es más eficiente que insertar los n elementos uno a uno (que costaría O(n log n)).\n¿Cómo convertir un min-heap en max-heap? Solo hay que invertir las comparaciones: en subir, cambiar \u003c= por \u003e=; en bajar, cambiar \u003c por \u003e. El resto del código permanece idéntico.",
+    "description": "Ejercicio resuelto de min-heap en C: inserción, extracción del mínimo, heapify y representación con array.",
+    "tags": [
+      "Avanzado",
+      "Estructuras-Datos"
+    ],
+    "title": "Min-heap en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/min-heap-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
     "content": "strcat y strncat en C: ejercicio resuelto Si buscas strcat y strncat en C ejercicio resuelto, aquí tienes los patrones esenciales: concatenar dos cadenas con strcat, concatenar con límite de seguridad usando strncat y construir cadenas paso a paso sin desbordamiento de buffer.\nstrncat(dst, src, n) añade como máximo n caracteres de src al final de dst y siempre termina la cadena con \\0. El parámetro n es el número de caracteres a copiar de la fuente, no el tamaño total del destino.\nEnunciado Construye la cadena \"Hola, mundo!\" concatenando partes con strcat. Repite el ejercicio con strncat limitando el número de caracteres añadidos. Muestra cómo calcular correctamente el espacio restante antes de strncat. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char buf[32]; /* 1. strcat básico */ strcpy(buf, \"Hola\"); strcat(buf, \", \"); strcat(buf, \"mundo\"); strcat(buf, \"!\"); printf(\"strcat: \\\"%s\\\"\\n\", buf); /* 2. strncat con límite */ char dst[16] = \"C es \"; strncat(dst, \"genial y potente\", 6); /* añade máximo 6 chars */ printf(\"strncat: \\\"%s\\\"\\n\", dst); /* 3. Cálculo seguro del espacio restante */ char resultado[20] = \"\"; const char *partes[] = {\"uno\", \"-\", \"dos\", \"-\", \"tres\"}; for (int i = 0; i \u003c 5; i++) { size_t restante = sizeof(resultado) - strlen(resultado) - 1; strncat(resultado, partes[i], restante); } printf(\"seguro: \\\"%s\\\"\\n\", resultado); return 0; } Resultado esperado 1 2 3 strcat: \"Hola, mundo!\" strncat: \"C es genial\" seguro: \"uno-dos-tres\" Errores frecuentes Pasar el tamaño total del buffer como n en strncat: el parámetro n es el número de caracteres a copiar de la fuente, no el espacio disponible. Para calcular el espacio real hay que restar strlen(dst) y el \\0. No reservar espacio suficiente en dst antes de strcat: si dst no tiene espacio, se produce un desbordamiento de buffer. Confundir strncat con strncpy: strncat siempre agrega \\0; strncpy no lo hace si n \u003c strlen(src). Encadenar muchos strcat en lugar de usar snprintf: snprintf es más eficiente y seguro para construir cadenas compuestas. Aplicación práctica strncat se usa para construir cadenas de forma incremental cuando se trabaja con buffers de tamaño fijo: construir rutas de sistema de ficheros, mensajes de protocolo o fragmentos de HTML. En código nuevo se prefiere snprintf para toda la cadena de una vez.\nSiguiente ejercicio recomendado sprintf y snprintf en C: ejercicio resuelto strcpy y strncpy en C: ejercicio resuelto strtok en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia exacta entre strcat y strncat? strcat(dst, src) copia todos los caracteres de src hasta el \\0 inclusive al final de dst, sin límite. strncat(dst, src, n) copia como máximo n caracteres de src y siempre añade un \\0 al final. La diferencia es de seguridad: strncat permite controlar cuánto se añade.\n¿Por qué el parámetro n de strncat no es el tamaño del buffer destino? Por diseño histórico de C. n indica cuántos caracteres se toman de la fuente. Para calcular el espacio realmente disponible en dst hay que calcular sizeof(dst) - strlen(dst) - 1 y pasar ese valor como n.\n¿Cuándo es mejor usar snprintf en lugar de strncat? Casi siempre. snprintf(buf, sizeof(buf), \"%s%s\", parte1, parte2) es más claro, más seguro y más eficiente que múltiples llamadas a strncat. Se prefiere strncat solo cuando se añade un fragmento a una cadena existente y el overhead de snprintf no es aceptable.",
     "description": "Ejercicio resuelto de strcat y strncat en C: concatenar cadenas, diferencias de seguridad y alternativa con snprintf.",
@@ -1406,8 +1417,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arboles",
-    "uri": "/tags/arboles/index.html"
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1426,20 +1437,28 @@ var relearn_searchindex = [
     "uri": "/tags/estructuras-datos/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arboles",
+    "uri": "/tags/arboles/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1496,14 +1515,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Algoritmos-Ordenacion",
     "uri": "/tags/algoritmos-ordenacion/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",

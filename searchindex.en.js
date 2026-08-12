@@ -1257,6 +1257,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Min-heap in C: solved exercise If you searched for a solved min-heap in C, here is the complete array-based implementation: O(log n) insertion, O(log n) extract-min, and the heapify operation that maintains the heap property.\nA min-heap is a complete binary tree where each node is less than or equal to its children. It is efficiently represented with an array: the left child of node i is at 2*i+1, the right at 2*i+2, and the parent at (i-1)/2.\nProblem statement Implement a fixed-capacity min-heap supporting:\ninsert(heap, value): inserts an element and restores the heap property. extract_min(heap): removes and returns the minimum element. print(heap): displays the internal array. Insert the values {5, 3, 8, 1, 4, 2} and extract the minimum three times.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define MAX_HEAP 64 typedef struct { int data[MAX_HEAP]; int size; } MinHeap; static void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; } /* Bubble node i up to its correct position */ static void bubble_up(MinHeap *h, int i) { while (i \u003e 0) { int parent = (i - 1) / 2; if (h-\u003edata[parent] \u003c= h-\u003edata[i]) break; swap(\u0026h-\u003edata[parent], \u0026h-\u003edata[i]); i = parent; } } /* Push node i down to its correct position */ static void push_down(MinHeap *h, int i) { while (1) { int smallest = i; int left = 2 * i + 1, right = 2 * i + 2; if (left \u003c h-\u003esize \u0026\u0026 h-\u003edata[left] \u003c h-\u003edata[smallest]) smallest = left; if (right \u003c h-\u003esize \u0026\u0026 h-\u003edata[right] \u003c h-\u003edata[smallest]) smallest = right; if (smallest == i) break; swap(\u0026h-\u003edata[i], \u0026h-\u003edata[smallest]); i = smallest; } } void insert(MinHeap *h, int val) { if (h-\u003esize \u003e= MAX_HEAP) { fprintf(stderr, \"Heap full\\n\"); return; } h-\u003edata[h-\u003esize++] = val; bubble_up(h, h-\u003esize - 1); } int extract_min(MinHeap *h) { if (h-\u003esize == 0) { fprintf(stderr, \"Heap empty\\n\"); return -1; } int min = h-\u003edata[0]; h-\u003edata[0] = h-\u003edata[--h-\u003esize]; push_down(h, 0); return min; } void print_heap(const MinHeap *h) { printf(\"Heap [%d]: \", h-\u003esize); for (int i = 0; i \u003c h-\u003esize; i++) printf(\"%d \", h-\u003edata[i]); printf(\"\\n\"); } int main(void) { MinHeap h = {.size = 0}; int vals[] = {5, 3, 8, 1, 4, 2}; for (int i = 0; i \u003c 6; i++) { insert(\u0026h, vals[i]); print_heap(\u0026h); } printf(\"\\nExtracting minimums:\\n\"); for (int i = 0; i \u003c 3; i++) printf(\" extract_min() = %d\\n\", extract_min(\u0026h)); printf(\"\\nFinal heap: \"); print_heap(\u0026h); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 13 Heap [1]: 5 Heap [2]: 3 5 Heap [3]: 3 5 8 Heap [4]: 1 3 8 5 Heap [5]: 1 3 8 5 4 Heap [6]: 1 3 2 5 4 8 Extracting minimums: extract_min() = 1 extract_min() = 2 extract_min() = 3 Final heap: Heap [3]: 4 5 8 Common mistakes Wrong child/parent index formulas: left child = 2*i+1, right child = 2*i+2, parent = (i-1)/2. With 1-based indexing the formulas differ. Not decrementing size before calling push_down in extract_min: if size is not reduced, the last element placed at the root is compared with itself. Confusing min-heap and max-heap: in a min-heap the parent is smaller; in a max-heap it is larger. Only the comparison sign changes. Not validating that the heap is non-empty before extract_min: accessing data[0] when size == 0 is undefined behavior. Practical use The min-heap is the underlying structure of priority queues, used in Dijkstra’s algorithm, Huffman encoding, task scheduling by priority, and the heapsort sorting algorithm.\nRecommended next exercise Heap sort in C: solved exercise Queue in C: solved exercise Dijkstra in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why use an array instead of a pointer-based tree for a heap? Because a complete binary tree maps perfectly to an array without pointers: parent and child indices are computed arithmetically. This reduces memory usage, improves cache locality, and simplifies the code.\nWhat is the heapify (or build-heap) operation? It converts an arbitrary array into a valid heap in O(n) by applying push_down to all internal nodes from bottom to top (from n/2 - 1 down to 0). This is more efficient than inserting n elements one by one, which costs O(n log n).\nHow do you convert a min-heap into a max-heap? Only the comparisons need to be inverted: in bubble_up, change \u003c= to \u003e=; in push_down, change \u003c to \u003e. The rest of the code stays identical.",
+    "description": "Solved min-heap in C: insertion, extract-min, heapify, and array-based representation.",
+    "tags": [
+      "Advanced",
+      "Data-Structures"
+    ],
+    "title": "Min-heap in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/min-heap-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "strcat and strncat in C: solved exercise If you searched for a solved strcat and strncat exercise in C, here are the essential patterns: concatenating two strings with strcat, safe bounded concatenation with strncat, and building strings step by step without buffer overflow.\nstrncat(dst, src, n) appends at most n characters from src to the end of dst and always null-terminates. The n parameter is the number of characters to copy from the source, not the total size of the destination buffer.\nProblem statement Build the string \"Hello, world!\" by concatenating parts with strcat. Repeat using strncat with a character limit. Show how to correctly calculate remaining space before calling strncat. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main(void) { char buf[32]; /* 1. Basic strcat */ strcpy(buf, \"Hello\"); strcat(buf, \", \"); strcat(buf, \"world\"); strcat(buf, \"!\"); printf(\"strcat: \\\"%s\\\"\\n\", buf); /* 2. strncat with limit */ char dst[16] = \"C is \"; strncat(dst, \"powerful and fast\", 8); /* append at most 8 chars */ printf(\"strncat: \\\"%s\\\"\\n\", dst); /* 3. Safe remaining-space calculation */ char result[20] = \"\"; const char *parts[] = {\"one\", \"-\", \"two\", \"-\", \"three\"}; for (int i = 0; i \u003c 5; i++) { size_t remaining = sizeof(result) - strlen(result) - 1; strncat(result, parts[i], remaining); } printf(\"safe: \\\"%s\\\"\\n\", result); return 0; } Expected output 1 2 3 strcat: \"Hello, world!\" strncat: \"C is powerful\" safe: \"one-two-three\" Common mistakes Passing the total buffer size as n to strncat: n is the number of characters to copy from the source, not the available space. You must compute sizeof(dst) - strlen(dst) - 1 to get the real remaining capacity. Not reserving enough space in dst before strcat: if dst is too small, a buffer overflow occurs. Confusing strncat with strncpy: strncat always appends \\0; strncpy does not if n \u003c strlen(src). Chaining many strcat calls instead of using snprintf: snprintf is cleaner, safer, and more efficient for building composite strings. Practical use strncat is used to incrementally build strings with fixed-size buffers: filesystem paths, protocol messages, or HTML fragments. In new code, snprintf is preferred for building the entire string at once.\nRecommended next exercise sprintf and snprintf in C: solved exercise strcpy and strncpy in C: solved exercise strtok in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the exact difference between strcat and strncat? strcat(dst, src) copies all characters from src up to and including its \\0 onto the end of dst, with no limit. strncat(dst, src, n) copies at most n characters from src and always appends \\0. The difference is safety: strncat lets you control how much is appended.\nWhy is strncat’s n parameter not the destination buffer size? By historical C design. n tells how many characters to take from the source. To compute the real available space in dst, calculate sizeof(dst) - strlen(dst) - 1 and pass that as n.\nWhen is snprintf better than strncat? Almost always. snprintf(buf, sizeof(buf), \"%s%s\", part1, part2) is clearer, safer, and more efficient than multiple strncat calls. Prefer strncat only when appending a fragment to an existing string and the overhead of snprintf is unacceptable.",
     "description": "Solved strcat and strncat exercise in C: concatenating strings, security differences, and snprintf as a safe alternative.",
@@ -1414,16 +1425,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Data-Structures",
-    "uri": "/en/tags/data-structures/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Data-Structures",
+    "uri": "/en/tags/data-structures/index.html"
   },
   {
     "breadcrumb": "",
@@ -1440,6 +1451,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1488,14 +1507,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Arrays",
     "uri": "/en/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
