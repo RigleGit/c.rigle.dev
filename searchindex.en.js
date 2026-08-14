@@ -1326,6 +1326,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
+    "content": "Deque in C: solved exercise If you searched for a solved deque in C, here is the circular-array implementation that supports O(1) insertion and removal at both ends. A deque (double-ended queue) generalizes both the stack and the queue: it can be used as either.\nWith a circular array, the front and rear indices advance modulo CAPACITY, avoiding element shifting.\nProblem statement Implement a fixed-capacity deque of 8 elements supporting:\npush_front(d, v): insert at the front. push_back(d, v): insert at the back. pop_front(d): remove and return the front element. pop_back(d): remove and return the back element. print(d): display contents from front to back. Demonstrate all four operations with a sequence of insertions and removals.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define CAP 8 typedef struct { int data[CAP]; int front; /* index of the first element */ int size; } Deque; static int is_full(const Deque *d) { return d-\u003esize == CAP; } static int is_empty(const Deque *d) { return d-\u003esize == 0; } void push_back(Deque *d, int val) { if (is_full(d)) { fprintf(stderr, \"Deque full\\n\"); return; } int pos = (d-\u003efront + d-\u003esize) % CAP; d-\u003edata[pos] = val; d-\u003esize++; } void push_front(Deque *d, int val) { if (is_full(d)) { fprintf(stderr, \"Deque full\\n\"); return; } d-\u003efront = (d-\u003efront - 1 + CAP) % CAP; d-\u003edata[d-\u003efront] = val; d-\u003esize++; } int pop_front(Deque *d) { if (is_empty(d)) { fprintf(stderr, \"Deque empty\\n\"); return -1; } int val = d-\u003edata[d-\u003efront]; d-\u003efront = (d-\u003efront + 1) % CAP; d-\u003esize--; return val; } int pop_back(Deque *d) { if (is_empty(d)) { fprintf(stderr, \"Deque empty\\n\"); return -1; } int pos = (d-\u003efront + d-\u003esize - 1) % CAP; d-\u003esize--; return d-\u003edata[pos]; } void print_deque(const Deque *d) { printf(\"Deque [%d]: \", d-\u003esize); for (int i = 0; i \u003c d-\u003esize; i++) printf(\"%d \", d-\u003edata[(d-\u003efront + i) % CAP]); printf(\"\\n\"); } int main(void) { Deque d = {.front = 0, .size = 0}; push_back(\u0026d, 10); print_deque(\u0026d); push_back(\u0026d, 20); print_deque(\u0026d); push_front(\u0026d, 5); print_deque(\u0026d); push_back(\u0026d, 30); print_deque(\u0026d); push_front(\u0026d, 1); print_deque(\u0026d); printf(\"\\npop_front() = %d\\n\", pop_front(\u0026d)); print_deque(\u0026d); printf(\"pop_back() = %d\\n\", pop_back(\u0026d)); print_deque(\u0026d); printf(\"pop_front() = %d\\n\", pop_front(\u0026d)); print_deque(\u0026d); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 Deque [1]: 10 Deque [2]: 10 20 Deque [3]: 5 10 20 Deque [4]: 5 10 20 30 Deque [5]: 1 5 10 20 30 pop_front() = 1 Deque [4]: 5 10 20 30 pop_back() = 30 Deque [3]: 5 10 20 pop_front() = 5 Deque [2]: 10 20 Common mistakes Not applying the CAP modulo when computing front - 1: in C, the % operator with negative numbers can give a negative result; use (front - 1 + CAP) % CAP. Confusing the back index with front + size: the back is at (front + size - 1) % CAP, since front + size points to the first empty slot. Not checking if the deque is full before push_front or push_back: inserting when size == CAP overwrites existing elements. Initializing front to a non-zero value: for simplicity, front = 0 and size = 0 is the standard initialization. Practical use The deque is used in sliding window algorithms (maximum/minimum in a window of size k), task scheduling (insertion and removal at both ends), as the underlying structure of bidirectional BFS, and in simulators of priority queues at both ends.\nRecommended next exercise Queue in C: solved exercise Min-heap in C: solved exercise Trie in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the difference between a deque and a regular queue? A queue (FIFO) only allows insertion at the back and removal at the front. A deque allows insertion and removal at both ends. The deque is a superset: it can simulate both a queue (using only push_back and pop_front) and a stack (using only push_back and pop_back).\nWhy use a circular array instead of a linked list? A circular array guarantees O(1) for all operations without dynamic memory allocation, making it faster and with better cache locality than a linked list. A linked list is preferable when the capacity is unknown or unlimited.\nWhat is the time complexity of the four deque operations? All four operations (push_front, push_back, pop_front, pop_back) are O(1) with the circular array. The print operation is O(n) as it traverses all elements.",
+    "description": "Solved deque (double-ended queue) in C: circular array implementation with push_front, push_back, pop_front, and pop_back.",
+    "tags": [
+      "Intermediate",
+      "Data-Structures"
+    ],
+    "title": "Deque in C: solved exercise",
+    "uri": "/en/ejercicios/estructuras-datos/deque-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Arrays \u0026 strings",
     "content": "Rotate array in C: solved exercise If you searched for a solved rotate array exercise in C, here is the three-reversal trick: rotate an array k positions left or right in O(n) time and O(1) extra space, with no auxiliary buffer needed.\nThe idea is that rotating an array is equivalent to reversing three sub-sequences: the block being shifted, the remainder, and then the entire array.\nProblem statement Given the array {1, 2, 3, 4, 5, 6, 7}:\nRotate it 3 positions to the left → {4, 5, 6, 7, 1, 2, 3}. Rotate it 2 positions to the right → {6, 7, 1, 2, 3, 4, 5}. Use the three-reversal algorithm in both cases.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 #include \u003cstdio.h\u003e void reverse(int arr[], int lo, int hi) { while (lo \u003c hi) { int tmp = arr[lo]; arr[lo++] = arr[hi]; arr[hi--] = tmp; } } /* Left rotation by k positions */ void rotate_left(int arr[], int n, int k) { k %= n; if (k == 0) return; reverse(arr, 0, k - 1); reverse(arr, k, n - 1); reverse(arr, 0, n - 1); } /* Right rotation by k positions */ void rotate_right(int arr[], int n, int k) { k %= n; if (k == 0) return; reverse(arr, 0, n - 1); reverse(arr, 0, k - 1); reverse(arr, k, n - 1); } void print_arr(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int a[] = {1, 2, 3, 4, 5, 6, 7}; int b[] = {1, 2, 3, 4, 5, 6, 7}; rotate_left(a, 7, 3); printf(\"Rotate left 3: \"); print_arr(a, 7); rotate_right(b, 7, 2); printf(\"Rotate right 2: \"); print_arr(b, 7); return 0; } Expected output 1 2 Rotate left 3: 4 5 6 7 1 2 3 Rotate right 2: 6 7 1 2 3 4 5 Common mistakes Not reducing k with k %= n: if k \u003e= n, computing k - 1 gives an out-of-bounds index. Confusing left with right: rotating left by k is equivalent to rotating right by n - k. Using an auxiliary buffer of size k: functionally correct but uses O(k) extra space; the three-reversal algorithm is O(1). Getting the three ranges wrong: for a left rotation they must be [0, k-1], [k, n-1], and [0, n-1], in that order. Practical use Array rotation is used in circular buffers, FIFO queue implementations with arrays, signal processing (sliding windows), and string problems such as detecting rotation anagrams.\nRecommended next exercise Maximum subarray: Kadane in C: solved exercise Two pointers in C: solved exercise Transposed matrix in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does the three-reversal algorithm work? Rotating left by k transforms [A|B] into [B|A]. Reversing A gives [A'|B], then reversing B gives [A'|B'], and finally reversing the whole array gives [B|A]. The three in-place reversals achieve the rotation without any copies.\nHow do you handle k larger than n? Use k %= n. Rotating by n positions is the same as not rotating. With the modulo, k = 9 on a 7-element array is equivalent to k = 2.\nCan the same algorithm rotate a string? Yes. A C string is an array of char, so reverse and rotate_left work identically by replacing int with char and passing strlen(s) as n.",
     "description": "Solved rotate array exercise in C: left and right rotation using the three-reversal algorithm in O(n) time and O(1) space.",
@@ -1437,16 +1448,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "title": "Tag :: Data-Structures",
+    "uri": "/en/tags/data-structures/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Data-Structures",
-    "uri": "/en/tags/data-structures/index.html"
+    "title": "Tag :: Intermediate",
+    "uri": "/en/tags/intermediate/index.html"
   },
   {
     "breadcrumb": "",
@@ -1455,14 +1466,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Learn C — solved exercises",
     "uri": "/en/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -1477,8 +1480,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "title": "Tag :: Advanced",
+    "uri": "/en/tags/advanced/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Strings",
+    "uri": "/en/tags/strings/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

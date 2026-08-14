@@ -344,7 +344,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C Preorden árbol binario Postorden árbol binario Min-heap Trie",
+    "content": "Las estructuras de datos dinámicas son imprescindibles para resolver problemas reales. Aquí implementarás desde cero, con punteros y memoria dinámica, las estructuras más importantes: pilas, colas, listas enlazadas (simple, doble y circular) y árboles binarios. Todos los ejercicios incluyen inserción, recorrido y eliminación de nodos.\nLista simple Lista doble Lista circular Pila (stack) Cola (queue) Árbol binario Árbol AVL en C Tabla hash en C Cola de prioridad en C Grafo con lista de adyacencia en C BFS en C DFS en C Insertar en una lista ordenada en C Eliminar un nodo de una lista simple en C Invertir una lista enlazada en C Recorrido inorden de un árbol binario en C Altura de un árbol binario en C Preorden árbol binario Postorden árbol binario Min-heap Trie Deque",
     "description": "Ejercicios resueltos de estructuras de datos en C: pila, cola, lista simplemente enlazada, lista doblemente enlazada, lista circular y árbol binario.",
     "tags": [],
     "title": "Estructuras de datos",
@@ -1310,6 +1310,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
+    "content": "Deque en C: ejercicio resuelto Si buscas deque en C ejercicio resuelto, aquí tienes la implementación con array circular que soporta inserción y extracción en ambos extremos en O(1). Un deque (double-ended queue, o cola de doble extremo) generaliza tanto la pila como la cola: se puede usar como cualquiera de los dos.\nCon el array circular, los índices front y rear avanzan módulo CAPACIDAD, evitando desplazamiento de elementos.\nEnunciado Implementa un deque con capacidad fija de 8 elementos que soporte:\npush_front(d, v): inserta al principio. push_back(d, v), inserta al final. pop_front(d): elimina y devuelve el elemento del principio. pop_back(d): elimina y devuelve el elemento del final. imprimir(d): muestra el contenido de frente a fondo. Demuestra las cuatro operaciones con una secuencia de inserciones y extracciones.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #define CAP 8 typedef struct { int datos[CAP]; int frente; /* índice del primer elemento */ int tamaño; } Deque; static int lleno(const Deque *d) { return d-\u003etamaño == CAP; } static int vacio(const Deque *d) { return d-\u003etamaño == 0; } void push_back(Deque *d, int val) { if (lleno(d)) { fprintf(stderr, \"Deque lleno\\n\"); return; } int pos = (d-\u003efrente + d-\u003etamaño) % CAP; d-\u003edatos[pos] = val; d-\u003etamaño++; } void push_front(Deque *d, int val) { if (lleno(d)) { fprintf(stderr, \"Deque lleno\\n\"); return; } d-\u003efrente = (d-\u003efrente - 1 + CAP) % CAP; d-\u003edatos[d-\u003efrente] = val; d-\u003etamaño++; } int pop_front(Deque *d) { if (vacio(d)) { fprintf(stderr, \"Deque vacío\\n\"); return -1; } int val = d-\u003edatos[d-\u003efrente]; d-\u003efrente = (d-\u003efrente + 1) % CAP; d-\u003etamaño--; return val; } int pop_back(Deque *d) { if (vacio(d)) { fprintf(stderr, \"Deque vacío\\n\"); return -1; } int pos = (d-\u003efrente + d-\u003etamaño - 1) % CAP; d-\u003etamaño--; return d-\u003edatos[pos]; } void imprimir(const Deque *d) { printf(\"Deque [%d]: \", d-\u003etamaño); for (int i = 0; i \u003c d-\u003etamaño; i++) printf(\"%d \", d-\u003edatos[(d-\u003efrente + i) % CAP]); printf(\"\\n\"); } int main(void) { Deque d = {.frente = 0, .tamaño = 0}; push_back(\u0026d, 10); imprimir(\u0026d); push_back(\u0026d, 20); imprimir(\u0026d); push_front(\u0026d, 5); imprimir(\u0026d); push_back(\u0026d, 30); imprimir(\u0026d); push_front(\u0026d, 1); imprimir(\u0026d); printf(\"\\npop_front() = %d\\n\", pop_front(\u0026d)); imprimir(\u0026d); printf(\"pop_back() = %d\\n\", pop_back(\u0026d)); imprimir(\u0026d); printf(\"pop_front() = %d\\n\", pop_front(\u0026d)); imprimir(\u0026d); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 Deque [1]: 10 Deque [2]: 10 20 Deque [3]: 5 10 20 Deque [4]: 5 10 20 30 Deque [5]: 1 5 10 20 30 pop_front() = 1 Deque [4]: 5 10 20 30 pop_back() = 30 Deque [3]: 5 10 20 pop_front() = 5 Deque [2]: 10 20 Errores frecuentes No aplicar el módulo CAP al calcular frente - 1: en C, el operador % con números negativos puede dar resultado negativo; hay que usar (frente - 1 + CAP) % CAP. Confundir el índice del fondo con frente + tamaño: el fondo está en (frente + tamaño - 1) % CAP, ya que frente + tamaño apunta a la primera posición libre. No verificar si el deque está lleno antes de push_front o push_back: insertar cuando tamaño == CAP sobrescribe elementos existentes. Inicializar frente a un valor distinto de 0: para simplificar, frente = 0 y tamaño = 0 es la inicialización estándar. Aplicación práctica El deque se usa en la implementación de algoritmos de ventana deslizante (máximo/mínimo en ventana de tamaño k), en la planificación de tareas (inserción y extracción en ambos extremos), como estructura base de la búsqueda en anchura (BFS) bidireccional y en simuladores de colas con prioridad en los extremos.\nSiguiente ejercicio recomendado Cola en C: ejercicio resuelto Min-heap en C: ejercicio resuelto Trie en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre un deque y una cola normal? Una cola (FIFO) solo permite insertar por el fondo y extraer por el frente. Un deque permite insertar y extraer por ambos extremos. El deque es un superconjunto: puede simular tanto una cola (usando solo push_back y pop_front) como una pila (usando solo push_back y pop_back).\n¿Por qué usar un array circular en lugar de una lista enlazada? El array circular garantiza O(1) para todas las operaciones sin asignación dinámica de memoria, lo que lo hace más rápido y con mejor localidad de caché que una lista enlazada. La lista enlazada es preferible si la capacidad es desconocida o ilimitada.\n¿Qué complejidad temporal tienen las cuatro operaciones del deque? Las cuatro operaciones (push_front, push_back, pop_front, pop_back) son O(1) con el array circular. La operación imprimir es O(n) porque recorre todos los elementos.",
+    "description": "Ejercicio resuelto de deque (doble cola) en C: implementación con array circular, push_front, push_back, pop_front y pop_back.",
+    "tags": [
+      "Intermedio",
+      "Estructuras-Datos"
+    ],
+    "title": "Deque en C: ejercicio resuelto",
+    "uri": "/ejercicios/estructuras-datos/deque-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Arrays y cadenas",
     "content": "Rotar array en C: ejercicio resuelto Si buscas rotar array en C ejercicio resuelto, aquí tienes el algoritmo de tres reversiones (three-reversal trick): rota un array k posiciones a la izquierda o a la derecha en O(n) tiempo y O(1) espacio extra, sin necesitar un buffer auxiliar.\nLa idea es que rotar un array equivale a invertir tres subsecuencias: el bloque que se desplaza, el resto y luego todo el array.\nEnunciado Dado el array {1, 2, 3, 4, 5, 6, 7}:\nRótalo 3 posiciones a la izquierda → {4, 5, 6, 7, 1, 2, 3}. Rótalo 2 posiciones a la derecha → {6, 7, 1, 2, 3, 4, 5}. Usa el algoritmo de tres reversiones en ambos casos.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 #include \u003cstdio.h\u003e void invertir(int arr[], int ini, int fin) { while (ini \u003c fin) { int tmp = arr[ini]; arr[ini++] = arr[fin]; arr[fin--] = tmp; } } /* Rotación a la izquierda k posiciones */ void rotar_izquierda(int arr[], int n, int k) { k %= n; if (k == 0) return; invertir(arr, 0, k - 1); invertir(arr, k, n - 1); invertir(arr, 0, n - 1); } /* Rotación a la derecha k posiciones */ void rotar_derecha(int arr[], int n, int k) { k %= n; if (k == 0) return; invertir(arr, 0, n - 1); invertir(arr, 0, k - 1); invertir(arr, k, n - 1); } void imprimir(const int arr[], int n) { for (int i = 0; i \u003c n; i++) printf(\"%d \", arr[i]); printf(\"\\n\"); } int main(void) { int a[] = {1, 2, 3, 4, 5, 6, 7}; int b[] = {1, 2, 3, 4, 5, 6, 7}; rotar_izquierda(a, 7, 3); printf(\"Rotar izquierda 3: \"); imprimir(a, 7); rotar_derecha(b, 7, 2); printf(\"Rotar derecha 2: \"); imprimir(b, 7); return 0; } Resultado esperado 1 2 Rotar izquierda 3: 4 5 6 7 1 2 3 Rotar derecha 2: 6 7 1 2 3 4 5 Errores frecuentes No reducir k con k %= n: si k \u003e= n se intentan acceder índices fuera del array al calcular k - 1. Confundir izquierda con derecha: rotar a la izquierda k posiciones es equivalente a rotar a la derecha n - k posiciones. Usar un buffer auxiliar de tamaño k: correcto en funcionalidad pero usa O(k) espacio extra; el algoritmo de tres reversiones es O(1). Invertir los índices incorrectamente: los tres rangos deben ser [0, k-1], [k, n-1] y [0, n-1] para la rotación izquierda, en ese orden. Aplicación práctica La rotación de arrays se usa en buffers circulares, en la implementación de colas FIFO con array, en el procesamiento de señales (desplazamiento de ventanas) y en problemas de texto como la rotación de cadenas para detectar anagramas de rotación.\nSiguiente ejercicio recomendado Máximo subarray: Kadane en C: ejercicio resuelto Dos punteros en C: ejercicio resuelto Matriz transpuesta en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué el algoritmo de tres reversiones funciona? Rotar a la izquierda k posiciones transforma [A|B] en [B|A]. Si invertimos A → [A'|B], luego invertimos B → [A'|B'] y finalmente invertimos todo → [B|A]. Las tres inversiones in-place logran la rotación sin copias.\n¿Cómo manejar k mayor que n? Con k %= n. Rotar n posiciones equivale a no rotar. Con el módulo, k = 9 en un array de 7 elementos equivale a k = 2.\n¿Es posible rotar una cadena con el mismo algoritmo? Sí. Una cadena en C es un array de char, por lo que invertir y rotar_izquierda funcionan exactamente igual sustituyendo int por char y pasando strlen(s) como n.",
     "description": "Ejercicio resuelto de rotar array en C: rotación a la izquierda y derecha con el algoritmo de tres reversiones en O(n) y O(1) de espacio.",
@@ -1425,22 +1436,6 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Avanzado",
-    "uri": "/tags/avanzado/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Cadenas",
-    "uri": "/tags/cadenas/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "Si buscas ejercicios resueltos de programación en C, aquí tienes una colección práctica para entrenar lo que más se pide en clase, entrevistas y proyectos reales.\nTrabajamos C paso a paso, con foco en estructuras de datos, memoria, ficheros y resolución de problemas.\nQué encontrarás \u003c/\u003e Ejercicios prácticos Problemas típicos de clase, entrevistas y proyectos, con código que puedes compilar y probar.\n📘 Explicación paso a paso Cada solución va de enunciado a implementación para que entiendas el razonamiento, no solo el resultado.\n📈 Dificultad progresiva Verás la dificultad en cada ejercicio para avanzar desde bases sólidas hacia temas más avanzados.\nSi quieres el recorrido completo con 100 ejercicios estructurados por dificultad, visita Programación en C en 100 ejercicios resueltos.\nFAQ ¿Estos ejercicios sirven para aprender C desde cero? Sí, sobre todo si ya conoces lo básico de sintaxis y quieres consolidar práctica real con problemas típicos.\n¿Dónde encuentro más ejercicios con progresión guiada? En Programación en C en 100 ejercicios resueltos y en la sección Ejercicios C.",
     "description": "Ejercicios resueltos de programación en C, paso a paso, con código compilable sobre punteros, listas, recursividad, memoria y ficheros para practicar C real.",
@@ -1457,6 +1452,14 @@ var relearn_searchindex = [
     "uri": "/tags/estructuras-datos/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
@@ -1469,16 +1472,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Arboles",
-    "uri": "/tags/arboles/index.html"
+    "title": "Etiqueta :: Avanzado",
+    "uri": "/tags/avanzado/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Cadenas",
+    "uri": "/tags/cadenas/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Arboles",
+    "uri": "/tags/arboles/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
