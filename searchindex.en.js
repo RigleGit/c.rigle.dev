@@ -911,6 +911,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
+    "content": "Pointer to struct in C: solved exercise If you searched for a solved pointer to struct in C, here is the difference between value access (s.field) and pointer access (p-\u003efield), together with dynamic struct allocation using malloc.\nThe arrow operator -\u003e is equivalent to dereferencing the pointer and accessing the field: p-\u003efield is syntactic sugar for (*p).field.\nProblem statement Define a Product struct with fields name (32-character string), price (double), and stock (int). Write a function that receives a pointer to Product, applies a percentage discount to the price, and decrements the stock by 1. Show the result with both static and dynamic access.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e #define MAX_NAME 32 typedef struct { char name[MAX_NAME]; double price; int stock; } Product; /* Modifies the product pointed to by p */ void apply_discount(Product *p, double pct) { p-\u003eprice *= (1.0 - pct / 100.0); p-\u003estock--; } void print_product(const Product *p) { printf(\"%-20s price=%.2f stock=%d\\n\", p-\u003ename, p-\u003eprice, p-\u003estock); } int main(void) { /* --- Static access --- */ Product a; strncpy(a.name, \"Mechanical keyboard\", MAX_NAME - 1); a.name[MAX_NAME - 1] = '\\0'; a.price = 89.99; a.stock = 10; printf(\"Before: \"); print_product(\u0026a); apply_discount(\u0026a, 15.0); /* 15% discount */ printf(\"After: \"); print_product(\u0026a); printf(\"\\n\"); /* --- Dynamic allocation --- */ Product *b = malloc(sizeof(Product)); if (!b) { perror(\"malloc\"); return 1; } strncpy(b-\u003ename, \"Wireless mouse\", MAX_NAME - 1); b-\u003ename[MAX_NAME - 1] = '\\0'; b-\u003eprice = 34.50; b-\u003estock = 5; printf(\"Before: \"); print_product(b); apply_discount(b, 10.0); /* 10% discount */ printf(\"After: \"); print_product(b); free(b); return 0; } Expected output 1 2 3 4 5 Before: Mechanical keyboard price=89.99 stock=10 After: Mechanical keyboard price=76.49 stock=9 Before: Wireless mouse price=34.50 stock=5 After: Wireless mouse price=31.05 stock=4 Common mistakes Using . instead of -\u003e with a pointer: p.price with a Product * is a compile error; p-\u003eprice is required. Not initializing all fields before printing: malloc does not initialize memory; fields may contain garbage. Not checking the return value of malloc: if it returns NULL and the pointer is dereferenced, the program crashes with a segmentation fault. Forgetting free(b) at the end: every malloc must have a corresponding free to avoid memory leaks. Practical use Pointers to structs are the central pattern in C programming with complex data: linked lists, trees, hash tables, and software modules that pass large structures between functions without copying them. Passing const Product * is more efficient than passing Product by value when the struct is large.\nRecommended next exercise const pointer in C: solved exercise Struct and files in C: solved exercise Calloc in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When should I use a struct by value and when by pointer? Use by value when the struct is small (1–2 numeric fields) and you do not need to modify it in the called function. Use by pointer when the struct is large (avoids copying), when you need to modify its fields in the function, or when it is a node of a dynamic structure (list, tree).\nWhat is the difference between malloc(sizeof(Product)) and declaring Product b? Product b allocates the struct on the stack, automatically freed when the block exits. malloc allocates on the heap, with a lifetime independent of the creating block, but requires explicit free. The heap is appropriate when the struct’s lifetime must outlast the function that created it.\nCan you have an array of pointers to structs? Yes: Product *catalog[100] is an array of 100 pointers, each pointing to an independently allocated Product. This is useful when structs have varying sizes (simulated inheritance via composition) or when you want to relocate them with realloc without invalidating external pointers.",
+    "description": "Solved pointer to struct in C: arrow operator, dynamic allocation with malloc, and field access.",
+    "tags": [
+      "Intermediate",
+      "Pointers",
+      "Struct"
+    ],
+    "title": "Pointer to struct in C: solved exercise",
+    "uri": "/en/ejercicios/punteros-memoria/puntero-a-struct-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "Insert into a sorted linked list in C: solved exercise If you are looking for insert into a sorted linked list in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Insert the value 30 into the sorted list 10 -\u003e 20 -\u003e 40 while keeping it ordered.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *insertar_ordenado(Nodo *cabeza, int valor) { Nodo *n = nuevo_nodo(valor); if (!n) { return cabeza; } if (cabeza == NULL || valor \u003c cabeza-\u003evalor) { n-\u003esig = cabeza; return n; } Nodo *actual = cabeza; while (actual-\u003esig \u0026\u0026 actual-\u003esig-\u003evalor \u003c valor) { actual = actual-\u003esig; } n-\u003esig = actual-\u003esig; actual-\u003esig = n; return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(40); cabeza = insertar_ordenado(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Expected output 1 10 20 30 40 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to insert a node in ascending order into a singly linked list.",
@@ -1448,14 +1460,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Data-Structures",
-    "uri": "/en/tags/data-structures/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Intermediate",
     "uri": "/en/tags/intermediate/index.html"
   },
@@ -1468,12 +1472,36 @@ var relearn_searchindex = [
     "uri": "/en/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Pointers",
+    "uri": "/en/tags/pointers/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Struct",
+    "uri": "/en/tags/struct/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Data-Structures",
+    "uri": "/en/tags/data-structures/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1594,14 +1622,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Files",
     "uri": "/en/tags/files/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

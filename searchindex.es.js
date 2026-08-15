@@ -171,7 +171,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C Arrays de punteros en C Void pointer en C",
+    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C Arrays de punteros en C Void pointer en C Puntero a struct",
     "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
     "tags": [],
     "title": "Punteros y memoria",
@@ -895,6 +895,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "Puntero a struct en C: ejercicio resuelto Si buscas puntero a struct en C ejercicio resuelto, aquí tienes la diferencia entre acceso por valor (s.campo) y acceso por puntero (p-\u003ecampo), junto con la asignación dinámica de structs con malloc.\nEl operador flecha -\u003e es equivalente a desreferenciar el puntero y acceder al campo: p-\u003ecampo es azúcar sintáctico para (*p).campo.\nEnunciado Define una struct Producto con campos nombre (cadena de 32 caracteres), precio (double) y stock (int). Crea una función que reciba un puntero a Producto, aplique un descuento porcentual al precio y reduzca el stock en 1. Muestra el resultado tanto con acceso estático como dinámico.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e #define MAX_NOMBRE 32 typedef struct { char nombre[MAX_NOMBRE]; double precio; int stock; } Producto; /* Modifica el producto apuntado por p */ void aplicar_descuento(Producto *p, double pct) { p-\u003eprecio *= (1.0 - pct / 100.0); p-\u003estock--; } void imprimir(const Producto *p) { printf(\"%-20s precio=%.2f stock=%d\\n\", p-\u003enombre, p-\u003eprecio, p-\u003estock); } int main(void) { /* --- Acceso estático --- */ Producto a; strncpy(a.nombre, \"Teclado mecánico\", MAX_NOMBRE - 1); a.nombre[MAX_NOMBRE - 1] = '\\0'; a.precio = 89.99; a.stock = 10; printf(\"Antes: \"); imprimir(\u0026a); aplicar_descuento(\u0026a, 15.0); /* 15 % de descuento */ printf(\"Después: \"); imprimir(\u0026a); printf(\"\\n\"); /* --- Asignación dinámica --- */ Producto *b = malloc(sizeof(Producto)); if (!b) { perror(\"malloc\"); return 1; } strncpy(b-\u003enombre, \"Ratón inalámbrico\", MAX_NOMBRE - 1); b-\u003enombre[MAX_NOMBRE - 1] = '\\0'; b-\u003eprecio = 34.50; b-\u003estock = 5; printf(\"Antes: \"); imprimir(b); aplicar_descuento(b, 10.0); /* 10 % de descuento */ printf(\"Después: \"); imprimir(b); free(b); return 0; } Resultado esperado 1 2 3 4 5 Antes: Teclado mecánico precio=89.99 stock=10 Después: Teclado mecánico precio=76.49 stock=9 Antes: Ratón inalámbrico precio=34.50 stock=5 Después: Ratón inalámbrico precio=31.05 stock=4 Errores frecuentes Usar . en lugar de -\u003e con un puntero: p.precio con un Producto * es un error de compilación; se necesita p-\u003eprecio. No inicializar todos los campos antes de imprimir: malloc no inicializa la memoria; los campos pueden tener valores basura. No comprobar el resultado de malloc: si devuelve NULL y se accede al puntero, el programa termina con fallo de segmento. Olvidar free(b) al final: cada malloc debe tener su free correspondiente para evitar fugas de memoria. Aplicación práctica Los punteros a structs son el patrón central de la programación en C con datos complejos: listas enlazadas, árboles, tablas hash y módulos de software que pasan estructuras grandes entre funciones sin copiarlas. Pasar const Producto * es más eficiente que pasar Producto por valor cuando la struct es grande.\nSiguiente ejercicio recomendado const pointer en C: ejercicio resuelto Struct y ficheros en C: ejercicio resuelto Calloc en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuándo usar struct por valor y cuándo por puntero? Usa por valor cuando la struct es pequeña (1–2 campos numéricos) y no necesitas modificarla en la función llamada. Usa por puntero cuando la struct es grande (evita copiar), cuando necesitas modificar sus campos en la función o cuando se trata de nodos de una estructura dinámica (lista, árbol).\n¿Qué diferencia hay entre malloc(sizeof(Producto)) y declarar Producto b? Producto b asigna la struct en la pila (stack), que se libera automáticamente al salir del bloque. malloc asigna en el montón (heap), con vida independiente del bloque donde se creó, pero requiere free explícito. El heap es adecuado cuando la vida de la struct debe superar a la función que la creó.\n¿Se puede tener un array de punteros a struct? Sí: Producto *catalogo[100] es un array de 100 punteros, cada uno apuntando a un Producto asignado independientemente. Es útil cuando las structs tienen tamaños distintos (con herencia simulada por composición) o cuando quieres reubicarlas con realloc sin invalidar los punteros externos.",
+    "description": "Ejercicio resuelto de puntero a struct en C: operador flecha, asignación dinámica con malloc y acceso a campos.",
+    "tags": [
+      "Intermedio",
+      "Punteros",
+      "Struct"
+    ],
+    "title": "Puntero a struct en C: ejercicio resuelto",
+    "uri": "/ejercicios/punteros-memoria/puntero-a-struct-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Insertar en una lista ordenada en C: ejercicio resuelto Si buscas insertar en una lista ordenada en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Inserta el valor 30 en la lista ordenada 10 -\u003e 20 -\u003e 40 manteniendo el orden.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *insertar_ordenado(Nodo *cabeza, int valor) { Nodo *n = nuevo_nodo(valor); if (!n) { return cabeza; } if (cabeza == NULL || valor \u003c cabeza-\u003evalor) { n-\u003esig = cabeza; return n; } Nodo *actual = cabeza; while (actual-\u003esig \u0026\u0026 actual-\u003esig-\u003evalor \u003c valor) { actual = actual-\u003esig; } n-\u003esig = actual-\u003esig; actual-\u003esig = n; return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(40); cabeza = insertar_ordenado(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Salida esperada 1 10 20 30 40 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto para insertar un nodo en orden creciente dentro de una lista enlazada simple.",
@@ -1448,16 +1460,24 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Estructuras-Datos",
-    "uri": "/tags/estructuras-datos/index.html"
+    "title": "Etiqueta :: Intermedio",
+    "uri": "/tags/intermedio/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Intermedio",
-    "uri": "/tags/intermedio/index.html"
+    "title": "Etiqueta :: Punteros",
+    "uri": "/tags/punteros/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Struct",
+    "uri": "/tags/struct/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos",
@@ -1466,6 +1486,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Estructuras-Datos",
+    "uri": "/tags/estructuras-datos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1586,14 +1614,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Ficheros",
     "uri": "/tags/ficheros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Punteros",
-    "uri": "/tags/punteros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
