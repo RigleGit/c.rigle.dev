@@ -978,6 +978,17 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Pointers \u0026 memory",
+    "content": "const pointer in C: solved exercise If you searched for a solved const pointer in C, here are the three combinations of const with pointers, with examples showing what is allowed and what the compiler rejects.\nThe rule is to read the declaration right to left: the const closest to the variable name freezes the pointer itself; the const closest to the base type freezes the pointed-to value.\nProblem statement Declare and use the three variants:\nconst int *p — pointer to constant integer (cannot modify the value). int * const p — constant pointer to integer (cannot change where it points). const int * const p — constant pointer to constant integer. Show which operations are valid and which are invalid for each one.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e int main(void) { int x = 10, y = 20; /* ── 1. Pointer to constant integer ───────────────────────────── The pointer can change where it points, but cannot modify the pointed-to value. */ const int *p1 = \u0026x; printf(\"p1 -\u003e %d\\n\", *p1); p1 = \u0026y; /* OK: change target */ printf(\"p1 -\u003e %d\\n\", *p1); /* *p1 = 99; */ /* ERROR: cannot modify the value */ /* ── 2. Constant pointer to integer ───────────────────────────── Cannot change where it points, but can modify the pointed-to value. */ int * const p2 = \u0026x; printf(\"p2 -\u003e %d\\n\", *p2); *p2 = 42; /* OK: modify the value */ printf(\"p2 -\u003e %d (x=%d)\\n\", *p2, x); /* p2 = \u0026y; */ /* ERROR: cannot change target */ /* ── 3. Constant pointer to constant integer ───────────────────── Cannot change either the target or the value. */ const int * const p3 = \u0026x; printf(\"p3 -\u003e %d\\n\", *p3); /* *p3 = 99; */ /* ERROR: cannot modify the value */ /* p3 = \u0026y; */ /* ERROR: cannot change target */ return 0; } Expected output 1 2 3 4 5 p1 -\u003e 10 p1 -\u003e 20 p2 -\u003e 10 p2 -\u003e 42 (x=42) p3 -\u003e 42 Common mistakes Confusing what is constant: const int *p freezes the value, not the pointer; int * const p freezes the pointer, not the value. Assigning a const pointer to a non-const pointer without a cast: int *q = p1; triggers a compiler warning because the const protection is lost. Trying to modify the value through a const int * by casting away const: this is undefined behavior if the original object was declared const. Not initializing an int * const at declaration: a constant pointer must be initialized where it is declared (it cannot be reassigned later). Practical use const int * is used in function parameters to guarantee that the original data is not modified (strcmp, strlen, printf all use const char *). int * const appears in embedded hardware registers where the address is fixed but the value is writable. const int * const expresses a fully immutable pointer, useful for read-only configuration tables.\nRecommended next exercise Dynamic buffer in C: solved exercise Pointer to struct in C: solved exercise Arrays as parameters in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why does the compiler warn when assigning const int * to int *? Because losing the const opens the possibility of modifying data the programmer marked as immutable. The compiler issues a warning (or error in strict mode) to signal that protection is being silently dropped.\nWhat does const mean in the const char *s parameter of printf? It means that printf commits to not modifying the string pointed to by s. It is a guarantee to the caller: you can safely pass a string literal (which lives in read-only memory) without risk of printf modifying it.\nHow do you read const int * const *pp? Right to left: pp is a non-constant pointer (*pp) pointing to a constant pointer (* const) to a constant integer (const int). In practice, double indirection is rare but appears in tables of pointers to read-only strings such as const char * const argv[].",
+    "description": "Solved const pointer in C: differences between const int *, int * const, and const int * const with examples.",
+    "tags": [
+      "Intermediate",
+      "Pointers"
+    ],
+    "title": "const pointer in C: solved exercise",
+    "uri": "/en/ejercicios/punteros-memoria/const-pointer-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Data structures",
     "content": "Delete a node from a singly linked list in C: solved exercise If you are looking for delete a node from a singly linked list in c: solved exercise, here is a practical, compilable example focused on the reusable idea behind the exercise.\nProblem statement Delete the value 30 from the list 10 -\u003e 20 -\u003e 30 -\u003e 40.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *eliminar_valor(Nodo *cabeza, int valor) { Nodo *actual = cabeza; Nodo *previo = NULL; while (actual \u0026\u0026 actual-\u003evalor != valor) { previo = actual; actual = actual-\u003esig; } if (!actual) { return cabeza; } if (!previo) { cabeza = actual-\u003esig; } else { previo-\u003esig = actual-\u003esig; } free(actual); return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(30); cabeza-\u003esig-\u003esig-\u003esig = nuevo_nodo(40); cabeza = eliminar_valor(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Expected output 1 10 20 40 Common mistakes Not testing edge cases such as small or empty inputs. Not validating indices, pointers, or limits carefully enough. Copying the mechanics without understanding the general pattern. Practical use This kind of exercise trains correct reference handling and edge cases in linked or hierarchical structures.\nRecommended next exercise All C exercises Programming in C in 100 Solved Exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is this exercise useful in practice? Yes. It is designed to teach a reusable C pattern rather than a one-off toy example.\nHow should I practice it better? Change the input data, add edge cases, and rewrite it from scratch without looking at the solution.\nHow should I practice this exercise type to improve faster? Start with small inputs, run edge cases (empty, one item, max capacity), then rewrite the solution from scratch without copying.",
     "description": "Solved exercise to delete a node by value from a singly linked list.",
@@ -1480,20 +1491,20 @@ var relearn_searchindex = [
     "uri": "/en/tags/pointers/index.html"
   },
   {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Struct",
-    "uri": "/en/tags/struct/index.html"
-  },
-  {
     "breadcrumb": "Learn C — solved exercises",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Struct",
+    "uri": "/en/tags/struct/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

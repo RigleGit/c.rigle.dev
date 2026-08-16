@@ -171,7 +171,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C Arrays de punteros en C Void pointer en C Puntero a struct",
+    "content": "Los punteros son el concepto más temido —y más poderoso— de C. Estos ejercicios te llevan desde los fundamentos (*p, \u0026var) hasta la memoria dinámica con malloc, realloc y free, y la doble indirección (**p). Cada ejemplo está resuelto paso a paso para que entiendas qué ocurre en memoria.\nPunteros Puntero a puntero malloc y free malloc y realloc calloc Punteros a funciones Double free en C Fuga de memoria en C realloc seguro en C Aritmética de punteros en C Arrays de punteros en C Void pointer en C Puntero a struct const pointer",
     "description": "Ejercicios resueltos de punteros en C y gestión de memoria dinámica con malloc, free y realloc. Incluye puntero a puntero paso a paso.",
     "tags": [],
     "title": "Punteros y memoria",
@@ -962,6 +962,17 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Punteros y memoria",
+    "content": "const pointer en C: ejercicio resuelto Si buscas const pointer en C ejercicio resuelto, aquí tienes las tres combinaciones de const con punteros, con ejemplos que muestran qué está permitido y qué el compilador rechaza.\nLa regla es leer la declaración de derecha a izquierda: el const más cercano al nombre de variable congela el puntero; el const más cercano al tipo base congela el valor apuntado.\nEnunciado Declara y usa las tres variantes:\nconst int *p — puntero a entero constante (no puede modificar el valor). int * const p — puntero constante a entero (no puede cambiar a dónde apunta). const int * const p — puntero constante a entero constante. Muestra qué operaciones son válidas e inválidas para cada una.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include \u003cstdio.h\u003e int main(void) { int x = 10, y = 20; /* ── 1. Puntero a entero constante ────────────────────────────── El puntero puede cambiar a dónde apunta, pero no puede modificar el valor apuntado. */ const int *p1 = \u0026x; printf(\"p1 -\u003e %d\\n\", *p1); p1 = \u0026y; /* OK: cambia el destino */ printf(\"p1 -\u003e %d\\n\", *p1); /* *p1 = 99; */ /* ERROR: no puede modificar el valor */ /* ── 2. Puntero constante a entero ────────────────────────────── No puede cambiar a dónde apunta, pero sí puede modificar el valor apuntado. */ int * const p2 = \u0026x; printf(\"p2 -\u003e %d\\n\", *p2); *p2 = 42; /* OK: modifica el valor */ printf(\"p2 -\u003e %d (x=%d)\\n\", *p2, x); /* p2 = \u0026y; */ /* ERROR: no puede cambiar el destino */ /* ── 3. Puntero constante a entero constante ──────────────────── No puede cambiar ni el destino ni el valor. */ const int * const p3 = \u0026x; printf(\"p3 -\u003e %d\\n\", *p3); /* *p3 = 99; */ /* ERROR: no puede modificar el valor */ /* p3 = \u0026y; */ /* ERROR: no puede cambiar el destino */ return 0; } Resultado esperado 1 2 3 4 5 p1 -\u003e 10 p1 -\u003e 20 p2 -\u003e 10 p2 -\u003e 42 (x=42) p3 -\u003e 42 Errores frecuentes Confundir qué es constante: const int *p congela el valor, no el puntero; int * const p congela el puntero, no el valor. Asignar un puntero const a un puntero no-const sin cast: int *q = p1; genera advertencia del compilador porque se perdería la protección const. Intentar modificar el valor a través de un const int * usando un cast para eliminar const: es comportamiento indefinido si el objeto original fue declarado const. No inicializar un int * const en la declaración: un puntero constante debe inicializarse donde se declara (no puede reasignarse después). Aplicación práctica const int * se usa en parámetros de funciones para garantizar que no se modifique el dato original (strcmp, strlen, printf usan const char *). int * const aparece en registros de hardware embebido donde la dirección es fija pero el valor es de escritura. const int * const expresa un puntero completamente inmutable, útil para tablas de configuración de solo lectura.\nSiguiente ejercicio recomendado Buffer dinámico en C: ejercicio resuelto Puntero a struct en C: ejercicio resuelto Arrays como parámetros en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué el compilador avisa si asigno const int * a int *? Porque al perder el const se abre la posibilidad de modificar datos que el programador marcó como inmutables. El compilador genera una advertencia (o error en modo estricto) para señalar que se está eliminando protección de forma implícita.\n¿Qué significa const en el parámetro const char *s de printf? Significa que printf se compromete a no modificar la cadena apuntada por s. Es una garantía al llamador: puedes pasar una cadena literal (que vive en memoria de solo lectura) sin riesgo de que printf la modifique.\n¿Cómo se lee const int * const *pp? De derecha a izquierda: pp es un puntero (*pp) no constante, que apunta a un puntero constante (* const) a un entero constante (const int). En la práctica, el doble nivel es raro, pero aparece en tablas de punteros a strings de solo lectura como const char * const argv[].",
+    "description": "Ejercicio resuelto de const pointer en C: diferencias entre const int *, int * const y const int * const con ejemplos.",
+    "tags": [
+      "Intermedio",
+      "Punteros"
+    ],
+    "title": "const pointer en C: ejercicio resuelto",
+    "uri": "/ejercicios/punteros-memoria/const-pointer-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Eliminar un nodo de una lista simple en C: ejercicio resuelto Si buscas eliminar un nodo de una lista simple en c: ejercicio resuelto, aquí tienes un caso práctico, compilable y pensado para explicar la idea que realmente se reutiliza.\nEnunciado Elimina el valor 30 de la lista 10 -\u003e 20 -\u003e 30 -\u003e 40.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int valor; struct Nodo *sig; } Nodo; Nodo *nuevo_nodo(int valor) { Nodo *n = (Nodo *)malloc(sizeof(Nodo)); if (!n) { return NULL; } n-\u003evalor = valor; n-\u003esig = NULL; return n; } Nodo *eliminar_valor(Nodo *cabeza, int valor) { Nodo *actual = cabeza; Nodo *previo = NULL; while (actual \u0026\u0026 actual-\u003evalor != valor) { previo = actual; actual = actual-\u003esig; } if (!actual) { return cabeza; } if (!previo) { cabeza = actual-\u003esig; } else { previo-\u003esig = actual-\u003esig; } free(actual); return cabeza; } void imprimir(Nodo *cabeza) { for (Nodo *p = cabeza; p; p = p-\u003esig) { printf(\"%d\", p-\u003evalor); if (p-\u003esig) { printf(\" \"); } } printf(\"\\n\"); } void liberar(Nodo *cabeza) { while (cabeza) { Nodo *tmp = cabeza; cabeza = cabeza-\u003esig; free(tmp); } } int main(void) { Nodo *cabeza = nuevo_nodo(10); cabeza-\u003esig = nuevo_nodo(20); cabeza-\u003esig-\u003esig = nuevo_nodo(30); cabeza-\u003esig-\u003esig-\u003esig = nuevo_nodo(40); cabeza = eliminar_valor(cabeza, 30); imprimir(cabeza); liberar(cabeza); return 0; } Salida esperada 1 10 20 40 Errores frecuentes No probar casos borde con entradas pequeñas o vacías. No validar bien índices, punteros o límites según el caso. Quedarte con la mecánica sin entender el patrón general. Aplicación práctica Este tipo de ejercicio entrena la manipulación correcta de referencias y casos borde en estructuras enlazadas o jerárquicas.\nSiguiente ejercicio recomendado Todos los ejercicios de C Programación en C en 100 ejercicios resueltos Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Este ejercicio sirve para práctica real? Sí. Está planteado para cubrir un patrón reutilizable en C, no solo un caso artificial.\n¿Cómo practicarlo mejor? Modifica los datos de entrada, añade casos límite y reescríbelo desde cero sin mirar la solución.\n¿Cómo practicar este tipo de ejercicio para mejorar más rápido? Empieza con entradas pequeñas, prueba casos límite (vacío, un elemento y capacidad máxima) y luego reescribe la solución sin copiarla.",
     "description": "Ejercicio resuelto para eliminar por valor un nodo de una lista enlazada simple.",
@@ -1472,20 +1483,20 @@ var relearn_searchindex = [
     "uri": "/tags/punteros/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Struct",
-    "uri": "/tags/struct/index.html"
-  },
-  {
     "breadcrumb": "Aprende C — ejercicios resueltos",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Struct",
+    "uri": "/tags/struct/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
