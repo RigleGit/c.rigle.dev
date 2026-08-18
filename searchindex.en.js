@@ -1112,6 +1112,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "Struct with pointers in C: solved exercise If you searched for a solved struct with pointers in C, here is the critical difference between a shallow copy (with = or memcpy) and a deep copy, and why shallow-copying a struct with pointer members is a common source of bugs.\nWhen a struct contains a char * or any pointer, a shallow copy duplicates the pointer but not the pointed-to data: both structs point to the same memory, and freeing one invalidates the other.\nProblem statement Define an Employee struct with fields name (dynamic pointer), age, and salary. Implement:\nemployee_create(name, age, salary): dynamically allocates the struct and duplicates the string. employee_copy(src): deep copy — new struct and new string. employee_free(e): frees the string and then the struct. Demonstrate that modifying the copy does not affect the original.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e typedef struct { char *name; int age; double salary; } Employee; Employee *employee_create(const char *name, int age, double salary) { Employee *e = malloc(sizeof(Employee)); if (!e) return NULL; e-\u003ename = malloc(strlen(name) + 1); if (!e-\u003ename) { free(e); return NULL; } strcpy(e-\u003ename, name); e-\u003eage = age; e-\u003esalary = salary; return e; } /* Deep copy: new struct, new string */ Employee *employee_copy(const Employee *src) { return employee_create(src-\u003ename, src-\u003eage, src-\u003esalary); } void employee_free(Employee *e) { if (!e) return; free(e-\u003ename); /* free the string first */ free(e); } void employee_print(const char *label, const Employee *e) { printf(\"%s: name=%-15s age=%d salary=%.2f [name ptr=%p]\\n\", label, e-\u003ename, e-\u003eage, e-\u003esalary, (void *)e-\u003ename); } int main(void) { Employee *orig = employee_create(\"Alice Johnson\", 30, 2500.00); if (!orig) { perror(\"create\"); return 1; } Employee *copy = employee_copy(orig); if (!copy) { perror(\"copy\"); employee_free(orig); return 1; } employee_print(\"Original\", orig); employee_print(\"Copy \", copy); /* Modifying the copy must not affect the original */ free(copy-\u003ename); copy-\u003ename = malloc(strlen(\"Bob Smith\") + 1); strcpy(copy-\u003ename, \"Bob Smith\"); copy-\u003esalary = 3100.00; printf(\"\\nAfter modifying the copy:\\n\"); employee_print(\"Original\", orig); employee_print(\"Copy \", copy); employee_free(orig); employee_free(copy); return 0; } Expected output 1 2 3 4 5 6 Original: name=Alice Johnson age=30 salary=2500.00 [name ptr=0x...] Copy : name=Alice Johnson age=30 salary=2500.00 [name ptr=0x...] After modifying the copy: Original: name=Alice Johnson age=30 salary=2500.00 [name ptr=0x...] Copy : name=Bob Smith age=30 salary=3100.00 [name ptr=0x...] (Pointer addresses will differ between original and copy, proving they are independent.)\nCommon mistakes Copying the struct with copy = *orig or memcpy: duplicates the name pointer, not the string. Both structs point to the same string; freeing one invalidates the other’s pointer. Freeing e before freeing e-\u003ename: the name address is lost with the struct, causing a memory leak. Using strcpy without allocating memory for the destination: strcpy assumes the destination already has enough space; without a prior malloc the memory is corrupted. Not checking the return value of malloc for the string: if it fails after the struct was already allocated, the struct must be freed before returning NULL. Practical use This pattern is essential in any C module managing data with dynamic strings or buffers: in-memory database records, message queues, caching systems, and any structure that must be copied or serialized to pass to another function or thread.\nRecommended next exercise qsort with structs in C: solved exercise List of structs in C: solved exercise Files in C: solved exercises All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ When is a shallow copy acceptable for structs with pointers? Only when the copy’s lifetime does not exceed the original’s and you can guarantee that the original will not be freed while the copy is in use. In practice this guarantee is hard to maintain; deep copy is the safer default rule.\nIs there an equivalent of clone or a copy constructor in C? Not natively. The usual pattern is to manually implement an type_copy(const Type *src) function that performs the deep copy, following the same convention as employee_copy in this exercise.\nWhat happens if the same memory is freed twice (double free)? It is undefined behavior. In practice it usually corrupts the allocator’s internal heap structures, which can cause segmentation faults, infinite loops, or security vulnerabilities. To detect it, tools like Valgrind or AddressSanitizer (gcc -fsanitize=address) are indispensable.",
+    "description": "Solved struct with pointers in C: deep copy vs shallow copy, pointer members, and memory management.",
+    "tags": [
+      "Intermediate",
+      "Struct",
+      "Pointers"
+    ],
+    "title": "Struct with pointers in C: solved exercise",
+    "uri": "/en/ejercicios/struct-ficheros/struct-con-punteros-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "Bitwise operators in C: solved exercise If you searched for a solved bitwise operators exercise in C, here are all six binary operators applied to concrete values so you can see exactly which bit is set or cleared by each operation.\nBitwise operators work on the binary representation of integers and are essential in embedded systems, network protocols, configuration flags, and hardware register manipulation.\nProblem statement Given a = 12 (binary 1100) and b = 10 (binary 1010), compute and print the result of \u0026, |, ^, ~a, a \u003c\u003c 1, and a \u003e\u003e 1, also showing the hexadecimal representation where relevant.\nC solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include \u003cstdio.h\u003e int main(void) { unsigned int a = 12u; /* 1100 in binary */ unsigned int b = 10u; /* 1010 in binary */ printf(\"a = %2u (0x%X)\\n\", a, a); printf(\"b = %2u (0x%X)\\n\", b, b); printf(\"a \u0026 b = %2u (0x%X) AND\\n\", a \u0026 b, a \u0026 b); printf(\"a | b = %2u (0x%X) OR\\n\", a | b, a | b); printf(\"a ^ b = %2u (0x%X) XOR\\n\", a ^ b, a ^ b); printf(\"~a = %u NOT\\n\", ~a); printf(\"a \u003c\u003c 1 = %2u left shift\\n\", a \u003c\u003c 1); printf(\"a \u003e\u003e 1 = %2u right shift\\n\", a \u003e\u003e 1); return 0; } Expected output 1 2 3 4 5 6 7 8 a = 12 (0xC) b = 10 (0xA) a \u0026 b = 8 (0x8) AND a | b = 14 (0xE) OR a ^ b = 6 (0x6) XOR ~a = 4294967283 NOT a \u003c\u003c 1 = 24 left shift a \u003e\u003e 1 = 6 right shift Common mistakes Confusing \u0026 (bitwise AND) with \u0026\u0026 (logical AND): they are completely different operators. Applying ~ to a signed int and getting unexpected negative results; use unsigned for bitwise manipulation. Shifting more bits than the type holds (a \u003c\u003c 32 on a 32-bit unsigned int is undefined behavior). Omitting parentheses around bitwise expressions in complex expressions: \u0026, |, and ^ have lower precedence than comparison operators. Practical use Bitwise operators are used to set, clear, or test individual flags in a bit field, mask parts of a byte in network protocols, and efficiently multiply or divide by powers of two using shifts.\nRecommended next exercise Data types in C: solved exercise sizeof in C: solved exercise Relational and logical operators in C All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ What is the difference between \u0026 and \u0026\u0026 in C? \u0026 is the bitwise AND operator: it compares each bit of both operands. \u0026\u0026 is the logical AND operator: it evaluates whether both operands are non-zero and returns 0 or 1. They are completely different.\nWhy does ~12 give 4294967283 instead of -13? ~a flips all bits. On a 32-bit unsigned int, ~12 is 0xFFFFFFF3 = 4294967283. With a signed int the result is -13 (two’s complement), which is the same bit pattern interpreted differently.\nWhen should I use shifts instead of multiply or divide? x \u003c\u003c 1 equals x * 2 and x \u003e\u003e 1 equals x / 2 for non-negative unsigned integers. Modern compilers optimize this automatically, so use shifts when the code genuinely represents bit manipulation, not as a speed trick.",
     "description": "Solved bitwise operators exercise in C: AND, OR, XOR, NOT and shift operations with practical examples.",
@@ -1499,16 +1511,16 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Memory",
-    "uri": "/en/tags/memory/index.html"
+    "title": "Tag :: Pointers",
+    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
+    "title": "Tag :: Struct",
+    "uri": "/en/tags/struct/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises",
@@ -1523,8 +1535,8 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Struct",
-    "uri": "/en/tags/struct/index.html"
+    "title": "Tag :: Memory",
+    "uri": "/en/tags/memory/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
