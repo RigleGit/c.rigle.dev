@@ -1168,6 +1168,18 @@ var relearn_searchindex = [
     "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Structs \u0026 files",
+    "content": "qsort with structs in C: solved exercise If you searched for a solved qsort with structs in C, here is how to pass a custom comparator to qsort to sort an array of structs by different fields. qsort from \u003cstdlib.h\u003e accepts void * pointers in the comparator, so an explicit cast to the concrete type is required.\nThe comparator signature must be int cmp(const void *a, const void *b) and return negative, zero, or positive according to the relative order of a and b.\nProblem statement Define a Student struct with fields name (32-character array), grade (double), and age (int). Create an array of 5 students and sort it three ways:\nBy grade descending (highest grade first). By name ascending (alphabetical order). By age ascending and, in case of a tie, by grade descending. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e #define MAX_N 32 typedef struct { char name[MAX_N]; double grade; int age; } Student; /* ── Comparators ─────────────────────────────────────────────── */ /* By grade descending */ int cmp_grade_desc(const void *a, const void *b) { const Student *x = (const Student *)a; const Student *y = (const Student *)b; if (y-\u003egrade \u003e x-\u003egrade) return 1; if (y-\u003egrade \u003c x-\u003egrade) return -1; return 0; } /* By name ascending */ int cmp_name_asc(const void *a, const void *b) { const Student *x = (const Student *)a; const Student *y = (const Student *)b; return strncmp(x-\u003ename, y-\u003ename, MAX_N); } /* By age ascending; tie → grade descending */ int cmp_age_grade(const void *a, const void *b) { const Student *x = (const Student *)a; const Student *y = (const Student *)b; if (x-\u003eage != y-\u003eage) return x-\u003eage - y-\u003eage; if (y-\u003egrade \u003e x-\u003egrade) return 1; if (y-\u003egrade \u003c x-\u003egrade) return -1; return 0; } /* ── Utilities ──────────────────────────────────────────────── */ void print_students(const char *title, const Student *arr, int n) { printf(\"%s:\\n\", title); for (int i = 0; i \u003c n; i++) printf(\" %-14s grade=%.1f age=%d\\n\", arr[i].name, arr[i].grade, arr[i].age); } int main(void) { Student students[] = { {\"Laura\", 8.5, 21}, {\"Pedro\", 6.0, 22}, {\"Sofia\", 9.2, 21}, {\"Carlos\", 7.8, 20}, {\"Marta\", 9.2, 22}, }; int n = sizeof(students) / sizeof(students[0]); qsort(students, n, sizeof(Student), cmp_grade_desc); print_students(\"By grade (desc)\", students, n); qsort(students, n, sizeof(Student), cmp_name_asc); print_students(\"\\nBy name (asc)\", students, n); qsort(students, n, sizeof(Student), cmp_age_grade); print_students(\"\\nBy age (asc) + grade (desc)\", students, n); return 0; } Expected output 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 By grade (desc): Sofia grade=9.2 age=21 Marta grade=9.2 age=22 Laura grade=8.5 age=21 Carlos grade=7.8 age=20 Pedro grade=6.0 age=22 By name (asc): Carlos grade=7.8 age=20 Laura grade=8.5 age=21 Marta grade=9.2 age=22 Pedro grade=6.0 age=22 Sofia grade=9.2 age=21 By age (asc) + grade (desc): Carlos grade=7.8 age=20 Sofia grade=9.2 age=21 Laura grade=8.5 age=21 Marta grade=9.2 age=22 Pedro grade=6.0 age=22 Common mistakes Comparing doubles with a-\u003egrade - b-\u003egrade and returning the result directly: the difference may be a tiny double that gets truncated to 0 on cast to int, producing incorrect ties. Use explicit comparisons (\u003e, \u003c). Not using const Student * in the comparator: casting from const void * to a non-const pointer is valid but generates compiler warnings; using const is correct. Forgetting the third argument to qsort (sizeof(Student)): passing sizeof(Student *) (pointer size) causes qsort to misinterpret the data. Not using strncmp with the MAX_N limit to compare strings in a struct: strcmp may read past the field if it is not null-terminated. Practical use qsort with custom comparators is the standard C tool for sorting any array of records: in-memory database tables, query results, user rankings, sorting files by name/size/date, and any scenario where the sort criterion depends on multiple fields.\nRecommended next exercise List of structs in C: solved exercise Struct with pointers in C: solved exercise Direct insertion in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Is qsort stable? Does it preserve the order of equal elements? Stability is not guaranteed. Most platform implementations use introsort (quicksort + heapsort hybrid), which is not stable. If you need stability, add the original index to the comparator as the final tiebreaker.\nWhat is the difference between qsort and bsearch? qsort sorts an array in place; bsearch finds an element in an already-sorted array, with O(n log n) and O(log n) complexity respectively. They are used together: first qsort, then bsearch.\nCan qsort be used with an array of pointers to structs? Yes, and it is common when elements are large. The comparator receives const void *a which is really const Student **, so the cast is *(const Student **)a. Sorting pointers instead of full structs avoids copying data during sorting.",
+    "description": "Solved qsort with structs in C: custom comparator, ascending and descending sorting by different fields.",
+    "tags": [
+      "Intermediate",
+      "Struct",
+      "Algorithms"
+    ],
+    "title": "qsort with structs in C: solved exercise",
+    "uri": "/en/ejercicios/struct-ficheros/qsort-con-structs-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Learn C — solved exercises \u003e Exercises \u003e Fundamentals",
     "content": "Define and macros in C: solved exercise If you searched for a solved #define and macros exercise in C, here are the most common patterns: symbolic constants, function-like macros, and a safe SWAP macro using the do { } while (0) idiom.\nPreprocessor macros are expanded before compilation: they generate no function call overhead and have no type, which makes them fast but also dangerous if used carelessly.\nProblem statement Implement and use the following macros:\nPI: constant with the value of π. SQUARE(x): returns x squared. MAX(a, b): returns the greater of two values. SWAP(T, a, b): swaps two variables of type T. C solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e #define PI 3.14159 #define SQUARE(x) ((x) * (x)) #define MAX(a, b) ((a) \u003e (b) ? (a) : (b)) #define SWAP(T, a, b) do { T _tmp = (a); (a) = (b); (b) = _tmp; } while (0) int main(void) { double r = 3.0; printf(\"Circle area (r=%.1f): %.5f\\n\", r, PI * SQUARE(r)); printf(\"SQUARE(5) = %d\\n\", SQUARE(5)); printf(\"MAX(7, 3) = %d\\n\", MAX(7, 3)); int x = 10, y = 20; SWAP(int, x, y); printf(\"After SWAP: x=%d, y=%d\\n\", x, y); return 0; } Expected output 1 2 3 4 Circle area (r=3.0): 28.27431 SQUARE(5) = 25 MAX(7, 3) = 7 After SWAP: x=20, y=10 Common mistakes Not wrapping macro parameters in parentheses: SQUARE(1+2) without them expands to 1+2 * 1+2 = 5 instead of 9. Not using do { } while (0) for multi-statement macros: without it, a bare if may not execute all statements in the macro. Passing expressions with ++ or function calls as macro arguments: MAX(f(), g()) evaluates each argument twice. Confusing #define with const: const has a type and scope; #define is raw text with neither. Practical use #define is used for configuration constants (buffer sizes, bit masks), debug macros (DEBUG_PRINT), and minimal abstractions that avoid function call overhead on performance-critical paths.\nRecommended next exercise Const in C: solved exercise sizeof in C: solved exercise Bitwise operators in C: solved exercise All C exercises Guided practice and full book If you want a complete path with progressive difficulty:\nProgramming in C in 100 Solved Exercises View on Amazon (included in Kindle Unlimited) FAQ Why wrap macro parameters in parentheses? Because macros are text substitution. Without parentheses, SQUARE(1+2) becomes 1+2 * 1+2 due to operator precedence, giving 5 instead of 9. With parentheses: ((1+2) * (1+2)) = 9.\nWhat is the difference between #define PI 3.14 and const double PI = 3.14? #define is typeless, scopeless text substitution that is invisible to the debugger. const double has a type, block scope, and shows up in the debugger. In modern C, prefer const or enum for named constants.\nWhat is the do { } while (0) idiom for in multi-statement macros? It lets you use the macro as a normal statement: if (cond) SWAP(int, a, b); else .... Without this wrapper, only the first statement of the macro would be under the if.",
     "description": "Solved #define and macros exercise in C: symbolic constants, function-like macros, MAX, SQUARE and SWAP.",
@@ -1495,6 +1507,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Algorithms",
+    "uri": "/en/tags/algorithms/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: Intermediate",
     "uri": "/en/tags/intermediate/index.html"
   },
@@ -1511,14 +1531,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Tag :: Struct",
     "uri": "/en/tags/struct/index.html"
   },
@@ -1529,6 +1541,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tags",
     "uri": "/en/tags/index.html"
+  },
+  {
+    "breadcrumb": "Learn C — solved exercises \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Pointers",
+    "uri": "/en/tags/pointers/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",
@@ -1601,14 +1621,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: Arrays",
     "uri": "/en/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Learn C — solved exercises \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: Algorithms",
-    "uri": "/en/tags/algorithms/index.html"
   },
   {
     "breadcrumb": "Learn C — solved exercises \u003e Tags",

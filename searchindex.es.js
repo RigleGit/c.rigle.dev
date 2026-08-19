@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C fseek y ftell en C Struct con punteros",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C fseek y ftell en C Struct con punteros qsort con structs",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -1152,6 +1152,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "qsort con structs en C: ejercicio resuelto Si buscas qsort con structs en C ejercicio resuelto, aquí tienes la forma de pasar un comparador personalizado a qsort para ordenar un array de structs por distintos campos. qsort de \u003cstdlib.h\u003e acepta punteros a void en el comparador, por lo que hay que hacer un cast explícito al tipo concreto.\nLa firma del comparador debe ser int cmp(const void *a, const void *b) y devolver negativo, cero o positivo según el orden relativo de a y b.\nEnunciado Define una struct Alumno con campos nombre (array de 32 caracteres), nota (double) y edad (int). Crea un array de 5 alumnos y ordénalo de tres formas:\nPor nota descendente (mayor nota primero). Por nombre ascendente (orden alfabético). Por edad ascendente y, en caso de empate, por nota descendente. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e #define MAX_N 32 typedef struct { char nombre[MAX_N]; double nota; int edad; } Alumno; /* ── Comparadores ──────────────────────────────────────────────── */ /* Por nota descendente */ int cmp_nota_desc(const void *a, const void *b) { const Alumno *x = (const Alumno *)a; const Alumno *y = (const Alumno *)b; if (y-\u003enota \u003e x-\u003enota) return 1; if (y-\u003enota \u003c x-\u003enota) return -1; return 0; } /* Por nombre ascendente */ int cmp_nombre_asc(const void *a, const void *b) { const Alumno *x = (const Alumno *)a; const Alumno *y = (const Alumno *)b; return strncmp(x-\u003enombre, y-\u003enombre, MAX_N); } /* Por edad ascendente, empate → nota descendente */ int cmp_edad_nota(const void *a, const void *b) { const Alumno *x = (const Alumno *)a; const Alumno *y = (const Alumno *)b; if (x-\u003eedad != y-\u003eedad) return x-\u003eedad - y-\u003eedad; /* Empate en edad: nota descendente */ if (y-\u003enota \u003e x-\u003enota) return 1; if (y-\u003enota \u003c x-\u003enota) return -1; return 0; } /* ── Utilidades ─────────────────────────────────────────────────── */ void imprimir(const char *titulo, const Alumno *arr, int n) { printf(\"%s:\\n\", titulo); for (int i = 0; i \u003c n; i++) printf(\" %-16s nota=%.1f edad=%d\\n\", arr[i].nombre, arr[i].nota, arr[i].edad); } int main(void) { Alumno alumnos[] = { {\"Laura\", 8.5, 21}, {\"Pedro\", 6.0, 22}, {\"Sofia\", 9.2, 21}, {\"Carlos\", 7.8, 20}, {\"Marta\", 9.2, 22}, }; int n = sizeof(alumnos) / sizeof(alumnos[0]); qsort(alumnos, n, sizeof(Alumno), cmp_nota_desc); imprimir(\"Por nota (desc)\", alumnos, n); qsort(alumnos, n, sizeof(Alumno), cmp_nombre_asc); imprimir(\"\\nPor nombre (asc)\", alumnos, n); qsort(alumnos, n, sizeof(Alumno), cmp_edad_nota); imprimir(\"\\nPor edad (asc) + nota (desc)\", alumnos, n); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Por nota (desc): Sofia nota=9.2 edad=21 Marta nota=9.2 edad=22 Laura nota=8.5 edad=21 Carlos nota=7.8 edad=20 Pedro nota=6.0 edad=22 Por nombre (asc): Carlos nota=7.8 edad=20 Laura nota=8.5 edad=21 Marta nota=9.2 edad=22 Pedro nota=6.0 edad=22 Sofia nota=9.2 edad=21 Por edad (asc) + nota (desc): Carlos nota=7.8 edad=20 Sofia nota=9.2 edad=21 Laura nota=8.5 edad=21 Marta nota=9.2 edad=22 Pedro nota=6.0 edad=22 Errores frecuentes Comparar doubles con a-\u003enota - b-\u003enota y devolver el resultado directamente: la diferencia puede ser un double muy pequeño que se trunca a 0 en el cast a int, dando empates incorrectos. Hay que usar comparaciones explícitas (\u003e, \u003c). No usar const Alumno * en el comparador: el cast desde const void * a un puntero no-const es válido pero genera advertencias del compilador; usar const es lo correcto. Olvidar el tercer argumento de qsort (sizeof(Alumno)): si se pasa sizeof(Alumno *) (tamaño de puntero), qsort interpreta los datos de forma incorrecta. No usar strncmp con el límite MAX_N para comparar cadenas en struct: strcmp puede leer más allá del campo si no está terminado en \\0. Aplicación práctica qsort con comparadores personalizados es la herramienta estándar de C para ordenar cualquier array de registros: tablas de una base de datos en memoria, resultados de consultas, clasificaciones de usuarios, ordenación de archivos por nombre/tamaño/fecha y cualquier escenario donde el criterio de orden depende de múltiples campos.\nSiguiente ejercicio recomendado Lista de structs en C: ejercicio resuelto Struct con punteros en C: ejercicio resuelto Inserción directa en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿qsort es estable? ¿Mantiene el orden de elementos iguales? No está garantizado que sea estable. La implementación estándar en la mayoría de plataformas usa introsort (combinación de quicksort + heapsort), que no es estable. Si necesitas estabilidad, puedes añadir el índice original al comparador como criterio de desempate final.\n¿Qué diferencia hay entre qsort y bsearch? qsort ordena un array en su sitio; bsearch busca un elemento en un array ya ordenado, ambas en O(n log n) y O(log n) respectivamente. Se usan juntas: primero qsort, luego bsearch.\n¿Se puede usar qsort con un array de punteros a struct? Sí, y es frecuente cuando los elementos son grandes. El comparador recibe const void *a que es const Alumno **, por lo que el cast es *(const Alumno **)a. Ordenar punteros en lugar de structs completas evita copiar los datos durante la ordenación.",
+    "description": "Ejercicio resuelto de qsort con structs en C: comparador personalizado, ordenación ascendente y descendente por diferentes campos.",
+    "tags": [
+      "Intermedio",
+      "Struct",
+      "Algoritmos"
+    ],
+    "title": "qsort con structs en C: ejercicio resuelto",
+    "uri": "/ejercicios/struct-ficheros/qsort-con-structs-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Fundamentos",
     "content": "Define y macros en C: ejercicio resuelto Si buscas #define y macros en C ejercicio resuelto, aquí tienes los patrones más usados: constantes simbólicas, macros con parámetros y una macro SWAP segura con el truco del do { } while (0).\nLas macros de preprocesador se expanden antes de compilar: no generan código de función ni tienen tipo, lo que las hace muy rápidas pero también peligrosas si no se usan con cuidado.\nEnunciado Implementa y usa las siguientes macros:\nPI: constante con el valor de π. CUADRADO(x): eleva x al cuadrado. MAX(a, b): devuelve el mayor de dos valores. SWAP(T, a, b): intercambia dos variables del tipo T. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include \u003cstdio.h\u003e #define PI 3.14159 #define CUADRADO(x) ((x) * (x)) #define MAX(a, b) ((a) \u003e (b) ? (a) : (b)) #define SWAP(T, a, b) do { T _tmp = (a); (a) = (b); (b) = _tmp; } while (0) int main(void) { double r = 3.0; printf(\"Area del circulo (r=%.1f): %.5f\\n\", r, PI * CUADRADO(r)); printf(\"CUADRADO(5) = %d\\n\", CUADRADO(5)); printf(\"MAX(7, 3) = %d\\n\", MAX(7, 3)); int x = 10, y = 20; SWAP(int, x, y); printf(\"Tras SWAP: x=%d, y=%d\\n\", x, y); return 0; } Resultado esperado 1 2 3 4 Area del circulo (r=3.0): 28.27431 CUADRADO(5) = 25 MAX(7, 3) = 7 Tras SWAP: x=20, y=10 Errores frecuentes No rodear los parámetros de la macro con paréntesis: CUADRADO(1+2) sin paréntesis se expande a 1+2 * 1+2 = 5 en lugar de 9. No usar do { } while (0) en macros de varias sentencias: sin ello, un if sin llaves puede no ejecutar todas las sentencias de la macro. Crear efectos secundarios al pasar expresiones con ++ o llamadas a función: MAX(f(), g()) evalúa los argumentos dos veces. Confundir #define con const: const tiene tipo y ámbito; #define es texto literal sin ninguno de los dos. Aplicación práctica #define se usa para constantes de configuración (tamaños de buffer, máscaras de bits), macros de depuración (DEBUG_PRINT) y abstracciones mínimas que evitan la sobrecarga de llamada a función en rutas críticas de rendimiento.\nSiguiente ejercicio recomendado Const en C: ejercicio resuelto Sizeof en C: ejercicio resuelto Operadores bit a bit en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué rodear los parámetros de una macro con paréntesis? Porque las macros son sustitución de texto. Sin paréntesis, CUADRADO(1+2) se convierte en 1+2 * 1+2 por precedencia de operadores, dando 5 en lugar de 9. Con paréntesis: ((1+2) * (1+2)) = 9.\n¿Qué diferencia hay entre #define PI 3.14 y const double PI = 3.14? #define es una sustitución de texto sin tipo ni ámbito; no aparece en el depurador. const double tiene tipo, ámbito de bloque y es visible en el depurador. En C moderno se prefiere const o enum para constantes con nombre.\n¿Para qué sirve el do { } while (0) en macros de varias sentencias? Permite usar la macro como una sentencia normal: if (cond) SWAP(int, a, b); else .... Sin ese envoltorio, solo la primera sentencia de la macro quedaría bajo el if.",
     "description": "Ejercicio resuelto de #define y macros en C: constantes simbólicas, macros con parámetros, MAX, CUADRADO y SWAP.",
@@ -1475,6 +1487,14 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Algoritmos",
+    "uri": "/tags/algoritmos/index.html"
+  },
+  {
     "breadcrumb": "",
     "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
     "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
@@ -1503,14 +1523,6 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Etiqueta :: Punteros",
-    "uri": "/tags/punteros/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
     "title": "Etiqueta :: Struct",
     "uri": "/tags/struct/index.html"
   },
@@ -1521,6 +1533,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiquetas",
     "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Punteros",
+    "uri": "/tags/punteros/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1593,14 +1613,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Arrays",
     "uri": "/tags/arrays/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Algoritmos",
-    "uri": "/tags/algoritmos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
