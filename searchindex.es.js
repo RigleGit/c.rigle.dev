@@ -258,7 +258,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios",
-    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C fseek y ftell en C Struct con punteros qsort con structs",
+    "content": "Los struct permiten agrupar datos relacionados en un único tipo y son la base de la programación orientada a datos en C. En esta sección aprenderás a definirlos, usarlos con punteros, leer y escribir ficheros binarios con fread/fwrite, y a simular conceptos de POO como clases y herencia.\nStruct Simular clases Simular herencia Ficheros (texto) fread y fwrite union en C Bitfields en C fgets en C fprintf y fscanf en C Archivos binarios y struct en C Manejo de errores con errno en C Leer CSV en C Archivo temporal en C Copiar archivo en C fseek y ftell en C Struct con punteros qsort con structs Lista de structs",
     "description": "Ejercicios resueltos de struct en C y manejo de ficheros con fread y fwrite. Incluye simulación de clases y herencia con structs.",
     "tags": [],
     "title": "Struct y ficheros",
@@ -1208,6 +1208,18 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
   },
   {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Struct y ficheros",
+    "content": "Lista de structs en C: ejercicio resuelto Si buscas lista de structs en C ejercicio resuelto, aquí tienes la lista enlazada simple donde cada nodo contiene una struct Contacto y el puntero al siguiente nodo. Este patrón combina la gestión de punteros con datos estructurados: hay que liberar tanto los campos dinámicos de la struct como el nodo mismo.\nEnunciado Define una struct Contacto con campos nombre (array de 32 caracteres), telefono (array de 16 caracteres) y siguiente (puntero al siguiente nodo). Implementa:\nlista_agregar(cabeza, nombre, tel): inserta un nodo al final. lista_buscar(cabeza, nombre): devuelve el puntero al nodo con ese nombre o NULL. lista_eliminar(cabeza, nombre): elimina el nodo con ese nombre. lista_imprimir(cabeza): imprime todos los contactos. lista_liberar(cabeza): libera todos los nodos. Solución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e #include \u003cstring.h\u003e #define MAX_NOM 32 #define MAX_TEL 16 typedef struct Contacto { char nombre[MAX_NOM]; char telefono[MAX_TEL]; struct Contacto *siguiente; } Contacto; Contacto *lista_agregar(Contacto *cabeza, const char *nom, const char *tel) { Contacto *nuevo = malloc(sizeof(Contacto)); if (!nuevo) return cabeza; strncpy(nuevo-\u003enombre, nom, MAX_NOM - 1); nuevo-\u003enombre[MAX_NOM - 1] = '\\0'; strncpy(nuevo-\u003etelefono, tel, MAX_TEL - 1); nuevo-\u003etelefono[MAX_TEL - 1] = '\\0'; nuevo-\u003esiguiente = NULL; if (!cabeza) return nuevo; /* Recorrer hasta el último nodo */ Contacto *cur = cabeza; while (cur-\u003esiguiente) cur = cur-\u003esiguiente; cur-\u003esiguiente = nuevo; return cabeza; } Contacto *lista_buscar(Contacto *cabeza, const char *nom) { for (Contacto *cur = cabeza; cur; cur = cur-\u003esiguiente) if (strncmp(cur-\u003enombre, nom, MAX_NOM) == 0) return cur; return NULL; } Contacto *lista_eliminar(Contacto *cabeza, const char *nom) { Contacto *prev = NULL, *cur = cabeza; while (cur) { if (strncmp(cur-\u003enombre, nom, MAX_NOM) == 0) { if (prev) prev-\u003esiguiente = cur-\u003esiguiente; else cabeza = cur-\u003esiguiente; free(cur); return cabeza; } prev = cur; cur = cur-\u003esiguiente; } return cabeza; /* no encontrado */ } void lista_imprimir(const Contacto *cabeza) { int i = 1; for (const Contacto *cur = cabeza; cur; cur = cur-\u003esiguiente, i++) printf(\" %d. %-20s %s\\n\", i, cur-\u003enombre, cur-\u003etelefono); } void lista_liberar(Contacto *cabeza) { Contacto *cur = cabeza; while (cur) { Contacto *sig = cur-\u003esiguiente; free(cur); cur = sig; } } int main(void) { Contacto *lista = NULL; lista = lista_agregar(lista, \"Ana Martínez\", \"600-111-222\"); lista = lista_agregar(lista, \"Luis García\", \"611-333-444\"); lista = lista_agregar(lista, \"Sofía Pérez\", \"622-555-666\"); lista = lista_agregar(lista, \"Carlos López\", \"633-777-888\"); printf(\"Lista completa:\\n\"); lista_imprimir(lista); Contacto *c = lista_buscar(lista, \"Luis García\"); printf(\"\\nBuscar 'Luis García': %s\\n\", c ? c-\u003etelefono : \"no encontrado\"); printf(\"\\nEliminando 'Ana Martínez'...\\n\"); lista = lista_eliminar(lista, \"Ana Martínez\"); lista_imprimir(lista); printf(\"\\nEliminando 'Carlos López'...\\n\"); lista = lista_eliminar(lista, \"Carlos López\"); lista_imprimir(lista); lista_liberar(lista); return 0; } Resultado esperado 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Lista completa: 1. Ana Martínez 600-111-222 2. Luis García 611-333-444 3. Sofía Pérez 622-555-666 4. Carlos López 633-777-888 Buscar 'Luis García': 611-333-444 Eliminando 'Ana Martínez'... 1. Luis García 611-333-444 2. Sofía Pérez 622-555-666 3. Carlos López 633-777-888 Eliminando 'Carlos López'... 1. Luis García 611-333-444 2. Sofía Pérez 622-555-666 Errores frecuentes No devolver la nueva cabeza cuando se elimina el primer nodo: si el nodo a eliminar es la cabeza, hay que actualizar cabeza = cur-\u003esiguiente y devolver el nuevo valor al llamador. Liberar cur antes de guardar cur-\u003esiguiente: una vez liberado, cur-\u003esiguiente es comportamiento indefinido. No actualizar el puntero siguiente del nodo anterior al eliminar: deja un puntero colgante que apunta al nodo liberado. No liberar todos los nodos al final: cada nodo fue asignado con malloc; hay que recorrer la lista y liberar cada uno. Aplicación práctica La lista enlazada de structs es el patrón básico de muchas estructuras de datos reales: tablas hash con encadenamiento para resolver colisiones, colas de eventos en sistemas operativos, gestores de plugins que añaden/eliminan módulos dinámicamente y cachés LRU donde se reordena o elimina la entrada más antigua.\nSiguiente ejercicio recomendado qsort con structs en C: ejercicio resuelto Struct con punteros en C: ejercicio resuelto Ficheros en C: ejercicios resueltos Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Por qué lista_eliminar y lista_agregar devuelven la nueva cabeza? Porque en C no hay referencias: si la cabeza cambia (se elimina el primer nodo o se inserta cuando la lista está vacía), el llamador debe recibir el nuevo puntero. El patrón idiomático es lista = lista_eliminar(lista, nombre).\n¿Cuándo usar lista enlazada en lugar de array dinámico? La lista es preferible cuando las inserciones/eliminaciones en el medio son frecuentes (O(1) con el puntero al nodo previo) y no necesitas acceso aleatorio. El array dinámico es mejor cuando necesitas acceso por índice (O(1)) o cuando la memoria contigua importa para el rendimiento de caché.\n¿Cómo detectar fugas de memoria en listas enlazadas? Con Valgrind: valgrind --leak-check=full ./programa. Cada nodo asignado con malloc que no se libere aparecerá como “definitely lost”. AddressSanitizer (gcc -fsanitize=address) también detecta accesos a memoria ya liberada (use-after-free).",
+    "description": "Ejercicio resuelto de lista enlazada de structs en C: inserción al final, búsqueda por campo y eliminación de nodo con gestión de memoria.",
+    "tags": [
+      "Intermedio",
+      "Struct",
+      "Estructuras-Datos"
+    ],
+    "title": "Lista de structs en C: ejercicio resuelto",
+    "uri": "/ejercicios/struct-ficheros/lista-de-structs-en-c-ejercicio-resuelto/index.html"
+  },
+  {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Ejercicios \u003e Estructuras de datos",
     "content": "Recorrido preorden de árbol binario en C: ejercicio resuelto Si buscas recorrido preorden de árbol binario en C ejercicio resuelto, aquí tienes las dos implementaciones canónicas: la versión recursiva (natural y concisa) y la iterativa con pila explícita (necesaria para árboles muy profundos que agotarían la pila del sistema).\nEn preorden el orden de visita es raíz → hijo izquierdo → hijo derecho (NLR: Node-Left-Right).\nEnunciado Dado el árbol:\n1 2 3 4 5 1 / \\ 2 3 / \\ \\ 4 5 6 Imprime los nodos en orden preorden de forma recursiva e iterativa.\nSolución en C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 #include \u003cstdio.h\u003e #include \u003cstdlib.h\u003e typedef struct Nodo { int dato; struct Nodo *izq, *der; } Nodo; Nodo *nuevo(int dato) { Nodo *n = malloc(sizeof(Nodo)); n-\u003edato = dato; n-\u003eizq = n-\u003eder = NULL; return n; } /* --- Versión recursiva --- */ void preorden_rec(const Nodo *n) { if (!n) return; printf(\"%d \", n-\u003edato); preorden_rec(n-\u003eizq); preorden_rec(n-\u003eder); } /* --- Versión iterativa con pila --- */ #define MAX_PILA 64 void preorden_iter(const Nodo *raiz) { if (!raiz) return; const Nodo *pila[MAX_PILA]; int tope = 0; pila[tope++] = raiz; while (tope \u003e 0) { const Nodo *n = pila[--tope]; printf(\"%d \", n-\u003edato); /* Apilar derecho primero para procesar izquierdo antes */ if (n-\u003eder) pila[tope++] = n-\u003eder; if (n-\u003eizq) pila[tope++] = n-\u003eizq; } } void liberar(Nodo *n) { if (!n) return; liberar(n-\u003eizq); liberar(n-\u003eder); free(n); } int main(void) { Nodo *raiz = nuevo(1); raiz-\u003eizq = nuevo(2); raiz-\u003eder = nuevo(3); raiz-\u003eizq-\u003eizq = nuevo(4); raiz-\u003eizq-\u003eder = nuevo(5); raiz-\u003eder-\u003eder = nuevo(6); printf(\"Recursivo: \"); preorden_rec(raiz); printf(\"\\n\"); printf(\"Iterativo: \"); preorden_iter(raiz); printf(\"\\n\"); liberar(raiz); return 0; } Resultado esperado 1 2 Recursivo: 1 2 4 5 3 6 Iterativo: 1 2 4 5 3 6 Errores frecuentes En la versión iterativa, apilar el hijo izquierdo antes que el derecho: como la pila es LIFO, hay que apilar derecho primero para que izquierdo se procese antes. No comprobar NULL antes de acceder a los hijos: n-\u003eizq-\u003edato sin verificar que n-\u003eizq != NULL provoca segmentation fault. No liberar la memoria del árbol: cada nodo se asigna con malloc y debe liberarse con free recorriendo el árbol en postorden. Confundir preorden con inorden: preorden visita la raíz primero (NLR); inorden visita la raíz entre los hijos (LNR). Aplicación práctica El recorrido preorden se usa para serializar/copiar un árbol (el orden de inserción reconstruye la misma estructura), para evaluar expresiones en notación prefija (árboles de expresión) y para imprimir la jerarquía de directorios de un sistema de ficheros.\nSiguiente ejercicio recomendado Recorrido postorden de árbol binario en C: ejercicio resuelto Árbol binario en C: ejercicio resuelto Cola en C: ejercicio resuelto Todos los ejercicios de C Práctica guiada y libro completo Si quieres una ruta completa con progresión real de dificultad:\nProgramación en C en 100 ejercicios resueltos Ver en Amazon (incluido en Kindle Unlimited) FAQ ¿Cuál es la diferencia entre preorden, inorden y postorden? Los tres recorren los mismos nodos pero en distinto orden:\nPreorden (NLR): raíz primero, luego subárbol izquierdo, luego derecho. Inorden (LNR): subárbol izquierdo, raíz, subárbol derecho. En un BST produce los valores ordenados. Postorden (LRN): subárboles primero, raíz al final. Útil para liberar memoria. ¿Cuándo usar la versión iterativa frente a la recursiva? La versión recursiva es más legible y suficiente para árboles de profundidad razonable. La iterativa es necesaria cuando el árbol puede ser muy profundo (miles de niveles) y la pila del sistema no es suficiente. En producción, los árboles auto-balanceados como AVL o Red-Black tienen profundidad O(log n), lo que hace la recursión segura.\n¿El recorrido preorden es único para un árbol dado? Sí: para un árbol binario dado, el preorden es único. Sin embargo, conocer solo el preorden no es suficiente para reconstruir el árbol; se necesita también el inorden (o marcar los nodos NULL explícitamente en la serialización).",
     "description": "Ejercicio resuelto de recorrido preorden (preorder) de árbol binario en C: implementación recursiva e iterativa con pila explícita.",
@@ -1487,14 +1499,6 @@ var relearn_searchindex = [
     "uri": "/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
   },
   {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Algoritmos",
-    "uri": "/tags/algoritmos/index.html"
-  },
-  {
     "breadcrumb": "",
     "content": "Recursos prácticos para aprender a programar en C.\nEjercicios resueltos Libro C100",
     "description": "Ejercicios resueltos de C paso a paso. Desde lo básico hasta estructuras de datos avanzadas.",
@@ -1509,6 +1513,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Ejercicios resueltos en C (paso a paso)",
     "uri": "/ejercicios/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Etiqueta :: Estructuras-Datos",
+    "uri": "/tags/estructuras-datos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
@@ -1539,6 +1551,14 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Etiqueta :: Algoritmos",
+    "uri": "/tags/algoritmos/index.html"
+  },
+  {
+    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Etiqueta :: Punteros",
     "uri": "/tags/punteros/index.html"
   },
@@ -1549,14 +1569,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Etiqueta :: Memoria",
     "uri": "/tags/memoria/index.html"
-  },
-  {
-    "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Etiqueta :: Estructuras-Datos",
-    "uri": "/tags/estructuras-datos/index.html"
   },
   {
     "breadcrumb": "Aprende C — ejercicios resueltos \u003e Etiquetas",
