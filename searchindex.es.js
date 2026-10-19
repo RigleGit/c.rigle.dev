@@ -1764,7 +1764,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C escribiendo programas \u003e Libro completo",
-    "content": "¡Gracias por tu interés! Aquí tienes los recursos del pack. Si acabas de solicitar el correo, revisa también la carpeta de spam y ten en cuenta que puede tardar unos minutos.\nChuleta A4 de Lenguaje C (PDF) Plantilla Devcontainer Repositorio completo de ejercicios Apúntate a la newsletter Tecnología, educación, programación, cultura de internet y herramientas útiles.\n← Volver a la página principal",
+    "content": "¡Gracias por tu interés! Aquí tienes los recursos del pack. Si acabas de solicitar el correo, revisa también la carpeta de spam y ten en cuenta que puede tardar unos minutos.\nChuleta A4 de Lenguaje C (PDF) Código de los ejercicios (ZIP) Entorno Devcontainer Apúntate a la newsletter Tecnología, educación, programación, cultura de internet y herramientas útiles.\n← Volver a la página principal",
     "description": "Accede de nuevo a la chuleta, Devcontainer y ejercicios del libro C100.",
     "tags": [],
     "title": "Gracias",
@@ -1773,7 +1773,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "Aprende C escribiendo programas \u003e Libro completo",
     "content": "Tu pack del lector está listo Recibe por correo la chuleta A4 de C, el código de los ejercicios y el entorno Devcontainer opcional.\nRecibir los recursos por correo Nombre (opcional)\nCorreo electrónico\nWebsite Recibir el pack\nLa solicitud es solo para recibir el pack; no te suscribe a la newsletter. Consulta la política de privacidad.\nRecursos disponibles ahora Chuleta de C (PDF)\nCódigo de los ejercicios (ZIP)\nDevcontainer\nMás recursos Repositorio del código Erratas y sugerencias Suscribirte a la newsletter",
-    "description": "Recibe la chuleta de C, plantilla de proyecto y Devcontainer del libro C100.",
+    "description": "Recibe la chuleta de C, el código de los ejercicios y el entorno Devcontainer opcional del libro C100.",
     "tags": [],
     "title": "Pack del lector – C100",
     "uri": "/c100/pack/index.html"

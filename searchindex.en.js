@@ -1748,8 +1748,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
-    "content": "Your reader pack is ready Request the C cheat sheet, exercise code and optional Devcontainer environment by email.\nReceive the resources by email Name (optional)\nEmail\nWebsite Send me the pack\nThis requests the reader pack only; it does not subscribe you to the newsletter. See the privacy policy.\nResources you can use now C cheat sheet (PDF)\nExercise code (ZIP)\nDevcontainer\nMore resources Code repository Errata and suggestions Subscribe to the newsletter",
-    "description": "Receive the C cheat sheet, project template and Devcontainer from the book C100.",
+    "content": "Your reader pack is ready Request the C cheat sheet (in Spanish), exercise code and optional Devcontainer environment by email.\nReceive the resources by email Name (optional)\nEmail\nWebsite Send me the pack\nThis requests the reader pack only; it does not subscribe you to the newsletter. See the privacy policy.\nResources you can use now C cheat sheet (PDF, Spanish)\nExercise code (ZIP)\nDevcontainer\nMore resources Code repository Errata and suggestions Subscribe to the newsletter",
+    "description": "Receive the C cheat sheet in Spanish, exercise code and optional Devcontainer environment from the book C100.",
     "tags": [],
     "title": "Reader Pack – Programming in C in 100 Exercises",
     "uri": "/en/c100/pack/index.html"
@@ -1764,7 +1764,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
-    "content": "Thank you for your interest! Here are the pack resources. If you just requested the email, check your spam folder too and allow a few minutes for delivery.\nC Language A4 Cheat Sheet (PDF) Devcontainer Template Complete exercises repository Sign up for the newsletter Technology, education, programming, internet culture and useful tools.\n← Back to main page",
+    "content": "Thank you for your interest! Here are the pack resources. If you just requested the email, check your spam folder too and allow a few minutes for delivery.\nC Language A4 Cheat Sheet (PDF, Spanish) Exercise code (ZIP) Devcontainer environment Sign up for the newsletter Technology, education, programming, internet culture and useful tools.\n← Back to main page",
     "description": "Access again the cheat sheet, Devcontainer and exercises from the book C100.",
     "tags": [],
     "title": "Thank You",
