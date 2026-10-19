@@ -18,10 +18,11 @@
 
 /* --- HERO --- */
 .c100-hero-panel {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2rem 0 2.5rem;
+  gap: 2rem;
+  padding: 1rem 0 2rem;
   border-bottom: 2px solid #e8f5f2;
   margin-bottom: 2.5rem;
 }
@@ -38,8 +39,10 @@
 }
 
 .c100-book-cover {
-  width: 200px;
-  min-width: 200px;
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
   border-radius: 6px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   transition: transform 0.2s;
@@ -284,9 +287,9 @@
   margin-top: 0.5rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #2A9D8F !important;
+  color: #176b60 !important;
   text-decoration: none;
-  border-bottom: 1.5px solid #2A9D8F;
+  border-bottom: 1.5px solid #176b60;
   padding-bottom: 1px;
 }
 
@@ -360,14 +363,14 @@ article h1 {
 /* --- Responsive --- */
 @media (max-width: 700px) {
   .c100-hero-panel {
-    flex-direction: column-reverse;
-    text-align: center;
+    grid-template-columns: minmax(0, 1fr);
+    text-align: left;
     gap: 1.5rem;
   }
 
   .c100-book-cover {
-    width: 160px;
-    min-width: 160px;
+    width: 140px;
+    margin-inline: auto;
   }
 
   .c100-buy-grid,
@@ -383,3 +386,63 @@ article h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Reading routes and book actions share the site's existing visual language. */
+.c100-hero-copy { min-width: 0; }
+.c100-hero-copy > p { line-height: 1.55; }
+.c100-eyebrow {
+  margin: 0 0 .75rem;
+  font-size: .8rem;
+  font-weight: 650;
+  letter-spacing: .04em;
+  color: var(--MAIN-TEXT-color, #263c36);
+}
+.c100-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0; }
+.c100-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: .65rem 1rem;
+  border: 1.5px solid #176b60;
+  border-radius: 6px;
+  font-weight: 650;
+  font-size: .95rem;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+.c100-action-primary { background: #176b60; color: #fff !important; }
+.c100-action-primary:hover { background: #11554c; border-color: #11554c; }
+.c100-action-secondary { color: var(--MAIN-TEXT-color, #173e35) !important; }
+.c100-action-secondary:hover { background: rgba(42,157,143,.1); }
+.c100-action:focus-visible, .c-learning-path:focus-visible { outline: 3px solid var(--MAIN-LINK-color, #2f81eb); outline-offset: 4px; }
+.c100-hero-note { font-size: .8rem; margin-bottom: 0; }
+.c100-reader-fit, .c100-sample { margin-bottom: 2.5rem; }
+.c100-reader-fit h2, .c100-sample h2, .c-home-book h2 { font-size: 1.4rem; text-transform: none; letter-spacing: normal; }
+.c100-sample { padding-block: 1.25rem; border-block: 1px solid rgba(128,128,128,.35); }
+.c-learning-paths { margin: 2rem 0; border-top: 1px solid rgba(128,128,128,.35); }
+.c-learning-path {
+  display: grid;
+  grid-template-columns: 2rem minmax(0,1fr) 1rem;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(128,128,128,.35);
+  color: var(--MAIN-TEXT-color, #263c36) !important;
+  text-decoration: none !important;
+}
+.c-learning-path:hover { background: rgba(42,157,143,.06); }
+.c-path-number { font-family: monospace; font-size: .85rem; padding-top: .15rem; }
+.c-learning-path strong { display: block; font-size: 1.15rem; margin-bottom: .35rem; color: var(--MAIN-TITLES-TEXT-color, #173e35); }
+.c-learning-path strong + span { display: block; font-size: .95rem; line-height: 1.6; }
+.c-home-book { margin-top: 2.5rem; padding: 1.25rem 1.5rem; border-left: 3px solid #2a9d8f; background: rgba(42,157,143,.06); }
+@media (max-width: 700px) {
+  .c100-actions { flex-direction: column; }
+  .c100-action { width: 100%; box-sizing: border-box; }
+  .c-learning-path { gap: .5rem; grid-template-columns: 1.5rem minmax(0,1fr) .8rem; }
+}
+
+.pack-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+#packForm fieldset { border: 1px solid rgba(128,128,128,.35); padding: 1rem; min-width: 0; }
+#packForm input { max-width: 100%; box-sizing: border-box; }
+#packStatus { min-height: 1.5em; }
