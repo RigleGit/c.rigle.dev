@@ -1772,7 +1772,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Aprende C escribiendo programas \u003e Libro completo",
-    "content": "Tu pack del lector está listo Recibe por correo la chuleta A4 de C, el código de los ejercicios y el entorno Devcontainer opcional.\nEl envío por correo no está disponible ahora. Puedes acceder a los recursos de abajo.\nRecibir los recursos por correo Nombre (opcional)\nCorreo electrónico\nWebsite Recibir el pack\nLa solicitud es solo para recibir el pack; no te suscribe a la newsletter. Consulta la política de privacidad.\nRecursos disponibles ahora Chuleta de C (PDF)\nCódigo de los ejercicios (ZIP)\nDevcontainer\nMás recursos Repositorio del código Erratas y sugerencias Suscribirte a la newsletter",
+    "content": "Tu pack del lector está listo Recibe por correo la chuleta A4 de C, el código de los ejercicios y el entorno Devcontainer opcional.\nRecibir los recursos por correo Nombre (opcional)\nCorreo electrónico\nWebsite Recibir el pack\nLa solicitud es solo para recibir el pack; no te suscribe a la newsletter. Consulta la política de privacidad.\nRecursos disponibles ahora Chuleta de C (PDF)\nCódigo de los ejercicios (ZIP)\nDevcontainer\nMás recursos Repositorio del código Erratas y sugerencias Suscribirte a la newsletter",
     "description": "Recibe la chuleta de C, plantilla de proyecto y Devcontainer del libro C100.",
     "tags": [],
     "title": "Pack del lector – C100",

@@ -1748,7 +1748,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
-    "content": "Your reader pack is ready Request the C cheat sheet, exercise code and optional Devcontainer environment by email.\nEmail delivery is unavailable right now. The resources below are ready to use.\nReceive the resources by email Name (optional)\nEmail\nWebsite Send me the pack\nThis requests the reader pack only; it does not subscribe you to the newsletter. See the privacy policy.\nResources you can use now C cheat sheet (PDF)\nExercise code (ZIP)\nDevcontainer\nMore resources Code repository Errata and suggestions Subscribe to the newsletter",
+    "content": "Your reader pack is ready Request the C cheat sheet, exercise code and optional Devcontainer environment by email.\nReceive the resources by email Name (optional)\nEmail\nWebsite Send me the pack\nThis requests the reader pack only; it does not subscribe you to the newsletter. See the privacy policy.\nResources you can use now C cheat sheet (PDF)\nExercise code (ZIP)\nDevcontainer\nMore resources Code repository Errata and suggestions Subscribe to the newsletter",
     "description": "Receive the C cheat sheet, project template and Devcontainer from the book C100.",
     "tags": [],
     "title": "Reader Pack – Programming in C in 100 Exercises",
