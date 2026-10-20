@@ -5,15 +5,15 @@ var relearn_searchindex = [
     "description": "Solved C programming exercises with clear explanations and compilable code on pointers, linked lists, recursion, dynamic memory, and file handling.",
     "tags": [],
     "title": "Solved C programming exercises (step by step)",
-    "uri": "/en/ejercicios/index.html"
+    "uri": "/en/ejercicios/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Practise C fundamentals with solved exercises on input, variables, operators, conditionals and loops.",
     "tags": [],
     "title": "Fundamentals",
-    "uri": "/en/ejercicios/fundamentos/index.html"
+    "uri": "/en/ejercicios/fundamentos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Resources \u0026 guides",
@@ -24,7 +24,7 @@ var relearn_searchindex = [
       "Resources"
     ],
     "title": "Online C compiler: 7 options to practice C without installing anything",
-    "uri": "/en/ejercicios/recursos/c-online-compiler-para-practicar-c/index.html"
+    "uri": "/en/ejercicios/recursos/c-online-compiler-para-practicar-c/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -35,7 +35,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Data types in C: solved exercise with sizeof and casts",
-    "uri": "/en/ejercicios/fundamentos/tipos-de-datos-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/tipos-de-datos-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -46,7 +46,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Arrays and vectors in C: solved beginner exercises",
-    "uri": "/en/ejercicios/arrays-cadenas/arreglos-vectores-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/arreglos-vectores-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -57,7 +57,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Struct in C: solved exercise with arrays of structs",
-    "uri": "/en/ejercicios/struct-ficheros/struct-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/struct-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -68,7 +68,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Singly linked list in C: solved exercise with insert and delete",
-    "uri": "/en/ejercicios/estructuras-datos/lista-simplemente-enlazada-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/lista-simplemente-enlazada-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -79,7 +79,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Pointers in C: solved pass-by-reference exercises",
-    "uri": "/en/ejercicios/punteros-memoria/punteros-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/punteros-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -90,15 +90,15 @@ var relearn_searchindex = [
       "Recursion"
     ],
     "title": "Recursion in C: solved exercise to reverse a string",
-    "uri": "/en/ejercicios/algoritmos/recursividad-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/algoritmos/recursividad-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Work through C exercises on arrays and strings, with solutions explaining indexing, text processing and common mistakes.",
     "tags": [],
     "title": "Arrays \u0026 strings",
-    "uri": "/en/ejercicios/arrays-cadenas/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -109,7 +109,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Sequential programming in C: solved exercises from scratch",
-    "uri": "/en/ejercicios/fundamentos/programacion-secuencial-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/fundamentos/programacion-secuencial-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -120,7 +120,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Classes in C with struct: solved modular design exercise",
-    "uri": "/en/ejercicios/struct-ficheros/simular-clases-con-struct-en-c/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/simular-clases-con-struct-en-c/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Resources \u0026 guides",
@@ -131,7 +131,7 @@ var relearn_searchindex = [
       "Resources"
     ],
     "title": "Best books to learn C in 2026: comparison by level and learning style",
-    "uri": "/en/ejercicios/recursos/mejores-libros-para-aprender-c/index.html"
+    "uri": "/en/ejercicios/recursos/mejores-libros-para-aprender-c/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -142,7 +142,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Pointer to pointer in C: solved exercise with reference update",
-    "uri": "/en/ejercicios/punteros-memoria/puntero-a-puntero-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/puntero-a-puntero-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -153,7 +153,7 @@ var relearn_searchindex = [
       "Search"
     ],
     "title": "Binary search in C: solved exercise on sorted arrays",
-    "uri": "/en/ejercicios/algoritmos/busqueda-binaria-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/busqueda-binaria-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -164,7 +164,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Doubly linked list in C: solved exercise with insert and traversal",
-    "uri": "/en/ejercicios/estructuras-datos/lista-doblemente-enlazada-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/lista-doblemente-enlazada-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -175,7 +175,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Matrices in C: solved main and secondary diagonal exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/matrices-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/matrices-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs",
@@ -183,15 +183,15 @@ var relearn_searchindex = [
     "description": "Learn C programming with 100 exercises explained step by step. Clear statements, reasoned solutions and practical resources to progress with confidence.",
     "tags": [],
     "title": "Programming in C in 100 Solved Exercises",
-    "uri": "/en/c100/index.html"
+    "uri": "/en/c100/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Practise pointers and dynamic memory in C with solved exercises and explanations of allocation, access and memory management.",
     "tags": [],
     "title": "Pointers \u0026 memory",
-    "uri": "/en/ejercicios/punteros-memoria/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -202,7 +202,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Inheritance in C: solved exercise with composition and pointers",
-    "uri": "/en/ejercicios/struct-ficheros/simular-herencia-en-c-con-composicion/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/simular-herencia-en-c-con-composicion/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -214,7 +214,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "memset in C: solved exercise to initialize arrays and buffers",
-    "uri": "/en/ejercicios/arrays-cadenas/memset-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/memset-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -225,7 +225,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "If else in C: solved exercises with nested conditions",
-    "uri": "/en/ejercicios/fundamentos/if-else-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/fundamentos/if-else-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Resources \u0026 guides",
@@ -236,7 +236,7 @@ var relearn_searchindex = [
       "Resources"
     ],
     "title": "Is learning C worth it in 2026? Practical decision guide",
-    "uri": "/en/ejercicios/recursos/merece-la-pena-aprender-c/index.html"
+    "uri": "/en/ejercicios/recursos/merece-la-pena-aprender-c/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -247,7 +247,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Circular linked list in C: solved insert and traversal exercise",
-    "uri": "/en/ejercicios/estructuras-datos/lista-circular-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/lista-circular-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -259,7 +259,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "Malloc and free in C: solved dynamic memory exercise",
-    "uri": "/en/ejercicios/punteros-memoria/malloc-free-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/malloc-free-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -270,15 +270,15 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Bubble sort in C: solved exercise step by step",
-    "uri": "/en/ejercicios/algoritmos/ordenacion-burbuja-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/ordenacion-burbuja-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Learn to organise data with structs and read and write files in C through solved programming exercises.",
     "tags": [],
     "title": "Structs \u0026 files",
-    "uri": "/en/ejercicios/struct-ficheros/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Resources \u0026 guides",
@@ -289,7 +289,7 @@ var relearn_searchindex = [
       "Resources"
     ],
     "title": "C vs Rust vs C++ vs C#: practical comparison to choose in 2026",
-    "uri": "/en/ejercicios/recursos/c-vs-rust-vs-cpp-vs-csharp-comparativa-practica/index.html"
+    "uri": "/en/ejercicios/recursos/c-vs-rust-vs-cpp-vs-csharp-comparativa-practica/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -301,7 +301,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "malloc and realloc in C: solved dynamic array exercise",
-    "uri": "/en/ejercicios/punteros-memoria/malloc-realloc-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/malloc-realloc-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -312,7 +312,7 @@ var relearn_searchindex = [
       "Loops"
     ],
     "title": "For loop in C: solved exercises with accumulators and counters",
-    "uri": "/en/ejercicios/fundamentos/for-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/fundamentos/for-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -323,7 +323,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Insertion sort in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/insercion-directa-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/insercion-directa-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -334,7 +334,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Strings in C: solved exercises with strlen, strcpy, and strcmp",
-    "uri": "/en/ejercicios/arrays-cadenas/cadenas-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/cadenas-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -345,7 +345,7 @@ var relearn_searchindex = [
       "Stacks-Queues"
     ],
     "title": "Stack in C: solved exercise with push, pop, and peek",
-    "uri": "/en/ejercicios/estructuras-datos/pila-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/pila-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -356,15 +356,15 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Files in C: solved exercise to count lines and characters",
-    "uri": "/en/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/ficheros-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Practise data structures in C with solved exercises, source code and explanations to compare with your own solutions.",
     "tags": [],
     "title": "Data structures",
-    "uri": "/en/ejercicios/estructuras-datos/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -375,7 +375,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strcpy and strncpy in C: solved safe-copy exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/strcpy-strncpy-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strcpy-strncpy-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -386,7 +386,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "calloc in C: solved exercise with zero-initialized dynamic array",
-    "uri": "/en/ejercicios/punteros-memoria/calloc-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/calloc-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -397,7 +397,7 @@ var relearn_searchindex = [
       "Loops"
     ],
     "title": "While and do while in C: solved exercises",
-    "uri": "/en/ejercicios/fundamentos/while-do-while-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/fundamentos/while-do-while-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -408,7 +408,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Binary insertion sort in C: solved sorting exercise",
-    "uri": "/en/ejercicios/algoritmos/insercion-binaria-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/insercion-binaria-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -419,7 +419,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "fread and fwrite in C: solved binary file exercise",
-    "uri": "/en/ejercicios/struct-ficheros/fread-fwrite-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/fread-fwrite-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -430,15 +430,15 @@ var relearn_searchindex = [
       "Stacks-Queues"
     ],
     "title": "Queue in C: solved exercise with circular array",
-    "uri": "/en/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/cola-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Explore solved C exercises on searching, sorting and algorithms, with code and explanations to compare with your own solutions.",
     "tags": [],
     "title": "Algorithms",
-    "uri": "/en/ejercicios/algoritmos/index.html"
+    "uri": "/en/ejercicios/algoritmos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -449,7 +449,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "union in C: solved exercise to save memory",
-    "uri": "/en/ejercicios/struct-ficheros/union-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/union-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -460,7 +460,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strcmp and strncmp in C: solved string-comparison exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/strcmp-strncmp-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strcmp-strncmp-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -471,7 +471,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Function pointers in C: solved exercise with callbacks",
-    "uri": "/en/ejercicios/punteros-memoria/punteros-a-funciones-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/punteros-a-funciones-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -482,7 +482,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Functions in C: solved exercises step by step",
-    "uri": "/en/ejercicios/fundamentos/funciones-en-c-ejercicios-resueltos/index.html"
+    "uri": "/en/ejercicios/fundamentos/funciones-en-c-ejercicios-resueltos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -493,7 +493,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Shell sort in C: solved exercise step by step",
-    "uri": "/en/ejercicios/algoritmos/shell-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/shell-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -504,7 +504,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "Binary tree in C: solved insertion and search exercise",
-    "uri": "/en/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/arbol-binario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -515,7 +515,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "Double free in C: solved exercise to avoid memory corruption",
-    "uri": "/en/ejercicios/punteros-memoria/doble-free-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/doble-free-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -526,7 +526,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Bitfields in C: solved exercise for compact flags",
-    "uri": "/en/ejercicios/struct-ficheros/bitfields-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/bitfields-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -537,7 +537,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "AVL tree in C: solved exercise with basic rotations",
-    "uri": "/en/ejercicios/estructuras-datos/arbol-avl-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/arbol-avl-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -548,7 +548,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strlen, strchr and strstr in C: solved text-search exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/strlen-strchr-strstr-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strlen-strchr-strstr-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -559,15 +559,15 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Switch case in C: solved exercise with interactive menu",
-    "uri": "/en/ejercicios/fundamentos/switch-case-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/switch-case-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
     "content": "",
-    "description": "",
+    "description": "Find C programming resources and practical guides to support your learning and help you work through the exercises.",
     "tags": [],
     "title": "Resources \u0026 guides",
-    "uri": "/en/ejercicios/recursos/index.html"
+    "uri": "/en/ejercicios/recursos/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -578,7 +578,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Merge sort in C: solved exercise with divide and conquer",
-    "uri": "/en/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/merge-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -589,7 +589,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "Memory leak in C: solved exercise and fix",
-    "uri": "/en/ejercicios/punteros-memoria/fuga-de-memoria-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/fuga-de-memoria-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -600,7 +600,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "fgets in C: solved exercise for safe text input",
-    "uri": "/en/ejercicios/struct-ficheros/fgets-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/fgets-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -611,7 +611,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Hash table in C: solved exercise with chaining",
-    "uri": "/en/ejercicios/estructuras-datos/tabla-hash-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/tabla-hash-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -622,7 +622,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "memcpy and memmove in C: solved overlap exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/memcpy-memmove-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/memcpy-memmove-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -633,7 +633,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Enum and typedef in C: solved exercise with states",
-    "uri": "/en/ejercicios/fundamentos/enum-typedef-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/enum-typedef-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -644,7 +644,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Quicksort in C: solved exercise with Lomuto partition",
-    "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/quicksort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -655,7 +655,7 @@ var relearn_searchindex = [
       "Dynamic-Memory"
     ],
     "title": "safe realloc in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/realloc-seguro-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/realloc-seguro-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -666,7 +666,7 @@ var relearn_searchindex = [
       "Stacks-Queues"
     ],
     "title": "Priority queue in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/cola-de-prioridad-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/cola-de-prioridad-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -677,7 +677,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "2D array in C: solved matrix exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/array-bidimensional-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/array-bidimensional-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -688,7 +688,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "fprintf and fscanf in C: solved exercise with text file",
-    "uri": "/en/ejercicios/struct-ficheros/fprintf-fscanf-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/fprintf-fscanf-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -699,7 +699,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "scanf and printf in C: solved input-output exercise",
-    "uri": "/en/ejercicios/fundamentos/scanf-printf-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/scanf-printf-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -710,7 +710,7 @@ var relearn_searchindex = [
       "Search"
     ],
     "title": "Linear search in C: solved exercise on unsorted arrays",
-    "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/busqueda-lineal-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -721,7 +721,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Pointer arithmetic in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/aritmetica-de-punteros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/aritmetica-de-punteros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -732,7 +732,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "Graph adjacency list in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/grafo-lista-adyacencia-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/grafo-lista-adyacencia-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -743,7 +743,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Reverse string in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/invertir-cadena-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/invertir-cadena-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -754,7 +754,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Binary files and struct in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/archivos-binarios-struct-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/archivos-binarios-struct-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -765,7 +765,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "qsort in C: solved exercise with custom comparator",
-    "uri": "/en/ejercicios/algoritmos/qsort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/qsort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -776,7 +776,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "const in C: solved exercise with read-only parameters",
-    "uri": "/en/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/const-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -787,7 +787,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Arrays of pointers in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/arrays-de-punteros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/arrays-de-punteros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -798,7 +798,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "BFS in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/bfs-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/bfs-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -809,7 +809,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Count vowels in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/contar-vocales-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/contar-vocales-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -820,7 +820,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Error handling with errno in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/manejo-de-errores-con-errno-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/manejo-de-errores-con-errno-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -831,7 +831,7 @@ var relearn_searchindex = [
       "Search"
     ],
     "title": "bsearch in C: solved exercise on sorted array",
-    "uri": "/en/ejercicios/algoritmos/bsearch-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/bsearch-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -842,7 +842,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "sizeof in C: solved exercise with types and arrays",
-    "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/sizeof-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -853,7 +853,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Void pointer in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/void-pointer-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/void-pointer-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -864,7 +864,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Read CSV in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/csv-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/csv-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -875,7 +875,7 @@ var relearn_searchindex = [
       "Structs"
     ],
     "title": "DFS in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/dfs-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/dfs-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -886,7 +886,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Remove spaces in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/eliminar-espacios-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/eliminar-espacios-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -897,7 +897,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Relational and logical operators in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/operadores-relacionales-logicos-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/operadores-relacionales-logicos-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -908,7 +908,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Selection sort in C: solved exercise step by step",
-    "uri": "/en/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/selection-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -920,7 +920,7 @@ var relearn_searchindex = [
       "Struct"
     ],
     "title": "Pointer to struct in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/puntero-a-struct-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/puntero-a-struct-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -931,7 +931,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Insert into a sorted linked list in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/insertar-en-lista-ordenada-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/insertar-en-lista-ordenada-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -942,7 +942,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strtok in C: solved exercise for splitting CSV strings",
-    "uri": "/en/ejercicios/arrays-cadenas/strtok-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strtok-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -953,7 +953,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Temporary file in C: solved exercise with tmpfile",
-    "uri": "/en/ejercicios/struct-ficheros/archivo-temporal-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/archivo-temporal-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -964,7 +964,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Ternary operator in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/operador-ternario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/operador-ternario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -975,7 +975,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Heap sort in C: solved exercise with max heap",
-    "uri": "/en/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/heap-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -986,7 +986,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "const pointer in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/const-pointer-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/const-pointer-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -997,7 +997,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Delete a node from a singly linked list in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/eliminar-nodo-lista-simple-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/eliminar-nodo-lista-simple-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -1008,7 +1008,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "Copy a file in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/copiar-archivo-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/copiar-archivo-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1019,7 +1019,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strtol in C: solved exercise for converting text to integer",
-    "uri": "/en/ejercicios/arrays-cadenas/strtol-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strtol-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1030,7 +1030,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Counting sort in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/counting-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/counting-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1041,7 +1041,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Explicit casting in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/casting-explicito-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Pointers \u0026 memory",
@@ -1053,7 +1053,7 @@ var relearn_searchindex = [
       "Memory"
     ],
     "title": "Dynamic buffer in C: solved exercise",
-    "uri": "/en/ejercicios/punteros-memoria/buffer-dinamico-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/punteros-memoria/buffer-dinamico-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1065,7 +1065,7 @@ var relearn_searchindex = [
       "Loops"
     ],
     "title": "Break and continue in C: solved exercise with loops",
-    "uri": "/en/ejercicios/fundamentos/break-continue-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/break-continue-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1076,7 +1076,7 @@ var relearn_searchindex = [
       "Linked-Lists"
     ],
     "title": "Reverse a linked list in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/invertir-lista-enlazada-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/invertir-lista-enlazada-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -1087,7 +1087,7 @@ var relearn_searchindex = [
       "Files"
     ],
     "title": "fseek and ftell in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/fseek-ftell-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/fseek-ftell-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1098,7 +1098,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Palindrome in C: solved exercise with two indices",
-    "uri": "/en/ejercicios/arrays-cadenas/palindromo-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/palindromo-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1109,7 +1109,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Radix sort in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/radix-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -1121,7 +1121,7 @@ var relearn_searchindex = [
       "Pointers"
     ],
     "title": "Struct with pointers in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/struct-con-punteros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/struct-con-punteros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1132,7 +1132,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Bitwise operators in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/operadores-bit-a-bit-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/operadores-bit-a-bit-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1143,7 +1143,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "In-order traversal of a binary tree in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/recorrido-inorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/recorrido-inorden-arbol-binario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1154,7 +1154,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Count words in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/contar-palabras-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/contar-palabras-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1165,7 +1165,7 @@ var relearn_searchindex = [
       "Search"
     ],
     "title": "Interpolation search in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/interpolation-search-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -1177,7 +1177,7 @@ var relearn_searchindex = [
       "Algorithms"
     ],
     "title": "qsort with structs in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/qsort-con-structs-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/qsort-con-structs-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1188,7 +1188,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Define and macros in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/define-macros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/define-macros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1199,7 +1199,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "Height of a binary tree in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/altura-arbol-binario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/altura-arbol-binario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1210,7 +1210,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Matrix transpose in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/matriz-transpuesta-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/matriz-transpuesta-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1221,7 +1221,7 @@ var relearn_searchindex = [
       "Algorithms"
     ],
     "title": "Euclidean algorithm (GCD) in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/euclides-mcd-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Structs \u0026 files",
@@ -1233,7 +1233,7 @@ var relearn_searchindex = [
       "Data-Structures"
     ],
     "title": "List of structs in C: solved exercise",
-    "uri": "/en/ejercicios/struct-ficheros/lista-de-structs-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/struct-ficheros/lista-de-structs-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1245,7 +1245,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "Binary tree preorder traversal in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/recorrido-preorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/recorrido-preorden-arbol-binario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1256,7 +1256,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Static variables in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/static-variables-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/static-variables-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1267,7 +1267,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Merge of sorted arrays in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/merge-de-arrays-ordenados-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/merge-de-arrays-ordenados-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1278,7 +1278,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Main diagonal sum in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/suma-diagonal-principal-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1290,7 +1290,7 @@ var relearn_searchindex = [
       "Trees"
     ],
     "title": "Binary tree postorder traversal in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/recorrido-postorden-arbol-binario-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/recorrido-postorden-arbol-binario-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1302,7 +1302,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "sprintf and snprintf in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/sprintf-snprintf-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/sprintf-snprintf-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Fundamentals",
@@ -1314,7 +1314,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Arrays as parameters in C: solved exercise",
-    "uri": "/en/ejercicios/fundamentos/arrays-como-parametros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/fundamentos/arrays-como-parametros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1325,7 +1325,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Remove duplicates from a sorted array in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/eliminar-duplicados-array-ordenado-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1336,7 +1336,7 @@ var relearn_searchindex = [
       "Data-Structures"
     ],
     "title": "Min-heap in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/min-heap-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/min-heap-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1348,7 +1348,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "strcat and strncat in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/strcat-strncat-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/strcat-strncat-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1359,7 +1359,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Maximum subarray (Kadane) in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/maximo-subarray-kadane-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/maximo-subarray-kadane-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1371,7 +1371,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "Trie in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/trie-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/trie-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1383,7 +1383,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "atoi in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/atoi-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/atoi-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1394,7 +1394,7 @@ var relearn_searchindex = [
       "Fundamentals"
     ],
     "title": "Sieve of Eratosthenes in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/criba-de-eratostenes-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Data structures",
@@ -1405,7 +1405,7 @@ var relearn_searchindex = [
       "Data-Structures"
     ],
     "title": "Deque in C: solved exercise",
-    "uri": "/en/ejercicios/estructuras-datos/deque-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/estructuras-datos/deque-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1417,7 +1417,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Rotate array in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/rotar-array-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/rotar-array-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1429,7 +1429,7 @@ var relearn_searchindex = [
       "Recursion"
     ],
     "title": "Fibonacci in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/fibonacci-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1441,7 +1441,7 @@ var relearn_searchindex = [
       "Matrices"
     ],
     "title": "Matrix multiplication in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/producto-matrices-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/producto-matrices-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1453,7 +1453,7 @@ var relearn_searchindex = [
       "Recursion"
     ],
     "title": "Factorial in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/factorial-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/factorial-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Arrays \u0026 strings",
@@ -1465,7 +1465,7 @@ var relearn_searchindex = [
       "Strings"
     ],
     "title": "toupper and tolower in C: solved exercise",
-    "uri": "/en/ejercicios/arrays-cadenas/toupper-tolower-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/arrays-cadenas/toupper-tolower-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1477,7 +1477,7 @@ var relearn_searchindex = [
       "Arrays"
     ],
     "title": "Two pointers in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/dos-punteros-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/dos-punteros-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1488,7 +1488,7 @@ var relearn_searchindex = [
       "Algorithms"
     ],
     "title": "Fast exponentiation in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/potencia-rapida-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1500,7 +1500,7 @@ var relearn_searchindex = [
       "Graphs"
     ],
     "title": "Dijkstra in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/dijkstra-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises \u003e Algorithms",
@@ -1512,7 +1512,7 @@ var relearn_searchindex = [
       "Sorting-Algorithms"
     ],
     "title": "Bucket sort in C: solved exercise",
-    "uri": "/en/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/index.html"
+    "uri": "/en/ejercicios/algoritmos/bucket-sort-en-c-ejercicio-resuelto/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1520,7 +1520,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Data-Structures",
-    "uri": "/en/tags/data-structures/index.html"
+    "uri": "/en/tags/data-structures/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1528,7 +1528,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Intermediate",
-    "uri": "/en/tags/intermediate/index.html"
+    "uri": "/en/tags/intermediate/"
   },
   {
     "breadcrumb": "",
@@ -1536,7 +1536,7 @@ var relearn_searchindex = [
     "description": "Start learning C, practise by topic or follow a complete book. Solved exercises, explanations and a clear route through the fundamentals.",
     "tags": [],
     "title": "Learn C by writing programs",
-    "uri": "/en/index.html"
+    "uri": "/en/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1544,7 +1544,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Struct",
-    "uri": "/en/tags/struct/index.html"
+    "uri": "/en/tags/struct/"
   },
   {
     "breadcrumb": "Learn C by writing programs",
@@ -1552,7 +1552,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/en/tags/index.html"
+    "uri": "/en/tags/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1560,7 +1560,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Algorithms",
-    "uri": "/en/tags/algorithms/index.html"
+    "uri": "/en/tags/algorithms/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1568,7 +1568,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Pointers",
-    "uri": "/en/tags/pointers/index.html"
+    "uri": "/en/tags/pointers/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1576,7 +1576,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Memory",
-    "uri": "/en/tags/memory/index.html"
+    "uri": "/en/tags/memory/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1584,7 +1584,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Advanced",
-    "uri": "/en/tags/advanced/index.html"
+    "uri": "/en/tags/advanced/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1592,7 +1592,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Strings",
-    "uri": "/en/tags/strings/index.html"
+    "uri": "/en/tags/strings/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1600,7 +1600,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Trees",
-    "uri": "/en/tags/trees/index.html"
+    "uri": "/en/tags/trees/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1608,7 +1608,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Arrays-Strings",
-    "uri": "/en/tags/arrays-strings/index.html"
+    "uri": "/en/tags/arrays-strings/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1616,7 +1616,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Beginner",
-    "uri": "/en/tags/beginner/index.html"
+    "uri": "/en/tags/beginner/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1624,7 +1624,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Matrices",
-    "uri": "/en/tags/matrices/index.html"
+    "uri": "/en/tags/matrices/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1632,7 +1632,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Arrays",
-    "uri": "/en/tags/arrays/index.html"
+    "uri": "/en/tags/arrays/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1640,7 +1640,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Sorting-Algorithms",
-    "uri": "/en/tags/sorting-algorithms/index.html"
+    "uri": "/en/tags/sorting-algorithms/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1648,7 +1648,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Graphs",
-    "uri": "/en/tags/graphs/index.html"
+    "uri": "/en/tags/graphs/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1656,7 +1656,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Recursion",
-    "uri": "/en/tags/recursion/index.html"
+    "uri": "/en/tags/recursion/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1664,7 +1664,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Fundamentals",
-    "uri": "/en/tags/fundamentals/index.html"
+    "uri": "/en/tags/fundamentals/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1672,7 +1672,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Loops",
-    "uri": "/en/tags/loops/index.html"
+    "uri": "/en/tags/loops/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1680,7 +1680,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Linked-Lists",
-    "uri": "/en/tags/linked-lists/index.html"
+    "uri": "/en/tags/linked-lists/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1688,7 +1688,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Files",
-    "uri": "/en/tags/files/index.html"
+    "uri": "/en/tags/files/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1696,7 +1696,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Dynamic-Memory",
-    "uri": "/en/tags/dynamic-memory/index.html"
+    "uri": "/en/tags/dynamic-memory/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1704,7 +1704,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Structs",
-    "uri": "/en/tags/structs/index.html"
+    "uri": "/en/tags/structs/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1712,7 +1712,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Stacks-Queues",
-    "uri": "/en/tags/stacks-queues/index.html"
+    "uri": "/en/tags/stacks-queues/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1720,7 +1720,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Search",
-    "uri": "/en/tags/search/index.html"
+    "uri": "/en/tags/search/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Tags",
@@ -1728,7 +1728,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tag :: Resources",
-    "uri": "/en/tags/resources/index.html"
+    "uri": "/en/tags/resources/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
@@ -1736,7 +1736,7 @@ var relearn_searchindex = [
     "description": "Download the repository, ZIP and Devcontainer from the book C100.",
     "tags": [],
     "title": "Book Code",
-    "uri": "/en/c100/code/index.html"
+    "uri": "/en/c100/code/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
@@ -1744,7 +1744,7 @@ var relearn_searchindex = [
     "description": "Consult and report errata for the book C100.",
     "tags": [],
     "title": "Errata",
-    "uri": "/en/c100/erratas/index.html"
+    "uri": "/en/c100/erratas/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
@@ -1752,7 +1752,7 @@ var relearn_searchindex = [
     "description": "Receive the C cheat sheet in Spanish, exercise code and optional Devcontainer environment from the book C100.",
     "tags": [],
     "title": "Reader Pack – Programming in C in 100 Exercises",
-    "uri": "/en/c100/pack/index.html"
+    "uri": "/en/c100/pack/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Exercises",
@@ -1760,7 +1760,7 @@ var relearn_searchindex = [
     "description": "Seven guided steps to start learning C, from your compiler to conditions, loops and functions.",
     "tags": [],
     "title": "Start learning C",
-    "uri": "/en/ejercicios/empieza-aqui/index.html"
+    "uri": "/en/ejercicios/empieza-aqui/"
   },
   {
     "breadcrumb": "Learn C by writing programs \u003e Complete book",
@@ -1768,6 +1768,6 @@ var relearn_searchindex = [
     "description": "Access again the cheat sheet, Devcontainer and exercises from the book C100.",
     "tags": [],
     "title": "Thank You",
-    "uri": "/en/c100/gracias/index.html"
+    "uri": "/en/c100/gracias/"
   }
 ]
